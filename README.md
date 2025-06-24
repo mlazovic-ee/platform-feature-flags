@@ -15,14 +15,30 @@
 ## About
 Feature Flags are cool.
 
+
 - [About](#about)
+- [Links](#links)
 - [Architecture](#architecture)
+- [Usage](#usage)
 - [Structure](#structure)
 - [Contributing](#contributing)
   - [Creating a new feature flag](#creating-a-new-feature-flag)
   - [Updating an existing feature flag](#updating-an-existing-feature-flag)
 
+## Links
+
+| Environment   | URL                                                                      |
+| :------------ | :----------------------------------------------------------------------- |
+| Production    | [https://flags.kick.com](https://flags.kick.com)                         |
+| Staging       | [https://flags.easygo-drop-kick.com](https://flags.easygo-drop-kick.com) |
+| Preproduction | TBA                                                                      |
+| Development   | TBA                                                                      |
+
+
 ## Architecture
+TODO
+
+## Usage
 TODO
 
 
