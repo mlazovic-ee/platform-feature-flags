@@ -18,7 +18,7 @@ spec:
       source:
         repoURL: https://github.com/KickEngineering/platform-feature-flags.git
         targetRevision: main
-        path: 'k8s/{{.values.environment}}'
+        path: 'k8s/flags/overlays/{{.values.environment}}'
       destination:
         server: '{{.server}}'
         namespace: platform-open-feature

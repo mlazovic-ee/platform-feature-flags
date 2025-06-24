@@ -20,6 +20,13 @@ Feature Flags are cool.
 - [Links](#links)
 - [Architecture](#architecture)
 - [Usage](#usage)
+  - [Web](#web)
+    - [Client side](#client-side)
+    - [Server side](#server-side)
+  - [Mobile](#mobile)
+  - [Backend](#backend)
+    - [PHP](#php)
+    - [Golang](#golang)
 - [Structure](#structure)
 - [Contributing](#contributing)
   - [Creating a new feature flag](#creating-a-new-feature-flag)
@@ -41,6 +48,27 @@ TODO
 ## Usage
 TODO
 
+### Web
+TODO
+
+#### Client side
+TODO
+
+#### Server side
+TODO
+
+### Mobile
+TODO
+
+### Backend
+TODO
+
+#### PHP
+TODO
+
+#### Golang
+TODO
+
 
 ## Structure
 
@@ -48,14 +76,17 @@ TODO
 k8s
 ├── kustomization.yaml
 ├── environments.yaml
-├── production
-│   └── featureflags.yaml
-├── staging
-│   └── featureflags.yaml
-├── preproduction
-│   └── featureflags.yaml
-├── development
-│   └── featureflags.yaml
+├── flags
+│   ├── base
+│   │   ├── kustomization.yaml
+│   │   └── ...
+│   └── overlays
+│       ├── production
+│       │   ├── kustomization.yaml
+|       |   └── ...
+│       └── staging
+│           ├── kustomization.yaml
+|           └── ...
 └── ...
 ```
 

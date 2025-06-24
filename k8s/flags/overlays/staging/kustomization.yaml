@@ -1,0 +1,23 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../../base
+  - kick-backend.yaml
+  - kick-mobile.yaml
+  - kick-tv.yaml
+  - kick-web.yaml
+
+patches:
+  - target:
+      group: core.openfeature.dev
+      version: v1beta1
+      kind: Flagd
+      name: main
+    patch: |-
+      - op: replace
+        path: /spec/ingress/hosts/0
+        value: flags.easygo-drop-kick.com
+      - op: replace
+        path: /spec/replicas
+        value: 3

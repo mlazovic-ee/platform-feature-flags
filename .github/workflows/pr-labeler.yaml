@@ -1,0 +1,43 @@
+name: 🏷️ PR labeler 🏷️
+
+on:
+  pull_request:
+    paths:
+    - k8s/**
+
+jobs:
+  pr-labeler:
+    name: Component changes
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Kustomize component changes
+      id: component-changes
+      uses: KickEngineering/platform-github-actions/kustomize-component-changes@main
+      with:
+        component-directory: k8s
+
+    - name: Component labels
+      uses: KickEngineering/platform-github-actions/pr-labeler@main
+      if: ${{ fromJson(steps.component-changes.outputs.components)[0] != null }}
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+      with:
+        labels: |-
+          ${{ join(fromJson(steps.component-changes.outputs.components), '
+          ') }}
+
+    - name: Environment labels
+      uses: KickEngineering/platform-github-actions/pr-labeler@main
+      if: ${{ fromJson(steps.component-changes.outputs.environments)[0] != null }}
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+      with:
+        labels: |-
+          ${{ join(fromJson(steps.component-changes.outputs.environments), '
+          ') }}

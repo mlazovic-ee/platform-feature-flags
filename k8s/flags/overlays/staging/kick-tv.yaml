@@ -1,0 +1,14 @@
+apiVersion: core.openfeature.dev/v1beta1
+kind: FeatureFlag
+metadata:
+  name: kick-tv
+  namespace: platform-open-feature
+spec:
+  flagSpec:
+    flags:
+      tv-test:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false

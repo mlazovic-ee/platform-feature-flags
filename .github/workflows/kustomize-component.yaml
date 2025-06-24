@@ -1,0 +1,25 @@
+on:
+  workflow_call:
+    inputs:
+      directory:
+        type: string
+        required: true
+      component:
+        type: string
+        required: true
+      environments:
+        type: string
+        required: true
+
+
+jobs:
+  component:
+    name: ${{ matrix.environment }}
+    strategy:
+      fail-fast: false
+      matrix:
+        environment: ${{ fromJSON(inputs.environments) }}
+    uses: KickEngineering/platform-github-workflows/.github/workflows/ci-kustomize.yaml@main
+    with:
+      path: ${{ inputs.directory }}/${{ inputs.component }}/overlays/${{ matrix.environment }}
+      name: "Diff ${{ inputs.component }} for ${{ matrix.environment }}"

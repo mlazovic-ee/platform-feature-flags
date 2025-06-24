@@ -1,0 +1,34 @@
+name: 🔨 Manifest Diff 🔨
+
+on:
+  pull_request:
+    paths:
+    - k8s/**
+
+jobs:
+  changes:
+    name: Component changes
+    runs-on: ubuntu-latest
+    outputs:
+      changes: ${{steps.component-changes.outputs.changes}}
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Kustomize component changes
+      id: component-changes
+      uses: KickEngineering/platform-github-actions/kustomize-component-changes@main
+      with:
+        component-directory: k8s
+
+  call-component:
+    name: ${{ matrix.component }}
+    needs: changes
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.changes.outputs.changes) }}
+    uses: ./.github/workflows/kustomize-component.yaml
+    with:
+      directory: k8s
+      component: ${{ matrix.component }}
+      environments: ${{ toJson(matrix.environments) }}

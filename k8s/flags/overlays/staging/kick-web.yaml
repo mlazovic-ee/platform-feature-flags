@@ -1,0 +1,14 @@
+apiVersion: core.openfeature.dev/v1beta1
+kind: FeatureFlag
+metadata:
+  name: kick-web
+  namespace: platform-open-feature
+spec:
+  flagSpec:
+    flags:
+      web-test:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false

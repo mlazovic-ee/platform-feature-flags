@@ -4,7 +4,7 @@ metadata:
   name: main
   namespace: platform-open-feature
 spec:
-  replicas: 3
+  replicas: PLACEHOLDER
   featureFlagSource: platform
   ingress:
     enabled: true
@@ -12,6 +12,6 @@ spec:
       alb.ingress.kubernetes.io/target-type: "ip"
       alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}]'
     hosts:
-      - flags.easygo-drop-kick.com
+      - PLACEHOLDER
     ingressClassName: kick-flags-alb
     pathType: Prefix
