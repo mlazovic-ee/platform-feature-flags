@@ -7,11 +7,9 @@ spec:
   goTemplate: true
   goTemplateOptions: ["missingkey=error"]
   generators:
-    - matrix:
-        generators:
-          - clusters:
-              values:
-                environment: '{{index .metadata.annotations "env"}}'
+    - clusters:
+        values:
+          environment: '{{index .metadata.annotations "env"}}'
   template:
     metadata:
       name: "platform-feature-flags"
