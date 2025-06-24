@@ -20,4 +20,4 @@ patches:
         value: flags.easygo-drop-kick.com
       - op: replace
         path: /spec/replicas
-        value: 3
+        value: 20
