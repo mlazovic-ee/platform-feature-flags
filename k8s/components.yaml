@@ -21,7 +21,7 @@ spec:
         path: 'k8s/{{.values.environment}}'
       destination:
         server: '{{.server}}'
-        namespace: '{{.path.basename}}'
+        namespace: platform-open-feature
       syncPolicy:
         automated:
           prune: false
