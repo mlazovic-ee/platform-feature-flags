@@ -1,0 +1,59 @@
+apiVersion: core.openfeature.dev/v1beta1
+kind: FeatureFlag
+metadata:
+  name: kick-web
+  namespace: platform-open-feature
+spec:
+  flagSpec:
+    flags:
+      web-test:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+---
+apiVersion: core.openfeature.dev/v1beta1
+kind: FeatureFlag
+metadata:
+  name: kick-mobile
+  namespace: platform-open-feature
+spec:
+  flagSpec:
+    flags:
+      mobile-test:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+---
+apiVersion: core.openfeature.dev/v1beta1
+kind: FeatureFlag
+metadata:
+  name: kick-tv
+  namespace: platform-open-feature
+spec:
+  flagSpec:
+    flags:
+      tv-test:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+---
+apiVersion: core.openfeature.dev/v1beta1
+kind: FeatureFlag
+metadata:
+  name: kick-backend
+  namespace: platform-open-feature
+spec:
+  flagSpec:
+    flags:
+      backend-test:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false

@@ -1,0 +1,15 @@
+apiVersion: core.openfeature.dev/v1beta1
+kind: FeatureFlagSource
+metadata:
+  name: platform
+  namespace: platform-open-feature
+spec:
+  sources:
+    - source: kick-web
+      provider: kubernetes
+    - source: kick-mobile
+      provider: kubernetes
+    - source: kick-tv
+      provider: kubernetes
+    - source: kick-backend
+      provider: kubernetes

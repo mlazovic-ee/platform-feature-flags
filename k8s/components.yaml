@@ -1,0 +1,32 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: platform-components
+  namespace: argocd
+spec:
+  goTemplate: true
+  goTemplateOptions: ["missingkey=error"]
+  generators:
+    - matrix:
+        generators:
+          - clusters:
+              values:
+                environment: '{{index .metadata.annotations "env"}}'
+  template:
+    metadata:
+      name: "platform-feature-flags"
+    spec:
+      project: platform
+      source:
+        repoURL: https://github.com/KickEngineering/platform-feature-flags.git
+        targetRevision: main
+        path: 'k8s/{{.values.environment}}'
+      destination:
+        server: '{{.server}}'
+        namespace: '{{.path.basename}}'
+      syncPolicy:
+        automated:
+          prune: false
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true

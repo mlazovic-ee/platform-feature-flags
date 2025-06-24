@@ -1,0 +1,17 @@
+apiVersion: core.openfeature.dev/v1beta1
+kind: Flagd
+metadata:
+  name: main
+  namespace: platform-open-feature
+spec:
+  replicas: 3
+  featureFlagSource: platform
+  ingress:
+    enabled: true
+    annotations:
+      alb.ingress.kubernetes.io/target-type: "ip"
+      alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}]'
+    hosts:
+      - flags.easygo-drop-kick.com
+    ingressClassName: kick-flags-alb
+    pathType: Prefix
