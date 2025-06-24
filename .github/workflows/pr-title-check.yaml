@@ -1,0 +1,10 @@
+name: PR title check
+
+on:
+  pull_request:
+    types: [opened, edited, reopened, synchronize]
+
+jobs:
+  pr-title-check:
+    name: PR title Check
+    uses: KickEngineering/platform-github-workflows/.github/workflows/pr-title-check.yaml@main
