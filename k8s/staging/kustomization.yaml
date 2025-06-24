@@ -5,3 +5,4 @@ resources:
   - flagd.yaml
   - featureflagsource.yaml
   - featureflags.yaml
+  - clusterrolebinding.yaml
