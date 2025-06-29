@@ -1,11 +1,11 @@
 apiVersion: core.openfeature.dev/v1beta1
 kind: Flagd
 metadata:
-  name: main
+  name: client-side
   namespace: platform-open-feature
 spec:
   replicas: PLACEHOLDER
-  featureFlagSource: platform
+  featureFlagSource: client-side
   ingress:
     enabled: true
     annotations:
@@ -15,3 +15,12 @@ spec:
       - PLACEHOLDER
     ingressClassName: kick-flags-alb
     pathType: Prefix
+---
+apiVersion: core.openfeature.dev/v1beta1
+kind: Flagd
+metadata:
+  name: server-side
+  namespace: platform-open-feature
+spec:
+  replicas: PLACEHOLDER
+  featureFlagSource: client-side

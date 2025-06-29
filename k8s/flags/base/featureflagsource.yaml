@@ -1,15 +1,25 @@
 apiVersion: core.openfeature.dev/v1beta1
 kind: FeatureFlagSource
 metadata:
-  name: platform
+  name: server-side
   namespace: platform-open-feature
 spec:
   sources:
-    - source: kick-web
-      provider: kubernetes
-    - source: kick-mobile
-      provider: kubernetes
-    - source: kick-tv
-      provider: kubernetes
-    - source: kick-backend
-      provider: kubernetes
+    - source: platform-open-feature/kick-backend
+      provider: flagd-proxy
+    - source: platform-open-feature/kick-platform
+      provider: flagd-proxy
+---
+apiVersion: core.openfeature.dev/v1beta1
+kind: FeatureFlagSource
+metadata:
+  name: client-side
+  namespace: platform-open-feature
+spec:
+  sources:
+    - source: platform-open-feature/kick-web
+      provider: flagd-proxy
+    - source: platform-open-feature/kick-mobile
+      provider: flagd-proxy
+    - source: platform-open-feature/kick-tv
+      provider: flagd-proxy

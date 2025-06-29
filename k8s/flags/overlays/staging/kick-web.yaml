@@ -2,7 +2,6 @@ apiVersion: core.openfeature.dev/v1beta1
 kind: FeatureFlag
 metadata:
   name: kick-web
-  namespace: platform-open-feature
 spec:
   flagSpec:
     flags:
