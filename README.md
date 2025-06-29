@@ -43,7 +43,8 @@ Feature Flags are cool.
 
 
 ## Architecture
-TODO
+
+![Architecture](./docs/images/diagram.svg)
 
 ## Usage
 TODO
