@@ -20,26 +20,23 @@ Feature Flags are cool.
 - [Links](#links)
 - [Architecture](#architecture)
 - [Usage](#usage)
-  - [Web](#web)
-    - [Client side](#client-side)
-    - [Server side](#server-side)
-  - [Mobile](#mobile)
-  - [Backend](#backend)
+  - [Client Side](#client-side)
+    - [Mobile](#mobile)
+    - [Web](#web)
+  - [Server Side](#server-side)
     - [PHP](#php)
     - [Golang](#golang)
+    - [NextJS](#nextjs)
 - [Structure](#structure)
-- [Contributing](#contributing)
-  - [Creating a new feature flag](#creating-a-new-feature-flag)
-  - [Updating an existing feature flag](#updating-an-existing-feature-flag)
 
 ## Links
 
-| Environment   | URL                                                                      |
-| :------------ | :----------------------------------------------------------------------- |
-| Production    | [https://flags.kick.com](https://flags.kick.com)                         |
-| Staging       | [https://flags.easygo-drop-kick.com](https://flags.easygo-drop-kick.com) |
-| Preproduction | TBA                                                                      |
-| Development   | TBA                                                                      |
+| Environment   | URL                                                                      | Configuration                                                                                                   |
+| :------------ | :----------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------- |
+| Production    | [https://flags.kick.com](https://flags.kick.com)                         | [Production](https://github.com/KickEngineering/platform-feature-flags/tree/main/k8s/flags/overlays/production) |
+| Staging       | [https://flags.easygo-drop-kick.com](https://flags.easygo-drop-kick.com) | [Staging](https://github.com/KickEngineering/platform-feature-flags/tree/main/k8s/flags/overlays/staging)       |
+| Preproduction | TBA                                                                      | TBA                                                                                                             |
+| Development   | TBA                                                                      | TBA                                                                                                             |
 
 
 ## Architecture
@@ -47,29 +44,80 @@ Feature Flags are cool.
 ![Architecture](./docs/images/diagram.svg)
 
 ## Usage
+Consumption of feature flags is done through the OpenFeature specification, which allows for a consistent way to manage feature flags across different platforms and avoids vendor lock-in.
+
+### Client Side
+For consumers that run in an insecure environment, such as a web browser or mobile app, feature flag evaluation has to be done on a backend that is controlled by us. This is due to flag definitions having the potential to contain sensitive information that should not be exposed to end users. Only one options is available for client-side, which is remote evaluation using the client-side deployment of FlagD that is accessible via a publically exposed endpoint.
+
+#### Mobile
 TODO
 
-### Web
+#### Web
 TODO
 
-#### Client side
-TODO
-
-#### Server side
-TODO
-
-### Mobile
-TODO
-
-### Backend
-TODO
+### Server Side
+For consumers that do support it, we recommend inprocess evaluation of feature flags, which is the fastest and most efficient way to consume them. For consumers that do not support inprocess evaluation, we recommend remote evaluation using the server-side deployment of FlagD.
 
 #### PHP
+Kubernetes
+```yaml
+metadata:
+  annotations:
+    openfeature.dev/enabled: "true"
+    openfeature.dev/inprocessconfiguration: platform-open-feature/backend-inprocess-config
+```
+
+Code
+```
 TODO
+```
 
 #### Golang
-TODO
 
+Kubernetes
+```yaml
+metadata:
+  annotations:
+    openfeature.dev/enabled: "true"
+    openfeature.dev/inprocessconfiguration: platform-open-feature/backend-inprocess-config
+```
+
+Code
+```golang
+	flagDProvider, err := flagd.NewProvider(
+		flagd.WithInProcessResolver(),
+	)
+	if err != nil {
+		slog.Error("Failed to initialize FlagD provider", "error", err)
+		os.Exit(1)
+	}
+
+	err = openfeature.SetProviderAndWait(flagDProvider)
+	if err != nil {
+		slog.Error("Failed to setup OpenFeature", "error", err)
+		os.Exit(1)
+	}
+
+	client := openfeature.NewClient("template-demo")
+
+	state := config.State{
+		Flags: client,
+	}
+```
+
+#### NextJS
+Kubernetes
+```yaml
+metadata:
+  annotations:
+    openfeature.dev/enabled: "true"
+    openfeature.dev/inprocessconfiguration: platform-open-feature/backend-inprocess-config
+```
+
+Code
+```
+TODO
+```
 
 ## Structure
 
@@ -90,13 +138,3 @@ k8s
 |           └── ...
 └── ...
 ```
-
-
-## Contributing
-All contributions welcome!
-
-### Creating a new feature flag
-TODO
-
-### Updating an existing feature flag
-TODO
