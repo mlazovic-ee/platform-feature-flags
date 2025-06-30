@@ -3,7 +3,7 @@ kind: InProcessConfiguration
 metadata:
   name: backend-inprocess-config
 spec:
-  host: flagd-proxy-svc.open-feature-operator-system.svc.cluster.local
+  host: flagd-proxy-svc.platform-open-feature.svc.cluster.local
   selector: "core.openfeature.dev/platform-open-feature/kick-backend"
 ---
 apiVersion: core.openfeature.dev/v1beta1
@@ -11,5 +11,5 @@ kind: InProcessConfiguration
 metadata:
   name: platform-inprocess-config
 spec:
-  host: flagd-proxy-svc.open-feature-operator-system.svc.cluster.local
+  host: flagd-proxy-svc.platform-open-feature.svc.cluster.local
   selector: "core.openfeature.dev/platform-open-feature/kick-platform"
