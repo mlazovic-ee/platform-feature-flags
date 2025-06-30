@@ -12,4 +12,4 @@ metadata:
   name: platform-inprocess-config
 spec:
   host: flagd-proxy-svc.platform-open-feature.svc.cluster.local
-  selector: "core.openfeature.dev/platform-open-feature/kick-platform"
+  selector: "core.openfeature.dev/platform-open-feature/kick-web"
