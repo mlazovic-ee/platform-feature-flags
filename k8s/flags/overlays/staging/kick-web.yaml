@@ -11,7 +11,7 @@ spec:
         variants:
           enabled: true
           disabled: false
-      keath-info-endpoint-csr:
+      keath-info-endpoint-cloudflare:
         state: ENABLED
         defaultVariant: disabled
         variants:

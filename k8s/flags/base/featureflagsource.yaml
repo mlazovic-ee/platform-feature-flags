@@ -19,7 +19,7 @@ metadata:
   namespace: platform-open-feature
 spec:
   sources:
-    - source: platform-open-feature/kick-web
+    - source: platform-open-feature/kick-web-client
       provider: flagd-proxy
     - source: platform-open-feature/kick-mobile
       provider: flagd-proxy
