@@ -92,7 +92,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          TITLE="${{ steps.new-state.outputs.action == 'enable' && 'Enable' || 'Disable' }} keath-info-endpoint-csr flag in ${{ inputs.environment }}"
+          TITLE="feat(KICK-0000): ${{ steps.new-state.outputs.action == 'enable' && 'Enable' || 'Disable' }} keath-info-endpoint-csr flag in ${{ inputs.environment }}"
           BODY="## Changes
           
           This PR ${{ steps.new-state.outputs.action }}s the \`keath-info-endpoint-csr\` feature flag in the **${{ inputs.environment }}** environment.
