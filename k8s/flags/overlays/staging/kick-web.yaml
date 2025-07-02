@@ -11,3 +11,9 @@ spec:
         variants:
           enabled: true
           disabled: false
+      keath-info-endpoint-csr:
+        state: DISABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false

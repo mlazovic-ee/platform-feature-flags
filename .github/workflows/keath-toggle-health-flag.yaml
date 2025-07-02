@@ -1,0 +1,120 @@
+name: 'Keath: Toggle Info Endpoint CSR Flag'
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to update (staging or production)'
+        required: true
+        default: 'staging'
+        type: choice
+        options:
+          - staging
+          - production
+
+jobs:
+  toggle-flag:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install yq
+        run: |
+          sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
+          sudo chmod +x /usr/local/bin/yq
+
+      - name: Get current date
+        id: date
+        run: echo "date=$(date +'%Y%m%d')" >> $GITHUB_OUTPUT
+
+      - name: Read current flag state
+        id: current-state
+        run: |
+          FLAG_FILE="k8s/flags/overlays/${{ inputs.environment }}/kick-web.yaml"
+          CURRENT_STATE=$(yq eval '.spec.flagSpec.flags.keath-info-endpoint-csr.state' "$FLAG_FILE")
+          echo "current_state=$CURRENT_STATE" >> $GITHUB_OUTPUT
+          echo "Current state: $CURRENT_STATE"
+
+      - name: Determine new state and branch name
+        id: new-state
+        run: |
+          if [ "${{ steps.current-state.outputs.current_state }}" = "ENABLED" ]; then
+            echo "new_state=DISABLED" >> $GITHUB_OUTPUT
+            echo "action=disable" >> $GITHUB_OUTPUT
+          else
+            echo "new_state=ENABLED" >> $GITHUB_OUTPUT
+            echo "action=enable" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create and switch to new branch
+        id: branch
+        run: |
+          BRANCH_NAME="keath-${{ steps.new-state.outputs.action }}-info-endpoint-csr-${{ steps.date.outputs.date }}"
+          echo "Creating branch: $BRANCH_NAME"
+          git checkout -b "$BRANCH_NAME"
+          echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
+
+      - name: Update flag state
+        run: |
+          FLAG_FILE="k8s/flags/overlays/${{ inputs.environment }}/kick-web.yaml"
+          echo "Updating flag state from ${{ steps.current-state.outputs.current_state }} to ${{ steps.new-state.outputs.new_state }}"
+          yq eval '.spec.flagSpec.flags.keath-info-endpoint-csr.state = "${{ steps.new-state.outputs.new_state }}"' -i "$FLAG_FILE"
+          
+          # Show the changes
+          echo "Updated file contents:"
+          cat "$FLAG_FILE"
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add k8s/flags/overlays/${{ inputs.environment }}/kick-web.yaml
+          git commit -m "${{ steps.new-state.outputs.action }} keath-info-endpoint-csr flag in ${{ inputs.environment }}
+          
+          This commit ${{ steps.new-state.outputs.action }}s the keath-info-endpoint-csr feature flag
+          in the ${{ inputs.environment }} environment.
+          
+          Previous state: ${{ steps.current-state.outputs.current_state }}
+          New state: ${{ steps.new-state.outputs.new_state }}"
+
+      - name: Push changes
+        run: |
+          git push origin "${{ steps.branch.outputs.branch_name }}"
+
+      - name: Create Pull Request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TITLE="${{ steps.new-state.outputs.action == 'enable' && 'Enable' || 'Disable' }} keath-info-endpoint-csr flag in ${{ inputs.environment }}"
+          BODY="## Changes
+          
+          This PR ${{ steps.new-state.outputs.action }}s the \`keath-info-endpoint-csr\` feature flag in the **${{ inputs.environment }}** environment.
+          
+          ### Details
+          - **Flag**: \`keath-info-endpoint-csr\`
+          - **Environment**: \`${{ inputs.environment }}\`
+          - **Previous State**: \`${{ steps.current-state.outputs.current_state }}\`
+          - **New State**: \`${{ steps.new-state.outputs.new_state }}\`
+          - **Date**: \`${{ steps.date.outputs.date }}\`
+          
+          ### Files Changed
+          - \`k8s/flags/overlays/${{ inputs.environment }}/kick-web.yaml\`
+          
+          ---
+          
+          *This PR was automatically created by the Toggle Keath Flag workflow.*"
+          
+          gh pr create \
+            --title "$TITLE" \
+            --body "$BODY" \
+            --base main \
+            --head "${{ steps.branch.outputs.branch_name }}" \
+            --label "feature-flag" \
+            --label "automated"
