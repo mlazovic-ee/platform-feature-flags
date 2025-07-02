@@ -6,11 +6,11 @@ metadata:
 spec:
   sources:
     - source: platform-open-feature/kick-backend
-      provider: flagd-proxy
+      provider: kubernetes
     - source: platform-open-feature/kick-platform
-      provider: flagd-proxy
+      provider: kubernetes
     - source: platform-open-feature/kick-web
-      provider: flagd-proxy
+      provider: kubernetes
 ---
 apiVersion: core.openfeature.dev/v1beta1
 kind: FeatureFlagSource
@@ -20,8 +20,8 @@ metadata:
 spec:
   sources:
     - source: platform-open-feature/kick-web-client
-      provider: flagd-proxy
+      provider: kubernetes
     - source: platform-open-feature/kick-mobile
-      provider: flagd-proxy
+      provider: kubernetes
     - source: platform-open-feature/kick-tv
-      provider: flagd-proxy
+      provider: kubernetes

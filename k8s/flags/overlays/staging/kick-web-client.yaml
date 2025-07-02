@@ -5,7 +5,7 @@ metadata:
 spec:
   flagSpec:
     flags:
-      web-test:
+      web-client-test:
         state: ENABLED
         defaultVariant: disabled
         variants:

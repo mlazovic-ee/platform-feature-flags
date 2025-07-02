@@ -23,7 +23,7 @@ patches:
         value: flags.easygo-drop-kick.com
       - op: replace
         path: /spec/replicas
-        value: 20
+        value: 3
   - target:
       group: core.openfeature.dev
       version: v1beta1
