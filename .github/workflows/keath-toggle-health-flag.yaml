@@ -116,5 +116,5 @@ jobs:
             --body "$BODY" \
             --base main \
             --head "${{ steps.branch.outputs.branch_name }}" \
-            --label "feature-flag" \
-            --label "automated"
+            --label "automated" \
+            --label "keath"
