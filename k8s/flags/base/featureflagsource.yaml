@@ -9,6 +9,8 @@ spec:
       provider: flagd-proxy
     - source: platform-open-feature/kick-platform
       provider: flagd-proxy
+    - source: platform-open-feature/kick-web
+      provider: flagd-proxy
 ---
 apiVersion: core.openfeature.dev/v1beta1
 kind: FeatureFlagSource
