@@ -10,7 +10,6 @@ resources:
   - kick-mobile.yaml
   - kick-tv.yaml
   - kick-web.yaml
-  - kick-web-client.yaml
 patches:
   - target:
       group: core.openfeature.dev

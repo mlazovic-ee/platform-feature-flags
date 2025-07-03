@@ -54,13 +54,18 @@ TODO
 
 #### Web
 
-The browser starts with the flag values that were rendered by the Next.js server (see the **NextJS** section below). Immediately after hydration it bootstraps OpenFeature and subscribes to **streaming updates** from FlagD. When a flag definition in the `web-client` source changes, FlagD sends an [[Server-Sent Event (SSE)](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events)] to the browser and the SDK updates its cached values.
+The browser starts with the flag values that were rendered by the Next.js server (see the **NextJS** section below). Immediately after hydration it bootstraps OpenFeature and subscribes to **streaming updates** from FlagD. When a flag definition changes, FlagD sends a [[Server-Sent Event (SSE)](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events)] to the browser and the SDK updates its cached values.
+
+**Architecture Note:** We use a single source of flags (`kick-web`) that is accessible both server-side (via in-process evaluation) and client-side (via the public endpoint). This approach:
+- ✅ Enables local development and Vercel preview environments to work without gRPC connections
+- ✅ Simplifies flag management with a single source of truth
+- ⚠️ Makes all flag keys publicly visible
 
 **High-level flow**
 
 ```text
 Next.js server ── initial flag values (SSR) ─▶ Browser
-Browser ── streaming updates ─▶ FlagD (`web-client`)
+Browser ── streaming updates ─▶ FlagD (`kick-web`)
 ```
 
 **Browser bootstrap (React / OpenFeature)**
@@ -81,10 +86,7 @@ const client = OpenFeature.getClient();
 const webTestEnabled = client.getBooleanValue('web-test', false);
 ```
 
-When adding a new flag:
-
-- **Default (recommended):** Add the flag to `kick-web` only. All `kick-web` values can be hydrated into the browser during SSR, so the client can still read them via React props, context or initial state.
-- **Real-time browser toggle required?** If the flag must change **after** hydration (for example a kill-switch or UX experiment that needs instant reaction without a page reload) ➜ also add it to `kick-web-client`. This lets the browser subscribe to SSE updates for that specific key.
+All flags are defined in `kick-web` and are available for both server-side rendering and client-side real-time updates via SSE.
 
 ### Server Side
 For consumers that do support it, we recommend inprocess evaluation of feature flags, which is the fastest and most efficient way to consume them. For consumers that do not support inprocess evaluation, we recommend remote evaluation using the server-side deployment of FlagD.
@@ -146,6 +148,10 @@ metadata:
 ```
 
 Flags in Next.js are evaluated *server-side* in line with [Flags SDK's server-side guidance](https://flags-sdk.dev/principles/server-side-vs-client-side). This avoids layout shift, reduces latency in hydrating components, and prevents leaking flag names to the browser.
+
+**Environment-aware evaluation:**
+- **Production/Staging (Kubernetes):** Uses in-process evaluation via the OpenFeature operator for optimal performance
+- **Local/Vercel Preview:** Falls back to remote evaluation against the public FlagD endpoint via http when in-process is unavailable
 
 ##### 1 – OpenFeature ⇄ flagd adapter
 ```ts

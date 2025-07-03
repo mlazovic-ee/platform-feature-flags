@@ -19,7 +19,7 @@ metadata:
   namespace: platform-open-feature
 spec:
   sources:
-    - source: platform-open-feature/kick-web-client
+    - source: platform-open-feature/kick-web
       provider: kubernetes
     - source: platform-open-feature/kick-mobile
       provider: kubernetes
