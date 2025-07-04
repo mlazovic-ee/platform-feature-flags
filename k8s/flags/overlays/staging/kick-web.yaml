@@ -7,7 +7,7 @@ spec:
     flags:
       web-test:
         state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
         variants:
           enabled: true
           disabled: false
