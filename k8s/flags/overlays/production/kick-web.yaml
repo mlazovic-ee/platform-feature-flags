@@ -13,7 +13,7 @@ spec:
           disabled: false
       keath-info-endpoint-cloudflare:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
