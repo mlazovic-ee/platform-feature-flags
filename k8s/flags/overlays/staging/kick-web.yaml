@@ -5,13 +5,10 @@ metadata:
 spec:
   flagSpec:
     flags:
-      web-test:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
-      keath-info-endpoint-cloudflare:
+      # Kick Health - Toggle the channel info endpoint from intercluster to cloudflare. Will increase latency by 100ms.
+      # disabled: intercluster
+      # enabled: cloudflare
+      keath-info:
         state: ENABLED
         defaultVariant: disabled
         variants:

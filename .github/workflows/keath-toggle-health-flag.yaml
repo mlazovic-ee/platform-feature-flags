@@ -38,7 +38,7 @@ jobs:
         id: current-state
         run: |
           FLAG_FILE="k8s/flags/overlays/${{ inputs.environment }}/kick-web.yaml"
-          CURRENT_STATE=$(yq eval '.spec.flagSpec.flags.keath-info-endpoint-cloudflare.state' "$FLAG_FILE")
+          CURRENT_STATE=$(yq eval '.spec.flagSpec.flags.keath-info.state' "$FLAG_FILE")
           echo "current_state=$CURRENT_STATE" >> $GITHUB_OUTPUT
           echo "Current state: $CURRENT_STATE"
 
@@ -65,7 +65,7 @@ jobs:
         run: |
           FLAG_FILE="k8s/flags/overlays/${{ inputs.environment }}/kick-web.yaml"
           echo "Updating flag state from ${{ steps.current-state.outputs.current_state }} to ${{ steps.new-state.outputs.new_state }}"
-          yq eval '.spec.flagSpec.flags.keath-info-endpoint-cloudflare.state = "${{ steps.new-state.outputs.new_state }}"' -i "$FLAG_FILE"
+          yq eval '.spec.flagSpec.flags.keath-info.state = "${{ steps.new-state.outputs.new_state }}"' -i "$FLAG_FILE"
           
           # Show the changes
           echo "Updated file contents:"
@@ -76,9 +76,9 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add k8s/flags/overlays/${{ inputs.environment }}/kick-web.yaml
-          git commit -m "${{ steps.new-state.outputs.action }} keath-info-endpoint-cloudflare flag in ${{ inputs.environment }}
+          git commit -m "${{ steps.new-state.outputs.action }} keath-info flag in ${{ inputs.environment }}
           
-          This commit ${{ steps.new-state.outputs.action }}s the keath-info-endpoint-cloudflare feature flag
+          This commit ${{ steps.new-state.outputs.action }}s the keath-info feature flag
           in the ${{ inputs.environment }} environment.
           
           Previous state: ${{ steps.current-state.outputs.current_state }}
@@ -92,13 +92,13 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          TITLE="feat(KICK-0000): ${{ steps.new-state.outputs.action == 'enable' && 'Enable' || 'Disable' }} keath-info-endpoint-cloudflare flag in ${{ inputs.environment }}"
+          TITLE="feat(KICK-0000): ${{ steps.new-state.outputs.action == 'enable' && 'Enable' || 'Disable' }} keath-info flag in ${{ inputs.environment }}"
           BODY="## Changes
           
-          This PR ${{ steps.new-state.outputs.action }}s the \`keath-info-endpoint-cloudflare\` feature flag in the **${{ inputs.environment }}** environment.
+          This PR ${{ steps.new-state.outputs.action }}s the \`keath-info\` feature flag in the **${{ inputs.environment }}** environment.
           
           ### Details
-          - **Flag**: \`keath-info-endpoint-cloudflare\`
+          - **Flag**: \`keath-info\`
           - **Environment**: \`${{ inputs.environment }}\`
           - **Previous State**: \`${{ steps.current-state.outputs.current_state }}\`
           - **New State**: \`${{ steps.new-state.outputs.new_state }}\`
