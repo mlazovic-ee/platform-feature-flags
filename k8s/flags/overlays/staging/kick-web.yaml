@@ -23,9 +23,7 @@ spec:
           disabled: false
           targeting:
             if:
-              - and:
-                - ne:  [{ var: status }, "unauthenticated" ]   # status != "unauthenticated"
-                - in:  [ "internal", { var: user.roles } ]          # roles contains "internal"
+              - in:  [ "internal", { var: user.roles } ]
               - enabled   # variant when rule is true
               - disabled  # variant when rule is false
         
