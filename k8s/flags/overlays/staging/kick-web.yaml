@@ -14,3 +14,19 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Drops Feature
+      web1:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+          targeting:
+            if:
+              - and:
+                - ne:  [{ var: status }, "unauthenticated" ]   # status != "unauthenticated"
+                - in:  [ "internal", { var: roles } ]          # roles contains "internal"
+              - enabled   # variant when rule is true
+              - disabled  # variant when rule is false
+        
+
