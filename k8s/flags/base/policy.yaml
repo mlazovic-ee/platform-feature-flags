@@ -22,5 +22,5 @@ spec:
                   - name: "{{element.name}}"
                     resources:
                       limits:
-                        memory: "512Mi"
+                        memory: "1024Mi"
   validationFailureAction: audit
