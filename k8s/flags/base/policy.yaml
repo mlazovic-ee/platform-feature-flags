@@ -1,10 +1,10 @@
 apiVersion: kyverno.io/v1
 kind: ClusterPolicy
 metadata:
-  name: mutate-flagd-memory-limit
+  name: mutate-flagd-resources
 spec:
   rules:
-    - name: set-flagd-memory-limit
+    - name: set-flagd-client-side-resources
       match:
         resources:
           kinds:
@@ -23,4 +23,23 @@ spec:
                     resources:
                       limits:
                         memory: "1024Mi"
-  validationFailureAction: audit
+    - name: set-flagd-server-side-resources
+      match:
+        resources:
+          kinds:
+            - Pod
+          selector:
+            matchLabels:
+              app: server-side
+              app.kubernetes.io/managed-by: open-feature-operator
+      mutate:
+        foreach:
+          - list: "request.object.spec.containers"
+            patchStrategicMerge:
+              spec:
+                containers:
+                  - name: "{{element.name}}"
+                    resources:
+                      limits:
+                        memory: "1024Mi"
+  validationFailureAction: Audit
