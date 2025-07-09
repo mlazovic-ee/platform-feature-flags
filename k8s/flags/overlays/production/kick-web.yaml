@@ -21,7 +21,7 @@ spec:
         targeting:
           if:
           - in:
-            - developer
+            - internal
             - var: user.roles
           - enabled
           - disabled
