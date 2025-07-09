@@ -1,0 +1,26 @@
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: mutate-flagd-memory-limit
+spec:
+  rules:
+    - name: set-flagd-memory-limit
+      match:
+        resources:
+          kinds:
+            - Pod
+          selector:
+            matchLabels:
+              app: client-side
+              app.kubernetes.io/managed-by: open-feature-operator
+      mutate:
+        foreach:
+          - list: "request.object.spec.containers"
+            patchStrategicMerge:
+              spec:
+                containers:
+                  - name: "{{element.name}}"
+                    resources:
+                      limits:
+                        memory: "512Mi"
+  validationFailureAction: audit
