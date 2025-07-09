@@ -14,3 +14,18 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Drops Feature
+      web1:
+        defaultVariant: disabled
+        state: ENABLED
+        targeting:
+          if:
+          - in:
+            - internal
+            - var: user.roles
+          - enabled
+          - disabled
+        variants:
+          disabled: false
+          enabled: true
+
