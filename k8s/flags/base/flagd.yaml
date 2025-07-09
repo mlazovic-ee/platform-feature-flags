@@ -11,6 +11,8 @@ spec:
     annotations:
       alb.ingress.kubernetes.io/target-type: "ip"
       alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}]'
+      alb.ingress.kubernetes.io/healthcheck-port: "8014"
+      alb.ingress.kubernetes.io/healthcheck-path: "/readyz"
     hosts:
       - PLACEHOLDER
     ingressClassName: kick-flags-alb
