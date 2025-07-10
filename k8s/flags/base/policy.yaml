@@ -14,17 +14,35 @@ spec:
               app: client-side
               app.kubernetes.io/managed-by: open-feature-operator
       mutate:
-        foreach:
-          - list: "request.object.spec.containers"
-            patchStrategicMerge:
-              spec:
-                containers:
-                  - name: "{{element.name}}"
-                    resources:
-                      limits:
-                        memory: "2048Mi"
-                      requests:
-                        memory: "1024Mi"
+        patchStrategicMerge:
+          metadata:
+            annotations:
+              ad.datadoghq.com/flagd.checks: |
+                {
+                  "openmetrics": {
+                    "init_config": {},
+                    "instances": [
+                      {
+                        "openmetrics_endpoint": "http://%%host%%:8014/metrics",
+                        "metrics": [
+                          "http.server.duration",
+                          "http.server.response.size",
+                          "http.server.active_requests",
+                          "feature_flag.flagd.impression",
+                          "feature_flag.flagd.evaluation.reason"
+                        ]
+                      }
+                    ]
+                  }
+                }
+          spec:
+            containers:
+              - name: flagd
+                resources:
+                  limits:
+                    memory: "2048Mi"
+                  requests:
+                    memory: "1024Mi"
     - name: set-flagd-server-side-resources
       match:
         resources:
@@ -35,15 +53,33 @@ spec:
               app: server-side
               app.kubernetes.io/managed-by: open-feature-operator
       mutate:
-        foreach:
-          - list: "request.object.spec.containers"
-            patchStrategicMerge:
-              spec:
-                containers:
-                  - name: "{{element.name}}"
-                    resources:
-                      limits:
-                        memory: "2048Mi"
-                      requests:
-                        memory: "1024Mi"
+        patchStrategicMerge:
+          metadata:
+            annotations:
+              ad.datadoghq.com/flagd.checks: |
+                {
+                  "openmetrics": {
+                    "init_config": {},
+                    "instances": [
+                      {
+                        "openmetrics_endpoint": "http://%%host%%:8014/metrics",
+                        "metrics": [
+                          "http.server.duration",
+                          "http.server.response.size",
+                          "http.server.active_requests",
+                          "feature_flag.flagd.impression",
+                          "feature_flag.flagd.evaluation.reason"
+                        ]
+                      }
+                    ]
+                  }
+                }
+          spec:
+            containers:
+              - name: flagd
+                resources:
+                  limits:
+                    memory: "2048Mi"
+                  requests:
+                    memory: "1024Mi"
   validationFailureAction: Audit
