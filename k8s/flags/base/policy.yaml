@@ -40,8 +40,10 @@ spec:
               - name: flagd
                 resources:
                   limits:
+                    cpu: 1000m
                     memory: "2048Mi"
                   requests:
+                    cpu: 500m
                     memory: "1024Mi"
     - name: set-flagd-server-side-resources
       match:
@@ -79,7 +81,9 @@ spec:
               - name: flagd
                 resources:
                   limits:
+                    cpu: 1000m
                     memory: "2048Mi"
                   requests:
+                    cpu: 500m
                     memory: "1024Mi"
   validationFailureAction: Audit
