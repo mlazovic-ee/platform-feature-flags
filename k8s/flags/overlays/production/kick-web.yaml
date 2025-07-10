@@ -10,7 +10,7 @@ spec:
       # enabled: cloudflare
       keath-info:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
@@ -20,12 +20,11 @@ spec:
         state: ENABLED
         targeting:
           if:
-          - in:
-            - internal
-            - var: user.roles
-          - enabled
-          - disabled
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
         variants:
           disabled: false
           enabled: true
-
