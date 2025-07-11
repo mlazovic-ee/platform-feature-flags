@@ -45,7 +45,14 @@ spec:
       # Chat History Web Gateway
       web-chat-history:
         state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
         variants:
           disabled: false
           enabled: true
