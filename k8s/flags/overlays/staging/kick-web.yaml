@@ -28,6 +28,17 @@ spec:
         variants:
           disabled: false
           enabled: true
-          
-        
-
+      # Featured Livestreams Web Gateway
+      web-feat-livestreams:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          disabled: false
+          enabled: true
+      # Chat History Web Gateway
+      web-chat-history:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          disabled: false
+          enabled: true
