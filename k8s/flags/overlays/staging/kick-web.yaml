@@ -31,14 +31,7 @@ spec:
       # Featured Livestreams Web Gateway
       web-feat-livestreams:
         state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - in:
-                - internal
-                - var: user.roles
-            - enabled
-            - disabled
+        defaultVariant: enabled
         variants:
           disabled: false
           enabled: true
@@ -46,13 +39,6 @@ spec:
       web-chat-history:
         state: ENABLED
         defaultVariant: disabled
-        targeting:
-          if:
-            - in:
-                - internal
-                - var: user.roles
-            - enabled
-            - disabled
         variants:
           disabled: false
           enabled: true
