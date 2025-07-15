@@ -31,7 +31,14 @@ spec:
       # Featured Livestreams Web Gateway
       web-feat-livestreams:
         state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
         variants:
           disabled: false
           enabled: true
