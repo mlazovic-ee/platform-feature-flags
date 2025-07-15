@@ -35,8 +35,8 @@ spec:
         targeting:
           if:
             - in:
-                - internal
-                - var: user.roles
+                - canlabofficial@gmail.com
+                - var: user.email
             - enabled
             - disabled
         variants:
