@@ -19,7 +19,12 @@ Feature Flags are cool.
 - [About](#about)
 - [Links](#links)
 - [Architecture](#architecture)
-- [Usage](#usage)
+- [How To](#how-to)
+  - [Create a new flag](#create-a-new-flag)
+  - [Update an existing flag](#update-an-existing-flag)
+- [Use evaluation context to target users](#use-evaluation-context-to-target-users)
+  - [Examples](#examples)
+- [Consumption](#consumption)
   - [Client Side](#client-side)
     - [Mobile](#mobile)
     - [Web](#web)
@@ -27,23 +32,182 @@ Feature Flags are cool.
     - [PHP](#php)
     - [Golang](#golang)
     - [NextJS](#nextjs)
+      - [1 – OpenFeature ⇄ flagd adapter](#1--openfeature--flagd-adapter)
+      - [2 – Declare typed flags](#2--declare-typed-flags)
+      - [3 – Use flags in a **Server Component** (App Router)](#3--use-flags-in-a-server-component-app-router)
 - [Structure](#structure)
 
 ## Links
 
-| Environment   | URL                                                                      | Configuration                                                                                                   |
-| :------------ | :----------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------- |
-| Production    | [https://flags.kick.com](https://flags.kick.com)                         | [Production](https://github.com/KickEngineering/platform-feature-flags/tree/main/k8s/flags/overlays/production) |
-| Staging       | [https://flags.easygo-drop-kick.com](https://flags.easygo-drop-kick.com) | [Staging](https://github.com/KickEngineering/platform-feature-flags/tree/main/k8s/flags/overlays/staging)       |
-| Preproduction | TBA                                                                      | TBA                                                                                                             |
-| Development   | TBA                                                                      | TBA                                                                                                             |
+| Environment   | URL                                                                      | Configuration                                                                                                   | ArgoCD Application                                                                              |
+| :------------ | :----------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------- |
+| Production    | [https://flags.kick.com](https://flags.kick.com)                         | [Production](https://github.com/KickEngineering/platform-feature-flags/tree/main/k8s/flags/overlays/production) | [platform-feature-flags](https://argo.easygo-kick.com/applications/platform-feature-flags)      |
+| Staging       | [https://flags.easygo-drop-kick.com](https://flags.easygo-drop-kick.com) | [Staging](https://github.com/KickEngineering/platform-feature-flags/tree/main/k8s/flags/overlays/staging)       | [platform-feature-flags](https://argo.easygo-drop-kick.com/applications/platform-feature-flags) |
+| Preproduction | TBA                                                                      | TBA                                                                                                             | TBA                                                                                             |
+| Development   | TBA                                                                      | TBA                                                                                                             | TBA                                                                                             |
 
 
 ## Architecture
 
 ![Architecture](./docs/images/diagram.svg)
 
-## Usage
+## How To
+
+### Create a new flag
+
+1. Add a new flag to an existing `FeatureFlag` Manifest located in your desired environment overlay, e.g. `k8s/flags/overlays/staging/kick-web.yaml`:
+
+```yaml
+      # My flag to do something cool
+      # disabled: Not cool
+      # enabled: Cool
+      my-flag:
+        state: ENABLED
+        defaultVariant: disabled # What everyone will evaluate if no targetting rules
+        variants:
+          enabled: true
+          disabled: false
+```
+
+2. Raise a Pull Request to merge your changes into the `main` branch. This will trigger a deployment of the updated flag definition to your desired environment.
+
+3. Once the Pull Request is merged, ArgoCD will automatically sync your changes to the Kubernetes cluster, and the new flag will be available for consumption.
+
+> [!TIP]
+> If you need your flag available quicker than ArgoCD's sync internval, you can manually trigger a sync in the ArgoCD UI.
+
+### Update an existing flag
+
+1. Update your desired flag within a `FeatureFlag` Manifest located in your desired environment overlay, e.g. `k8s/flags/overlays/staging/kick-web.yaml`:
+
+2. Raise a Pull Request to merge your changes into the `main` branch. This will trigger a deployment of the updated flag definition to your desired environment.
+
+3. Once the Pull Request is merged, ArgoCD will automatically sync your changes to the Kubernetes cluster, and the new flag will be available for consumption.
+
+> [!TIP]
+> If you need your flag available quicker than ArgoCD's sync internval, you can manually trigger a sync in the ArgoCD UI.
+
+## Use evaluation context to target users
+OpenFeature allows you to use an evaluation context to target specific users or groups of users with feature flags. This is useful for A/B testing, gradual rollouts, or targeting specific user segments. OpenFeature achieves this by passing an [evaluation context](https://openfeature.dev/docs/reference/concepts/evaluation-context) where you evaluate the flag, and [targetting rules](https://flagd.dev/reference/flag-definitions/#targeting-rules) on the flag definition.
+
+### Examples
+
+<details>
+<summary>Target users that have the `internal` role</summary>
+
+```yaml
+web1:
+  defaultVariant: disabled
+  state: ENABLED
+  targeting:
+    if:
+    - in:
+      - internal
+      - var: user.roles
+    - enabled
+    - disabled
+  variants:
+    disabled: false
+    enabled: true
+```
+</details>
+
+<details>
+<summary>Target a single user by email</summary>
+
+```yaml
+web2:
+  state: ENABLED
+  defaultVariant: disabled
+  targeting:
+    if:
+      - in:
+          - foo@gmail.com
+          - var: user.email
+      - enabled
+      - disabled
+```
+</details>
+
+<details>
+<summary>Return an object</summary>
+
+```yaml
+web3:
+  state: ENABLED
+  variants:
+    object1:
+      key: val
+    object2:
+      key: true
+  defaultVariant: object1
+```
+</details>
+
+<details>
+<summary>Return a float</summary>
+
+```yaml
+web4:
+  state: ENABLED
+  variants:
+    one: 1.23
+    two: 2.34
+  defaultVariant: one
+```
+</details>
+
+<details>
+<summary>Email ending in `@easygo.io`</summary>
+
+```yaml
+web5:
+  state: ENABLED
+  defaultVariant: 'false'
+  variants:
+    'true': true
+    'false': false
+  targeting:
+    if:
+    - ends_with:
+      - var: email
+      - "@easygo.io"
+    - 'true'
+    - 'false'
+```
+</details>
+
+<details>
+<summary>Fractional Rollout</summary>
+
+```yaml
+web6:
+  state: ENABLED
+  defaultVariant: grey
+  variants:
+    red: "#b91c1c"
+    blue: "#0284c7"
+    green: "#16a34a"
+    grey: "#4b5563"
+  targeting:
+    fractional:
+    - - red
+      - 25
+    - - blue
+      - 25
+    - - green
+      - 25
+    - - grey
+      - 25
+```
+</details>
+
+
+More Examples:
+- https://flagd.dev/playground/
+- https://yzx396.github.io/flagd-ui/
+
+## Consumption
 Consumption of feature flags is done through the OpenFeature specification, which allows for a consistent way to manage feature flags across different platforms and avoids vendor lock-in.
 
 ### Client Side
@@ -108,11 +272,19 @@ TODO
 #### Golang
 
 Kubernetes
+
 ```yaml
+# On Pod manifest
 metadata:
   annotations:
     openfeature.dev/enabled: "true"
     openfeature.dev/inprocessconfiguration: platform-open-feature/backend-inprocess-config
+```
+or
+```yaml
+# In Helm chart values
+featureflagging:
+  enabled: true
 ```
 
 Code
