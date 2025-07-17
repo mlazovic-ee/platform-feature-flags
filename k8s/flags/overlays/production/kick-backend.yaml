@@ -16,5 +16,7 @@ spec:
           - in:
             - var: channel_id
             - - '23812321' # jet
+              - '668' # xqc
+              - '30204909' # davooxeneize
           - enabled
           - disabled
