@@ -130,6 +130,29 @@ web2:
 </details>
 
 <details>
+<summary>Target list of IDs</summary>
+
+```yaml
+platform_batch_bans_enabled:
+  state: ENABLED
+  variants:
+    enabled: true
+    disabled: false
+  defaultVariant: disabled
+  targeting:
+    if:
+    - in:
+      - var: ID
+      - - '1'
+        - '2'
+        - '3'
+    - enabled
+    - disabled
+
+```
+</details>
+
+<details>
 <summary>Return an object</summary>
 
 ```yaml

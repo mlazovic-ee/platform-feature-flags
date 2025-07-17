@@ -5,9 +5,18 @@ metadata:
 spec:
   flagSpec:
     flags:
-      backend-test:
+      platform_batch_bans_enabled:
         state: ENABLED
-        defaultVariant: disabled
         variants:
           enabled: true
           disabled: false
+        defaultVariant: disabled
+        targeting:
+          if:
+          - in:
+            - var: channel_id
+            - - '1'
+              - '2'
+              - '3'
+          - enabled
+          - disabled
