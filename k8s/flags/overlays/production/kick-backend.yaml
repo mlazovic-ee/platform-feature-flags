@@ -23,3 +23,9 @@ spec:
               - '1227772' # n3on
           - enabled
           - disabled
+      medialibrary_vips:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
