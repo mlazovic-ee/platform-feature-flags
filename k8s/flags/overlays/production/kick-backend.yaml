@@ -7,25 +7,13 @@ spec:
     flags:
       platform_batch_bans_enabled:
         state: ENABLED
-        variants:
-          enabled: true
-          disabled: false
         defaultVariant: disabled
-        targeting:
-          if:
-          - in:
-            - var: channel_id
-            - - '23812321' # jet
-              - '668' # xqc
-              - '30204909' # davooxeneize
-              - '2401072' # odablock
-              - '17883767' # sxb
-              - '1227772' # n3on
-          - enabled
-          - disabled
-      medialibrary_vips:
-        state: ENABLED
-        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
+        targeting:
+          fractional:
+            - - enabled
+              - 25
+            - - disabled
+              - 75
