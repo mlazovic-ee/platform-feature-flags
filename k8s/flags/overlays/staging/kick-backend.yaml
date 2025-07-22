@@ -5,19 +5,18 @@ metadata:
 spec:
   flagSpec:
     flags:
-      platform_batch_bans_enabled:
-        state: ENABLED
-        variants:
-          enabled: true
-          disabled: false
-        defaultVariant: disabled
-        targeting:
-          if:
-          - in:
-            - var: channel_id
-            - - '150'
-          - enabled
-          - disabled
+    platform_batch_bans_enabled:
+      state: ENABLED
+      defaultVariant: disabled
+      variants:
+        enabled: true
+        disabled: false
+      targeting:
+        fractional:
+          - - enabled
+            - 50
+          - - disabled
+            - 50
       medialibrary_vips:
         state: ENABLED
         defaultVariant: enabled
