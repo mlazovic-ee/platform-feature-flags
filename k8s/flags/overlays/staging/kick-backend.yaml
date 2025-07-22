@@ -5,21 +5,21 @@ metadata:
 spec:
   flagSpec:
     flags:
-    platform_batch_bans_enabled:
-      state: ENABLED
-      defaultVariant: disabled
-      variants:
-        enabled: true
-        disabled: false
-      targeting:
-        fractional:
-          - - enabled
-            - 50
-          - - disabled
-            - 50
-      medialibrary_vips:
+      platform_batch_bans_enabled:
         state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
         variants:
           enabled: true
           disabled: false
+        targeting:
+          fractional:
+            - - enabled
+              - 50
+            - - disabled
+              - 50
+        medialibrary_vips:
+          state: ENABLED
+          defaultVariant: enabled
+          variants:
+            enabled: true
+            disabled: false
