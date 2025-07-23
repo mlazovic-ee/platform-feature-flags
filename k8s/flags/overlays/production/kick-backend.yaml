@@ -14,6 +14,6 @@ spec:
         targeting:
           fractional:
             - - enabled
-              - 50
+              - 75
             - - disabled
-              - 50
+              - 25
