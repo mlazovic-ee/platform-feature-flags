@@ -49,3 +49,10 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # Send tracking.user.watch.livestream event through websocket
+      web-watch-event:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
