@@ -31,14 +31,7 @@ spec:
       # Featured Livestreams Web Gateway
       web-feat-livestreams:
         state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - in:
-                - n.dagher@easygo.io
-                - var: user.email
-            - enabled
-            - disabled
+        defaultVariant: enabled
         variants:
           disabled: false
           enabled: true
@@ -52,14 +45,7 @@ spec:
       # Livestreams Home Web Gateway
       web-livestreams-home:
         state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - in:
-                - n.dagher@easygo.io
-                - var: user.email
-            - enabled
-            - disabled
+        defaultVariant: enabled
         variants:
           disabled: false
           enabled: true
