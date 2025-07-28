@@ -35,7 +35,7 @@ spec:
         targeting:
           if:
             - in:
-                - canlabofficial@gmail.com
+                - n.dagher@easygo.io
                 - var: user.email
             - enabled
             - disabled
@@ -53,6 +53,13 @@ spec:
       web-livestreams-home:
         state: ENABLED
         defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - n.dagher@easygo.io
+                - var: user.email
+            - enabled
+            - disabled
         variants:
           disabled: false
           enabled: true
