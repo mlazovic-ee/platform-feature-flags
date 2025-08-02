@@ -45,7 +45,7 @@ spec:
       # Livestreams Home Web Gateway
       web-livestreams-home:
         state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
         variants:
           disabled: false
           enabled: true
