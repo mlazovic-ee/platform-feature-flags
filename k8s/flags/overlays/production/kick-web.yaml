@@ -45,6 +45,7 @@ spec:
       # Livestreams Home Web Gateway
       web-livestreams-home:
         state: ENABLED
+        defaultVariant: disabled
         targeting:
           if:
             - in:
