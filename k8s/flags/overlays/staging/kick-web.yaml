@@ -63,6 +63,20 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # FingerprintJS Proof of Concept
+      operation-eagle:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+          - in:
+            - internal
+            - var: user.roles
+          - enabled
+          - disabled
+        variants:
+          disabled: false
+          enabled: true
       # KICKs Feature
       web2:
         defaultVariant: disabled
