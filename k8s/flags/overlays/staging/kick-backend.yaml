@@ -17,3 +17,9 @@ spec:
               - 50
             - - disabled
               - 50
+      ws_stats_tracking_enabled:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
