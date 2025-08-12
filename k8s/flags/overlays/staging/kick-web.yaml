@@ -84,7 +84,6 @@ spec:
                     - - disabled
                       - 1
                 - disabled
-            - disabled
         variants:
           enabled: true
           disabled: false
