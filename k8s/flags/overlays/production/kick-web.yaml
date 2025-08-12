@@ -62,11 +62,16 @@ spec:
         defaultVariant: disabled
         targeting:
           if:
-          - in:
-            - internal
-            - var: user.roles
-          - enabled
-          - disabled
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - fractional:
+                - - enabled
+                  - 1
+                - - disabled
+                  - 99
+            - disabled
         variants:
           enabled: true
           disabled: false
