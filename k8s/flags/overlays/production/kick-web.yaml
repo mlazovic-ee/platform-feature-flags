@@ -71,7 +71,6 @@ spec:
                   - 5
                 - - disabled
                   - 95
-            - disabled
         variants:
           enabled: true
           disabled: false
