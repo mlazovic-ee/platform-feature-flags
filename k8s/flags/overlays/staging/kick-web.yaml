@@ -73,11 +73,17 @@ spec:
                 - internal
                 - var: user.roles
             - enabled
-            - fractional:
-                - - enabled
-                  - 99
-                - - disabled
-                  - 1
+            - if:
+                - var: $flagd.targetingKey
+                - fractional:
+                    - cat:
+                        - var: $flagd.flagKey
+                        - var: $flagd.targetingKey
+                    - - enabled
+                      - 99
+                    - - disabled
+                      - 1
+                - disabled
             - disabled
         variants:
           enabled: true
