@@ -20,11 +20,11 @@ spec:
         state: ENABLED
         targeting:
           if:
-          - in:
-            - internal
-            - var: user.roles
-          - enabled
-          - disabled
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
         variants:
           disabled: false
           enabled: true
@@ -48,11 +48,11 @@ spec:
         defaultVariant: disabled
         targeting:
           if:
-          - in:
-            - internal
-            - var: user.roles
-          - enabled
-          - disabled
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
         variants:
           disabled: false
           enabled: true
@@ -69,14 +69,19 @@ spec:
         defaultVariant: disabled
         targeting:
           if:
-          - in:
-            - internal
-            - var: user.roles
-          - enabled
-          - disabled
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - fractional:
+                - - enabled
+                  - 1
+                - - disabled
+                  - 99
+            - disabled
         variants:
-          disabled: false
           enabled: true
+          disabled: false
       # KICKs Feature
       web2:
         defaultVariant: disabled
