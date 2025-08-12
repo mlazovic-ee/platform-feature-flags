@@ -68,11 +68,11 @@ spec:
         state: ENABLED
         defaultVariant: disabled
         targeting:
-          - fractional:
-              - - enabled
-                - 99
-              - - disabled
-                - 1
+          fractional:
+            - - enabled
+              - 99
+            - - disabled
+              - 1
         variants:
           enabled: true
           disabled: false
