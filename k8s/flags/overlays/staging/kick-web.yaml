@@ -75,9 +75,9 @@ spec:
             - enabled
             - fractional:
                 - - enabled
-                  - 1
-                - - disabled
                   - 99
+                - - disabled
+                  - 1
             - disabled
         variants:
           enabled: true
