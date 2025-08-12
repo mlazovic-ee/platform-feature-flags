@@ -28,7 +28,7 @@ spec:
           disabled: false
       ws_analytics_tracking_enabled:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
