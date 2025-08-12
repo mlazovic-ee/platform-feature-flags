@@ -73,6 +73,9 @@ spec:
                 - internal
                 - var: user.roles
             - enabled
+            - neq:
+                - var: user.roles
+                - null
             - fractional:
                 - cat:
                     - var: $flagd.flagKey
