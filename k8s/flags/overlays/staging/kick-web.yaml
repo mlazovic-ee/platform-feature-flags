@@ -64,6 +64,12 @@ spec:
           disabled: false
           enabled: true
       # FingerprintJS Proof of Concept
+      operation-fail:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
       operation-eagle:
         state: ENABLED
         defaultVariant: disabled
