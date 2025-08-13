@@ -60,6 +60,17 @@ spec:
       operation-eagle:
         state: ENABLED
         defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - fractional:
+                - - enabled
+                  - 10
+                - - disabled
+                  - 90
         variants:
           enabled: true
           disabled: false
