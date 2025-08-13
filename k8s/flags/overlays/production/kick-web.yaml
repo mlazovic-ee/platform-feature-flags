@@ -68,9 +68,9 @@ spec:
             - enabled
             - fractional:
                 - - enabled
-                  - 10
+                  - 25
                 - - disabled
-                  - 90
+                  - 75
         variants:
           enabled: true
           disabled: false
