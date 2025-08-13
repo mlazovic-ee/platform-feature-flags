@@ -95,3 +95,10 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # Homepage Banner
+      home-banner:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false

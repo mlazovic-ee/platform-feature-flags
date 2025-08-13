@@ -88,3 +88,10 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # Homepage Banner
+      home-banner:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false

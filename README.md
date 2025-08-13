@@ -13,8 +13,8 @@
 </div>
 
 ## About
-Feature Flags are cool.
 
+Feature Flags are cool.
 
 - [About](#about)
 - [Links](#links)
@@ -46,7 +46,6 @@ Feature Flags are cool.
 | Preproduction | TBA                                                                      | TBA                                                                                                             | TBA                                                                                             |
 | Development   | TBA                                                                      | TBA                                                                                                             | TBA                                                                                             |
 
-
 ## Architecture
 
 ![Architecture](./docs/images/diagram.svg)
@@ -58,15 +57,15 @@ Feature Flags are cool.
 1. Add a new flag to an existing `FeatureFlag` Manifest located in your desired environment overlay, e.g. `k8s/flags/overlays/staging/kick-web.yaml`:
 
 ```yaml
-      # My flag to do something cool
-      # disabled: Not cool
-      # enabled: Cool
-      my-flag:
-        state: ENABLED
-        defaultVariant: disabled # What everyone will evaluate if no targetting rules
-        variants:
-          enabled: true
-          disabled: false
+# My flag to do something cool
+# disabled: Not cool
+# enabled: Cool
+my-flag:
+  state: ENABLED
+  defaultVariant: disabled # What everyone will evaluate if no targetting rules
+  variants:
+    enabled: true
+    disabled: false
 ```
 
 2. Raise a Pull Request to merge your changes into the `main` branch. This will trigger a deployment of the updated flag definition to your desired environment.
@@ -88,6 +87,7 @@ Feature Flags are cool.
 > If you need your flag available quicker than ArgoCD's sync internval, you can manually trigger a sync in the ArgoCD UI.
 
 ## Use evaluation context to target users
+
 OpenFeature allows you to use an evaluation context to target specific users or groups of users with feature flags. This is useful for A/B testing, gradual rollouts, or targeting specific user segments. OpenFeature achieves this by passing an [evaluation context](https://openfeature.dev/docs/reference/concepts/evaluation-context) where you evaluate the flag, and [targetting rules](https://flagd.dev/reference/flag-definitions/#targeting-rules) on the flag definition.
 
 ### Examples
@@ -101,15 +101,16 @@ web1:
   state: ENABLED
   targeting:
     if:
-    - in:
-      - internal
-      - var: user.roles
-    - enabled
-    - disabled
+      - in:
+          - internal
+          - var: user.roles
+      - enabled
+      - disabled
   variants:
     disabled: false
     enabled: true
 ```
+
 </details>
 
 <details>
@@ -127,6 +128,7 @@ web2:
       - enabled
       - disabled
 ```
+
 </details>
 
 <details>
@@ -141,15 +143,15 @@ platform_batch_bans_enabled:
   defaultVariant: disabled
   targeting:
     if:
-    - in:
-      - var: ID
-      - - '1'
-        - '2'
-        - '3'
-    - enabled
-    - disabled
-
+      - in:
+          - var: ID
+          - - "1"
+            - "2"
+            - "3"
+      - enabled
+      - disabled
 ```
+
 </details>
 
 <details>
@@ -165,6 +167,7 @@ web3:
       key: true
   defaultVariant: object1
 ```
+
 </details>
 
 <details>
@@ -178,6 +181,7 @@ web4:
     two: 2.34
   defaultVariant: one
 ```
+
 </details>
 
 <details>
@@ -186,18 +190,19 @@ web4:
 ```yaml
 web5:
   state: ENABLED
-  defaultVariant: 'false'
+  defaultVariant: "false"
   variants:
-    'true': true
-    'false': false
+    "true": true
+    "false": false
   targeting:
     if:
-    - ends_with:
-      - var: email
-      - "@easygo.io"
-    - 'true'
-    - 'false'
+      - ends_with:
+          - var: email
+          - "@easygo.io"
+      - "true"
+      - "false"
 ```
+
 </details>
 
 <details>
@@ -214,29 +219,60 @@ web6:
     grey: "#4b5563"
   targeting:
     fractional:
-    - - red
-      - 25
-    - - blue
-      - 25
-    - - green
-      - 25
-    - - grey
-      - 25
+      - - red
+        - 25
+      - - blue
+        - 25
+      - - green
+        - 25
+      - - grey
+        - 25
 ```
+
 </details>
 
+<details>
+<summary>Progressive Rollout w/ other condition</summary>
+
+This will only work for authenticated users!
+
+```yaml
+web7:
+  state: ENABLED
+  defaultVariant: disabled
+  targeting:
+    if:
+      - in:
+          - internal
+          - var: user.roles
+      - enabled
+      - fractional:
+          - - enabled
+            - 50
+          - - disabled
+            - 50
+  variants:
+    enabled: true
+    disabled: false
+```
+
+</details>
 
 More Examples:
+
 - https://flagd.dev/playground/
 - https://yzx396.github.io/flagd-ui/
 
 ## Consumption
+
 Consumption of feature flags is done through the OpenFeature specification, which allows for a consistent way to manage feature flags across different platforms and avoids vendor lock-in.
 
 ### Client Side
+
 For consumers that run in an insecure environment, such as a web browser or mobile app, feature flag evaluation has to be done on a backend that is controlled by us. This is due to flag definitions having the potential to contain sensitive information that should not be exposed to end users. Only one options is available for client-side, which is remote evaluation using the client-side deployment of FlagD that is accessible via a publically exposed endpoint.
 
 #### Mobile
+
 TODO
 
 #### Web
@@ -244,6 +280,7 @@ TODO
 The browser starts with the flag values that were rendered by the Next.js server (see the **NextJS** section below). Immediately after hydration it bootstraps OpenFeature and subscribes to **streaming updates** from FlagD. When a flag definition changes, FlagD sends a [[Server-Sent Event (SSE)](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events)] to the browser and the SDK updates its cached values.
 
 **Architecture Note:** We use a single source of flags (`kick-web`) that is accessible both server-side (via in-process evaluation) and client-side (via the public endpoint). This approach:
+
 - ✅ Enables local development and Vercel preview environments to work without gRPC connections
 - ✅ Simplifies flag management with a single source of truth
 - ⚠️ Makes all flag keys publicly visible
@@ -258,28 +295,31 @@ Browser ── streaming updates ─▶ FlagD (`kick-web`)
 **Browser bootstrap (React / OpenFeature)**
 
 ```ts
-import { OpenFeature } from '@openfeature/react-sdk';
-import { FlagdWebProvider } from '@openfeature/flagd-web-provider';
+import { OpenFeature } from "@openfeature/react-sdk";
+import { FlagdWebProvider } from "@openfeature/flagd-web-provider";
 
 await OpenFeature.setProviderAndWait(
   new FlagdWebProvider({
-    url: 'https://flags.kick.com',
+    url: "https://flags.kick.com",
     tls: true,
-  }),
+  })
 );
 
 const client = OpenFeature.getClient();
 
-const webTestEnabled = client.getBooleanValue('web-test', false);
+const webTestEnabled = client.getBooleanValue("web-test", false);
 ```
 
 All flags are defined in `kick-web` and are available for both server-side rendering and client-side real-time updates via SSE.
 
 ### Server Side
+
 For consumers that do support it, we recommend inprocess evaluation of feature flags, which is the fastest and most efficient way to consume them. For consumers that do not support inprocess evaluation, we recommend remote evaluation using the server-side deployment of FlagD.
 
 #### PHP
+
 Kubernetes
+
 ```yaml
 metadata:
   annotations:
@@ -288,6 +328,7 @@ metadata:
 ```
 
 Code
+
 ```
 TODO
 ```
@@ -303,7 +344,9 @@ metadata:
     openfeature.dev/enabled: "true"
     openfeature.dev/inprocessconfiguration: platform-open-feature/backend-inprocess-config
 ```
+
 or
+
 ```yaml
 # In Helm chart values
 featureflagging:
@@ -311,6 +354,7 @@ featureflagging:
 ```
 
 Code
+
 ```golang
 	flagDProvider, err := flagd.NewProvider(
 		flagd.WithInProcessResolver(),
@@ -334,7 +378,9 @@ Code
 ```
 
 #### NextJS
+
 Kubernetes
+
 ```yaml
 metadata:
   annotations:
@@ -342,13 +388,15 @@ metadata:
     openfeature.dev/inprocessconfiguration: platform-open-feature/backend-inprocess-config
 ```
 
-Flags in Next.js are evaluated *server-side* in line with [Flags SDK's server-side guidance](https://flags-sdk.dev/principles/server-side-vs-client-side). This avoids layout shift, reduces latency in hydrating components, and prevents leaking flag names to the browser.
+Flags in Next.js are evaluated _server-side_ in line with [Flags SDK's server-side guidance](https://flags-sdk.dev/principles/server-side-vs-client-side). This avoids layout shift, reduces latency in hydrating components, and prevents leaking flag names to the browser.
 
 **Environment-aware evaluation:**
+
 - **Production/Staging (Kubernetes):** Uses in-process evaluation via the OpenFeature operator for optimal performance
 - **Local/Vercel Preview:** Falls back to remote evaluation against the public FlagD endpoint via http when in-process is unavailable
 
 ##### 1 – OpenFeature ⇄ flagd adapter
+
 ```ts
 // libs/shared/src/feature-flags/adapter.ts
 import { OpenFeature } from "@openfeature/server-sdk";
@@ -363,6 +411,7 @@ export const openFeatureAdapter = createOpenFeatureAdapter(async () => {
 ```
 
 ##### 2 – Declare typed flags
+
 ```ts
 // libs/shared/src/feature-flags/flags.ts
 import { flag } from "flags/next";
@@ -377,6 +426,7 @@ export const webTest = flag<boolean, EvaluationContext>({
 ```
 
 ##### 3 – Use flags in a **Server Component** (App Router)
+
 ```tsx
 // app/page.tsx – or any React Server Component
 after using the app router.
