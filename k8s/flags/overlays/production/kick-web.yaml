@@ -59,18 +59,7 @@ spec:
       # FingerprintJS Proof of Concept
       operation-eagle:
         state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - in:
-                - internal
-                - var: user.roles
-            - enabled
-            - fractional:
-                - - enabled
-                  - 100
-                - - disabled
-                  - 0
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
