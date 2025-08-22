@@ -9,7 +9,7 @@ spec:
   generators:
     - clusters:
         values:
-          environment: '{{index .metadata.annotations "env"}}'
+          cluster_name: '{{index .metadata.annotations "cluster_name"}}'
   template:
     metadata:
       name: "platform-feature-flags"
@@ -18,7 +18,7 @@ spec:
       source:
         repoURL: https://github.com/KickEngineering/platform-feature-flags.git
         targetRevision: main
-        path: 'k8s/flags/overlays/{{.values.environment}}'
+        path: 'k8s/flags/overlays/{{.values.cluster_name}}'
       destination:
         server: '{{.server}}'
         namespace: platform-open-feature
