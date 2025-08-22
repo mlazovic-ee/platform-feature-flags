@@ -1,0 +1,86 @@
+apiVersion: core.openfeature.dev/v1beta1
+kind: FeatureFlag
+metadata:
+  name: kick-web
+spec:
+  flagSpec:
+    flags:
+      # Kick Health - Toggle the channel info endpoint from intercluster to cloudflare. Will increase latency by 100ms.
+      # disabled: intercluster
+      # enabled: cloudflare
+      keath-info:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+      # Drops Feature
+      web1:
+        defaultVariant: disabled
+        state: ENABLED
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
+        variants:
+          disabled: false
+          enabled: true
+      # Featured Livestreams Web Gateway
+      web-feat-livestreams:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
+      # Chat History Web Gateway
+      web-chat-history:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
+      # Livestreams Home Web Gateway
+      web-livestreams-home:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
+      # Send tracking.user.watch.livestream event through websocket
+      web-watch-event:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
+      # FingerprintJS Proof of Concept
+      operation-eagle:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      # KICKs Feature
+      web2:
+        defaultVariant: disabled
+        state: ENABLED
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
+        variants:
+          disabled: false
+          enabled: true
+      # Homepage Banner
+      home-banner:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
