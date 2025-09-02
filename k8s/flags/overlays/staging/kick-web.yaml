@@ -81,6 +81,14 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # FingerprintJS Cache Time
+      operation-eagle-cache:
+        state: ENABLED
+        defaultVariant: one
+        variants:
+          one: 7200 # 2 hours
+          two: 28800 # 8 hours
+          three: 86400 # 24 hours
       # KICKs Feature
       web2:
         defaultVariant: disabled
