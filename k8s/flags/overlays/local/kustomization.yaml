@@ -25,7 +25,7 @@ patches:
         value: nginx
       - op: replace
         path: /spec/replicas
-        value: 3
+        value: 1
   - target:
       group: core.openfeature.dev
       version: v1beta1
@@ -34,4 +34,14 @@ patches:
     patch: |-
       - op: replace
         path: /spec/replicas
-        value: 3
+        value: 1
+  - target:
+      group: kyverno.io
+      version: v1
+      kind: ClusterPolicy
+    patch: |-
+      apiVersion: kyverno.io/v1
+      kind: ClusterPolicy
+      metadata:
+        name: mutate-flagd-resources
+      $patch: delete
