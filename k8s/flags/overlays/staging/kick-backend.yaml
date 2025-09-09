@@ -38,8 +38,7 @@ spec:
         targeting:
           if:
             - in:
+                - '11265'
                 - var: channel_id
-                - 11265
             - enabled
             - disabled
-

@@ -27,7 +27,7 @@ spec:
           if:
             - in:
                 - var: channel_id
-                - 51793447
+                - '51793447'
             - enabled
             - disabled
 
