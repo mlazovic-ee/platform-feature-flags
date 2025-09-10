@@ -31,14 +31,7 @@ spec:
           disabled: false
       validate_watch_events:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
-        targeting:
-          if:
-            - in:
-                - '11265'
-                - var: channel_id
-            - enabled
-            - disabled

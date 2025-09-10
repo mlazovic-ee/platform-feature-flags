@@ -24,10 +24,9 @@ spec:
           enabled: true
           disabled: false
         targeting:
-          if:
-            - in:
-                - var: channel_id
-                - '51793447'
-            - enabled
-            - disabled
+          fractional:
+            - - enabled
+              - 20
+            - - disabled
+              - 80
 
