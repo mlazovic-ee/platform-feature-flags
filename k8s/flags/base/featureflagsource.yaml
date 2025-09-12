@@ -15,6 +15,20 @@ spec:
 apiVersion: core.openfeature.dev/v1beta1
 kind: FeatureFlagSource
 metadata:
+  name: server-side-proxy
+  namespace: platform-open-feature
+spec:
+  sources:
+    - source: platform-open-feature/kick-backend
+      provider: flagd-proxy
+    - source: platform-open-feature/kick-platform
+      provider: flagd-proxy
+    - source: platform-open-feature/kick-web
+      provider: flagd-proxy
+---
+apiVersion: core.openfeature.dev/v1beta1
+kind: FeatureFlagSource
+metadata:
   name: client-side
   namespace: platform-open-feature
 spec:
