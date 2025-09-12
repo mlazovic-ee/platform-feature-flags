@@ -110,3 +110,16 @@ spec:
         variants:
           enabled: true
           disabled: false
+      web-revenue-page:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
