@@ -29,6 +29,17 @@ spec:
 apiVersion: core.openfeature.dev/v1beta1
 kind: FeatureFlagSource
 metadata:
+  name: server-side-grpc
+  namespace: platform-open-feature
+spec:
+  sources:
+    - source: server-side.platform-open-feature.svc.cluster.local:8015
+      provider: grpc
+      tls: false
+---
+apiVersion: core.openfeature.dev/v1beta1
+kind: FeatureFlagSource
+metadata:
   name: client-side
   namespace: platform-open-feature
 spec:
