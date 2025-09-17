@@ -49,3 +49,10 @@ spec:
                 - var: user.roles
             - enabled
             - disabled
+      test-flag:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false      
+
