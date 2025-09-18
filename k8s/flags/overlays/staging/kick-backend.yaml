@@ -55,4 +55,13 @@ spec:
         variants:
           enabled: true
           disabled: false      
+        targeting:
+          if:
+            - in:
+                - var: channel_id
+                - - "1"
+                  - "2"
+                  - "3"
+            - enabled
+            - disabled
 
