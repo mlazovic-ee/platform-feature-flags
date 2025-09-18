@@ -114,6 +114,31 @@ web1:
 </details>
 
 <details>
+<summary>Target users that have `a` or `b` role</summary>
+
+```yaml
+web1:
+  defaultVariant: disabled
+  state: ENABLED
+  targeting:
+    if:
+      - or:
+          - in:
+              - a
+              - var: user.roles
+          - in:
+              - b
+              - var: user.roles
+      - enabled
+      - disabled
+  variants:
+    disabled: false
+    enabled: true
+```
+
+</details>
+
+<details>
 <summary>Target a single user by email</summary>
 
 ```yaml
