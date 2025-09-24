@@ -20,9 +20,13 @@ spec:
         state: ENABLED
         targeting:
           if:
-            - in:
-                - internal
-                - var: user.roles
+            - or:
+                - in:
+                    - internal
+                    - var: user.roles
+                - in:
+                    - drops-external
+                    - var: user.roles
             - enabled
             - disabled
         variants:
