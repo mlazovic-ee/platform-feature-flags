@@ -133,15 +133,8 @@ spec:
           disabled: false
           enabled: true
       kicks-leaderboard:
-        defaultVariant: disabled
         state: ENABLED
-        targeting:
-          if:
-            - in:
-                - internal
-                - var: user.roles
-            - enabled
-            - disabled
+        defaultVariant: enabled
         variants:
           disabled: false
           enabled: true
