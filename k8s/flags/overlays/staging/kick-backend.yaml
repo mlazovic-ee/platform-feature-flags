@@ -64,4 +64,16 @@ spec:
                   - "3"
             - enabled
             - disabled
+      pusher_cluster:
+        state: ENABLED
+        defaultVariant: pusher
+        variants:
+          pusher: 'pusher'
+          pusher2: 'pusher-2'
+        targeting:
+          fractional:
+            - - pusher
+              - 50
+            - - pusher2
+              - 50
 
