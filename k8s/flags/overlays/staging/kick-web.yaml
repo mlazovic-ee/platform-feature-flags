@@ -107,6 +107,25 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Homepage Banner Config
+      home-banner-config:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
+        variants:
+          enabled:
+            title: "BRAND REFRESH"
+            linkText: "Watch now"
+            linkLocation: "/terms-of-service"
+            imageLink: "https://files.kick.com/images/banner_image/default-banner-4.jpg"
+          disabled: {}
+      # Web revenue page
       web-revenue-page:
         state: ENABLED
         defaultVariant: enabled
