@@ -71,9 +71,9 @@ spec:
           pusher: 'pusher'
           pusher2: 'pusher-2'
         targeting:
-          fractional:
-            - - pusher
-              - 50
-            - - pusher2
-              - 50
-
+          if:
+          - equals:
+              - var: user_id
+              - "270"
+          - pusher2
+          - pusher
