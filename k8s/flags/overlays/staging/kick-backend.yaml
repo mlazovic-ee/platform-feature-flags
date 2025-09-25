@@ -73,7 +73,7 @@ spec:
         targeting:
           fractional:
             - - pusher
-              - 0
+              - 50
             - - pusher2
-              - 100
+              - 50
 
