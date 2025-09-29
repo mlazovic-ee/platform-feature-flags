@@ -72,8 +72,8 @@ spec:
           pusher2: 'pusher-2'
         targeting:
           if:
-          - in:
-              - var: channel_id
-              - - 150 # jett
-          - pusher2
-          - pusher
+            - in:
+                - var: channel_id
+                - - 150 # jett
+            - pusher2
+            - pusher

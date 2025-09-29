@@ -48,6 +48,6 @@ spec:
           - in:
               - var: channel_id
               - - 669746 # westcol
-              - - 23812321 # jett
+                - 23812321 # jett
           - pusher2
           - pusher
