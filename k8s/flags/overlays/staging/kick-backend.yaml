@@ -76,5 +76,8 @@ spec:
                 - var: channel_id
                 - - 150 # jett
                   - 151 # random
-            - pusher2
+            - fractional:
+                - var: channel_id
+                - - pusher: 50
+                  - pusher2: 50
             - pusher
