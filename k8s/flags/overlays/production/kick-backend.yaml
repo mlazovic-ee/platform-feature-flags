@@ -37,3 +37,17 @@ spec:
                 - var: user.roles
             - enabled
             - disabled
+      pusher_cluster:
+        state: ENABLED
+        defaultVariant: pusher
+        variants:
+          pusher: "pusher"
+          pusher2: "pusher-2"
+        targeting:
+          if:
+            - in:
+                - var: channel_id
+                - - 21512519 # luke
+                  - 23812321 # jett
+            - pusher2
+            - pusher
