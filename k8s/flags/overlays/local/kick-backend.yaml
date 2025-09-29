@@ -49,6 +49,6 @@ spec:
           if:
           - in:
               - var: channel_id
-              - - 151
+              - - "151"
           - pusher2
           - pusher

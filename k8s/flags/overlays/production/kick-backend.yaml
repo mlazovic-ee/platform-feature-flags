@@ -47,7 +47,7 @@ spec:
           if:
           - in:
               - var: channel_id
-              - - 669746 # westcol
-                - 23812321 # jett
+              - - "669746" # westcol
+                - "23812321" # jett
           - pusher2
           - pusher

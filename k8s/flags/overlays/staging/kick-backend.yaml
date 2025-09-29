@@ -74,6 +74,6 @@ spec:
           if:
             - in:
                 - var: channel_id
-                - - 150 # jett
+                - - "150" # jett
             - pusher2
             - pusher
