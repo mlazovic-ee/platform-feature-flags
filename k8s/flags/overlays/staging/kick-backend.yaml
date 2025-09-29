@@ -64,3 +64,17 @@ spec:
                   - "3"
             - enabled
             - disabled
+      pusher_cluster:
+        state: ENABLED
+        defaultVariant: pusher
+        variants:
+          pusher: "pusher"
+          pusher2: "pusher-2"
+        targeting:
+          if:
+            - in:
+                - var: channel_id
+                - - 150 # jett
+                  - 151 # random
+            - pusher2
+            - pusher
