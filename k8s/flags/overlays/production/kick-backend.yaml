@@ -23,7 +23,7 @@ spec:
         variants:
           enabled: true
           disabled: false
-      # Revenue page web gateway# Revenue page web gateway
+      # Revenue page web gateway
       web-revenue-page:
         state: ENABLED
         defaultVariant: disabled
@@ -45,9 +45,9 @@ spec:
           pusher2: 'pusher-2'
         targeting:
           if:
-          - in:
-              - var: channel_id
-              - - "669746" # westcol
-                - "23812321" # jett
-          - pusher2
-          - pusher
+            - in:
+                - var: channel_id
+                - - "669746" # westcol
+                  - "23812321" # jett
+            - pusher2
+            - pusher

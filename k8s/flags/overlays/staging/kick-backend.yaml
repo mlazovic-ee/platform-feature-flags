@@ -45,8 +45,8 @@ spec:
         targeting:
           if:
             - in:
+                - internal
                 - var: user.roles
-                - ["internal"]
             - enabled
             - disabled
       test-flag:
@@ -54,12 +54,14 @@ spec:
         defaultVariant: enabled
         variants:
           enabled: true
-          disabled: false      
+          disabled: false
         targeting:
           if:
             - in:
                 - var: channel_id
-                - ["1", "2", "3"]
+                - - "1"
+                  - "2"
+                  - "3"
             - enabled
             - disabled
       pusher_cluster:
@@ -70,8 +72,8 @@ spec:
           pusher2: 'pusher-2'
         targeting:
           if:
-            - in:
+            - equals:
                 - var: channel_id
-                - ["150", "151"]  # jett
+                - "150" # jett
             - pusher2
             - pusher
