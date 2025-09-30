@@ -49,5 +49,9 @@ spec:
                 - var: channel_id
                 - - 21512519 # luke
                   - 23812321 # jett
-            - pusher2
+            - fractional:
+                  - - pusher
+                    - 50
+                  - - pusher2
+                    - 50
             - pusher
