@@ -82,3 +82,9 @@ spec:
                   - - pusher2
                     - 50
             - pusher
+      ivs_view_count:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
