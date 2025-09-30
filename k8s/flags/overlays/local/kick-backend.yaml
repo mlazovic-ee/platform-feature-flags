@@ -32,7 +32,7 @@ spec:
         variants:
           enabled: true
           disabled: false
-      # Revenue page web gateway# Revenue page web gateway
+      # Revenue page web gateway
       web-revenue-page:
         state: ENABLED
         defaultVariant: enabled
@@ -47,8 +47,13 @@ spec:
           pusher2: "pusher-2"
         targeting:
           if:
-          - in:
-              - var: channel_id
-              - - 151
-          - pusher2
-          - pusher
+            - in:
+                - var: channel_id
+                - - 151
+                  - 150
+            - fractional:
+                  - - pusher
+                    - 50
+                  - - pusher2
+                    - 50
+            - pusher
