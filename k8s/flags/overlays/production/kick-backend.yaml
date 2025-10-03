@@ -47,13 +47,13 @@ spec:
           if:
             - in:
                 - var: channel_id
-                - - 21512519 # luke
+                - - 31392563 # ElZeein
                   - 23812321 # jett
             - fractional:
                   - - pusher
-                    - 50
+                    - 100
                   - - pusher2
-                    - 50
+                    - 0
             - pusher
       ivs_view_count:
         state: ENABLED
