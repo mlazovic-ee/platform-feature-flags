@@ -343,6 +343,7 @@ For consumers that do support it, we recommend inprocess evaluation of feature f
 
 #### PHP
 
+
 Kubernetes
 
 ```yaml
@@ -352,10 +353,46 @@ metadata:
     openfeature.dev/inprocessconfiguration: platform-open-feature/backend-inprocess-config
 ```
 
-Code
+Minimal PHP usage example:
 
-```
-TODO
+```php
+use App\Services\FeatureFlag\FeatureFlagServiceInterface;
+use Illuminate\Support\Facades\Auth;
+
+class ExampleController extends Controller
+{
+  private $featureFlags;
+
+  public function __construct(FeatureFlagServiceInterface $featureFlags)
+  {
+    $this->featureFlags = $featureFlags;
+  }
+
+  public function index()
+  {
+    // Boolean flag with default value
+    $isNewFeature = $this->featureFlags->boolean('new_feature_enabled', false);
+
+    // String flag with default value
+    $theme = $this->featureFlags->string('ui_theme', 'light');
+
+    // Number flag with default value
+    $maxItems = $this->featureFlags->number('max_items_per_page', 10);
+
+    // With evaluation context (targeting)
+    $user = Auth::user();
+    $showBetaFeatures = $this->featureFlags->boolean('beta_features', false, [
+      'targetingKey' => $user->id
+    ]);
+    $chatProvider = $this->featureFlags->string('chat_provider', 'default', [
+      'user_role' => $user->role,
+      'subscription_tier' => $user->subscription_tier,
+      'region' => $user->region
+    ]);
+
+    return null;
+  }
+}
 ```
 
 #### Golang
