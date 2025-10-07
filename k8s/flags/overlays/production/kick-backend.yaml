@@ -47,8 +47,8 @@ spec:
           if:
             - in:
                 - var: channel_id
-                - - 31392563 # ElZeein
-                  - 23812321 # jett
+                - - 23812321 # jett
+                  - 669746 # Westcol
             - fractional:
                   - - pusher
                     - 100
