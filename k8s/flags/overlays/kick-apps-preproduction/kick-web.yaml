@@ -90,3 +90,9 @@ spec:
         variants:
           disabled: false
           enabled: true
+      domain-1:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true

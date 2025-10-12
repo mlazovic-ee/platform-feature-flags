@@ -102,3 +102,13 @@ spec:
         variants:
           disabled: false
           enabled: true
+      domain-1:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
