@@ -14,7 +14,7 @@ spec:
         variants:
           enabled: true
           disabled: false
-      # Drops Feature
+      # Drops Feature - authenticated users
       web1:
         defaultVariant: disabled
         state: ENABLED
@@ -25,6 +25,13 @@ spec:
                 - var: user.roles
             - enabled
             - disabled
+        variants:
+          disabled: false
+          enabled: true
+      # Drops Feature - unauthenticated users
+      web1-guest:
+        defaultVariant: disabled
+        state: ENABLED
         variants:
           disabled: false
           enabled: true
