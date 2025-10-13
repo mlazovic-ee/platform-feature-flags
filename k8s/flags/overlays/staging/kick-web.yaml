@@ -138,6 +138,13 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # allow web clients to connect to pusher-2
+      pusher-2:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
       domain-1:
         state: ENABLED
         defaultVariant: disabled
