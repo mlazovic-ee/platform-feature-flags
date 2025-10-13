@@ -148,3 +148,6 @@ spec:
                 - var: user.roles
             - enabled
             - disabled
+        variants:
+          disabled: false
+          enabled: true
