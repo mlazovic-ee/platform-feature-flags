@@ -51,9 +51,9 @@ spec:
                   - 669746 # Westcol
             - fractional:
                   - - pusher
-                    - 99
+                    - 50
                   - - pusher2
-                    - 1
+                    - 50
             - pusher
       ivs_view_count:
         state: ENABLED
