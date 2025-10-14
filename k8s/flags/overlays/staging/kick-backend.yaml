@@ -89,9 +89,9 @@ spec:
                 - - 23812321 # jett
             - fractional:
                   - - enabled
-                    - 100
+                    - 50
                   - - disabled
-                    - 0
+                    - 50
             - enabled
       ivs_view_count:
         state: ENABLED
