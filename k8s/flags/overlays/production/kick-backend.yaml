@@ -48,11 +48,12 @@ spec:
             - in:
                 - var: channel_id
                 - - 23812321 # jett
+                  - 669746 # Westcol
             - fractional:
                   - - pusher
-                    - 50
+                    - 99
                   - - pusher2
-                    - 50
+                    - 1
             - pusher
       ivs_view_count:
         state: ENABLED
