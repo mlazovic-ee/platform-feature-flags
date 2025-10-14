@@ -86,7 +86,7 @@ spec:
           if:
             - in:
                 - var: channel_id
-                - - 23812321 # jett
+                - - 150 # jett
             - fractional:
                   - - enabled
                     - 50
