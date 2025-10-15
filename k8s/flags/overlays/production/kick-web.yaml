@@ -116,9 +116,24 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # /me endpoint
       domain-1:
         state: ENABLED
         defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
+      # /videos endpoint
+      domain-2:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
         variants:
           disabled: false
           enabled: true
