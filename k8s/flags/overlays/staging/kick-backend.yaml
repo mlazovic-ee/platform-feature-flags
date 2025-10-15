@@ -64,6 +64,7 @@ spec:
         variants:
           pusher: "pusher"
           pusher2: "pusher-2"
+          pusher3: "pusher-3"
         targeting:
           if:
             - in:
@@ -72,9 +73,11 @@ spec:
                   - 151 # random
             - fractional:
                   - - pusher
-                    - 50
+                    - 33
                   - - pusher2
-                    - 50
+                    - 33
+                  - - pusher2
+                    - 33
             - pusher
       broadcast_chat_to_pusher:
         state: ENABLED
