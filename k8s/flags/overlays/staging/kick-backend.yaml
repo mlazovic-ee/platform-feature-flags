@@ -102,6 +102,13 @@ spec:
         variants:
           enabled: true
           disabled: false
+        targeting:
+          if:
+            - in:
+                - var: livestream_id
+                - - 37 # set the active livestream
+            - enabled
+            - disabled
       schema_based_producers_enabled:
         state: ENABLED
         defaultVariant: enabled
