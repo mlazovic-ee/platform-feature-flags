@@ -18,7 +18,7 @@ spec:
           enabled: true
           disabled: false
       # Enable IVS view counts globally or specify a livestream id
-      ivs_view_count:
+      ivs_global_view_count:
         state: ENABLED
         defaultVariant: enabled
         variants:
