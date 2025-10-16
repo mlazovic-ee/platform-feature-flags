@@ -20,17 +20,17 @@ spec:
       # Enable IVS view counts globally or specify a livestream id
       ivs_global_view_count:
         state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
         variants:
           enabled: true
           disabled: false
-        # targeting:
-        #   if:
-        #     - in:
-        #         - var: livestream_id
-        #         - - 37 # set the active livestream
-        #     - enabled
-        #     - disabled
+        targeting:
+          if:
+            - in:
+                - var: livestream_id
+                - - 38 # set the active livestream
+            - enabled
+            - disabled
       # Revenue page web gateway# Revenue page web gateway
       web-revenue-page:
         state: ENABLED
