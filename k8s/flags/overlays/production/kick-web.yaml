@@ -119,7 +119,7 @@ spec:
       # /me endpoint
       domain-1:
         state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
         variants:
           disabled: false
           enabled: true
