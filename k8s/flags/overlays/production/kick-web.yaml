@@ -10,7 +10,7 @@ spec:
       # enabled: cloudflare
       keath-info:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
