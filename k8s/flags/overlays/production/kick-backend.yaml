@@ -69,11 +69,12 @@ spec:
             - in:
                 - var: channel_id
                 - - 23812321 # jett
+                  - 669746 # westcol
             - fractional:
                   - - enabled
-                    - 100
+                    - 90
                   - - disabled
-                    - 0
+                    - 10
             - enabled
       ivs_view_count:
         state: ENABLED
