@@ -72,9 +72,9 @@ spec:
                   - 669746 # westcol
             - fractional:
                   - - enabled
-                    - 90
+                    - 70
                   - - disabled
-                    - 10
+                    - 30
             - enabled
       ivs_view_count:
         state: ENABLED
