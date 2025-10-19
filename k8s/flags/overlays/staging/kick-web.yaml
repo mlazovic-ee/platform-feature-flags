@@ -34,7 +34,7 @@ spec:
           enabled: true
       # Drops Feature - unauthenticated users
       web1-guest:
-        defaultVariant: enabled
+        defaultVariant: disabled
         state: ENABLED
         variants:
           disabled: false
