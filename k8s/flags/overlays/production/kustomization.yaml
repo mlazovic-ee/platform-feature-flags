@@ -22,7 +22,7 @@ patches:
         value: flags.kick.com
       - op: replace
         path: /spec/replicas
-        value: 100
+        value: 50
   - target:
       group: core.openfeature.dev
       version: v1beta1
@@ -31,4 +31,4 @@ patches:
     patch: |-
       - op: replace
         path: /spec/replicas
-        value: 30
+        value: 15
