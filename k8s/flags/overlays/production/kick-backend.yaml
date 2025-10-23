@@ -52,11 +52,11 @@ spec:
                   - 669746 # Westcol
             - fractional:
                   - - pusher
-                    - 33
+                    - 100
                   - - pusher2
-                    - 33
+                    - 0
                   - - pusher3
-                    - 33
+                    - 0
             - pusher
       broadcast_chat_to_pusher:
         state: ENABLED
