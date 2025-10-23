@@ -69,7 +69,6 @@ spec:
             - in:
                 - var: channel_id
                 - - 23812321 # jett
-                  - 669746 # westcol
             - fractional:
                   - - enabled
                     - 10
