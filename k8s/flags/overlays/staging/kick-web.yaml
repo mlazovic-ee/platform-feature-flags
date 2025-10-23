@@ -173,3 +173,17 @@ spec:
         variants:
           disabled: false
           enabled: true
+      ia-redesign:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
+        variants:
+          disabled: false
+          enabled: true
+      
