@@ -124,7 +124,7 @@ spec:
         targeting:
           if:
             - in:
-                - var: channel_slug
+                - var: username
                 - - cleidoscope
             - enabled
             - disabled
