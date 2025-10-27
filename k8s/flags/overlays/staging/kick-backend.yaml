@@ -126,5 +126,6 @@ spec:
             - in:
                 - var: username
                 - - cleidoscope
+                  - mateo
             - enabled
             - disabled
