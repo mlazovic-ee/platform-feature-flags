@@ -175,4 +175,17 @@ spec:
         variants:
           disabled: false
           enabled: true
-      
+      # Kicks Pinned Messages
+      web-3:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
+        variants:
+          disabled: false
+          enabled: true
