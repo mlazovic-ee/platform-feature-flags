@@ -35,34 +35,6 @@ spec:
         variants:
           disabled: false
           enabled: true
-      # Featured Livestreams Web Gateway
-      web-feat-livestreams:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          disabled: false
-          enabled: true
-      # Chat History Web Gateway
-      web-chat-history:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          disabled: false
-          enabled: true
-      # Livestreams Home Web Gateway
-      web-livestreams-home:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          disabled: false
-          enabled: true
-      # Send tracking.user.watch.livestream event through websocket
-      web-watch-event:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          disabled: false
-          enabled: true
       # FingerprintJS Proof of Concept
       operation-eagle:
         state: ENABLED
@@ -70,13 +42,6 @@ spec:
         variants:
           enabled: true
           disabled: false
-      # KICKs Feature
-      web2:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          disabled: false
-          enabled: true
       # Homepage Banner
       home-banner:
         state: ENABLED
@@ -84,19 +49,6 @@ spec:
         variants:
           enabled: true
           disabled: false
-      # Revenue page web gateway
-      web-revenue-page:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
-      kicks-leaderboard:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          disabled: false
-          enabled: true
       # /me endpoint
       domain-1:
         state: ENABLED
