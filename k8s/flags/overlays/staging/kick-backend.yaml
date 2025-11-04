@@ -117,15 +117,7 @@ spec:
           disabled: false
       stripe_purchase_otp:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
-        targeting:
-          if:
-            - in:
-                - var: username
-                - - cleidoscope
-                  - mateo
-            - enabled
-            - disabled
