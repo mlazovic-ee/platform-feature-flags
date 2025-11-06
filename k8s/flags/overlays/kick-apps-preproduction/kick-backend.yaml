@@ -51,3 +51,9 @@ spec:
                 - - cleidoscope
             - enabled
             - disabled
+      vod_tiering:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
