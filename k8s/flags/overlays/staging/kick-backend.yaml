@@ -127,3 +127,10 @@ spec:
         variants:
           enabled: true
           disabled: false
+        targeting:
+          if:
+            - in:
+                - var: channel_id
+                - - 11265
+            - enabled
+            - disabled
