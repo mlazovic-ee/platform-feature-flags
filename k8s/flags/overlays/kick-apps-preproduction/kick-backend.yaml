@@ -64,3 +64,10 @@ spec:
                 - - 27
             - enabled
             - disabled
+      # enforces per bucket expiry for VOD tiering, instead of the 30 days default
+      vod_tiering_per_bucket_expiry:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false

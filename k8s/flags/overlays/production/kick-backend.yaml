@@ -113,12 +113,10 @@ spec:
         variants:
           enabled: true
           disabled: false
-        targeting:
-          if:
-            - in:
-                - var: channel_id
-                - - 30955613 # superpumped
-                  - 27651979 # sami
-                  - 51478852 # eg-streamer
-            - enabled
-            - disabled
+      # enforces per bucket expiry for VOD tiering, instead of the 30 days default
+      vod_tiering_per_bucket_expiry:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
