@@ -123,7 +123,7 @@ spec:
           disabled: false
       vod_tiering:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
