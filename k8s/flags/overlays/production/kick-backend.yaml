@@ -96,17 +96,10 @@ spec:
           disabled: false
       stripe_purchase_otp:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
-        targeting:
-          if:
-            - ends_with:
-                - var: email
-                - "@easygo.io"
-            - enabled
-            - disabled
       vod_tiering:
         state: ENABLED
         defaultVariant: enabled
