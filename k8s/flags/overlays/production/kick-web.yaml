@@ -28,21 +28,6 @@ spec:
         variants:
           disabled: false
           enabled: true
-      # FingerprintJS Proof of Concept
-      operation-eagle:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
-      # FingerprintJS Cache Time
-      operation-eagle-cache:
-        state: ENABLED
-        defaultVariant: one
-        variants:
-          one: 7200 # 2 hours
-          two: 28800 # 8 hours
-          three: 86400 # 24 hours
       # Homepage Banner
       home-banner:
         state: ENABLED
@@ -102,6 +87,20 @@ spec:
                 - var: user.roles
             - enabled
             - disabled
+        variants:
+          disabled: false
+          enabled: true
+      # Age Assurance Home Banner
+      trust-1:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          disabled: false
+          enabled: true
+      # Age Assurance "forced" verification logic
+      trust-2:
+        state: ENABLED
+        defaultVariant: disabled
         variants:
           disabled: false
           enabled: true
