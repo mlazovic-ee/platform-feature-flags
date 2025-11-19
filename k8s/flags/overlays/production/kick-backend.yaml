@@ -113,3 +113,9 @@ spec:
         variants:
           enabled: true
           disabled: false
+      chat_settings_sync:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
