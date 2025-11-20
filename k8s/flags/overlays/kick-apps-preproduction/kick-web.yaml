@@ -16,7 +16,7 @@ spec:
           disabled: false
       # Drops Feature - authenticated users
       web1:
-        defaultVariant: disabled
+        defaultVariant: enabled
         state: ENABLED
         targeting:
           if:
@@ -30,7 +30,7 @@ spec:
           enabled: true
       # Drops Feature - unauthenticated users
       web1-guest:
-        defaultVariant: disabled
+        defaultVariant: enabled
         state: ENABLED
         variants:
           disabled: false
