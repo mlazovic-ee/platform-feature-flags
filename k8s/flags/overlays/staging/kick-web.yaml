@@ -93,7 +93,7 @@ spec:
       # Age Assurance "forced" verification logic
       trust-2:
         state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
         variants:
           disabled: false
           enabled: true
