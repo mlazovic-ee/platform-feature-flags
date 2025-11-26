@@ -14,20 +14,6 @@ spec:
         variants:
           enabled: true
           disabled: false
-      # Drops Feature - authenticated users
-      web1:
-        defaultVariant: enabled
-        state: ENABLED
-        variants:
-          disabled: false
-          enabled: true
-      # Drops Feature - unauthenticated users
-      web1-guest:
-        defaultVariant: enabled
-        state: ENABLED
-        variants:
-          disabled: false
-          enabled: true
       # Homepage Banner
       home-banner:
         state: ENABLED
