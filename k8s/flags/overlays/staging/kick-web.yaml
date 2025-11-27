@@ -76,7 +76,7 @@ spec:
         variants:
           disabled: false
           enabled: true
-      # Age Assurance "forced" verification logic
+      # Age Assurance "forced" verification logic on critical pages
       trust-2:
         state: ENABLED
         defaultVariant: disabled
