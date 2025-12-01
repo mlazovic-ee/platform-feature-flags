@@ -73,6 +73,17 @@ spec:
       trust-1:
         state: ENABLED
         defaultVariant: disabled
+        targeting:
+          if:
+            - or:
+              - in:
+                  - internal
+                  - var: user.roles
+              - ends_with:
+                  - "@easygo.io"
+                  - var: user.email
+            - enabled
+            - disabled
         variants:
           disabled: false
           enabled: true
