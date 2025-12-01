@@ -80,8 +80,8 @@ spec:
                   - internal
                   - var: user.roles
               - ends_with:
-                  - "@easygo.io"
                   - var: user.email
+                  - "@easygo.io"
             - enabled
             - disabled
         variants:
