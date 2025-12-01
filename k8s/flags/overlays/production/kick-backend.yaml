@@ -121,7 +121,7 @@ spec:
           disabled: false
       bulk_full_sync_users_to_v2:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
