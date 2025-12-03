@@ -72,14 +72,14 @@ spec:
       # Age Assurance Home Banner
       trust-1:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           disabled: false
           enabled: true
       # Age Assurance "forced" verification logic on critical pages
       trust-2:
         state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
         variants:
           disabled: false
           enabled: true
