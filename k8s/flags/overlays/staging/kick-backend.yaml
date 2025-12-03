@@ -153,3 +153,9 @@ spec:
         variants:
           enabled: true
           disabled: false
+      bulk_sync_null_username_users_to_v2:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
