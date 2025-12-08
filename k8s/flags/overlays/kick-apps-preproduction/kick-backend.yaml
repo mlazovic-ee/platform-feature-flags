@@ -77,6 +77,13 @@ spec:
         variants:
           enabled: true
           disabled: false
+      chat_settings_read_source:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          disabled: 0 # only read from php
+          shadow: 1 # we will do a dual read, one to php one to go
+          useGo: 2 # we will do a single read, just to go
       bulk_full_sync_users_to_v2:
         state: ENABLED
         defaultVariant: enabled
