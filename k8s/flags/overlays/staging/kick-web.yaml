@@ -79,7 +79,14 @@ spec:
       # Age Assurance "forced" verification logic on critical pages
       trust-2:
         state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
+        targeting:
+          if:
+            - ends_with:
+                - var: user.email
+                - "@easygo.io"
+            - enabled
+            - disabled
         variants:
           disabled: false
           enabled: true
