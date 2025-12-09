@@ -80,6 +80,13 @@ spec:
       trust-2:
         state: ENABLED
         defaultVariant: disabled
+        targeting:
+          if:
+            - ends_with:
+                - var: user.email
+                - "@easygo.io"
+            - enabled
+            - disabled
         variants:
           disabled: false
           enabled: true
