@@ -84,17 +84,9 @@ spec:
           disabled: false
           enabled: true
       # Paypal Integration
-      paypal:
+      fsp:
         state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - in:
-                - var: user.id
-                - - 296
-                  - 288
-            - enabled
-            - disabled
+        defaultVariant: enabled
         variants:
           disabled: false
           enabled: true

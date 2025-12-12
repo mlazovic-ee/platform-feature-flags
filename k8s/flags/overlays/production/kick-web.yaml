@@ -84,9 +84,17 @@ spec:
           disabled: false
           enabled: true
       # Paypal Integration
-      paypal:
+      fsp:
         state: ENABLED
         defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.id
+                - - 217501 # Grid (m.meana@easygo.io)
+                  - 363122 # ElleEtMao (m.goutry@easygo.io)
+            - enabled
+            - disabled
         variants:
           disabled: false
           enabled: true
