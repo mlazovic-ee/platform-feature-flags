@@ -138,3 +138,10 @@ spec:
           disabled: 0 # only read from php
           shadow: 1 # we will do a dual read, one to php one to go
           useGo: 2 # we will do a single read, just to go
+        targeting:
+          if:
+            - in:
+                - var: channel_id
+                - - 41137250 # easygo_quality
+            - useGo
+            - shadow
