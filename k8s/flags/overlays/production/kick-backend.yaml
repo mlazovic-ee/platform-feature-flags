@@ -144,4 +144,9 @@ spec:
                 - var: channel_id
                 - - 41137250 # easygo_quality
             - useGo
+            - fractional:
+                  - - shadow
+                    - 70
+                  - - useGo
+                    - 30
             - shadow
