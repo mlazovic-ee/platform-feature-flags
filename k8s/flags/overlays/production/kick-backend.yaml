@@ -118,7 +118,7 @@ spec:
             - in:
               - var: channel_id
               - - 2401072 # odablock
-              - - 81965251 # whygamesmatter
+                - 81965251 # whygamesmatter
             - enabled
             - disabled
       chat_settings_sync:
