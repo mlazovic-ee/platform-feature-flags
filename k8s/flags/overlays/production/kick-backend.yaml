@@ -116,9 +116,9 @@ spec:
         targeting:
           if:
             - in:
-              - var: channel_id
-              - - 2401072 # odablock
-                - 81965251 # whygamesmatter
+                - var: channel_id
+                - - 2401072 # odablock
+                  - 81965251 # whygamesmatter
             - enabled
       chat_settings_sync:
         state: ENABLED
