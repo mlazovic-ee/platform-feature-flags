@@ -149,3 +149,4 @@ spec:
                     - 70
                   - - useGo
                     - 30
+            - shadow
