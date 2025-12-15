@@ -113,6 +113,14 @@ spec:
         variants:
           enabled: true
           disabled: false
+        targeting:
+          if:
+            - in:
+                - var: channel_id
+                - - 2401072 # odablock
+                  - 81965251 # whygamesmatter
+            - enabled
+            - disabled
       chat_settings_sync:
         state: ENABLED
         defaultVariant: enabled
