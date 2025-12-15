@@ -3,6 +3,7 @@ kind: Kustomization
 
 namespace: platform-open-feature
 
+
 resources:
   - ../../base
   - kick-backend.yaml

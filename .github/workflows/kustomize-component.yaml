@@ -23,3 +23,39 @@ jobs:
     with:
       path: ${{ inputs.directory }}/${{ inputs.component }}/overlays/${{ matrix.environment }}
       name: "Diff ${{ inputs.component }} for ${{ matrix.environment }}"
+
+  validate:
+    name: Validate ${{ matrix.environment }} FeatureFlags
+    runs-on: ubuntu-latest
+    env:
+      DIRECTORY: ${{ inputs.directory }}/${{ inputs.component }}/overlays/${{ matrix.environment }}
+    strategy:
+      matrix:
+        environment: ${{ fromJSON(inputs.environments) }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup Go
+        uses: actions/setup-go@v6
+        with:
+          go-version-file: ./scripts/validate/go.mod
+          cache-dependency-path: ./scripts/validate/go.sum
+
+      - name: Install tools
+        uses: KickEngineering/platform-github-actions/install-tools@main
+        with:
+          kustomize: v5.4.3
+
+      - name: kustomize build
+        env:
+          HELM_EXPERIMENTAL_OCI: 1
+        run: |
+          kustomize build --enable-helm --load-restrictor LoadRestrictionsNone ${{ env.DIRECTORY }} > FeatureFlags.yaml
+
+      - name: Validate FeatureFlags
+        working-directory: ./scripts/validate
+        run: |
+          go run main.go ../../FeatureFlags.yaml
