@@ -69,3 +69,10 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # Paypal Integration
+      fsp:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
