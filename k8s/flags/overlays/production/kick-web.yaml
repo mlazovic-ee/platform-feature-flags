@@ -55,8 +55,8 @@ spec:
         targeting:
           if:
             - in:
-                - internal
-                - var: user.roles
+                - var: user.id
+                - - 61573661 # brian (b.choi@easygo.io)
             - enabled
             - disabled
         variants:
