@@ -148,8 +148,8 @@ spec:
           if:
             - in:
                 - var: targetingKey
-                - - 217501 # Grid (m.meana@easygo.io)
-                  - 363122 # ElleEtMao (m.goutry@easygo.io)
-                  - 33030534 # the_destined_1 (p.costa@easygo.io)
+                - - "217501" # Grid (m.meana@easygo.io)
+                  - "363122" # ElleEtMao (m.goutry@easygo.io)
+                  - "33030534" # the_destined_1 (p.costa@easygo.io)
             - enabled
             - disabled
