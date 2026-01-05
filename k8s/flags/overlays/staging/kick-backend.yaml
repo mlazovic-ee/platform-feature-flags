@@ -181,6 +181,8 @@ spec:
                   - 1950353 # y.levraud@easygo.io
                   - 290 # c.escobidal@easygo.io
                   - 1963545 # japan_acc_test
+            - enabled
+            - disabled
       bulk_sync_null_username_users_to_v2:
         state: ENABLED
         defaultVariant: disabled
