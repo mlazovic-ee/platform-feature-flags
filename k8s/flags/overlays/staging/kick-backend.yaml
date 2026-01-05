@@ -162,7 +162,7 @@ spec:
           useGo: 2 # we will do a single read, just to go
       paypal_integration:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
