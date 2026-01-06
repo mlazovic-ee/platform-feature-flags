@@ -57,6 +57,7 @@ spec:
             - in:
                 - var: user.id
                 - - 61573661 # brian (b.choi@easygo.io)
+                  - 89677479 # alister (a.roe@easygo.io)
             - enabled
             - disabled
         variants:
