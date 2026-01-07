@@ -55,9 +55,11 @@ spec:
         targeting:
           if:
             - in:
-                - var: user.id
-                - - 61573661 # brian (b.choi@easygo.io)
-                  - 89677479 # alister (a.roe@easygo.io)
+                - var: user.email
+                - - b.choi@easygo.io # brian
+                  - a.roe@easygo.io # alister
+                  - k.camacho@easygo.io # kyrie
+                  - k.bedi@easygo.io # KD
             - enabled
             - disabled
         variants:
