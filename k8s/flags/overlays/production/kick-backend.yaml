@@ -25,7 +25,7 @@ spec:
           disabled: false
       trust_worker_consume_unauth_watch_events:
         state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
         variants:
           enabled: true
           disabled: false
