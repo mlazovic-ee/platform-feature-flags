@@ -100,3 +100,23 @@ spec:
         variants:
           disabled: false
           enabled: true
+
+      example-ab-test:
+        state: ENABLED
+        defaultVariant: control
+        variants:
+          control: "control"
+          variant-a: "variant-a"
+          variant-b: "variant-b"
+        targeting: 
+          if:
+            - in:
+                - b.choi@easygo.io
+                - var: user.email
+            - variant-a
+            - if:
+                - in:
+                    - csh97@proton.me
+                    - var: user.email
+                - variant-b
+                - control
