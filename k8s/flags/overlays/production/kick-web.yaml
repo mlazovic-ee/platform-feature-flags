@@ -60,6 +60,8 @@ spec:
                   - a.roe@easygo.io # alister
                   - k.camacho@easygo.io # kyrie
                   - k.bedi@easygo.io # KD
+                  - el.liu@easygo.io # elaine
+                  - v.manohar@easygo.io # vivek
             - enabled
             - disabled
         variants:
