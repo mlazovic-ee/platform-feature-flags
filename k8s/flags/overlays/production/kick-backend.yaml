@@ -161,7 +161,22 @@ spec:
             - in:
                 - var: user_id
                 - - 217501 # Grid (m.meana@easygo.io)
-                  - 363122 # ElleEtMao (m.goutry@easygo.io)
                   - 33030534 # the_destined_1 (p.costa@easygo.io)
+                  - 19730728 # pedro_costa
+                  - 88795467 # i.pavkovic@easygo.io
+                  - 72669368 # m.pajic@easygo.io
+                  - 3968558 # w.ober@easygo.io
+                  - 50778183 # a.luneski@easygo.io
+                  - 25488686 # y.levraud@easygo.io
+                  - 57104239 # m.lazovic@easygo.io
+                  - 30497681 # jc.yu@easygo.io
+                  - 57012589 # a.zivanovic@easygo.io
+                  - 84903248 # j.tan@easygo.io
+                  - 31482707 # c.escobidal@easygo.io
+                  - 22 # edward@easygo.io
+                  - 1554332 # aleksa@mebit.io (support team)
+                  - 551244 # k.camacho@easygo.io (qa team)
+                  - 32006497  # e.rosal@easygo.io (qa team)
+                  - 2 # p.chianese@easygo.io
             - enabled
             - disabled
