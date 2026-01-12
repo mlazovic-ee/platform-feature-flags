@@ -51,19 +51,7 @@ spec:
           enabled: true
       ia-redesign:
         state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - in:
-                - var: user.email
-                - - b.choi@easygo.io # brian
-                  - a.roe@easygo.io # alister
-                  - k.camacho@easygo.io # kyrie
-                  - k.bedi@easygo.io # KD
-                  - el.liu@easygo.io # elaine
-                  - v.manohar@easygo.io # vivek
-            - enabled
-            - disabled
+        defaultVariant: enabled
         variants:
           disabled: false
           enabled: true
