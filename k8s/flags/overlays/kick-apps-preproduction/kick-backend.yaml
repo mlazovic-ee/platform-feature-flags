@@ -63,13 +63,6 @@ spec:
         variants:
           enabled: true
           disabled: false
-        targeting:
-          if:
-            - in:
-                - var: channel_id
-                - - 27
-            - enabled
-            - disabled
       # enforces per bucket expiry for VOD tiering, instead of the 30 days default
       vod_tiering_per_bucket_expiry:
         state: ENABLED
@@ -77,14 +70,6 @@ spec:
         variants:
           enabled: true
           disabled: false
-        targeting:
-          if:
-            - in:
-              - var: channel_id
-              - - 2401072 # odablock
-                - 81965251 # whygamesmatter
-            - enabled
-            - disabled
       chat_settings_sync:
         state: ENABLED
         defaultVariant: enabled
