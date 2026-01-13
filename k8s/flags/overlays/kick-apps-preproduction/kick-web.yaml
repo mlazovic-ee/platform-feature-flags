@@ -73,6 +73,7 @@ spec:
                 - - 10697 # miloskick (m.pajic@easygo.io)
                   - 10747 # ipavkovic (i.pavkovic@easygo.io)
                   - 11908 # Grid (m.meana@easygo.io)
+                  - 4713 # p.costa@easygo.io
             - enabled
             - disabled
         variants:
