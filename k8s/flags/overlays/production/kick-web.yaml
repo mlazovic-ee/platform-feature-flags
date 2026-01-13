@@ -84,9 +84,23 @@ spec:
           if:
             - in:
                 - var: user.id
-                - - 217501 # Grid (m.meana@easygo.io)
-                  - 363122 # ElleEtMao (m.goutry@easygo.io)
+                - - 2 # Paulie (p.chianese@easygo.io)
+                  - 22 # Eddie (edward@easygo.io)
+                  - 217501 # Grid (m.meana@easygo.io)
+                  - 551244 # kyriec (k.camacho@easygo.io - QA team)
+                  - 1554332 # Aleksa (aleksa@mebit.io - support team)
+                  - 3968558 # KickPay (w.ober@easygo.io)
+                  - 25488686 # YOPO86 (y.levraud@easygo.io)
+                  - 30497681 # jcyuee (jc.yu@easygo.io)
+                  - 31482707 # clydeeasygo (c.escobidal@easygo.io)
+                  - 32006497 # superpumped (e.rosal@easygo.io - QA team)
                   - 33030534 # the_destined_1 (p.costa@easygo.io)
+                  - 50778183 # endi1003 (a.luneski@easygo.io)
+                  - 57012589 # AlexTheKicker (a.zivanovic@easygo.io)
+                  - 57104239 # hammer_of_wrath (m.lazovic@easygo.io)
+                  - 72669368 # mpajic (m.pajic@easygo.io)
+                  - 84903248 # jetta10 (j.tan@easygo.io)
+                  - 88795467 # disorganisation (i.pavkovic@easygo.io)
             - enabled
             - disabled
         variants:
