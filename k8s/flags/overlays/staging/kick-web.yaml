@@ -108,7 +108,7 @@ spec:
           control: "control"
           variant-a: "variant-a"
           variant-b: "variant-b"
-        targeting: 
+        targeting:
           if:
             - in:
                 - b.choi@easygo.io
@@ -120,3 +120,11 @@ spec:
                     - var: user.email
                 - variant-b
                 - control
+
+      # Masthead Display Ads
+      web-4:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true

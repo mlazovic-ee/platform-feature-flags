@@ -107,3 +107,10 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # Masthead Display Ads
+      web-4:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
