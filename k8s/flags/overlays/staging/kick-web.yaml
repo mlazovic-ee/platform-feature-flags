@@ -95,6 +95,7 @@ spec:
                   - 1950353 # y.levraud@easygo.io
                   - 290 # c.escobidal@easygo.io
                   - 1963545 # japan_acc_test
+                  - 1964527 # brazil_test@virgilian.com
             - enabled
             - disabled
         variants:
