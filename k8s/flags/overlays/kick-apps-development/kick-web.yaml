@@ -26,8 +26,8 @@ spec:
         state: ENABLED
         defaultVariant: enabled
         variants:
-          disabled: false
-          enabled: true
+          disabled: true
+          enabled: false
       # /videos endpoint
       domain-2:
         state: ENABLED
