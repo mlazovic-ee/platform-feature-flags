@@ -93,3 +93,17 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # Playback API
+      web-playback:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
+        variants:
+          disabled: false
+          enabled: true

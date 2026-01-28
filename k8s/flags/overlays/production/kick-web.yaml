@@ -139,3 +139,20 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # Playback API
+      web-playback:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - a.ruberto@easygo.io # Alex
+                  - p.howard@easygo.io # Peter
+                  - j.brown@easygo.io # Jeremy
+                  - c.tatli@easygo.io # Chris
+            - enabled
+            - disabled
+        variants:
+          disabled: false
+          enabled: true
