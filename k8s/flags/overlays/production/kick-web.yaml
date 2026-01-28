@@ -151,6 +151,8 @@ spec:
                   - p.howard@easygo.io # Peter
                   - j.brown@easygo.io # Jeremy
                   - c.tatli@easygo.io # Chris
+                  - eg_viewer@easygo.mailosaur.net
+                  - eg_user@easygo.mailosaur.net
             - enabled
             - disabled
         variants:
