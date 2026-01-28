@@ -159,23 +159,6 @@ spec:
         variants:
           enabled: true
           disabled: false
-        targeting:
-          if:
-            - in:
-                - var: user_id
-                - - 296 # m.meana@easygo.io
-                  - 260 # p.costa@easygo.io
-                  - 263 # pcostag
-                  - 1963461 # i.pavkovic@easygo.io
-                  - 1950474 # m.pajic@easygo.io
-                  - 1950360 # a.zivanovic@easygo.io
-                  - 1950357 # m.lazovic@easygo.io
-                  - 1963435 # j.tan@easygo.io
-                  - 1950353 # y.levraud@easygo.io
-                  - 290 # c.escobidal@easygo.io
-                  - 1963545 # japan_acc_test
-            - enabled
-            - disabled
       bulk_sync_null_username_users_to_v2:
         state: ENABLED
         defaultVariant: disabled
