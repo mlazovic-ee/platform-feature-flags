@@ -158,3 +158,20 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # A/A test: feature flag phased rollout validation
+      # Phase 1: 5/95 split
+      aa-test-1:
+        state: ENABLED
+        defaultVariant: control
+        variants:
+          control: "control"
+          variant-a: "variant-a"
+        targeting:
+          if:
+            - var: user.id
+            - fractional:
+                - - control
+                  - 95
+                - - variant-a
+                  - 5
+            - control
