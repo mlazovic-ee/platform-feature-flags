@@ -1,0 +1,104 @@
+apiVersion: core.openfeature.dev/v1beta1
+kind: FeatureFlag
+metadata:
+  name: kick-backend
+spec:
+  flagSpec:
+    flags:
+      platform_batch_bans_enabled:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      ws_analytics_tracking_enabled:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      # Enable IVS view counts globally or specify a livestream id
+      ivs_view_count:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+        targeting:
+          if:
+            - in:
+                - var: livestream_id
+                - - 38 # set the active livestream
+            - enabled
+            - disabled
+      # Revenue page web gateway# Revenue page web gateway
+      web-revenue-page:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+      stripe_purchase_otp:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+        targeting:
+          if:
+            - in:
+                - var: username
+                - - cleidoscope
+            - enabled
+            - disabled
+      vod_tiering:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+        targeting:
+          if:
+            - in:
+                - var: channel_id
+                - - 27
+            - enabled
+            - disabled
+      # enforces per bucket expiry for VOD tiering, instead of the 30 days default
+      vod_tiering_per_bucket_expiry:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      chat_settings_sync:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      bulk_full_sync_users_to_v2:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      bulk_sync_null_username_users_to_v2:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      chat_settings_read_source:
+        state: ENABLED
+        defaultVariant: useGo
+        variants:
+          disabled: 0 # only read from php
+          shadow: 1 # we will do a dual read, one to php one to go
+          useGo: 2 # we will do a single read, just to go
+      paypal_integration:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false

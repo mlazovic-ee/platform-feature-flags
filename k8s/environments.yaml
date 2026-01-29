@@ -7,21 +7,28 @@ spec:
   goTemplate: true
   goTemplateOptions: ["missingkey=error"]
   generators:
-    - clusters:
-        values:
-          cluster_name: '{{index .metadata.annotations "cluster_name"}}'
+    - matrix:
+        generators:
+          - clusters:
+              values:
+                cluster_name: '{{index .metadata.annotations "cluster_name"}}'
+          - git:
+              repoURL: https://github.com/KickEngineering/platform-feature-flags.git
+              revision: main
+              directories:
+                - path: 'k8s/flags/overlays/{{.values.cluster_name}}*'
   template:
     metadata:
-      name: "platform-feature-flags"
+      name: '{{if eq .values.cluster_name .path.basename}}platform-feature-flags{{else}}platform-feature-flags{{trimPrefix .values.cluster_name .path.basename}}{{end}}'
     spec:
       project: platform
       source:
         repoURL: https://github.com/KickEngineering/platform-feature-flags.git
         targetRevision: main
-        path: 'k8s/flags/overlays/{{.values.cluster_name}}'
+        path: '{{.path.path}}'
       destination:
         server: '{{.server}}'
-        namespace: platform-open-feature
+        namespace: '{{if eq .values.cluster_name .path.basename}}platform-open-feature{{else}}platform-open-feature{{trimPrefix .values.cluster_name .path.basename}}{{end}}'
       syncPolicy:
         automated:
           prune: false
