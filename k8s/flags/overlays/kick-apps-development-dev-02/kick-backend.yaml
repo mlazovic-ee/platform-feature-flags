@@ -104,7 +104,7 @@ spec:
           disabled: false
       slots_and_casino_bot_logic:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: log
         variants:
           disabled: 0
           log: 1
