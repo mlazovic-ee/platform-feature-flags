@@ -35,12 +35,6 @@ spec:
         variants:
           disabled: false
           enabled: true
-      ia-redesign:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          disabled: false
-          enabled: true
       # Kicks Pinned Messages
       web-3:
         state: ENABLED
