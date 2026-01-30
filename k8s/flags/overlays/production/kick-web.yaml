@@ -129,7 +129,7 @@ spec:
           disabled: false
           enabled: true
       # A/A test: feature flag phased rollout validation
-      # Phase 2: 75/25 split (authenticated users only)
+      # Phase 3: 50/50 split (authenticated users only)
       aa-test-1:
         state: ENABLED
         defaultVariant: control
@@ -142,7 +142,7 @@ spec:
             - var: user.id
             - fractional:
                 - - variant-a
-                  - 75
+                  - 50
                 - - variant-b
-                  - 25
+                  - 50
             - control
