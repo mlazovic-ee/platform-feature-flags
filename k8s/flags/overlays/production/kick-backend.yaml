@@ -151,3 +151,9 @@ spec:
           disabled: 0
           log: 1
           enabled: 2
+      ad_break_enabled:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
