@@ -70,6 +70,13 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # In-feed Ads
+      web-4-1:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          disabled: false
+          enabled: true
       # Home page personalisation
       web-5:
         state: ENABLED

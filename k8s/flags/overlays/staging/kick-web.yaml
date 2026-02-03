@@ -104,6 +104,13 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # In-feed Ads
+      web-4-1:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
       # Home page personalisation
       web-5:
         state: ENABLED
@@ -163,3 +170,4 @@ spec:
                 - - variant-b
                   - 50
             - control
+
