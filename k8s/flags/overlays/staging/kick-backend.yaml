@@ -7,16 +7,10 @@ spec:
     flags:
       platform_batch_bans_enabled:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
-        targeting:
-          fractional:
-            - - enabled
-              - 50
-            - - disabled
-              - 50
       ws_analytics_tracking_enabled:
         state: ENABLED
         defaultVariant: enabled
