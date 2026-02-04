@@ -77,6 +77,13 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # Mid-roll Ads
+      web-4-2:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          disabled: false
+          enabled: true
       # Home page personalisation
       web-5:
         state: ENABLED
