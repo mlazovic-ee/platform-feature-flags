@@ -135,7 +135,7 @@ spec:
             - disabled
         variants:
           disabled: false
-          enabled: true    
+          enabled: true
       # Home page personalisation
       web-5:
         state: ENABLED
@@ -205,3 +205,17 @@ spec:
                 - - variant-b
                   - 50
             - control
+      # Ads Preferences
+      web-4-3:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - m.meana@easygo.io # Mateo
+            - enabled
+            - disabled
+        variants:
+          disabled: false
+          enabled: true
