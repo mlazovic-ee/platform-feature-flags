@@ -214,6 +214,7 @@ spec:
             - in:
                 - var: user.email
                 - - m.meana@easygo.io # Mateo
+                - - b.choi@easygo.io # Brian
             - enabled
             - disabled
         variants:
