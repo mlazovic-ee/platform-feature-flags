@@ -157,3 +157,9 @@ spec:
         variants:
           enabled: true
           disabled: false
+      chatroom_sync:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: false
+          disabled: false
