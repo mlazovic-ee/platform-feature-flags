@@ -114,7 +114,25 @@ spec:
       # Mid-roll Ads
       web-4-2:
         state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - a.ruberto@easygo.io # Alex
+                  - a.fernandes@easygo.io # Andre
+                  - a.sajiv@easygo.io # Ash
+                  - b.choi@easygo.io # Brian
+                  - c.tzoumanekas@easygo.io # Costa
+                  - el.liu@easygo.io # Elaine
+                  - h.patel@easygo.io # Hemil
+                  - k.camacho@easygo.io # Kyrie
+                  - kyrie@kick.com # Kyrie
+                  - larissa@easygo.io # Larissa
+                  - y.levraud@easygo.io # Yohann
+                  - j.khan@easygo.io # Zeb
+            - enabled
+            - disabled
         variants:
           disabled: false
           enabled: true
