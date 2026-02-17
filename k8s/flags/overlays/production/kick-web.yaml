@@ -171,6 +171,8 @@ spec:
                   - j.kumar@easygo.io # Jitender
                   - eg_viewer@easygo.mailosaur.net
                   - eg_user@easygo.mailosaur.net
+                  - b.choi@easygo.io # Brian
+                  - c.li@easygo.io # Coco
             - enabled
             - disabled
         variants:
