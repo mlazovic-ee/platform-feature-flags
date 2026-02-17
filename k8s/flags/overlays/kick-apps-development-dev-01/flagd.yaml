@@ -12,6 +12,7 @@ spec:
       alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}]'
       alb.ingress.kubernetes.io/healthcheck-port: "8014"
       alb.ingress.kubernetes.io/healthcheck-path: "/readyz"
+      external-dns.alpha.kubernetes.io/proxied: "true"
     hosts:
       - flags.dev-01.kick-development.com
     ingressClassName: kick-flags-alb
