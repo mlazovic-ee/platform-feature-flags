@@ -101,10 +101,14 @@ spec:
                 - internal
                 - var: user.roles
             - enabled
-            - disabled
+            - fractional:
+                - - enabled
+                  - 0
+                - - disabled
+                  - 100
         variants:
-          disabled: false
           enabled: true
+          disabled: false
       # Ads Preferences
       web-4-3:
         state: ENABLED
