@@ -114,6 +114,12 @@ spec:
         variants:
           enabled: true
           disabled: false
+      bulk_sync_category_preferences:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
       ad_break_enabled:
         state: ENABLED
         defaultVariant: enabled

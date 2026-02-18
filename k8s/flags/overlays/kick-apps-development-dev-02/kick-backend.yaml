@@ -89,6 +89,12 @@ spec:
         variants:
           enabled: true
           disabled: false
+      bulk_sync_category_preferences:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
       chat_settings_read_source:
         state: ENABLED
         defaultVariant: useGo
