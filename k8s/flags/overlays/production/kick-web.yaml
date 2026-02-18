@@ -159,25 +159,17 @@ spec:
         targeting:
           if:
             - in:
-                - var: user.email
-                - - a.ruberto@easygo.io # Alex
-                  - p.howard@easygo.io # Peter
-                  - j.brown@easygo.io # Jeremy
-                  - c.tatli@easygo.io # Chris
-                  - v.manohar@easygo.io # Vivek
-                  - jc.yu@easygo.io # JC
-                  - k.lenihan@easygo.io # Kelly
-                  - ryan@easygo.io # Ryan
-                  - j.kumar@easygo.io # Jitender
-                  - eg_viewer@easygo.mailosaur.net
-                  - eg_user@easygo.mailosaur.net
-                  - b.choi@easygo.io # Brian
-                  - c.li@easygo.io # Coco
+                - internal
+                - var: user.roles
             - enabled
-            - disabled
+            - fractional:
+                - - enabled
+                  - 0
+                - - disabled
+                  - 100
         variants:
-          disabled: false
           enabled: true
+          disabled: false
       # A/A test: feature flag phased rollout validation
       # Phase 3: 50/50 split (authenticated users only)
       aa-test-1:
