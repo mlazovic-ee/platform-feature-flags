@@ -164,6 +164,25 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # Home page personalisation - Phase 1.5
+      web-5-1:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - a.sajiv@easygo.io # Ash
+                  - b.choi@easygo.io # Brian
+                  - c.tzoumanekas@easygo.io # Costa
+                  - h.patel@easygo.io # Hemil
+                  - k.bedi@easygo.io # KD
+                  - kyrie@kick.com # Kyrie
+            - enabled
+            - disabled
+        variants:
+          disabled: false
+          enabled: true
       # Playback API
       web-playback:
         state: ENABLED

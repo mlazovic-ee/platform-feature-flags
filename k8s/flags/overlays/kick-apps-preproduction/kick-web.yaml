@@ -91,6 +91,13 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # Home page personalisation - Phase 1.5
+      web-5-1:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          disabled: false
+          enabled: true
       # Playback API
       web-playback:
         state: ENABLED
