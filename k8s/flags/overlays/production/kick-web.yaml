@@ -164,9 +164,9 @@ spec:
             - enabled
             - fractional:
                 - - enabled
-                  - 1
+                  - 5
                 - - disabled
-                  - 99
+                  - 95
         variants:
           enabled: true
           disabled: false
