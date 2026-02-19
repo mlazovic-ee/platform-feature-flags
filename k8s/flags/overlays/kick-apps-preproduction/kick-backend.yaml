@@ -124,7 +124,7 @@ spec:
         state: ENABLED
         defaultVariant: enabled
         variants:
-          enabled: false
+          enabled: true
           disabled: false
       filter_banned_users_from_leaderboards:
         state: ENABLED
