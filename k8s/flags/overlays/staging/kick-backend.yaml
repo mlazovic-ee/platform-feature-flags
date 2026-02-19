@@ -184,3 +184,14 @@ spec:
         variants:
           enabled: true
           disabled: false
+      filter_banned_users_from_leaderboards:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+        targeting:
+          if:
+            - in:
+                - var: channel_id
+                - - 11394 # brian
