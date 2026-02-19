@@ -183,9 +183,9 @@ spec:
             - enabled
             - fractional:
                 - - enabled
-                  - 15
+                  - 30
                 - - disabled
-                  - 85
+                  - 70
         variants:
           enabled: true
           disabled: false
