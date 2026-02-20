@@ -195,6 +195,6 @@ spec:
             - in:
                 - var: channel_id
                 - - 11394 # brian
-                - - 148 # alex
+                  - 148 # alex
             - enabled
             - disabled
