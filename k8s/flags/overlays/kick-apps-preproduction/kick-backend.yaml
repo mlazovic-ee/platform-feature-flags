@@ -122,7 +122,7 @@ spec:
           disabled: false
       chatroom_sync:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
