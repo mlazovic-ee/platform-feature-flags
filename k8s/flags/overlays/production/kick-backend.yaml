@@ -180,5 +180,6 @@ spec:
             - in:
                 - var: channel_id
                 - - 30955613 # superpumped
+                  - 1081452 # iduncle
             - enabled
             - disabled
