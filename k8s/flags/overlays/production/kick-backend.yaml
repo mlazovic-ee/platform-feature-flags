@@ -183,3 +183,9 @@ spec:
                   - 1081452 # iduncle
             - enabled
             - disabled
+      user_info_update:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
