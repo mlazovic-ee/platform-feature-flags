@@ -171,18 +171,10 @@ spec:
           disabled: false
       filter_banned_users_from_leaderboards:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
-        targeting:
-          if:
-            - in:
-                - var: channel_id
-                - - 30955613 # superpumped
-                  - 1081452 # iduncle
-            - enabled
-            - disabled
       user_info_update:
         state: ENABLED
         defaultVariant: disabled
