@@ -127,3 +127,19 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # Onboarding flow
+      web-5-2:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - m.meana@easygo.io # Mateo
+                  - c.escobidal@easygo.io # Clyde
+                  - j.khan@easygo.io # Zeb
+            - enabled
+            - disabled
+        variants:
+          disabled: false
+          enabled: true
