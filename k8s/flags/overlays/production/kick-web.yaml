@@ -147,6 +147,14 @@ spec:
                   - y.levraud@easygo.io # Yohann
                   - z.ingle@easygo.io # Zach
                   - j.khan@easygo.io # Zeb
+                  - c.nie@easygo.io # Cong Nie
+                  - a.quick@easygo.io # Alixie
+                  - signup.test3@wn1lxpnt.mailosaur.net # Leon 1
+                  - signup.test2@wn1lxpnt.mailosaur.net # Leon 2
+                  - signup.test1@easygo.mailosaur.net  # Leon 3
+                  - eg_user_2fa@easygo.mailosaur.net # Kyrie
+                  - eg_user@easygo.mailosaur.net # Kyrie
+                  - streamkeyuser@easygo.mailosaur.net  # Kyrie
             - enabled
             - disabled
         variants:
