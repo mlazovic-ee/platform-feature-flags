@@ -144,3 +144,9 @@ spec:
         variants:
           enabled: true
           disabled: false
+      view_count_outbox_enabled:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
