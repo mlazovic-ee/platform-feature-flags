@@ -132,31 +132,8 @@ spec:
         targeting:
           if:
             - in:
-                - var: user.email
-                - - a.fernandes@easygo.io # Andre
-                  - a.sajiv@easygo.io # Ash
-                  - b.choi@easygo.io # Brian
-                  - c.li@easygo.io # Coco
-                  - c.tzoumanekas@easygo.io # Costa
-                  - el.liu@easygo.io # Elaine
-                  - h.patel@easygo.io # Hemil
-                  - k.bedi@easygo.io # KD
-                  - k.camacho@easygo.io # Kyrie
-                  - kyrie@kick.com # Kyrie
-                  - larissa@easygo.io # Larissa
-                  - yohann@kick.com # Yohann
-                  - y.levraud@easygo.io # Yohann
-                  - z.ingle@easygo.io # Zach
-                  - j.khan@easygo.io # Zeb
-                  - c.nie@easygo.io # Cong Nie
-                  - a.quick@easygo.io # Alixie
-                  - i.shvab@easygo.io # Ihor
-                  - signup.test3@wn1lxpnt.mailosaur.net # Leon 1
-                  - signup.test2@wn1lxpnt.mailosaur.net # Leon 2
-                  - signup.test1@easygo.mailosaur.net # Leon 3
-                  - eg_user_2fa@easygo.mailosaur.net # Kyrie
-                  - eg_user@easygo.mailosaur.net # Kyrie
-                  - streamkeyuser@easygo.mailosaur.net # Kyrie
+                - internal
+                - var: user.roles
             - enabled
             - disabled
         variants:
