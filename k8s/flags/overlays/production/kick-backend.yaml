@@ -168,10 +168,10 @@ spec:
             - in:
                 - var: channel_id
                 - - 46225651 # Andre
-                - - 60434403 # Coco
-                - - 90777385 # Peter
-                - - 28135073 # Kyrie
-                - - 12122309 # E2E
+                  - 60434403 # Coco
+                  - 90777385 # Peter
+                  - 28135073 # Kyrie
+                  - 12122309 # E2E
             - enabled
             - disabled
       chatroom_sync:
