@@ -63,3 +63,21 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # Mid-roll Ads
+      web-4-2:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - a.fernandes@easygo.io # Andre
+                  - c.li@easygo.io # Coco
+                  - k.camacho@easygo.io # Kyrie
+                  - kyrie@kick.com # Kyrie
+                  - p.howard@easygo.io # Peter
+            - enabled
+            - disabled
+        variants:
+          disabled: false
+          enabled: true
