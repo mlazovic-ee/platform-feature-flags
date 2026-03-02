@@ -167,6 +167,7 @@ spec:
           if:
             - in:
                 - var: channel_id
+                - - 46225651 # Andre
                 - - 60434403 # Coco
                 - - 90777385 # Peter
                 - - 28135073 # Kyrie
