@@ -135,7 +135,14 @@ spec:
                 - internal
                 - var: user.roles
             - enabled
-            - disabled
+            - if:
+                - var: user.id
+                - fractional:
+                    - - enabled
+                      - 5
+                    - - disabled
+                      - 95
+                - disabled
         variants:
           disabled: false
           enabled: true
