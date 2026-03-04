@@ -201,6 +201,7 @@ spec:
                 - - m.meana@easygo.io # Mateo
                   - b.choi@easygo.io # Brian
                   - j.khan@easygo.io # Zeb
+                  - k.camacho@easygo.io # Kyrie
             - enabled
             - disabled
         variants:
@@ -224,6 +225,7 @@ spec:
                 - - m.meana@easygo.io # Mateo
                   - c.escobidal@easygo.io # Clyde
                   - j.khan@easygo.io # Zeb
+                  - k.camacho@easygo.io # Kyrie
             - enabled
             - disabled
         variants:
