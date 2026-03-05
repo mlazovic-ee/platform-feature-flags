@@ -1,0 +1,93 @@
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: mutate-flagd-resources-dev-04
+spec:
+  rules:
+    - name: set-flagd-client-side-resources
+      match:
+        resources:
+          kinds:
+            - Pod
+          namespaces:
+            - kick-apps-development-dev-04
+          selector:
+            matchLabels:
+              app: client-side
+              app.kubernetes.io/managed-by: open-feature-operator
+      mutate:
+        patchStrategicMerge:
+          metadata:
+            annotations:
+              ad.datadoghq.com/flagd.checks: |
+                {
+                  "openmetrics": {
+                    "init_config": {},
+                    "instances": [
+                      {
+                        "openmetrics_endpoint": "http://%%host%%:8014/metrics",
+                        "metrics": [
+                          "http.server.duration",
+                          "http.server.response.size",
+                          "http.server.active_requests",
+                          "feature_flag.flagd.impression",
+                          "feature_flag.flagd.evaluation.reason"
+                        ]
+                      }
+                    ]
+                  }
+                }
+          spec:
+            containers:
+              - name: flagd
+                resources:
+                  limits:
+                    cpu: 1000m
+                    memory: "2048Mi"
+                  requests:
+                    cpu: 500m
+                    memory: "1024Mi"
+    - name: set-flagd-server-side-resources
+      match:
+        resources:
+          kinds:
+            - Pod
+          namespaces:
+            - kick-apps-development-dev-04
+          selector:
+            matchLabels:
+              app: server-side
+              app.kubernetes.io/managed-by: open-feature-operator
+      mutate:
+        patchStrategicMerge:
+          metadata:
+            annotations:
+              ad.datadoghq.com/flagd.checks: |
+                {
+                  "openmetrics": {
+                    "init_config": {},
+                    "instances": [
+                      {
+                        "openmetrics_endpoint": "http://%%host%%:8014/metrics",
+                        "metrics": [
+                          "http.server.duration",
+                          "http.server.response.size",
+                          "http.server.active_requests",
+                          "feature_flag.flagd.impression",
+                          "feature_flag.flagd.evaluation.reason"
+                        ]
+                      }
+                    ]
+                  }
+                }
+          spec:
+            containers:
+              - name: flagd
+                resources:
+                  limits:
+                    cpu: 1000m
+                    memory: "2048Mi"
+                  requests:
+                    cpu: 500m
+                    memory: "1024Mi"
+  validationFailureAction: Audit

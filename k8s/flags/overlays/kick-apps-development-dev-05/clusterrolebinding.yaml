@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: open-feature-operator-flagd-kubernetes-sync-manual-dev-05
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: open-feature-operator-flagd-kubernetes-sync
+subjects:
+- kind: ServiceAccount
+  name: default
+  namespace: platform-open-feature-dev-05

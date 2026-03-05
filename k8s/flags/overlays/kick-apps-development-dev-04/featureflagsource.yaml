@@ -1,0 +1,48 @@
+apiVersion: core.openfeature.dev/v1beta1
+kind: FeatureFlagSource
+metadata:
+  name: server-side
+spec:
+  sources:
+    - source: platform-open-feature-dev-04/kick-backend
+      provider: kubernetes
+    - source: platform-open-feature-dev-04/kick-platform
+      provider: kubernetes
+    - source: platform-open-feature-dev-04/kick-web
+      provider: kubernetes
+---
+apiVersion: core.openfeature.dev/v1beta1
+kind: FeatureFlagSource
+metadata:
+  name: server-side-proxy
+spec:
+  sources:
+    - source: platform-open-feature-dev-04/kick-backend
+      provider: flagd-proxy
+    - source: platform-open-feature-dev-04/kick-platform
+      provider: flagd-proxy
+    - source: platform-open-feature-dev-04/kick-web
+      provider: flagd-proxy
+---
+apiVersion: core.openfeature.dev/v1beta1
+kind: FeatureFlagSource
+metadata:
+  name: server-side-grpc
+spec:
+  sources:
+    - source: server-side.platform-open-feature-dev-04.svc.cluster.local:8015
+      provider: grpc
+      tls: false
+---
+apiVersion: core.openfeature.dev/v1beta1
+kind: FeatureFlagSource
+metadata:
+  name: client-side
+spec:
+  sources:
+    - source: platform-open-feature-dev-04/kick-web
+      provider: kubernetes
+    - source: platform-open-feature-dev-04/kick-mobile
+      provider: kubernetes
+    - source: platform-open-feature-dev-04/kick-tv
+      provider: kubernetes

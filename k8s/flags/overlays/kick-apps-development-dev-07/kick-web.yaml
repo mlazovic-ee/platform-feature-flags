@@ -1,0 +1,71 @@
+apiVersion: core.openfeature.dev/v1beta1
+kind: FeatureFlag
+metadata:
+  name: kick-web
+spec:
+  flagSpec:
+    flags:
+      # Kick Health - Toggle the channel info endpoint from intercluster to cloudflare. Will increase latency by 100ms.
+      # disabled: intercluster
+      # enabled: cloudflare
+      keath-info:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+      # Homepage Banner
+      home-banner:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+      # /me endpoint
+      domain-1:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: true
+          enabled: false
+      # /videos endpoint
+      domain-2:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
+      ia-redesign:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
+      # Kicks Pinned Messages
+      web-3:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
+      # Age Assurance Home Banner
+      trust-1:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
+      # Age Assurance "forced" verification logic
+      trust-2:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
+      # Paypal Integration
+      fsp:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true

@@ -1,0 +1,14 @@
+apiVersion: core.openfeature.dev/v1beta1
+kind: InProcessConfiguration
+metadata:
+  name: backend-inprocess-config
+spec:
+  host: server-side.platform-open-feature-dev-08.svc.cluster.local
+---
+apiVersion: core.openfeature.dev/v1beta1
+kind: InProcessConfiguration
+metadata:
+  name: backend-remote-config
+spec:
+  host: server-side.platform-open-feature-dev-08.svc.cluster.local
+  port: 8013
