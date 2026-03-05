@@ -200,6 +200,10 @@ spec:
                 - - m.meana@easygo.io # Mateo
                   - j.khan@easygo.io # Zeb
                   - k.camacho@easygo.io # Kyrie
+                  - stage_admin@easygo.mailosaur.net # Kyrie test
+                  - kyrieteststage@easygo.mailosaur.net # Kyrie test
+                  - test01@easygo.mailosaur.net # Kyrie test
+                  - el.liu@easygo.io # Elaine
             - enabled
             - disabled
         variants:
@@ -224,6 +228,10 @@ spec:
                   - c.escobidal@easygo.io # Clyde
                   - j.khan@easygo.io # Zeb
                   - k.camacho@easygo.io # Kyrie
+                  - stage_admin@easygo.mailosaur.net # Kyrie test
+                  - kyrieteststage@easygo.mailosaur.net # Kyrie test
+                  - test01@easygo.mailosaur.net # Kyrie test
+                  - el.liu@easygo.io # Elaine
             - enabled
             - disabled
         variants:
