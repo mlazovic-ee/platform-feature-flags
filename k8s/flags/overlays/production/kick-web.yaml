@@ -120,6 +120,7 @@ spec:
                   - y.levraud@easygo.io # Yohann
                   - j.khan@easygo.io # Zeb
                   - p.howard@easygo.io # Peter
+                  - j.brown@easygo.io # Jeremy
             - enabled
             - disabled
         variants:
