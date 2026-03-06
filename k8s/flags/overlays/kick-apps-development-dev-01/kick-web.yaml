@@ -69,3 +69,10 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # Clip chat command - when enabled, /clip is available in chat
+      web-6:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
