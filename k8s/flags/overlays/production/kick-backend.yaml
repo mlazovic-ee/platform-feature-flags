@@ -190,7 +190,7 @@ spec:
           disabled: false
       user_info_update:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
