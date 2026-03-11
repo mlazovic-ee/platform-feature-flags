@@ -173,6 +173,7 @@ spec:
                   - 28135073 # Kyrie
                   - 12122309 # E2E
                   - 72525767 # Jeremy
+                  - 22 # Eddie
             - enabled
             - disabled
       chatroom_sync:

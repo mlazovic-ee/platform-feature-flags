@@ -121,6 +121,7 @@ spec:
                   - j.khan@easygo.io # Zeb
                   - p.howard@easygo.io # Peter
                   - j.brown@easygo.io # Jeremy
+                  - edward@easygo.io # Eddie
             - enabled
             - disabled
         variants:
