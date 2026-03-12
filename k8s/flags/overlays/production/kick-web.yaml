@@ -205,6 +205,10 @@ spec:
                   - b.choi@easygo.io # Brian
                   - j.khan@easygo.io # Zeb
                   - k.camacho@easygo.io # Kyrie
+                  - onboarding01@easygo.mailosaur.net # Kyrie
+                  - el.liu@easygo.io # Elaine
+                  - larissa@easygo.io # Larissa
+                  - c.nehme@easygo.io # Charbel
             - enabled
             - disabled
         variants:
@@ -229,6 +233,10 @@ spec:
                   - c.escobidal@easygo.io # Clyde
                   - j.khan@easygo.io # Zeb
                   - k.camacho@easygo.io # Kyrie
+                  - onboarding01@easygo.mailosaur.net # Kyrie
+                  - el.liu@easygo.io # Elaine
+                  - larissa@easygo.io # Larissa
+                  - c.nehme@easygo.io # Charbel
             - enabled
             - disabled
         variants:

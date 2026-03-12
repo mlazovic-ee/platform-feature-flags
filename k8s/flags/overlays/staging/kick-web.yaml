@@ -201,9 +201,6 @@ spec:
                   - j.khan@easygo.io # Zeb
                   - k.camacho@easygo.io # Kyrie
                   - kyrieteststage@easygo.mailosaur.net # Kyrie test
-                  - test01@easygo.mailosaur.net # Kyrie test
-                  - register01@easygo.mailosaur.net # Kyrie Register test
-                  - register02@easygo.mailosaur.net # Kyrie Register test
                   - el.liu@easygo.io # Elaine
             - enabled
             - disabled
@@ -230,9 +227,6 @@ spec:
                   - j.khan@easygo.io # Zeb
                   - k.camacho@easygo.io # Kyrie
                   - kyrieteststage@easygo.mailosaur.net # Kyrie test
-                  - test01@easygo.mailosaur.net # Kyrie test
-                  - register01@easygo.mailosaur.net # Kyrie Register test
-                  - register02@easygo.mailosaur.net # Kyrie Register test
                   - el.liu@easygo.io # Elaine
             - enabled
             - disabled
