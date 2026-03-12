@@ -122,6 +122,7 @@ spec:
                   - p.howard@easygo.io # Peter
                   - j.brown@easygo.io # Jeremy
                   - edward@easygo.io # Eddie
+                  - c.nehme@easygo.io # Charbel
             - enabled
             - disabled
         variants:
