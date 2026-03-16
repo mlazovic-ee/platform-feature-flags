@@ -158,6 +158,8 @@ spec:
                   - c.escobidal@easygo.io # Clyde
                   - j.khan@easygo.io # Zeb
                   - k.camacho@easygo.io # Kyrie
+                  - j.gilson@easygo.io # Jeremy
+                  - s.lee@easygo.io # Stephen
             - enabled
             - disabled
         variants:

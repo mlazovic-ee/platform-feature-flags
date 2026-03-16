@@ -228,6 +228,8 @@ spec:
                   - k.camacho@easygo.io # Kyrie
                   - kyrieteststage@easygo.mailosaur.net # Kyrie test
                   - el.liu@easygo.io # Elaine
+                  - j.gilson@easygo.io # Jeremy
+                  - s.lee@easygo.io # Stephen
             - enabled
             - disabled
         variants:
