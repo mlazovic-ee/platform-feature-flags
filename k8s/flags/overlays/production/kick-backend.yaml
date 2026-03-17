@@ -51,12 +51,12 @@ spec:
                 - - 23812321 # jett
                   - 669746 # Westcol
             - fractional:
-                  - - pusher
-                    - 100
-                  - - pusher2
-                    - 0
-                  - - pusher3
-                    - 0
+                - - pusher
+                  - 100
+                - - pusher2
+                  - 0
+                - - pusher3
+                  - 0
             - pusher
       broadcast_chat_to_pusher:
         state: ENABLED
@@ -70,10 +70,10 @@ spec:
                 - var: channel_id
                 - - 23812321 # jett
             - fractional:
-                  - - enabled
-                    - 10
-                  - - disabled
-                    - 90
+                - - enabled
+                  - 10
+                - - disabled
+                  - 90
             - enabled
       ivs_view_count:
         state: ENABLED
@@ -109,7 +109,7 @@ spec:
       # enforces per bucket expiry for VOD tiering, instead of the 30 days default
       vod_tiering_per_bucket_expiry:
         state: ENABLED
-        defaultVariant: enabled 
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
@@ -198,7 +198,7 @@ spec:
           disabled: false
       view_count_outbox_enabled:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
