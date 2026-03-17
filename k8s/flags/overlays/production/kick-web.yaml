@@ -211,6 +211,14 @@ spec:
                   - larissa@easygo.io # Larissa
                   - c.nehme@easygo.io # Charbel
                   - elaineliu199411@gmail.com # Elaine
+                  - j.gilson@easygo.io # Jeremy
+                  - s.lee@easygo.io # Stephen
+                  - eg_viewer@easygo.mailosaur.net # Automation Testing Account
+                  - eg_user@easygo.mailosaur.net" # Automation Testing Account
+                  - eg_streamer@easygo.mailosaur.net # Automation Testing Account
+                  - eg_internal@easygo.mailosaur.net # Automation Testing Account
+                  - streamkeyuser@easygo.mailosaur.net # Automation Testing Account
+                  - ageassurance@easygo.mailosaur.net # Automation Testing Account
             - enabled
             - disabled
         variants:
@@ -243,6 +251,12 @@ spec:
                   - elaineliu199411@gmail.com # Elaine
                   - j.gilson@easygo.io # Jeremy
                   - s.lee@easygo.io # Stephen
+                  - eg_viewer@easygo.mailosaur.net # Automation Testing Account
+                  - eg_user@easygo.mailosaur.net" # Automation Testing Account
+                  - eg_streamer@easygo.mailosaur.net # Automation Testing Account
+                  - eg_internal@easygo.mailosaur.net # Automation Testing Account
+                  - streamkeyuser@easygo.mailosaur.net # Automation Testing Account
+                  - ageassurance@easygo.mailosaur.net # Automation Testing Account
             - enabled
             - disabled
         variants:
