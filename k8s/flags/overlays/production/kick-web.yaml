@@ -262,3 +262,18 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # KICK Drops
+      web-8:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - m.meana@easygo.io # Mateo
+                  - y.levraud@easygo.io # Yohann
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
