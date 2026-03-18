@@ -131,21 +131,7 @@ spec:
       # Home page personalisation
       web-5:
         state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - in:
-                - internal
-                - var: user.roles
-            - enabled
-            - if:
-                - var: user.id
-                - fractional:
-                    - - enabled
-                      - 50
-                    - - disabled
-                      - 50
-                - disabled
+        defaultVariant: enabled
         variants:
           disabled: false
           enabled: true
