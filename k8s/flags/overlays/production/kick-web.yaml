@@ -206,6 +206,7 @@ spec:
                   - eg_internal@easygo.mailosaur.net # Automation Testing Account
                   - streamkeyuser@easygo.mailosaur.net # Automation Testing Account
                   - ageassurance@easygo.mailosaur.net # Automation Testing Account
+                  - m.young@easygo.io # Matt Young
             - enabled
             - disabled
         variants:
@@ -244,6 +245,7 @@ spec:
                   - eg_internal@easygo.mailosaur.net # Automation Testing Account
                   - streamkeyuser@easygo.mailosaur.net # Automation Testing Account
                   - ageassurance@easygo.mailosaur.net # Automation Testing Account
+                  - m.young@easygo.io # Matt Young
             - enabled
             - disabled
         variants:
