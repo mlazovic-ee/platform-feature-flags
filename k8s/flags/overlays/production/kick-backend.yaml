@@ -176,6 +176,7 @@ spec:
                   - 22 # Eddie
                   - 67745766 # Elaine
                   - 85683462 # Charbel
+                  - 60434095 # Brian
             - enabled
             - disabled
       chatroom_sync:
