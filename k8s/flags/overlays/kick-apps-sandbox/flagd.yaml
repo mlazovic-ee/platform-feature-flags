@@ -1,0 +1,7 @@
+apiVersion: core.openfeature.dev/v1beta1
+kind: Flagd
+metadata:
+  name: server-side
+spec:
+  replicas: 1
+  featureFlagSource: server-side
