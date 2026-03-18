@@ -192,8 +192,8 @@ spec:
                   - b.choi@easygo.io # Brian
                   - j.khan@easygo.io # Zeb
                   - k.camacho@easygo.io # Kyrie
-                  - onboarding02@easygo.mailosaur.net # Kyrie
-                  - onboarding03@easygo.mailosaur.net # Kyrie
+                  - onboarding04@easygo.mailosaur.net # Kyrie
+                  - onboarding05@easygo.mailosaur.net # Kyrie
                   - el.liu@easygo.io # Elaine
                   - larissa@easygo.io # Larissa
                   - c.nehme@easygo.io # Charbel
@@ -201,7 +201,7 @@ spec:
                   - j.gilson@easygo.io # Jeremy
                   - s.lee@easygo.io # Stephen
                   - eg_viewer@easygo.mailosaur.net # Automation Testing Account
-                  - eg_user@easygo.mailosaur.net" # Automation Testing Account
+                  - eg_user@easygo.mailosaur.net # Automation Testing Account
                   - eg_streamer@easygo.mailosaur.net # Automation Testing Account
                   - eg_internal@easygo.mailosaur.net # Automation Testing Account
                   - streamkeyuser@easygo.mailosaur.net # Automation Testing Account
@@ -230,8 +230,8 @@ spec:
                   - c.escobidal@easygo.io # Clyde
                   - j.khan@easygo.io # Zeb
                   - k.camacho@easygo.io # Kyrie
-                  - onboarding02@easygo.mailosaur.net # Kyrie
-                  - onboarding03@easygo.mailosaur.net # Kyrie
+                  - onboarding04@easygo.mailosaur.net # Kyrie
+                  - onboarding05@easygo.mailosaur.net # Kyrie
                   - el.liu@easygo.io # Elaine
                   - larissa@easygo.io # Larissa
                   - c.nehme@easygo.io # Charbel
@@ -239,7 +239,7 @@ spec:
                   - j.gilson@easygo.io # Jeremy
                   - s.lee@easygo.io # Stephen
                   - eg_viewer@easygo.mailosaur.net # Automation Testing Account
-                  - eg_user@easygo.mailosaur.net" # Automation Testing Account
+                  - eg_user@easygo.mailosaur.net # Automation Testing Account
                   - eg_streamer@easygo.mailosaur.net # Automation Testing Account
                   - eg_internal@easygo.mailosaur.net # Automation Testing Account
                   - streamkeyuser@easygo.mailosaur.net # Automation Testing Account
