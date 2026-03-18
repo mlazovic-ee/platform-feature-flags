@@ -222,32 +222,7 @@ spec:
       # Onboarding flow
       web-5-2:
         state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - in:
-                - var: user.email
-                - - m.meana@easygo.io # Mateo
-                  - c.escobidal@easygo.io # Clyde
-                  - j.khan@easygo.io # Zeb
-                  - k.camacho@easygo.io # Kyrie
-                  - onboarding04@easygo.mailosaur.net # Kyrie
-                  - onboarding05@easygo.mailosaur.net # Kyrie
-                  - el.liu@easygo.io # Elaine
-                  - larissa@easygo.io # Larissa
-                  - c.nehme@easygo.io # Charbel
-                  - elaineliu199411@gmail.com # Elaine
-                  - j.gilson@easygo.io # Jeremy
-                  - s.lee@easygo.io # Stephen
-                  - eg_viewer@easygo.mailosaur.net # Automation Testing Account
-                  - eg_user@easygo.mailosaur.net # Automation Testing Account
-                  - eg_streamer@easygo.mailosaur.net # Automation Testing Account
-                  - eg_internal@easygo.mailosaur.net # Automation Testing Account
-                  - streamkeyuser@easygo.mailosaur.net # Automation Testing Account
-                  - ageassurance@easygo.mailosaur.net # Automation Testing Account
-                  - m.young@easygo.io # Matt Young
-            - enabled
-            - disabled
+        defaultVariant: enabled
         variants:
           disabled: false
           enabled: true
