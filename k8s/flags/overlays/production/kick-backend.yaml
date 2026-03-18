@@ -202,3 +202,18 @@ spec:
         variants:
           enabled: true
           disabled: false
+      outbox_query_experiment:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+        targeting:
+          if:
+            - var: targetingKey
+            - fractional:
+                - - enabled
+                  - 10
+                - - disabled
+                  - 90
+            - disabled

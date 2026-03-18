@@ -150,3 +150,9 @@ spec:
         variants:
           enabled: true
           disabled: false
+      outbox_query_experiment:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
