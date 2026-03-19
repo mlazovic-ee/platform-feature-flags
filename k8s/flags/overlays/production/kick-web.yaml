@@ -175,7 +175,8 @@ spec:
                   - c.tzoumanekas@easygo.io # Costa
                   - h.patel@easygo.io # Hemil
                   - k.bedi@easygo.io # KD
-                  - - k.camacho@easygo.io # Kyrie
+                  - k.camacho@easygo.io # Kyrie
+                  - streamkeyuser@easygo.mailosaur.net #Kyrie Test Account
                   - j.khan@easygo.io # Zeb
             - enabled
             - disabled
