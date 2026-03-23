@@ -131,6 +131,10 @@ spec:
                   - j.brown@easygo.io # Jeremy
                   - edward@easygo.io # Eddie
                   - c.nehme@easygo.io # Charbel
+                  - ryan@easygo.io # Ryan 
+                  - a.cronin@easygo.io # Andy Cronin
+                  - k.lenihan@easygo.io # Kevin Lenihan
+                  - streamkeyuser@easygo.mailosaur.net # Kyrie Test Account
             - enabled
             - disabled
         variants:
