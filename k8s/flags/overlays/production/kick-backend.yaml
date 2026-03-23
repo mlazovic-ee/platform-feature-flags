@@ -205,7 +205,7 @@ spec:
           disabled: false
       outbox_row_lock_claim:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
