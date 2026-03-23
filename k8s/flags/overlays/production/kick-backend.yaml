@@ -203,9 +203,9 @@ spec:
         variants:
           enabled: true
           disabled: false
-      outbox_query_experiment:
+      outbox_row_lock_claim:
         state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
         variants:
           enabled: true
           disabled: false
