@@ -17,15 +17,7 @@ spec:
       # Homepage Banner
       home-banner:
         state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - in:
-                - var: user.email
-                - - m.meana@easygo.io # Mateo
-                  - y.levraud@easygo.io # Yohann
-            - enabled
-            - disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
@@ -283,15 +275,7 @@ spec:
       # KICK Drops
       web-8:
         state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - in:
-                - var: user.email
-                - - m.meana@easygo.io # Mateo
-                  - y.levraud@easygo.io # Yohann
-            - enabled
-            - disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
