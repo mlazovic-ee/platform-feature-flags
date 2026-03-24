@@ -133,6 +133,7 @@ spec:
                   - y.levraud@easygo.io # Yohann
                   - j.khan@easygo.io # Zeb
                   - p.howard@easygo.io # Peter
+                  - stage1.up@wn1lxpnt.mailosaur.net #Leon test account
             - enabled
             - disabled
         variants:
@@ -160,6 +161,7 @@ spec:
                   - j.brown@easygo.io # Jeremy
                   - edward@easygo.io # Eddie
                   - c.nehme@easygo.io # Charbel
+                  - stage1.up@wn1lxpnt.mailosaur.net #Leon test account
             - enabled
             - disabled
         variants:
