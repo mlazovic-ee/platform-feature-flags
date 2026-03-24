@@ -134,6 +134,7 @@ spec:
                   - j.khan@easygo.io # Zeb
                   - p.howard@easygo.io # Peter
                   - stage1.up@wn1lxpnt.mailosaur.net #Leon test account
+                  - j.reyesvera@easygo.io # Juan
             - enabled
             - disabled
         variants:
@@ -162,6 +163,7 @@ spec:
                   - edward@easygo.io # Eddie
                   - c.nehme@easygo.io # Charbel
                   - stage1.up@wn1lxpnt.mailosaur.net #Leon test account
+                  - j.reyesvera@easygo.io # Juan
             - enabled
             - disabled
         variants:
