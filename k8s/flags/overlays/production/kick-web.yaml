@@ -127,6 +127,7 @@ spec:
                   - a.cronin@easygo.io # Andy Cronin
                   - k.lenihan@easygo.io # Kevin Lenihan
                   - streamkeyuser@easygo.mailosaur.net # Kyrie Test Account
+                  - f.mena@easygo.io # Felipe
             - enabled
             - disabled
         variants:
@@ -154,6 +155,7 @@ spec:
                   - j.brown@easygo.io # Jeremy
                   - edward@easygo.io # Eddie
                   - c.nehme@easygo.io # Charbel
+                  - f.mena@easygo.io # Felipe
             - enabled
             - disabled
         variants:
