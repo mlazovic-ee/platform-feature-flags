@@ -274,3 +274,9 @@ spec:
         variants:
           enabled: true
           disabled: false
+      view-chat-thread:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
