@@ -175,15 +175,8 @@ spec:
         targeting:
           if:
             - in:
-                - var: user.email
-                - - a.sajiv@easygo.io # Ash
-                  - b.choi@easygo.io # Brian
-                  - c.tzoumanekas@easygo.io # Costa
-                  - h.patel@easygo.io # Hemil
-                  - k.bedi@easygo.io # KD
-                  - k.camacho@easygo.io # Kyrie
-                  - streamkeyuser@easygo.mailosaur.net #Kyrie Test Account
-                  - j.khan@easygo.io # Zeb
+                - internal
+                - var: user.roles
             - enabled
             - disabled
         variants:
