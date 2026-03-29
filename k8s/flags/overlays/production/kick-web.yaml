@@ -256,7 +256,7 @@ spec:
       # Watch time storage and eligibility
       web-7:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
@@ -269,7 +269,7 @@ spec:
           disabled: false
       view-chat-thread:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
