@@ -136,6 +136,8 @@ spec:
                   - stage1.up@wn1lxpnt.mailosaur.net #Leon test account
                   - j.reyesvera@easygo.io # Juan
                   - z.ingle@easygo.io # Zach
+                  - f.mena@easygo.io # Felipe
+                  - m.goutry@easygo.io # Martin
             - enabled
             - disabled
         variants:
@@ -166,6 +168,8 @@ spec:
                   - stage1.up@wn1lxpnt.mailosaur.net #Leon test account
                   - j.reyesvera@easygo.io # Juan
                   - z.ingle@easygo.io # Zach
+                  - f.mena@easygo.io # Felipe
+                  - m.goutry@easygo.io # Martin
             - enabled
             - disabled
         variants:
