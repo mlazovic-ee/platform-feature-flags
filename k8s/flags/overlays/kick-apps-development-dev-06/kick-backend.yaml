@@ -115,12 +115,6 @@ spec:
           disabled: 0
           log: 1
           enabled: 2
-      ad_break_enabled:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
       chatroom_sync:
         state: ENABLED
         defaultVariant: enabled

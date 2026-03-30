@@ -120,12 +120,6 @@ spec:
         variants:
           enabled: true
           disabled: false
-      ad_break_enabled:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
       chatroom_sync:
         state: ENABLED
         defaultVariant: enabled
