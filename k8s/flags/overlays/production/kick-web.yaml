@@ -128,6 +128,7 @@ spec:
                   - k.lenihan@easygo.io # Kevin Lenihan
                   - streamkeyuser@easygo.mailosaur.net # Kyrie Test Account
                   - f.mena@easygo.io # Felipe
+                  - l.vesel@easygo.io # Leon
             - enabled
             - disabled
         variants:
@@ -156,6 +157,7 @@ spec:
                   - edward@easygo.io # Eddie
                   - c.nehme@easygo.io # Charbel
                   - f.mena@easygo.io # Felipe
+                  - l.vesel@easygo.io # Leon
             - enabled
             - disabled
         variants:
