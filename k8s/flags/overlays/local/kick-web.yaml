@@ -38,3 +38,39 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # the web-9 feature flags all fall under streamer analytics
+      # Overview section
+      web-9-1:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+      # Streams section
+      web-9-2:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+      # Partnership section - streamer
+      web-9-3:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+      # Partnership section - guest
+      web-9-4:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+      # Individual Stream section
+      web-9-5:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false

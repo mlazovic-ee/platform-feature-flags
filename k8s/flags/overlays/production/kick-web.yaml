@@ -275,3 +275,149 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # the web-9 feature flags all fall under streamer analytics
+      # Overview section
+      web-9-1:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - a.astruc@easygo.io # Arnaud
+                  - a.roe@easygo.io # Alister
+                  - a.ruberto@easygo.io # Alex
+                  - b.rostamiyeganeh@easygo.io # Naz
+                  - e.foh@easygo.io # Edwin
+                  - j.pettigrew@easygo.io # James
+                  - k.bedi@easygo.io # KD
+                  - m.meana@easygo.io # Mateo
+                  - m.soulsby@easygo.io # Matt
+                  - n.dagher@easygo.io # Nick
+                  - p.pan@easygo.io # Peter
+                  - r.tuvera@easygo.io # Raf
+                  - s.chu@easygo.io # Chu
+                  - s.sotiriadis@easygo.io # Sarah
+                  - v.manohar@easygo.io # Vivek
+                  - y.levraud@easygo.io # Yohan
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
+      # Streams section
+      web-9-2:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - a.astruc@easygo.io # Arnaud
+                  - a.roe@easygo.io # Alister
+                  - a.ruberto@easygo.io # Alex
+                  - b.rostamiyeganeh@easygo.io # Naz
+                  - e.foh@easygo.io # Edwin
+                  - j.pettigrew@easygo.io # James
+                  - k.bedi@easygo.io # KD
+                  - m.meana@easygo.io # Mateo
+                  - m.soulsby@easygo.io # Matt
+                  - n.dagher@easygo.io # Nick
+                  - p.pan@easygo.io # Peter
+                  - r.tuvera@easygo.io # Raf
+                  - s.chu@easygo.io # Chu
+                  - s.sotiriadis@easygo.io # Sarah
+                  - v.manohar@easygo.io # Vivek
+                  - y.levraud@easygo.io # Yohan
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
+      # Partnership section - streamer
+      web-9-3:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - a.astruc@easygo.io # Arnaud
+                  - a.roe@easygo.io # Alister
+                  - a.ruberto@easygo.io # Alex
+                  - b.rostamiyeganeh@easygo.io # Naz
+                  - e.foh@easygo.io # Edwin
+                  - j.pettigrew@easygo.io # James
+                  - k.bedi@easygo.io # KD
+                  - m.meana@easygo.io # Mateo
+                  - m.soulsby@easygo.io # Matt
+                  - n.dagher@easygo.io # Nick
+                  - p.pan@easygo.io # Peter
+                  - r.tuvera@easygo.io # Raf
+                  - s.chu@easygo.io # Chu
+                  - s.sotiriadis@easygo.io # Sarah
+                  - v.manohar@easygo.io # Vivek
+                  - y.levraud@easygo.io # Yohan
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
+      # Partnership section - guest
+      web-9-4:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - a.astruc@easygo.io # Arnaud
+                  - a.roe@easygo.io # Alister
+                  - a.ruberto@easygo.io # Alex
+                  - b.rostamiyeganeh@easygo.io # Naz
+                  - e.foh@easygo.io # Edwin
+                  - j.pettigrew@easygo.io # James
+                  - k.bedi@easygo.io # KD
+                  - m.meana@easygo.io # Mateo
+                  - m.soulsby@easygo.io # Matt
+                  - n.dagher@easygo.io # Nick
+                  - p.pan@easygo.io # Peter
+                  - r.tuvera@easygo.io # Raf
+                  - s.chu@easygo.io # Chu
+                  - s.sotiriadis@easygo.io # Sarah
+                  - v.manohar@easygo.io # Vivek
+                  - y.levraud@easygo.io # Yohan
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
+      # Individual Stream section
+      web-9-5:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - a.astruc@easygo.io # Arnaud
+                  - a.roe@easygo.io # Alister
+                  - a.ruberto@easygo.io # Alex
+                  - b.rostamiyeganeh@easygo.io # Naz
+                  - e.foh@easygo.io # Edwin
+                  - j.pettigrew@easygo.io # James
+                  - k.bedi@easygo.io # KD
+                  - m.meana@easygo.io # Mateo
+                  - m.soulsby@easygo.io # Matt
+                  - n.dagher@easygo.io # Nick
+                  - p.pan@easygo.io # Peter
+                  - r.tuvera@easygo.io # Raf
+                  - s.chu@easygo.io # Chu
+                  - s.sotiriadis@easygo.io # Sarah
+                  - v.manohar@easygo.io # Vivek
+                  - y.levraud@easygo.io # Yohan
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
