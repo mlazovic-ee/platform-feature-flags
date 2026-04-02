@@ -49,13 +49,6 @@ spec:
         variants:
           disabled: false
           enabled: true
-      # Kicks Pinned Messages
-      web-3:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          disabled: false
-          enabled: true
       # Age Assurance Home Banner
       trust-1:
         state: ENABLED
