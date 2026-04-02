@@ -158,6 +158,7 @@ spec:
                   - c.nehme@easygo.io # Charbel
                   - f.mena@easygo.io # Felipe
                   - l.vesel@easygo.io # Leon
+                  - streamkeyuser@easygo.mailosaur.net # Kyrie Test Account
             - enabled
             - disabled
         variants:
