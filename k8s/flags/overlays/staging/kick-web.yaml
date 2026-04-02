@@ -427,3 +427,17 @@ spec:
         variants:
           enabled: true
           disabled: false
+          # Individual Stream section
+      argentina-only-test:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+              - var: country
+              - ["AR"]
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
