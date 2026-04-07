@@ -45,7 +45,7 @@ jobs:
           cache-dependency-path: ./scripts/validate/go.sum
 
       - name: Install tools
-        uses: KickEngineering/platform-github-actions/install-tools@main
+        uses: KickEngineering/platform-github-actions/install-tools@install-tools/v1.0.0
         with:
           kustomize: v5.4.3
 
