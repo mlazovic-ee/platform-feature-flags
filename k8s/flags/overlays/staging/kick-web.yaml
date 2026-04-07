@@ -305,7 +305,8 @@ spec:
                   - s.chu@easygo.io # Chu
                   - s.sotiriadis@easygo.io # Sarah
                   - v.manohar@easygo.io # Vivek
-                  - y.levraud@easygo.io # Yohan
+                  - y.levraud@easygo.io # Yohann
+                  - yohann@kick.com # Yohann (Kick email)
             - enabled
             - disabled
         variants:
@@ -334,7 +335,8 @@ spec:
                   - s.chu@easygo.io # Chu
                   - s.sotiriadis@easygo.io # Sarah
                   - v.manohar@easygo.io # Vivek
-                  - y.levraud@easygo.io # Yohan
+                  - y.levraud@easygo.io # Yohann
+                  - yohann@kick.com # Yohann (Kick email)
             - enabled
             - disabled
         variants:
@@ -363,7 +365,8 @@ spec:
                   - s.chu@easygo.io # Chu
                   - s.sotiriadis@easygo.io # Sarah
                   - v.manohar@easygo.io # Vivek
-                  - y.levraud@easygo.io # Yohan
+                  - y.levraud@easygo.io # Yohann
+                  - yohann@kick.com # Yohann (Kick email)
             - enabled
             - disabled
         variants:
@@ -392,7 +395,8 @@ spec:
                   - s.chu@easygo.io # Chu
                   - s.sotiriadis@easygo.io # Sarah
                   - v.manohar@easygo.io # Vivek
-                  - y.levraud@easygo.io # Yohan
+                  - y.levraud@easygo.io # Yohann
+                  - yohann@kick.com # Yohann (Kick email)
             - enabled
             - disabled
         variants:
@@ -421,7 +425,8 @@ spec:
                   - s.chu@easygo.io # Chu
                   - s.sotiriadis@easygo.io # Sarah
                   - v.manohar@easygo.io # Vivek
-                  - y.levraud@easygo.io # Yohan
+                  - y.levraud@easygo.io # Yohann
+                  - yohann@kick.com # Yohann (Kick email)
             - enabled
             - disabled
         variants:
