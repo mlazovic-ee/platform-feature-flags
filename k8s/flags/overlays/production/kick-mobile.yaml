@@ -7,7 +7,7 @@ spec:
     flags:
       mobile-test:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
