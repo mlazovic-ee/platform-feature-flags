@@ -194,3 +194,17 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Revoke IVS key on ban (EI-24) - prevents banned users streaming via 3P restream providers
+      revoke_ivs_key_on_ban:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - k.camacho@easygo.io # Kyrie
+            - enabled
+            - disabled
