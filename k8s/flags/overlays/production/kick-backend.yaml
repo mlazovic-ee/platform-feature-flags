@@ -206,5 +206,6 @@ spec:
             - in:
                 - var: user.email
                 - - k.camacho@easygo.io # Kyrie
+                  - egbanuser@easygo.mailosaur.net # Kyrie Test
             - enabled
             - disabled
