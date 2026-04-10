@@ -116,7 +116,7 @@ spec:
                   - j.brown@easygo.io # Jeremy
                   - edward@easygo.io # Eddie
                   - c.nehme@easygo.io # Charbel
-                  - ryan@easygo.io # Ryan 
+                  - ryan@easygo.io # Ryan
                   - a.cronin@easygo.io # Andy Cronin
                   - k.lenihan@easygo.io # Kevin Lenihan
                   - streamkeyuser@easygo.mailosaur.net # Kyrie Test Account
@@ -420,3 +420,20 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # New Search MVP
+      web-10:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          disabled: false
+          enabled: true
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - a.sajiv@easygo.io # Ash
+                  - b.choi@easygo.io # Brian
+                  - h.patel@easygo.io # Hemil
+                  - z.ingle@easygo.io # Zach
+            - enabled
+            - disabled

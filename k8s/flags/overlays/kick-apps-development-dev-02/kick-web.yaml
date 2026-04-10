@@ -245,3 +245,10 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # New Search MVP
+      web-10:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          disabled: false
+          enabled: true

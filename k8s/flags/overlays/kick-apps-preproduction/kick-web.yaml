@@ -236,3 +236,9 @@ spec:
         variants:
           enabled: true
           disabled: false
+      web-10:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          disabled: false
+          enabled: true
