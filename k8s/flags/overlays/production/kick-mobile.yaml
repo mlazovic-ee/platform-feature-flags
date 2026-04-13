@@ -13,7 +13,7 @@ spec:
             - sem_ver:
                 - var: app.version
                 - <
-                - "40.14.2"
+                - "40.14.6"
             - disabled
             - disabled
         variants:
@@ -27,7 +27,7 @@ spec:
             - sem_ver:
                 - var: app.version
                 - <
-                - "40.14.2"
+                - "40.14.6"
             - disabled
             - enabled
         variants:
@@ -41,7 +41,7 @@ spec:
             - sem_ver:
                 - var: app.version
                 - <
-                - "40.14.2"
+                - "40.14.6"
             - disabled
             - enabled
         variants:
@@ -55,7 +55,7 @@ spec:
             - sem_ver:
                 - var: app.version
                 - <
-                - "40.14.2"
+                - "40.14.6"
             - disabled
             - disabled
         variants:
@@ -69,23 +69,9 @@ spec:
             - sem_ver:
                 - var: app.version
                 - <
-                - "40.14.2"
+                - "40.14.6"
             - disabled
             - enabled
-        variants:
-          enabled: true
-          disabled: false
-      fpjs:
-        state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - sem_ver:
-                - var: app.version
-                - <
-                - "40.14.2"
-            - disabled
-            - disabled
         variants:
           enabled: true
           disabled: false
@@ -97,7 +83,7 @@ spec:
             - sem_ver:
                 - var: app.version
                 - <
-                - "40.14.2"
+                - "40.14.6"
             - disabled
             - default
         variants:
@@ -111,7 +97,7 @@ spec:
             - sem_ver:
                 - var: app.version
                 - <
-                - "40.14.2"
+                - "40.14.6"
             - disabled
             - enabled
         variants:
@@ -125,7 +111,7 @@ spec:
             - sem_ver:
                 - var: app.version
                 - <
-                - "40.14.2"
+                - "40.14.6"
             - disabled
             - default
         variants:
@@ -139,7 +125,7 @@ spec:
             - sem_ver:
                 - var: app.version
                 - <
-                - "40.14.2"
+                - "40.14.6"
             - disabled
             - default
         variants:
@@ -156,7 +142,7 @@ spec:
             - sem_ver:
                 - var: app.version
                 - <
-                - "40.14.2"
+                - "40.14.6"
             - disabled
             - default
         variants:
@@ -205,7 +191,7 @@ spec:
             - sem_ver:
                 - var: app.version
                 - <
-                - "40.14.2"
+                - "40.14.6"
             - disabled
             - default
         variants:
@@ -219,7 +205,7 @@ spec:
             - sem_ver:
                 - var: app.version
                 - <
-                - "40.14.2"
+                - "40.14.6"
             - disabled
             - default
         variants:
@@ -236,7 +222,7 @@ spec:
             - sem_ver:
                 - var: app.version
                 - <
-                - "40.14.2"
+                - "40.14.6"
             - disabled
             - default
         variants:
