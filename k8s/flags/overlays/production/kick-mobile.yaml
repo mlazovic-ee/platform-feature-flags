@@ -144,9 +144,10 @@ spec:
             - default
         variants:
           default:
-            - "40.11.0"
-            - "40.13.4"
-          disabled: []
+            versions:
+              - "40.11.0"
+              - "40.13.4"
+          disabled: {}
       mobileAndroidVersionMap:
         state: ENABLED
         defaultVariant: default
@@ -223,9 +224,10 @@ spec:
             - default
         variants:
           default:
-            - "40.11.0"
-            - "40.13.4"
-          disabled: []
+            versions:
+              - "40.11.0"
+              - "40.13.4"
+          disabled: {}
       mobileIosVersionMap:
         state: ENABLED
         defaultVariant: default
