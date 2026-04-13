@@ -31,6 +31,7 @@ func main() {
 		err := validateFeatureFlagFlags(ff.Spec.FlagSpec.Flags)
 		if err != nil {
 			fmt.Printf("❌ FeatureFlag %s validation failed: %v\n", ff.Name, err)
+			os.Exit(1)
 		} else {
 			fmt.Printf("✅ FeatureFlag %s is valid.\n", ff.Name)
 		}
