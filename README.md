@@ -298,7 +298,36 @@ For consumers that run in an insecure environment, such as a web browser or mobi
 
 #### Mobile
 
-TODO
+The mobile app uses the OpenFeature OFREP web provider to poll feature flags from FlagD.
+
+The app must also define each expected flag locally with its own default value so it can continue working if FlagD is unavailable. Flags that exist in this repo but are not declared in the mobile app are ignored.
+
+When adding a new mobile flag:
+
+- During development, default it to `false` locally.
+- When the feature is ready to go live, change the flag's default to `true` (or its normal "on" value) in this repo.
+- Keep it disabled for app versions below the go-live version with a semver check.
+
+Example boolean flag:
+
+```yaml
+mobile-test:
+  state: ENABLED
+  defaultVariant: enabled
+  targeting:
+    if:
+      - sem_ver:
+          - var: app.version
+          - <
+          - "40.14.6"
+      - disabled
+      - enabled
+  variants:
+    enabled: true
+    disabled: false
+```
+
+This is important for a controlled release: the flag can be live by default, while still staying off for app versions older than the intended go-live version.
 
 #### Web
 
