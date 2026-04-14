@@ -46,7 +46,23 @@ spec:
   sources:
     - source: platform-open-feature/kick-web
       provider: kubernetes
+---
+apiVersion: core.openfeature.dev/v1beta1
+kind: FeatureFlagSource
+metadata:
+  name: client-side-mobile
+  namespace: platform-open-feature
+spec:
+  sources:
     - source: platform-open-feature/kick-mobile
       provider: kubernetes
+---
+apiVersion: core.openfeature.dev/v1beta1
+kind: FeatureFlagSource
+metadata:
+  name: client-side-tv
+  namespace: platform-open-feature
+spec:
+  sources:
     - source: platform-open-feature/kick-tv
       provider: kubernetes
