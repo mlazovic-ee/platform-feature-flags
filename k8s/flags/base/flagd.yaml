@@ -21,6 +21,26 @@ spec:
 apiVersion: core.openfeature.dev/v1beta1
 kind: Flagd
 metadata:
+  name: client-side-mobile
+  namespace: platform-open-feature
+spec:
+  replicas: PLACEHOLDER
+  featureFlagSource: client-side-mobile
+  ingress:
+    enabled: true
+    annotations:
+      alb.ingress.kubernetes.io/target-type: "ip"
+      alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}]'
+      alb.ingress.kubernetes.io/healthcheck-port: "8014"
+      alb.ingress.kubernetes.io/healthcheck-path: "/readyz"
+    hosts:
+      - PLACEHOLDER
+    ingressClassName: kick-flags-alb
+    pathType: Prefix
+---
+apiVersion: core.openfeature.dev/v1beta1
+kind: Flagd
+metadata:
   name: server-side
   namespace: platform-open-feature
 spec:
