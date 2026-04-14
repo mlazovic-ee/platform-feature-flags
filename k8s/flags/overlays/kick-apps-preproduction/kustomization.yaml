@@ -28,18 +28,6 @@ patches:
       group: core.openfeature.dev
       version: v1beta1
       kind: Flagd
-      name: client-side-mobile
-    patch: |-
-      - op: replace
-        path: /spec/ingress/hosts/0
-        value: mobile.flags.kick-preproduction.com
-      - op: replace
-        path: /spec/replicas
-        value: 5
-  - target:
-      group: core.openfeature.dev
-      version: v1beta1
-      kind: Flagd
       name: server-side
     patch: |-
       - op: replace
