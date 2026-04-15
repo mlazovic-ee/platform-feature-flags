@@ -39,12 +39,12 @@ Feature Flags are cool.
 
 ## Links
 
-| Environment   | URL                                                                      | Configuration                                                                                                   | ArgoCD Application                                                                              |
-| :------------ | :----------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------- |
-| Production    | [https://flags.kick.com](https://flags.kick.com)                         | [Production](https://github.com/KickEngineering/platform-feature-flags/tree/main/k8s/flags/overlays/production) | [platform-feature-flags](https://argo.easygo-kick.com/applications/platform-feature-flags)      |
-| Staging       | [https://flags.easygo-drop-kick.com](https://flags.easygo-drop-kick.com) | [Staging](https://github.com/KickEngineering/platform-feature-flags/tree/main/k8s/flags/overlays/staging)       | [platform-feature-flags](https://argo.easygo-drop-kick.com/applications/platform-feature-flags) |
-| Preproduction | TBA                                                                      | TBA                                                                                                             | TBA                                                                                             |
-| Development   | TBA                                                                      | TBA                                                                                                             | TBA                                                                                             |
+| Environment   | URL(s)                                                                                                                                     | Configuration                                                                                                   | ArgoCD Application                                                                              |
+| :------------ | :----------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------- |
+| Production    | Web: [https://flags.kick.com](https://flags.kick.com)<br>Mobile: [https://mobile.flags.kick.com](https://mobile.flags.kick.com)         | [Production](https://github.com/KickEngineering/platform-feature-flags/tree/main/k8s/flags/overlays/production) | [platform-feature-flags](https://argo.easygo-kick.com/applications/platform-feature-flags)      |
+| Staging       | Web: [https://flags.easygo-drop-kick.com](https://flags.easygo-drop-kick.com)<br>Mobile: [https://mobile.flags.easygo-drop-kick.com](https://mobile.flags.easygo-drop-kick.com) | [Staging](https://github.com/KickEngineering/platform-feature-flags/tree/main/k8s/flags/overlays/staging)       | [platform-feature-flags](https://argo.easygo-drop-kick.com/applications/platform-feature-flags) |
+| Preproduction | TBA                                                                                                                                        | TBA                                                                                                             | TBA                                                                                             |
+| Development   | TBA                                                                                                                                        | TBA                                                                                                             | TBA                                                                                             |
 
 ## Architecture
 
@@ -298,12 +298,16 @@ For consumers that run in an insecure environment, such as a web browser or mobi
 
 #### Mobile
 
-The mobile app uses the OpenFeature OFREP web provider to poll feature flags from FlagD.
+The mobile app uses the OpenFeature OFREP web provider to poll feature flags from a dedicated mobile FlagD endpoint. That endpoint only serves the `kick-mobile.yaml` manifest for the target environment.
+
+- Production: `https://mobile.flags.kick.com`
+- Staging: `https://mobile.flags.easygo-drop-kick.com`
 
 The app must also define each expected flag locally with its own default value so it can continue working if FlagD is unavailable. Flags that exist in this repo but are not declared in the mobile app are ignored.
 
 When adding a new mobile flag:
 
+- Add it to the appropriate `k8s/flags/overlays/<environment>/kick-mobile.yaml` manifest so it is exposed by the mobile endpoint.
 - During development, default it to `false` locally.
 - When the feature is ready to go live, change the flag's default to `true` (or its normal "on" value) in this repo.
 - Keep it disabled for app versions below the go-live version with a semver check.
