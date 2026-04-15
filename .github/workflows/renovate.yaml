@@ -1,0 +1,51 @@
+name: Renovate
+
+on:
+  merge_group:
+  workflow_dispatch:
+    inputs:
+      dryRun:
+        description: Dry Run
+        default: false
+        type: boolean
+        required: true
+      logLevel:
+        description: Log Level
+        default: info
+        type: choice
+        options:
+          - debug
+          - info
+          - warn
+          - error
+          - fatal
+        required: false
+      version:
+        description: Renovate Version
+        default: latest
+        required: false
+  schedule:
+    - cron: "0 * * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/renovate.yaml
+      - .github/renovate.json5
+      - .github/renovate/**.json5
+      - .renovate/**.json5
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  renovate:
+    uses: KickEngineering/platform-github-workflows/.github/workflows/ci-renovate.yaml@main
+    secrets: inherit
+    with:
+      renovate_repositories: ${{ github.repository }}
+      log_level: "${{ inputs.logLevel || 'debug' }}"
+      renovate_dry_run: "${{ inputs.dryRun && 'extract' || '' }}"
+      config_file_path: .github/renovate.json5
+      version: "${{ inputs.version || 'latest' }}"

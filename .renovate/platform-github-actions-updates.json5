@@ -1,0 +1,71 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  customManagers: [
+    {
+      customType: "regex",
+      fileMatch: ["\\.github/workflows/.*\\.ya?ml$"],
+      matchStrings: [
+        "uses: KickEngineering/platform-github-actions/(?<depName>[a-z0-9-]+)@[a-z0-9-]+/(?<currentValue>v[0-9]+\\.[0-9]+\\.[0-9]+)"
+      ],
+      datasourceTemplate: "github-tags",
+      packageNameTemplate: "KickEngineering/platform-github-actions",
+      extractVersionTemplate: "^{{{depName}}}/(?<version>.+)$",
+      versioningTemplate: "semver",
+    }
+  ],
+  packageRules: [
+    {
+      matchManagers: ["regex"],
+      matchPackageNames: ["KickEngineering/platform-github-actions"],
+      pinDigests: false,
+    },
+    {
+      matchPackageNames: ["KickEngineering/platform-github-actions"],
+      matchUpdateTypes: ["pinDigest"],
+      enabled: false,
+    },
+    {
+      matchManagers: ["regex"],
+      matchPackageNames: ["KickEngineering/platform-github-actions"],
+      matchUpdateTypes: ["minor", "patch"],
+      automerge: true,
+      automergeType: "branch",
+      ignoreTests: true,
+      addLabels: ["renovate/github-action"],
+    },
+    {
+      matchManagers: ["regex"],
+      matchPackageNames: ["KickEngineering/platform-github-actions"],
+      matchUpdateTypes: ["major"],
+      addLabels: ["renovate/github-action", "type/major"],
+    },
+    {
+      matchManagers: ["regex"],
+      matchPackageNames: ["KickEngineering/platform-github-actions"],
+      matchUpdateTypes: ["major"],
+      semanticCommitType: "feat",
+      commitMessagePrefix: "{{semanticCommitType}}({{semanticCommitScope}})!:",
+      commitMessageExtra: "( {{currentVersion}} → {{newVersion}} )",
+    },
+    {
+      matchManagers: ["regex"],
+      matchPackageNames: ["KickEngineering/platform-github-actions"],
+      matchUpdateTypes: ["minor"],
+      semanticCommitType: "feat",
+      commitMessageExtra: "( {{currentVersion}} → {{newVersion}} )",
+    },
+    {
+      matchManagers: ["regex"],
+      matchPackageNames: ["KickEngineering/platform-github-actions"],
+      matchUpdateTypes: ["patch"],
+      semanticCommitType: "fix",
+      commitMessageExtra: "( {{currentVersion}} → {{newVersion}} )",
+    },
+    {
+      matchManagers: ["regex"],
+      matchPackageNames: ["KickEngineering/platform-github-actions"],
+      semanticCommitScope: "KICK-0000",
+      commitMessageTopic: "action {{depName}}",
+    },
+  ],
+}
