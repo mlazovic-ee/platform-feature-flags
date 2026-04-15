@@ -11,6 +11,7 @@
     ":dependencyDashboard",
     ":semanticCommits",
     ":timezone(Australia/Melbourne)",
+    "github>KickEngineering/platform-feature-flags//.renovate/labels.json5",
     "github>KickEngineering/platform-feature-flags//.renovate/platform-github-actions-updates.json5",
   ],
   enabledManagers: ["regex"],
