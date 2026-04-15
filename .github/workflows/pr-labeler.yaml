@@ -23,7 +23,7 @@ jobs:
         component-directory: k8s
 
     - name: Component labels
-      uses: KickEngineering/platform-github-actions/pr-labeler@pr-labeler/v1.1.0
+      uses: KickEngineering/platform-github-actions/pr-labeler@pr-labeler/v1.2.0
       if: ${{ fromJson(steps.component-changes.outputs.components)[0] != null }}
       env:
         GITHUB_TOKEN: ${{ github.token }}
@@ -33,7 +33,7 @@ jobs:
           ') }}
 
     - name: Environment labels
-      uses: KickEngineering/platform-github-actions/pr-labeler@pr-labeler/v1.1.0
+      uses: KickEngineering/platform-github-actions/pr-labeler@pr-labeler/v1.2.0
       if: ${{ fromJson(steps.component-changes.outputs.environments)[0] != null }}
       env:
         GITHUB_TOKEN: ${{ github.token }}
