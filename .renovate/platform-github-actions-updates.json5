@@ -29,8 +29,7 @@
       matchPackageNames: ["KickEngineering/platform-github-actions"],
       matchUpdateTypes: ["minor", "patch"],
       automerge: true,
-      automergeType: "branch",
-      ignoreTests: true,
+      automergeType: "pr",
       addLabels: ["renovate/github-action"],
     },
     {
