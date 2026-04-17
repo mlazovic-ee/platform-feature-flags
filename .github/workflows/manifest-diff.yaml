@@ -17,7 +17,7 @@ jobs:
 
     - name: Kustomize component changes
       id: component-changes
-      uses: KickEngineering/platform-github-actions/kustomize-component-changes@kustomize-component-changes/v1.1.0
+      uses: KickEngineering/platform-github-actions/kustomize-component-changes@kustomize-component-changes/v1.2.0
       with:
         component-directory: k8s
 
