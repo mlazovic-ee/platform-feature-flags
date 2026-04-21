@@ -211,9 +211,15 @@ spec:
             - disabled
       # When enabled, monolith would call chat-history-service to
       # check if a given user has ever sent a message in a channel.
-      user-channel-has-chatted:
+      user_channel_has_chatted:
         state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
+        targeting:
+          fractional:
+            - - enabled
+              - 30
+            - - disabled
+              - 70
         variants:
           enabled: true
           disabled: false
