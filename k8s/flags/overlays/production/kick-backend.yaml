@@ -126,6 +126,12 @@ spec:
         variants:
           enabled: true
           disabled: false
+      user_events_outbox:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
       bulk_sync_null_username_users_to_v2:
         state: ENABLED
         defaultVariant: disabled
