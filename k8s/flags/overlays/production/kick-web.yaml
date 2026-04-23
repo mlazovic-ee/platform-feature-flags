@@ -168,7 +168,7 @@ spec:
           if:
             - in:
                 - var: country
-                - ["AR"]
+                - [ "AR" ]
             - enabled
             - disabled
       # Home page personalisation
@@ -229,6 +229,7 @@ spec:
                   - c.nehme@easygo.io # Charbel
                   - elaineliu199411@gmail.com # Elaine
                   - j.gilson@easygo.io # Jeremy
+                  - j.brown@easygo.io # Jeremy Brown
                   - s.lee@easygo.io # Stephen
                   - eg_viewer@easygo.mailosaur.net # Automation Testing Account
                   - eg_user@easygo.mailosaur.net # Automation Testing Account
