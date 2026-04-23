@@ -155,10 +155,17 @@ spec:
           disabled: false
       user_events_outbox:
         state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
         variants:
           enabled: true
           disabled: false
+        targeting:
+          if:
+            - in:
+                - var: user_id
+                - - 259 # danidomi
+            - enabled
+            - disabled
       bulk_sync_null_username_users_to_v2:
         state: ENABLED
         defaultVariant: disabled
