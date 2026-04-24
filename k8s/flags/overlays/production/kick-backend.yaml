@@ -128,18 +128,10 @@ spec:
           disabled: false
       user_events_outbox:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
-        targeting:
-          if:
-            - in:
-                - var: user_id
-                - - 21529733 # danidomi
-                  - 58344865 # igors
-            - enabled
-            - disabled
       bulk_sync_null_username_users_to_v2:
         state: ENABLED
         defaultVariant: disabled
