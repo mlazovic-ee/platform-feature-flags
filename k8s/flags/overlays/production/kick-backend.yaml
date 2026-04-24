@@ -227,13 +227,7 @@ spec:
       # check if a given user has ever sent a message in a channel.
       user_channel_has_chatted:
         state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          fractional:
-            - - enabled
-              - 30
-            - - disabled
-              - 70
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
