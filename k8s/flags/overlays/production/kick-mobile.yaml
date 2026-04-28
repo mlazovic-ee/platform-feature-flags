@@ -71,7 +71,7 @@ spec:
                 - <
                 - "40.14.6"
             - disabled
-            - enabled
+            - disabled
         variants:
           enabled: true
           disabled: false
