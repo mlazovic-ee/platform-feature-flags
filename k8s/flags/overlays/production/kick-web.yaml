@@ -84,8 +84,14 @@ spec:
         targeting:
           if:
             - in:
-                - internal
-                - var: user.roles
+                - var: user.email
+                - - c.li@easygo.io # Coco
+                  - k.lenihan@easygo.io # Kelly
+                  - el.liu@easygo.io # Elaine
+                  - k.camacho@easygo.io # Kyrie
+                  - kyrie@kick.com # Kyrie
+                  - vukasintrickovic@mebit.io # Vukasin
+                  - j.khan@easygo.io # Zeb
             - enabled
             - disabled
         variants:
