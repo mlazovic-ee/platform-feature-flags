@@ -135,3 +135,10 @@ spec:
                   - z.ingle@easygo.io # Zach
             - enabled
             - disabled
+      # Dynamic encoding settings in frontend to call chnl-engagement-service for channel_type values
+      encoding-settings:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
