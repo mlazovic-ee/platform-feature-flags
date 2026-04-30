@@ -5,6 +5,31 @@ metadata:
 spec:
   flagSpec:
     flags:
+      # Controls the fraction of requests for which Mux SDK IsEnabled is set in media-metadata.
+      # 0.0 = disabled for all, 1.0 = enabled for all.
+      # Authenticated users are bucketed consistently by user ID; anonymous users are sampled randomly.
+      media_metadata_mux_sampling_rate:
+        state: ENABLED
+        defaultVariant: full
+        variants:
+          off: 0.0
+          full: 1.0
+      # Go Live - Toggle the go live feature for creators
+      # disabled: not visible to creators
+      # enabled: visible to creators with a button to go live from main page navigation bar
+      web-go-live:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - f.mena@easygo.io # Felipe
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
       # Download Profile for Recommended Encoding Settings - Link to download OBS profile file containing recommended encoding settings, which can be imported inside OBS
       # disabled: not visible to creators
       # enabled: visible to creators with a link to download the profile
@@ -56,7 +81,7 @@ spec:
       # enabled: cloudflare
       keath-info:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
@@ -67,30 +92,38 @@ spec:
         variants:
           enabled: true
           disabled: false
-      # /me endpoint
-      domain-1:
+      # allow web clients to connect to pusher-2
+      pusher-2:
         state: ENABLED
-        defaultVariant: enabled
-        variants:
-          disabled: true
-          enabled: false
-      # /videos endpoint
-      domain-2:
-        state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
         variants:
           disabled: false
           enabled: true
-      ia-redesign:
+      # /me endpoint
+      domain-1:
         state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
+        variants:
+          disabled: false
+          enabled: true
+      # /videos endpoint
+      domain-2:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
         variants:
           disabled: false
           enabled: true
       # Age Assurance Home Banner
       trust-1:
         state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
         variants:
           disabled: false
           enabled: true
@@ -103,6 +136,199 @@ spec:
           enabled: true
       # Paypal Integration
       fsp:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      # Masthead Display Ads
+      web-4:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
+      # In-feed Ads
+      web-4-1:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - c.li@easygo.io # Coco
+                  - k.lenihan@easygo.io # Kelly
+                  - el.liu@easygo.io # Elaine
+                  - k.camacho@easygo.io # Kyrie
+                  - kyrie@kick.com # Kyrie
+                  - vukasintrickovic@mebit.io # Vukasin
+                  - j.khan@easygo.io # Zeb
+            - enabled
+            - disabled
+        variants:
+          disabled: false
+          enabled: true
+      # Mid-roll Ads
+      web-4-2:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - a.ruberto@easygo.io # Alex
+                  - a.fernandes@easygo.io # Andre
+                  - a.sajiv@easygo.io # Ash
+                  - b.choi@easygo.io # Brian
+                  - c.li@easygo.io # Coco
+                  - c.tzoumanekas@easygo.io # Costa
+                  - el.liu@easygo.io # Elaine
+                  - h.patel@easygo.io # Hemil
+                  - k.camacho@easygo.io # Kyrie
+                  - kyrie@kick.com # Kyrie
+                  - larissa@easygo.io # Larissa
+                  - y.levraud@easygo.io # Yohann
+                  - j.khan@easygo.io # Zeb
+                  - p.howard@easygo.io # Peter
+                  - j.brown@easygo.io # Jeremy
+                  - edward@easygo.io # Eddie
+                  - c.nehme@easygo.io # Charbel
+                  - ryan@easygo.io # Ryan
+                  - a.cronin@easygo.io # Andy Cronin
+                  - k.lenihan@easygo.io # Kevin Lenihan
+                  - streamkeyuser@easygo.mailosaur.net # Kyrie Test Account
+                  - f.mena@easygo.io # Felipe
+                  - l.vesel@easygo.io # Leon
+            - enabled
+            - disabled
+        variants:
+          disabled: false
+          enabled: true
+      # Mid-roll Ads - opt-in page
+      web-4-4:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - a.ruberto@easygo.io # Alex
+                  - a.fernandes@easygo.io # Andre
+                  - b.choi@easygo.io # Brian
+                  - c.li@easygo.io # Coco
+                  - el.liu@easygo.io # Elaine
+                  - k.camacho@easygo.io # Kyrie
+                  - kyrie@kick.com # Kyrie
+                  - larissa@easygo.io # Larissa
+                  - y.levraud@easygo.io # Yohann
+                  - j.khan@easygo.io # Zeb
+                  - p.howard@easygo.io # Peter
+                  - j.brown@easygo.io # Jeremy
+                  - edward@easygo.io # Eddie
+                  - c.nehme@easygo.io # Charbel
+                  - f.mena@easygo.io # Felipe
+                  - l.vesel@easygo.io # Leon
+                  - streamkeyuser@easygo.mailosaur.net # Kyrie Test Account
+            - enabled
+            - disabled
+        variants:
+          disabled: false
+          enabled: true
+      # KICK Ads policy page
+      web-4-5:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          disabled: false
+          enabled: true
+        targeting:
+          if:
+            - in:
+                - var: country
+                - [ "AR" ]
+            - enabled
+            - disabled
+      # Home page personalisation
+      web-5:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
+      # Home page personalisation - Phase 1.5
+      web-5-1:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
+      # Playback API
+      web-playback:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      # A/A test: feature flag phased rollout validation
+      # Phase 3: 50/50 split (authenticated users only)
+      aa-test-1:
+        state: ENABLED
+        defaultVariant: control
+        variants:
+          control: "control"
+          variant-a: "variant-a"
+          variant-b: "variant-b"
+        targeting:
+          if:
+            - var: user.id
+            - fractional:
+                - - variant-a
+                  - 50
+                - - variant-b
+                  - 50
+            - control
+      # Ads Preferences
+      web-4-3:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - m.meana@easygo.io # Mateo
+                  - b.choi@easygo.io # Brian
+                  - j.khan@easygo.io # Zeb
+                  - k.camacho@easygo.io # Kyrie
+                  - onboarding04@easygo.mailosaur.net # Kyrie
+                  - onboarding05@easygo.mailosaur.net # Kyrie
+                  - el.liu@easygo.io # Elaine
+                  - larissa@easygo.io # Larissa
+                  - c.nehme@easygo.io # Charbel
+                  - elaineliu199411@gmail.com # Elaine
+                  - j.gilson@easygo.io # Jeremy
+                  - j.brown@easygo.io # Jeremy Brown
+                  - s.lee@easygo.io # Stephen
+                  - eg_viewer@easygo.mailosaur.net # Automation Testing Account
+                  - eg_user@easygo.mailosaur.net # Automation Testing Account
+                  - eg_streamer@easygo.mailosaur.net # Automation Testing Account
+                  - eg_internal@easygo.mailosaur.net # Automation Testing Account
+                  - streamkeyuser@easygo.mailosaur.net # Automation Testing Account
+                  - ageassurance@easygo.mailosaur.net # Automation Testing Account
+                  - m.young@easygo.io # Matt Young
+            - enabled
+            - disabled
+        variants:
+          disabled: false
+          enabled: true
+      # Playback API - Infer content type from URL
+      web-playback-infer-content-type:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          disabled: false
+          enabled: true
+      # Onboarding flow
+      web-5-2:
         state: ENABLED
         defaultVariant: enabled
         variants:
@@ -122,6 +348,13 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # KICK Drops
+      web-8:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
       view-chat-thread:
         state: ENABLED
         defaultVariant: enabled
@@ -133,6 +366,30 @@ spec:
       web-9-1:
         state: ENABLED
         defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - a.astruc@easygo.io # Arnaud
+                  - a.roe@easygo.io # Alister
+                  - a.ruberto@easygo.io # Alex
+                  - an.nguyen@easygo.io # An
+                  - b.rostamiyeganeh@easygo.io # Naz
+                  - e.foh@easygo.io # Edwin
+                  - j.pettigrew@easygo.io # James
+                  - k.bedi@easygo.io # KD
+                  - m.meana@easygo.io # Mateo
+                  - m.soulsby@easygo.io # Matt
+                  - n.dagher@easygo.io # Nick
+                  - p.pan@easygo.io # Peter
+                  - r.tuvera@easygo.io # Raf
+                  - s.chu@easygo.io # Chu
+                  - s.sotiriadis@easygo.io # Sarah
+                  - v.manohar@easygo.io # Vivek
+                  - y.levraud@easygo.io # Yohann
+                  - yohann@kick.com # Yohann (Kick email)
+            - enabled
+            - disabled
         variants:
           enabled: true
           disabled: false
@@ -140,6 +397,30 @@ spec:
       web-9-2:
         state: ENABLED
         defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - a.astruc@easygo.io # Arnaud
+                  - a.roe@easygo.io # Alister
+                  - a.ruberto@easygo.io # Alex
+                  - an.nguyen@easygo.io # An
+                  - b.rostamiyeganeh@easygo.io # Naz
+                  - e.foh@easygo.io # Edwin
+                  - j.pettigrew@easygo.io # James
+                  - k.bedi@easygo.io # KD
+                  - m.meana@easygo.io # Mateo
+                  - m.soulsby@easygo.io # Matt
+                  - n.dagher@easygo.io # Nick
+                  - p.pan@easygo.io # Peter
+                  - r.tuvera@easygo.io # Raf
+                  - s.chu@easygo.io # Chu
+                  - s.sotiriadis@easygo.io # Sarah
+                  - v.manohar@easygo.io # Vivek
+                  - y.levraud@easygo.io # Yohann
+                  - yohann@kick.com # Yohann (Kick email)
+            - enabled
+            - disabled
         variants:
           enabled: true
           disabled: false
@@ -147,6 +428,30 @@ spec:
       web-9-3:
         state: ENABLED
         defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - a.astruc@easygo.io # Arnaud
+                  - a.roe@easygo.io # Alister
+                  - a.ruberto@easygo.io # Alex
+                  - an.nguyen@easygo.io # An
+                  - b.rostamiyeganeh@easygo.io # Naz
+                  - e.foh@easygo.io # Edwin
+                  - j.pettigrew@easygo.io # James
+                  - k.bedi@easygo.io # KD
+                  - m.meana@easygo.io # Mateo
+                  - m.soulsby@easygo.io # Matt
+                  - n.dagher@easygo.io # Nick
+                  - p.pan@easygo.io # Peter
+                  - r.tuvera@easygo.io # Raf
+                  - s.chu@easygo.io # Chu
+                  - s.sotiriadis@easygo.io # Sarah
+                  - v.manohar@easygo.io # Vivek
+                  - y.levraud@easygo.io # Yohann
+                  - yohann@kick.com # Yohann (Kick email)
+            - enabled
+            - disabled
         variants:
           enabled: true
           disabled: false
@@ -154,6 +459,30 @@ spec:
       web-9-4:
         state: ENABLED
         defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - a.astruc@easygo.io # Arnaud
+                  - a.roe@easygo.io # Alister
+                  - a.ruberto@easygo.io # Alex
+                  - an.nguyen@easygo.io # An
+                  - b.rostamiyeganeh@easygo.io # Naz
+                  - e.foh@easygo.io # Edwin
+                  - j.pettigrew@easygo.io # James
+                  - k.bedi@easygo.io # KD
+                  - m.meana@easygo.io # Mateo
+                  - m.soulsby@easygo.io # Matt
+                  - n.dagher@easygo.io # Nick
+                  - p.pan@easygo.io # Peter
+                  - r.tuvera@easygo.io # Raf
+                  - s.chu@easygo.io # Chu
+                  - s.sotiriadis@easygo.io # Sarah
+                  - v.manohar@easygo.io # Vivek
+                  - y.levraud@easygo.io # Yohann
+                  - yohann@kick.com # Yohann (Kick email)
+            - enabled
+            - disabled
         variants:
           enabled: true
           disabled: false
@@ -161,6 +490,30 @@ spec:
       web-9-5:
         state: ENABLED
         defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - a.astruc@easygo.io # Arnaud
+                  - a.roe@easygo.io # Alister
+                  - a.ruberto@easygo.io # Alex
+                  - an.nguyen@easygo.io # An
+                  - b.rostamiyeganeh@easygo.io # Naz
+                  - e.foh@easygo.io # Edwin
+                  - j.pettigrew@easygo.io # James
+                  - k.bedi@easygo.io # KD
+                  - m.meana@easygo.io # Mateo
+                  - m.soulsby@easygo.io # Matt
+                  - n.dagher@easygo.io # Nick
+                  - p.pan@easygo.io # Peter
+                  - r.tuvera@easygo.io # Raf
+                  - s.chu@easygo.io # Chu
+                  - s.sotiriadis@easygo.io # Sarah
+                  - v.manohar@easygo.io # Vivek
+                  - y.levraud@easygo.io # Yohann
+                  - yohann@kick.com # Yohann (Kick email)
+            - enabled
+            - disabled
         variants:
           enabled: true
           disabled: false
@@ -171,10 +524,49 @@ spec:
         variants:
           disabled: false
           enabled: true
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - a.sajiv@easygo.io # Ash
+                  - b.choi@easygo.io # Brian
+                  - h.patel@easygo.io # Hemil
+                  - z.ingle@easygo.io # Zach
+            - enabled
+            - disabled
+      # Subscribe prompt.
+      web-11:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - a.roe@easygo.io # Alister
+                  - a.ruberto@easygo.io # Alex
+                  - an.nguyen@easygo.io # An
+                  - e.foh@easygo.io # Edwin
+                  - j.pettigrew@easygo.io # James
+                  - k.bedi@easygo.io # KD
+                  - m.meana@easygo.io # Mateo
+                  - m.soulsby@easygo.io # Matt
+                  - n.dagher@easygo.io # Nick
+                  - p.pan@easygo.io # Peter
+                  - r.tuvera@easygo.io # Raf
+                  - s.chu@easygo.io # Chu
+                  - s.sotiriadis@easygo.io # Sarah
+                  - v.manohar@easygo.io # Vivek
+                  - y.levraud@easygo.io # Yohann
+                  - yohann@kick.com # Yohann (Kick email)
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
       # Dynamic encoding settings in frontend to call chnl-engagement-service for channel_type values
       encoding-settings:
         state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
         variants:
           enabled: true
           disabled: false
