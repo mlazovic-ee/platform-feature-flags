@@ -5,6 +5,52 @@ metadata:
 spec:
   flagSpec:
     flags:
+      # Download Profile for Recommended Encoding Settings - Link to download OBS profile file containing recommended encoding settings, which can be imported inside OBS
+      # disabled: not visible to creators
+      # enabled: visible to creators with a link to download the profile
+      web-recommended-encoding-settings-profile-download:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - a.fernandes@easygo.io # Andre
+                  - c.tatli@easygo.io # Chris
+                  - d.gunawardena@easygo.io # Damitha
+                  - j.brown@easygo.io # Jeremy
+                  - j.reyesvera@easygo.io # Juan
+                  - m.hogben@easygo.io # Matt
+                  - p.howard@easygo.io # Peter
+                  - f.mena@easygo.io # Felipe
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
+      # Web Disconnect Protection for Advanced Settings - Toggle disconnect protection for creator channel, which will keep the stream running even if the connection between encoder and Kick is interrupted for a short period of time.
+      # disabled: not visible to creators
+      # enabled: visible to creators with a toggle to enable/disable the feature
+      web-disconnect-protection:        
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - a.fernandes@easygo.io # Andre
+                  - c.tatli@easygo.io # Chris
+                  - d.gunawardena@easygo.io # Damitha
+                  - j.brown@easygo.io # Jeremy
+                  - j.reyesvera@easygo.io # Juan
+                  - m.hogben@easygo.io # Matt
+                  - p.howard@easygo.io # Peter
+                  - f.mena@easygo.io # Felipe
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
       # Kick Health - Toggle the channel info endpoint from intercluster to cloudflare. Will increase latency by 100ms.
       # disabled: intercluster
       # enabled: cloudflare
