@@ -70,7 +70,7 @@ spec:
                     - 33
                   - - pusher2
                     - 33
-                  - - pusher2
+                  - - pusher3
                     - 33
             - pusher
       broadcast_chat_to_pusher:
