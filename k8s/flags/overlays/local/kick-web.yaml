@@ -74,3 +74,10 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Insider SDK
+      web-12:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
