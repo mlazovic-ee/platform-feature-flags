@@ -461,6 +461,15 @@ spec:
                   - b.choi@easygo.io # Brian
                   - h.patel@easygo.io # Hemil
                   - z.ingle@easygo.io # Zach
+                  - c.li@easygo.io # Coco
+                  - c.tzoumanekas@easygo.io # Costa
+                  - el.liu@easygo.io # Elaine
+                  - k.camacho@easygo.io # Kyrie
+                  - j.khan@easygo.io # Zeb
+                  - c.tatli@easygo.io # Chris
+                  - a.zou@easygo.io # Alan
+                  - a.ruberto@easygo.io # Alex
+                  - an.nguyen@easygo.io # An
             - enabled
             - disabled
       # Subscribe prompt.
