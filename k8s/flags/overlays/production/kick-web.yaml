@@ -177,6 +177,30 @@ spec:
                 - [ "AR" ]
             - enabled
             - disabled
+      # Automated triggered ads
+      web-4-6:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - a.ruberto@easygo.io # Alex
+                  - a.fernandes@easygo.io # Andre
+                  - c.li@easygo.io # Coco
+                  - el.liu@easygo.io # Elaine
+                  - k.camacho@easygo.io # Kyrie
+                  - kyrie@kick.com # Kyrie
+                  - y.levraud@easygo.io # Yohann
+                  - j.khan@easygo.io # Zeb
+                  - p.howard@easygo.io # Peter
+                  - j.brown@easygo.io # Jeremy
+                  - streamkeyuser@easygo.mailosaur.net # Kyrie Test Account
+            - enabled
+            - disabled
+        variants:
+          disabled: false
+          enabled: true      
       # Home page personalisation
       web-5:
         state: ENABLED

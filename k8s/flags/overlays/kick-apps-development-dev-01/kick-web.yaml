@@ -62,6 +62,20 @@ spec:
         variants:
           disabled: false
           enabled: true
+       # Mid-roll Ads 
+      web-4-2:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
+      # Automated triggered ads
+      web-4-6:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
       # Clip chat command - when enabled, /clip is available in chat
       web-6:
         state: ENABLED
