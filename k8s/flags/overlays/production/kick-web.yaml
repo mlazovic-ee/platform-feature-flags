@@ -270,13 +270,6 @@ spec:
         variants:
           enabled: true
           disabled: false
-      # Watch time storage and eligibility
-      web-7:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
       # KICK Drops
       web-8:
         state: ENABLED
@@ -472,35 +465,6 @@ spec:
                   - an.nguyen@easygo.io # An
             - enabled
             - disabled
-      # Subscribe prompt.
-      web-11:
-        state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - in:
-                - var: user.email
-                - - a.roe@easygo.io # Alister
-                  - a.ruberto@easygo.io # Alex
-                  - an.nguyen@easygo.io # An
-                  - e.foh@easygo.io # Edwin
-                  - j.pettigrew@easygo.io # James
-                  - k.bedi@easygo.io # KD
-                  - m.meana@easygo.io # Mateo
-                  - m.soulsby@easygo.io # Matt
-                  - n.dagher@easygo.io # Nick
-                  - p.pan@easygo.io # Peter
-                  - r.tuvera@easygo.io # Raf
-                  - s.chu@easygo.io # Chu
-                  - s.sotiriadis@easygo.io # Sarah
-                  - v.manohar@easygo.io # Vivek
-                  - y.levraud@easygo.io # Yohann
-                  - yohann@kick.com # Yohann (Kick email)
-            - enabled
-            - disabled
-        variants:
-          enabled: true
-          disabled: false
       # Dynamic encoding settings in frontend to call chnl-engagement-service for channel_type values
       encoding-settings:
         state: ENABLED

@@ -194,13 +194,6 @@ spec:
         variants:
           enabled: true
           disabled: false
-      # Watch time storage and eligibility
-      web-7:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
       # KICK Drops
       web-8:
         state: ENABLED
