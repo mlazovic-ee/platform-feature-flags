@@ -5,15 +5,22 @@ metadata:
 spec:
   flagSpec:
     flags:
-      # Controls the fraction of requests for which Mux SDK IsEnabled is set in media-metadata.
-      # 0.0 = disabled for all, 1.0 = enabled for all.
-      # Authenticated users are bucketed consistently by user ID; anonymous users are sampled randomly.
-      media_metadata_mux_sampling_rate:
+      # Mux SDK Analytics - Toggle the mux sdk analytics sdk on the player for web clients
+      # disabled: MuxTracker component not rendered, no data sent to Mux 
+      # enabled: MuxTracker component rendered, data sent to Mux
+      mux-sdk-analytics:
         state: ENABLED
-        defaultVariant: full
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - f.mena@easygo.io # Felipe
+            - enabled
+            - disabled
         variants:
-          off: 0.0
-          full: 1.0
+          enabled: true
+          disabled: false
       # Go Live - Toggle the go live feature for creators
       # disabled: not visible to creators
       # enabled: visible to creators with a button to go live from main page navigation bar

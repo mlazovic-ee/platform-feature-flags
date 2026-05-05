@@ -5,6 +5,15 @@ metadata:
 spec:
   flagSpec:
     flags:
+      # Controls the fraction of requests for which Mux SDK IsEnabled is set in media-metadata.
+      # 0.0 = disabled for all, 1.0 = enabled for all.
+      # Authenticated users are bucketed consistently by user ID; anonymous users are sampled randomly.
+      media_metadata_mux_sampling_rate:
+        state: ENABLED
+        defaultVariant: full
+        variants:
+          off: 0.0
+          full: 1.0
       platform_batch_bans_enabled:
         state: ENABLED
         defaultVariant: enabled
