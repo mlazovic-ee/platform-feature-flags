@@ -499,22 +499,7 @@ spec:
       # Insider SDK
       web-12:
         state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - in:
-                - var: user.email
-                - - a.ruberto@easygo.io # Alex
-                  - an.nguyen@easygo.io # An
-                  - r.tuvera@easygo.io # Raf
-                  - y.levraud@easygo.io # Yohann
-                  - yohann@kick.com # Yohann (Kick email)
-                  - jc.yu@easygo.io # JC
-                  - a.namasivayam@easygo.io # Arvind
-                  - shishir.bhargava@insiderone.com
-                  - ankit.chopra@insiderone.com
-            - enabled
-            - disabled
+        defaultVariant: enabled
         variants:
           disabled: false
           enabled: true
