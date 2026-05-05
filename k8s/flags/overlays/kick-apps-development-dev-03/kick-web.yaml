@@ -48,6 +48,10 @@ spec:
                   - m.hogben@easygo.io # Matt
                   - p.howard@easygo.io # Peter
                   - f.mena@easygo.io # Felipe
+                  - dusanradojevic@mebit.io # Dusan
+                  - r.gole@easygo.io # Rohan
+                  - y.levraud@easygo.io # Yohann
+                  - jc.yu@easygo.io # JC
             - enabled
             - disabled
         variants:
@@ -71,6 +75,10 @@ spec:
                   - m.hogben@easygo.io # Matt
                   - p.howard@easygo.io # Peter
                   - f.mena@easygo.io # Felipe
+                  - dusanradojevic@mebit.io # Dusan
+                  - r.gole@easygo.io # Rohan
+                  - y.levraud@easygo.io # Yohann
+                  - jc.yu@easygo.io # JC
             - enabled
             - disabled
         variants:
