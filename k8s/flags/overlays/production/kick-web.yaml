@@ -511,6 +511,8 @@ spec:
                   - yohann@kick.com # Yohann (Kick email)
                   - jc.yu@easygo.io # JC
                   - a.namasivayam@easygo.io # Arvind
+                  - shishir.bhargava@insiderone.com
+                  - ankit.chopra@insiderone.com
             - enabled
             - disabled
         variants:
