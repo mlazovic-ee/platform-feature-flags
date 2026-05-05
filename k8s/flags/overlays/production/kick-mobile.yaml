@@ -89,6 +89,20 @@ spec:
         variants:
           default: 86400
           disabled: 0
+      insider:
+        state: ENABLED
+        defaultVariant: enabled
+        targeting:
+          if:
+            - sem_ver:
+                - var: app.version
+                - <
+                - "40.15.0"
+            - disabled
+            - enabled
+        variants:
+          enabled: true
+          disabled: false
       fpjsProd:
         state: ENABLED
         defaultVariant: enabled
