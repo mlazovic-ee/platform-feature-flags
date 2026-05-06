@@ -10,10 +10,11 @@ spec:
       # Authenticated users are bucketed consistently by user ID; anonymous users are sampled randomly.
       media_metadata_mux_sampling_rate:
         state: ENABLED
-        defaultVariant: full
+        defaultVariant: tenPercent
         variants:
           off: 0.0
           full: 1.0
+          tenPercent: 0.1
       platform_batch_bans_enabled:
         state: ENABLED
         defaultVariant: enabled
