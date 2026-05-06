@@ -14,6 +14,7 @@ spec:
         variants:
           off: 0.0
           full: 1.0
+          tenPercent: 0.1
       platform_batch_bans_enabled:
         state: ENABLED
         variants:
