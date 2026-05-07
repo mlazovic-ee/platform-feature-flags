@@ -200,7 +200,7 @@ spec:
             - disabled
         variants:
           disabled: false
-          enabled: true      
+          enabled: true
       # Home page personalisation
       web-5:
         state: ENABLED
@@ -487,6 +487,8 @@ spec:
                   - a.zou@easygo.io # Alan
                   - a.ruberto@easygo.io # Alex
                   - an.nguyen@easygo.io # An
+                  - k.bedi@easygo.io # KD
+                  - m.meana@easygo.io # Mateo
             - enabled
             - disabled
       # Dynamic encoding settings in frontend to call chnl-engagement-service for channel_type values
