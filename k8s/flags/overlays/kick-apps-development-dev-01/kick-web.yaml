@@ -62,7 +62,7 @@ spec:
         variants:
           disabled: false
           enabled: true
-       # Mid-roll Ads 
+      # Mid-roll Ads 
       web-4-2:
         state: ENABLED
         defaultVariant: enabled
@@ -84,6 +84,19 @@ spec:
           enabled: true
           disabled: false
       view-chat-thread:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      # Home page personalisation - Phase 3
+      web-5-3:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      embedded-chat:
         state: ENABLED
         defaultVariant: enabled
         variants:

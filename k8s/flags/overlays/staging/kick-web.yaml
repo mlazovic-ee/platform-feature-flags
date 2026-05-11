@@ -60,7 +60,7 @@ spec:
       # Web Disconnect Protection for Advanced Settings - Toggle disconnect protection for creator channel, which will keep the stream running even if the connection between encoder and Kick is interrupted for a short period of time.
       # disabled: not visible to creators
       # enabled: visible to creators with a toggle to enable/disable the feature
-      web-disconnect-protection:        
+      web-disconnect-protection:
         state: ENABLED
         defaultVariant: disabled
         targeting:
@@ -149,26 +149,6 @@ spec:
         variants:
           enabled: true
           disabled: false
-      example-ab-test:
-        state: ENABLED
-        defaultVariant: control
-        variants:
-          control: "control"
-          variant-a: "variant-a"
-          variant-b: "variant-b"
-        targeting:
-          if:
-            - in:
-                - b.choi@easygo.io
-                - var: user.email
-            - variant-a
-            - if:
-                - in:
-                    - csh97@proton.me
-                    - var: user.email
-                - variant-b
-                - control
-
       # Masthead Display Ads
       web-4:
         state: ENABLED
@@ -258,7 +238,7 @@ spec:
           if:
             - in:
                 - var: country
-                - ["AR"]
+                - [ "AR" ]
             - enabled
             - disabled
       # Home page personalisation
@@ -268,8 +248,15 @@ spec:
         variants:
           disabled: false
           enabled: true
-      # Home page personalisation - Phase 1.5
+      # Home page personalisation - Phase 2
       web-5-1:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
+      # Home page personalisation - Phase 3
+      web-5-3:
         state: ENABLED
         defaultVariant: disabled
         targeting:
@@ -280,13 +267,19 @@ spec:
                   - b.choi@easygo.io # Brian
                   - c.tzoumanekas@easygo.io # Costa
                   - h.patel@easygo.io # Hemil
-                  - k.bedi@easygo.io # KD
                   - k.camacho@easygo.io # Kyrie
             - enabled
             - disabled
         variants:
           disabled: false
           enabled: true
+      # Home page Embedded chat 
+      embedded-chat:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
       # Playback API
       web-playback:
         state: ENABLED
@@ -294,24 +287,6 @@ spec:
         variants:
           disabled: false
           enabled: true
-      # A/A test: feature flag phased rollout validation
-      # Phase 3: 50/50 split (authenticated users only)
-      aa-test-1:
-        state: ENABLED
-        defaultVariant: control
-        variants:
-          control: "control"
-          variant-a: "variant-a"
-          variant-b: "variant-b"
-        targeting:
-          if:
-            - var: user.id
-            - fractional:
-                - - variant-a
-                  - 50
-                - - variant-b
-                  - 50
-            - control
       # Ads Preferences
       web-4-3:
         state: ENABLED
@@ -531,7 +506,7 @@ spec:
           if:
             - in:
                 - var: country
-                - ["AR"]
+                - [ "AR" ]
             - enabled
             - disabled
         variants:
