@@ -92,6 +92,7 @@ spec:
                   - kyrie@kick.com # Kyrie
                   - vukasintrickovic@mebit.io # Vukasin
                   - j.khan@easygo.io # Zeb
+                  - c.tzoumanekas@easygo.io # Costa
             - enabled
             - disabled
         variants:
