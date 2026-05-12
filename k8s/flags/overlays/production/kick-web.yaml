@@ -199,7 +199,7 @@ spec:
           if:
             - in:
                 - var: country
-                - [ "AR" ]
+                - ["AR"]
             - enabled
             - disabled
       # Automated triggered ads
@@ -253,12 +253,14 @@ spec:
                   - h.patel@easygo.io # Hemil
                   - k.camacho@easygo.io # Kyrie
                   - a.sajiv@easygo.io # Ash
+                  - j.khan@easygo.io # Zeb
+                  - z.ingle@easygo.io # Zach
             - enabled
             - disabled
         variants:
           disabled: false
           enabled: true
-      # Home page Embedded chat 
+      # Home page Embedded chat
       embedded-chat:
         state: ENABLED
         defaultVariant: enabled
@@ -271,6 +273,8 @@ spec:
                   - h.patel@easygo.io # Hemil
                   - k.camacho@easygo.io # Kyrie
                   - a.sajiv@easygo.io # Ash
+                  - j.khan@easygo.io # Zeb
+                  - z.ingle@easygo.io # Zach
             - enabled
             - disabled
         variants:
@@ -516,24 +520,14 @@ spec:
         targeting:
           if:
             - in:
-                - var: user.email
-                - - a.sajiv@easygo.io # Ash
-                  - b.choi@easygo.io # Brian
-                  - h.patel@easygo.io # Hemil
-                  - z.ingle@easygo.io # Zach
-                  - c.li@easygo.io # Coco
-                  - c.tzoumanekas@easygo.io # Costa
-                  - el.liu@easygo.io # Elaine
-                  - k.camacho@easygo.io # Kyrie
-                  - j.khan@easygo.io # Zeb
-                  - c.tatli@easygo.io # Chris
-                  - a.zou@easygo.io # Alan
-                  - a.ruberto@easygo.io # Alex
-                  - an.nguyen@easygo.io # An
-                  - k.bedi@easygo.io # KD
-                  - m.meana@easygo.io # Mateo
+                - internal
+                - var: user.roles
             - enabled
-            - disabled
+            - fractional:
+                - - enabled
+                  - 5
+                - - disabled
+                  - 95
       # Dynamic encoding settings in frontend to call chnl-engagement-service for channel_type values
       encoding-settings:
         state: ENABLED
