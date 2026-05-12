@@ -138,7 +138,7 @@ spec:
           disabled: false
       user_events_outbox:
         state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
         variants:
           enabled: true
           disabled: false
