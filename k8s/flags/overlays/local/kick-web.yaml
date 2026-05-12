@@ -8,7 +8,7 @@ spec:
       # Mux SDK Analytics - Toggle the mux sdk analytics sdk on the player for web clients
       # disabled: MuxTracker component not rendered, no data sent to Mux 
       # enabled: MuxTracker component rendered, data sent to Mux
-      mux-sdk-analytics:
+      web-13::
         state: ENABLED
         defaultVariant: enabled
         variants:
