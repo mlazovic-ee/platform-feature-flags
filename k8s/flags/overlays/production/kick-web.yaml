@@ -535,9 +535,9 @@ spec:
             - enabled
             - fractional:
                 - - enabled
-                  - 5
+                  - 50
                 - - disabled
-                  - 95
+                  - 50
       # Dynamic encoding settings in frontend to call chnl-engagement-service for channel_type values
       encoding-settings:
         state: ENABLED
