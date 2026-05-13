@@ -369,6 +369,8 @@ spec:
                   - v.manohar@easygo.io # Vivek
                   - y.levraud@easygo.io # Yohann
                   - yohann@kick.com # Yohann (Kick email)
+                  - edward@easygo.io # Edward Craven
+                  - e.wright@easygo.io # #Ethan Wright
             - enabled
             - disabled
         variants:
@@ -400,6 +402,8 @@ spec:
                   - v.manohar@easygo.io # Vivek
                   - y.levraud@easygo.io # Yohann
                   - yohann@kick.com # Yohann (Kick email)
+                  - edward@easygo.io # Edward Craven
+                  - e.wright@easygo.io # #Ethan Wright
             - enabled
             - disabled
         variants:
@@ -431,6 +435,8 @@ spec:
                   - v.manohar@easygo.io # Vivek
                   - y.levraud@easygo.io # Yohann
                   - yohann@kick.com # Yohann (Kick email)
+                  - edward@easygo.io # Edward Craven
+                  - e.wright@easygo.io # #Ethan Wright
             - enabled
             - disabled
         variants:
@@ -462,6 +468,8 @@ spec:
                   - v.manohar@easygo.io # Vivek
                   - y.levraud@easygo.io # Yohann
                   - yohann@kick.com # Yohann (Kick email)
+                  - edward@easygo.io # Edward Craven
+                  - e.wright@easygo.io # #Ethan Wright
             - enabled
             - disabled
         variants:
@@ -493,6 +501,8 @@ spec:
                   - v.manohar@easygo.io # Vivek
                   - y.levraud@easygo.io # Yohann
                   - yohann@kick.com # Yohann (Kick email)
+                  - edward@easygo.io # Edward Craven
+                  - e.wright@easygo.io # #Ethan Wright
             - enabled
             - disabled
         variants:
