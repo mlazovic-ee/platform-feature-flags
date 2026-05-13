@@ -523,21 +523,10 @@ spec:
       # New Search MVP
       web-10:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           disabled: false
           enabled: true
-        targeting:
-          if:
-            - in:
-                - internal
-                - var: user.roles
-            - enabled
-            - fractional:
-                - - enabled
-                  - 50
-                - - disabled
-                  - 50
       # Dynamic encoding settings in frontend to call chnl-engagement-service for channel_type values
       encoding-settings:
         state: ENABLED
