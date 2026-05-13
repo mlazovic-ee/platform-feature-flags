@@ -255,6 +255,7 @@ spec:
                   - a.sajiv@easygo.io # Ash
                   - j.khan@easygo.io # Zeb
                   - z.ingle@easygo.io # Zach
+                  - edward@easygo.io # Ed
             - enabled
             - disabled
         variants:
