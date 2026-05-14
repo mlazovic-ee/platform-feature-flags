@@ -6,7 +6,7 @@ spec:
   flagSpec:
     flags:
       # Mux SDK Analytics - Toggle the mux sdk analytics sdk on the player for web clients
-      # disabled: MuxTracker component not rendered, no data sent to Mux 
+      # disabled: MuxTracker component not rendered, no data sent to Mux
       # enabled: MuxTracker component rendered, data sent to Mux
       web-13:
         state: ENABLED
@@ -263,6 +263,13 @@ spec:
                   - z.ingle@easygo.io # Zach
             - enabled
             - disabled
+        variants:
+          disabled: false
+          enabled: true
+      # "Enable Personalized Content" settings toggle
+      web-5-4:
+        state: ENABLED
+        defaultVariant: disabled
         variants:
           disabled: false
           enabled: true

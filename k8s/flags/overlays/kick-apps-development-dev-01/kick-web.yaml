@@ -62,7 +62,7 @@ spec:
         variants:
           disabled: false
           enabled: true
-      # Mid-roll Ads 
+      # Mid-roll Ads
       web-4-2:
         state: ENABLED
         defaultVariant: enabled
@@ -102,6 +102,13 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # "Enable Personalized Content" settings toggle
+      web-5-4:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          disabled: false
+          enabled: true
       # the web-9 feature flags all fall under streamer analytics
       # Overview section
       web-9-1:
