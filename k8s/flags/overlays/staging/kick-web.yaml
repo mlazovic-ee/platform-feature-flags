@@ -553,6 +553,22 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Guest HD trial A/B test (control / variant-a 480p / variant-b 720p)
+      web-11:
+        state: ENABLED
+        defaultVariant: control
+        variants:
+          control: "control"
+          variant-a: "variant-a" # 480p cap.
+          variant-b: "variant-b" # 720 cap.
+        targeting:
+          fractional:
+            - - control
+              - 50
+            - - variant-a
+              - 25
+            - - variant-b
+              - 25
       # Insider SDK
       web-12:
         state: ENABLED

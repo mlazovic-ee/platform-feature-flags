@@ -520,6 +520,22 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # Guest HD trial A/B test (control / variant-a 480p / variant-b 720p)
+      web-11:
+        state: ENABLED
+        defaultVariant: control
+        variants:
+          control: "control"
+          variant-a: "variant-a" # 480p cap.
+          variant-b: "variant-b" # 720 cap.
+        targeting:
+          fractional:
+            - - control
+              - 100
+            - - variant-a
+              - 0
+            - - variant-b
+              - 0
       # Dynamic encoding settings in frontend to call chnl-engagement-service for channel_type values
       encoding-settings:
         state: ENABLED
