@@ -241,6 +241,9 @@ spec:
                   - j.khan@easygo.io # Zeb
                   - z.ingle@easygo.io # Zach
                   - edward@easygo.io # Ed
+                  - el.liu@easygo.io # Elaine
+                  - j.mazurke@easygo.io # Jordan
+                  - j.kumar@easygo.io # Jitender
             - enabled
             - disabled
         variants:
@@ -261,6 +264,10 @@ spec:
                   - a.sajiv@easygo.io # Ash
                   - j.khan@easygo.io # Zeb
                   - z.ingle@easygo.io # Zach
+                  - el.liu@easygo.io # Elaine
+                  - edward@easygo.io # Ed
+                  - j.mazurke@easygo.io # Jordan
+                  - j.kumar@easygo.io # Jitender
             - enabled
             - disabled
         variants:
