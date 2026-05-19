@@ -244,6 +244,7 @@ spec:
                   - el.liu@easygo.io # Elaine
                   - j.mazurke@easygo.io # Jordan
                   - j.kumar@easygo.io # Jitender
+                  - larissa@easygo.io # Larissa
             - enabled
             - disabled
         variants:
@@ -268,6 +269,7 @@ spec:
                   - edward@easygo.io # Ed
                   - j.mazurke@easygo.io # Jordan
                   - j.kumar@easygo.io # Jitender
+                  - larissa@easygo.io # Larissa
             - enabled
             - disabled
         variants:
