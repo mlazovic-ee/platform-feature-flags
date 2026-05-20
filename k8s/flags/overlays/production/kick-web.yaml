@@ -559,3 +559,12 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # Download Profile for Recommended Encoding Settings - Link to download OBS profile file containing recommended encoding settings, which can be imported inside OBS
+      # disabled: not visible to creators
+      # enabled: visible to creators with a link to download the profile
+      web-15:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
