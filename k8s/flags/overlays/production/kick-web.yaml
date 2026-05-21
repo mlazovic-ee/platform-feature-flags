@@ -232,21 +232,14 @@ spec:
         targeting:
           if:
             - in:
-                - var: user.email
-                - - b.choi@easygo.io # Brian
-                  - c.tzoumanekas@easygo.io # Costa
-                  - h.patel@easygo.io # Hemil
-                  - k.camacho@easygo.io # Kyrie
-                  - a.sajiv@easygo.io # Ash
-                  - j.khan@easygo.io # Zeb
-                  - z.ingle@easygo.io # Zach
-                  - edward@easygo.io # Ed
-                  - el.liu@easygo.io # Elaine
-                  - j.mazurke@easygo.io # Jordan
-                  - j.kumar@easygo.io # Jitender
-                  - larissa@easygo.io # Larissa
+                - var: user.roles
+                - - internal
             - enabled
-            - disabled
+            - fractional:
+                - - enabled
+                  - 10
+                - - disabled
+                  - 90
         variants:
           disabled: false
           enabled: true
@@ -254,24 +247,6 @@ spec:
       embedded-chat:
         state: ENABLED
         defaultVariant: enabled
-        targeting:
-          if:
-            - in:
-                - var: user.email
-                - - b.choi@easygo.io # Brian
-                  - c.tzoumanekas@easygo.io # Costa
-                  - h.patel@easygo.io # Hemil
-                  - k.camacho@easygo.io # Kyrie
-                  - a.sajiv@easygo.io # Ash
-                  - j.khan@easygo.io # Zeb
-                  - z.ingle@easygo.io # Zach
-                  - el.liu@easygo.io # Elaine
-                  - edward@easygo.io # Ed
-                  - j.mazurke@easygo.io # Jordan
-                  - j.kumar@easygo.io # Jitender
-                  - larissa@easygo.io # Larissa
-            - enabled
-            - disabled
         variants:
           disabled: false
           enabled: true
