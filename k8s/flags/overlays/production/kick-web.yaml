@@ -232,8 +232,8 @@ spec:
         targeting:
           if:
             - in:
+                - internal
                 - var: user.roles
-                - - internal
             - enabled
             - fractional:
                 - - enabled
