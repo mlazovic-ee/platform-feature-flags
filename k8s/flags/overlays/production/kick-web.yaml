@@ -176,17 +176,10 @@ spec:
       # KICK Ads policy page
       web-4-5:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           disabled: false
           enabled: true
-        targeting:
-          if:
-            - in:
-                - var: country
-                - ["AR"]
-            - enabled
-            - disabled
       # Automated triggered ads
       web-4-6:
         state: ENABLED
