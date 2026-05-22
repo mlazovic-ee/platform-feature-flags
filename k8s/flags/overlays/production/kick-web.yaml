@@ -230,9 +230,9 @@ spec:
             - enabled
             - fractional:
                 - - enabled
-                  - 10
+                  - 50
                 - - disabled
-                  - 90
+                  - 50
         variants:
           disabled: false
           enabled: true
