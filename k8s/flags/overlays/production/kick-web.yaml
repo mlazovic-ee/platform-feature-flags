@@ -72,6 +72,13 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # Age Assurance lax verification logic
+      trust-3:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          disabled: false
+          enabled: true
       # Paypal Integration
       fsp:
         state: ENABLED
