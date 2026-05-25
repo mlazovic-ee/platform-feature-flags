@@ -526,3 +526,21 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Gamification Phase 1 - Global badges + leveling dropdown
+      web-16-1:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - a.sajiv@easygo.io # Ash
+                  - b.choi@easygo.io # Brian
+                  - z.ingle@easygo.io # Zach
+                  - c.li@easygo.io # Coco
+                  - el.liu@easygo.io # Elaine
+                  - k.camacho@easygo.io # Kyrie
+                  - j.khan@easygo.io # Zeb
+        variants:
+          enabled: true
+          disabled: false
