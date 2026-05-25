@@ -199,6 +199,7 @@ spec:
                   - p.howard@easygo.io # Peter
                   - j.brown@easygo.io # Jeremy
                   - streamkeyuser@easygo.mailosaur.net # Kyrie Test Account
+                  - eg_admin@easygo.mailosaur.net # Admin Account
             - enabled
             - disabled
         variants:
