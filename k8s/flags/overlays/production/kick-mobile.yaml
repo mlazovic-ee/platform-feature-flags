@@ -5,6 +5,7 @@ metadata:
 spec:
   flagSpec:
     flags:
+      # Shows an age assurance banner on the home screen.
       ageAssuranceBanner:
         state: ENABLED
         defaultVariant: disabled
@@ -19,6 +20,7 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Require the user to do age verification
       ageAssuranceEnforcement:
         state: ENABLED
         defaultVariant: enabled
@@ -33,6 +35,8 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Show or hide the app rating bottom sheet.
+      # The bottom sheet is opened explicitly within features, but this flag can stop the sheet from showing entirely.
       appRating:
         state: ENABLED
         defaultVariant: enabled
@@ -47,6 +51,8 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # This feature was built but then never went live.
+      # Since it has been so long since it was built, it should not be turned on without extensive testing again.
       channelGoals:
         state: ENABLED
         defaultVariant: disabled
@@ -61,6 +67,8 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Whether or not to force show the OTA update screen.
+      # Only used in certain OTA releases to enforce minimum versions.
       forcedUpdateOta:
         state: ENABLED
         defaultVariant: enabled
@@ -117,6 +125,7 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # The minimum version that a forced update requires for android.
       mobileAndroidForcedUpdateVersion:
         state: ENABLED
         defaultVariant: default
@@ -131,6 +140,7 @@ spec:
         variants:
           default: "40.14.2"
           disabled: ""
+      # Versions the app recommends updating to for android.
       mobileAndroidSuggestedUpdates:
         state: ENABLED
         defaultVariant: default
@@ -148,6 +158,8 @@ spec:
               - "40.11.0"
               - "40.13.4"
           disabled: {}
+      # A map from different ios/android versions to the same app version.
+      # Not needed anymore since all verssions were unified but kept until the old versions are not used anymore
       mobileAndroidVersionMap:
         state: ENABLED
         defaultVariant: default
@@ -197,6 +209,7 @@ spec:
             "40.14.1": "60006808"
             "40.14.2": "60006812"
           disabled: {}
+      # The minimum version that a forced update requires for ios.
       mobileIosForcedUpdateVersion:
         state: ENABLED
         defaultVariant: default
@@ -211,6 +224,7 @@ spec:
         variants:
           default: "40.4.9"
           disabled: ""
+      # Versions the app recommends updating to for ios.
       mobileIosSuggestedUpdates:
         state: ENABLED
         defaultVariant: default
@@ -228,6 +242,8 @@ spec:
               - "40.11.0"
               - "40.13.4"
           disabled: {}
+      # A map from different ios/android versions to the same app version.
+      # Not needed anymore since all verssions were unified but kept until the old versions are not used anymore
       mobileIosVersionMap:
         state: ENABLED
         defaultVariant: default
@@ -270,3 +286,24 @@ spec:
             "40.14.1": "40.14.1"
             "40.14.2": "40.14.2"
           disabled: {}
+      # Send video data to MUX, the video data analytics platform.
+      # If disabled, the MUX listener on the native side will never be initialised, and the data will never get sent.
+      muxVideoAnalytics:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - sem_ver:
+                - var: app.version
+                - <
+                - "40.19.0"
+            - disabled
+            - if:
+                - in:
+                    - internal
+                    - var: user.roles
+                - enabled
+                - disabled
+        variants:
+          enabled: true
+          disabled: false
