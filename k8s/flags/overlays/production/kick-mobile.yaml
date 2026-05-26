@@ -35,6 +35,20 @@ spec:
         variants:
           enabled: true
           disabled: false
+      ageAssuranceLaxFlow:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - sem_ver:
+                - var: app.version
+                - <
+                - "40.19.0"
+            - disabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
       # Show or hide the app rating bottom sheet.
       # The bottom sheet is opened explicitly within features, but this flag can stop the sheet from showing entirely.
       appRating:
