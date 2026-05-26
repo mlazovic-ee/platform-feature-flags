@@ -553,3 +553,17 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Show view count
+      web-17:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
+        variants:
+          disabled: false
+          enabled: true

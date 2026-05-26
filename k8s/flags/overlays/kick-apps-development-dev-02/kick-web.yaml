@@ -297,3 +297,10 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # Show view count
+      web-17:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
