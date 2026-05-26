@@ -548,6 +548,8 @@ spec:
                   - el.liu@easygo.io # Elaine
                   - k.camacho@easygo.io # Kyrie
                   - j.khan@easygo.io # Zeb
+            - enabled
+            - disabled
         variants:
           enabled: true
           disabled: false
