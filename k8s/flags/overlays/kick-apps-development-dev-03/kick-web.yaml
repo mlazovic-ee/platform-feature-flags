@@ -42,7 +42,7 @@ spec:
       # Web Disconnect Protection for Advanced Settings - Toggle disconnect protection for creator channel, which will keep the stream running even if the connection between encoder and Kick is interrupted for a short period of time.
       # disabled: not visible to creators
       # enabled: visible to creators with a toggle to enable/disable the feature
-      web-disconnect-protection:
+      web-13-1:
         state: ENABLED
         defaultVariant: disabled
         targeting:
@@ -50,6 +50,7 @@ spec:
             - in:
                 - var: user.email
                 - - a.fernandes@easygo.io # Andre
+                  - c.li@easygo.io # Coco Li
                   - c.tatli@easygo.io # Chris
                   - d.gunawardena@easygo.io # Damitha
                   - j.brown@easygo.io # Jeremy
@@ -59,8 +60,6 @@ spec:
                   - f.mena@easygo.io # Felipe
                   - dusanradojevic@mebit.io # Dusan
                   - r.gole@easygo.io # Rohan
-                  - y.levraud@easygo.io # Yohann
-                  - jc.yu@easygo.io # JC
             - enabled
             - disabled
         variants:
