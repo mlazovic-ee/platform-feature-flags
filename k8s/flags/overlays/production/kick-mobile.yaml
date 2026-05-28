@@ -310,7 +310,7 @@ spec:
             - sem_ver:
                 - var: app.version
                 - <
-                - "40.19.0"
+                - "40.20.0"
             - disabled
             - if:
                 - in:
