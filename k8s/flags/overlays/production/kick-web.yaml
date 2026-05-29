@@ -562,6 +562,7 @@ spec:
                   - w.hanemann@easygo.io # William Hanemann
                   - s.evans@easygo.io # Shareef
                   - b.rostamiyeganeh@easygo.io # Naz
+                  - akhil@easygo.io # Akhil
             - enabled
             - disabled
         variants:
