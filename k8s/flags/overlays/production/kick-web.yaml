@@ -556,6 +556,12 @@ spec:
                   - el.liu@easygo.io # Elaine
                   - k.camacho@easygo.io # Kyrie
                   - j.khan@easygo.io # Zeb
+                  - edward@easygo.io # Eddie
+                  - y.levraud@easygo.io # Yohann
+                  - yohann@kick.com # Yohann (Kick email)
+                  - w.hanemann@easygo.io # William Hanemann
+                  - s.evans@easygo.io # Shareef
+                  - b.rostamiyeganeh@easygo.io # Naz
             - enabled
             - disabled
         variants:
