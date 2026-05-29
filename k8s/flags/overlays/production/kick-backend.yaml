@@ -236,7 +236,7 @@ spec:
           disabled: false
       chnl_settings_batch_get_enabled:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
