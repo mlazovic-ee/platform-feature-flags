@@ -563,6 +563,8 @@ spec:
                   - s.evans@easygo.io # Shareef
                   - b.rostamiyeganeh@easygo.io # Naz
                   - akhil@easygo.io # Akhil
+                  - h.patel@easygo.io # Hemil
+                  - c.tzoumanekas@easygo.io # Costa
             - enabled
             - disabled
         variants:
