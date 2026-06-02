@@ -59,7 +59,7 @@ spec:
       # allow web clients to connect to pusher-2
       pusher-2:
         state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
         variants:
           disabled: false
           enabled: true
