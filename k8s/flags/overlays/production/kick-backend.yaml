@@ -56,13 +56,19 @@ spec:
           pusher2: "pusher-2"
           pusher3: "pusher-3"
         targeting:
-          fractional:
-            - - pusher
-              - 1
-            - - pusher2
-              - 1
-            - - pusher3
-              - 1
+          if:
+            - in:
+                - var: channel_id
+                - - 23812321 # jett
+                  - 669746 # Westcol
+            - fractional:
+                - - pusher
+                  - 100
+                - - pusher2
+                  - 0
+                - - pusher3
+                  - 0
+            - pusher
       broadcast_chat_to_pusher:
         state: ENABLED
         defaultVariant: enabled
