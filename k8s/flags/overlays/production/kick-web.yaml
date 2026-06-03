@@ -556,3 +556,17 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # Partner fast track
+      web-18:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
+        variants:
+          disabled: false
+          enabled: true

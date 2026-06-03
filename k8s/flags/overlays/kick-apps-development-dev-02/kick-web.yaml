@@ -309,3 +309,10 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # Partner fast track
+      web-18:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
