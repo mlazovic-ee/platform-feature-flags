@@ -116,6 +116,13 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # "Featured stream follow button
+      web-5-5:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
       # the web-9 feature flags all fall under streamer analytics
       # Overview section
       web-9-1:

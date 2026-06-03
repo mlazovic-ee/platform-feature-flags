@@ -6,7 +6,7 @@ spec:
   flagSpec:
     flags:
       # Mux SDK Analytics - Toggle the mux sdk analytics sdk on the player for web clients
-      # disabled: MuxTracker component not rendered, no data sent to Mux 
+      # disabled: MuxTracker component not rendered, no data sent to Mux
       # enabled: MuxTracker component rendered, data sent to Mux
       web-13:
         state: ENABLED
@@ -228,13 +228,20 @@ spec:
         variants:
           disabled: false
           enabled: true
-      # Home page Embedded chat 
+      # Home page Embedded chat
       embedded-chat:
         state: ENABLED
         defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
+      # "Featured stream follow button
+      web-5-5:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
       # Playback API
       web-playback:
         state: ENABLED

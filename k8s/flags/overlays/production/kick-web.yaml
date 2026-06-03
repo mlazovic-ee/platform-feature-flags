@@ -256,6 +256,35 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # "Featured stream follow button
+      web-5-5:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - b.choi@easygo.io # Brian
+                  - c.tzoumanekas@easygo.io # Costa
+                  - j.khan@easygo.io # Zeb
+                  - k.camacho@easygo.io # Kyrie
+                  - onboarding04@easygo.mailosaur.net # Kyrie
+                  - onboarding05@easygo.mailosaur.net # Kyrie
+                  - el.liu@easygo.io # Elaine
+                  - larissa@easygo.io # Larissa
+                  - eg_viewer@easygo.mailosaur.net # Automation Testing Account
+                  - eg_user@easygo.mailosaur.net # Automation Testing Account
+                  - eg_streamer@easygo.mailosaur.net # Automation Testing Account
+                  - eg_internal@easygo.mailosaur.net # Automation Testing Account
+                  - streamkeyuser@easygo.mailosaur.net # Automation Testing Account
+                  - ageassurance@easygo.mailosaur.net # Automation Testing Account
+                  - m.mohamed@easygo.io #Shamry
+                  - b.rostamiyeganeh@easygo.io # Naz
+            - enabled
+            - disabled
+        variants:
+          disabled: false
+          enabled: true
       # Playback API
       web-playback:
         state: ENABLED
