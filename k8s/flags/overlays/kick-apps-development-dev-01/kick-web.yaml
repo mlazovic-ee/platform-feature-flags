@@ -148,7 +148,7 @@ spec:
       # Partnership section - guest
       web-9-4:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
