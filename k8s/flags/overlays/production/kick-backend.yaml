@@ -17,21 +17,14 @@ spec:
           tenPercent: 0.1
           fiftyPercent: 0.5
       # VAP-511: subscribers (paid or gifted) skip ads on the channel they sub to.
-      # Default off. Allowlist by user_id below for soak testing; switch to a
-      # fractional rollout once validated.
+      # Kill switch — flip to `disabled` if paym-bridge degrades and we need
+      # ads back on for everyone.
       media_metadata_subscriber_ad_optout_enabled:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
-        targeting:
-          if:
-            - in:
-                - var: user_id
-                - - "28931777"
-            - enabled
-            - disabled
       platform_batch_bans_enabled:
         state: ENABLED
         defaultVariant: enabled
