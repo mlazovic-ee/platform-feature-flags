@@ -107,7 +107,7 @@ spec:
       # Partnership section - streamer
       web-9-3:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
