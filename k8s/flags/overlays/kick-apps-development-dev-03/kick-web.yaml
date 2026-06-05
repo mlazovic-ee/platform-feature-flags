@@ -426,20 +426,10 @@ spec:
       # New Search MVP
       web-10:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           disabled: false
           enabled: true
-        targeting:
-          if:
-            - in:
-                - var: user.email
-                - - a.sajiv@easygo.io # Ash
-                  - b.choi@easygo.io # Brian
-                  - h.patel@easygo.io # Hemil
-                  - z.ingle@easygo.io # Zach
-            - enabled
-            - disabled
       # Subscribe prompt.
       web-11:
         state: ENABLED

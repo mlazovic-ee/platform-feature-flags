@@ -337,7 +337,7 @@ spec:
           disabled: false
       web-10:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           disabled: false
           enabled: true

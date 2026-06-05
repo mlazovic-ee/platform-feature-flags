@@ -214,7 +214,7 @@ spec:
       # New Search MVP
       web-10:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           disabled: false
           enabled: true
