@@ -21,7 +21,7 @@ spec:
       # ads back on for everyone.
       media_metadata_subscriber_ad_optout_enabled:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
