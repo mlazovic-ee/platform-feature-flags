@@ -452,11 +452,11 @@ spec:
         targeting:
           fractional:
             - - control
-              - 100
+              - 80
             - - variant-a
-              - 0
+              - 10
             - - variant-b
-              - 0
+              - 10
       # Dynamic encoding settings in frontend to call chnl-engagement-service for channel_type values
       encoding-settings:
         state: ENABLED
