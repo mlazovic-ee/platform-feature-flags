@@ -335,12 +335,6 @@ spec:
         variants:
           enabled: true
           disabled: false
-      web-10:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          disabled: false
-          enabled: true
       # Dynamic encoding settings in frontend to call chnl-engagement-service for channel_type values
       encoding-settings:
         state: ENABLED

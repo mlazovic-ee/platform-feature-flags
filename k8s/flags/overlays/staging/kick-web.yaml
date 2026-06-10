@@ -6,7 +6,7 @@ spec:
   flagSpec:
     flags:
       # Mux SDK Analytics - Toggle the mux sdk analytics sdk on the player for web clients
-      # disabled: MuxTracker component not rendered, no data sent to Mux 
+      # disabled: MuxTracker component not rendered, no data sent to Mux
       # enabled: MuxTracker component rendered, data sent to Mux
       web-13:
         state: ENABLED
@@ -245,7 +245,7 @@ spec:
           if:
             - in:
                 - var: country
-                - [ "AR" ]
+                - ["AR"]
             - enabled
             - disabled
       # Home page personalisation
@@ -280,7 +280,7 @@ spec:
         variants:
           disabled: false
           enabled: true
-      # Home page Embedded chat 
+      # Home page Embedded chat
       embedded-chat:
         state: ENABLED
         defaultVariant: enabled
@@ -471,36 +471,12 @@ spec:
           if:
             - in:
                 - var: country
-                - [ "AR" ]
+                - ["AR"]
             - enabled
             - disabled
         variants:
           enabled: true
           disabled: false
-      # New Search MVP
-      web-10:
-        state: ENABLED
-        defaultVariant: disabled
-        variants:
-          disabled: false
-          enabled: true
-        targeting:
-          if:
-            - in:
-                - var: user.email
-                - - a.sajiv@easygo.io # Ash
-                  - b.choi@easygo.io # Brian
-                  - h.patel@easygo.io # Hemil
-                  - z.ingle@easygo.io # Zach
-                  - c.li@easygo.io # Coco
-                  - c.tzoumanekas@easygo.io # Costa
-                  - el.liu@easygo.io # Elaine
-                  - k.camacho@easygo.io # Kyrie
-                  - j.khan@easygo.io # Zeb
-                  - c.tatli@easygo.io # Chris
-                  - a.zou@easygo.io # Alan
-            - enabled
-            - disabled
       # Dynamic encoding settings in frontend to call chnl-engagement-service for channel_type values
       encoding-settings:
         state: ENABLED

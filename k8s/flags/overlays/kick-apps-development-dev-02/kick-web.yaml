@@ -225,13 +225,6 @@ spec:
         variants:
           enabled: true
           disabled: false
-      # New Search MVP
-      web-10:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          disabled: false
-          enabled: true
       # Guest HD trial A/B test (control / variant-a 480p / variant-b 720p)
       web-11:
         state: ENABLED
