@@ -499,3 +499,10 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Web gateway clip endpoints
+      web-19:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
