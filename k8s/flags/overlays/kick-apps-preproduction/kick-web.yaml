@@ -224,7 +224,7 @@ spec:
       # Home page personalisation - Phase 3
       web-5-3:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           disabled: false
           enabled: true

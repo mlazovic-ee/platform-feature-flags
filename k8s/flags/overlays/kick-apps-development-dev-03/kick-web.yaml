@@ -315,6 +315,20 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Home page personalisation - Phase 3
+      web-5-3:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
+      # Home page Embedded chat
+      embedded-chat:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
       # the web-9 feature flags all fall under streamer analytics
       # Overview section
       web-9-1:
