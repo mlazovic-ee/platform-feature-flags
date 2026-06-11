@@ -473,10 +473,17 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Web gateway clip endpoints
+      web-19:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
       # Stream Health - Toggle the stream health feature for creators, which will show stream health status and recommendations in the dashboard.
       # disabled: not visible to creators
       # enabled: visible to creators with a toggle to enable/disable the feature
-      web-18:
+      web-20:
         state: ENABLED
         defaultVariant: disabled
         targeting:
@@ -499,10 +506,3 @@ spec:
         variants:
           enabled: true
           disabled: false
-      # Web gateway clip endpoints
-      web-19:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          disabled: false
-          enabled: true
