@@ -225,6 +225,46 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Overview charts
+      web-9-6:
+        state: ENABLED
+        defaultVariant: public
+        variants:
+          internal:
+            avg_ccv: true
+            peak_ccv: true
+            unique_viewers: true
+            streams: true
+            hours_streamed: true
+            hours_watched: true
+            subscriber_growth: true
+            subscriber_count: true
+            follower_count: true
+            unique_chatters: true
+            followers_gained: true
+            chat_messages: true
+            chat_rate: true
+          public:
+            avg_ccv: false
+            peak_ccv: false
+            unique_viewers: false
+            streams: false
+            hours_streamed: false
+            hours_watched: false
+            subscriber_growth: false
+            subscriber_count: false
+            follower_count: false
+            unique_chatters: false
+            followers_gained: false
+            chat_messages: false
+            chat_rate: false
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - internal
+            - public
       # Guest HD trial A/B test (control / variant-a 480p / variant-b 720p)
       web-11:
         state: ENABLED
