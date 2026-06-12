@@ -169,8 +169,7 @@ spec:
         variants:
           default:
             versions:
-              - "40.11.0"
-              - "40.13.4"
+              - "40.21.0"
           disabled: {}
       # A map from different ios/android versions to the same app version.
       # Not needed anymore since all verssions were unified but kept until the old versions are not used anymore
@@ -222,6 +221,19 @@ spec:
             "40.14.0": "60006802"
             "40.14.1": "60006808"
             "40.14.2": "60006812"
+            "40.14.3": "60006817"
+            "40.14.4": "60006824"
+            "40.14.6": "60006834"
+            "40.14.7": "60006836"
+            "40.15.0": "60006841"
+            "40.16.0": "60006856"
+            "40.18.0": "60006867"
+            "40.18.1": "60006868"
+            "40.19.0": "60006870"
+            "40.19.1": "60006880"
+            "40.19.2": "60006882"
+            "40.20.0": "60006888"
+            "40.21.0": "60006889"
           disabled: {}
       # The minimum version that a forced update requires for ios.
       mobileIosForcedUpdateVersion:
@@ -253,8 +265,7 @@ spec:
         variants:
           default:
             versions:
-              - "40.11.0"
-              - "40.13.4"
+              - "40.21.0"
           disabled: {}
       # A map from different ios/android versions to the same app version.
       # Not needed anymore since all verssions were unified but kept until the old versions are not used anymore
@@ -299,6 +310,19 @@ spec:
             "40.14.0": "40.14.0"
             "40.14.1": "40.14.1"
             "40.14.2": "40.14.2"
+            "40.14.3": "40.14.3"
+            "40.14.4": "40.14.4"
+            "40.14.6": "40.14.6"
+            "40.14.7": "40.14.7"
+            "40.15.0": "40.15.0"
+            "40.16.0": "40.16.0"
+            "40.18.0": "40.18.0"
+            "40.18.1": "40.18.1"
+            "40.19.0": "40.19.0"
+            "40.19.1": "40.19.1"
+            "40.19.2": "40.19.2"
+            "40.20.0": "40.20.0"
+            "40.21.0": "40.21.0"
           disabled: {}
       # Send video data to MUX, the video data analytics platform.
       # If disabled, the MUX listener on the native side will never be initialised, and the data will never get sent.
