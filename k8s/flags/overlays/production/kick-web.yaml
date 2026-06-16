@@ -119,6 +119,7 @@ spec:
                   - j.khan@easygo.io # Zeb
                   - c.tzoumanekas@easygo.io # Costa
                   - j.jiang@easygo.io # Jeremy Jiang
+                  - ryan@easygo.io # Ryan
             - enabled
             - disabled
         variants:
