@@ -128,6 +128,13 @@ spec:
       web-9-1:
         state: ENABLED
         defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
         variants:
           enabled: true
           disabled: false
@@ -135,6 +142,13 @@ spec:
       web-9-2:
         state: ENABLED
         defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
         variants:
           enabled: true
           disabled: false
@@ -156,6 +170,13 @@ spec:
       web-9-5:
         state: ENABLED
         defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
         variants:
           enabled: true
           disabled: false

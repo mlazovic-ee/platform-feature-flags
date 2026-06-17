@@ -357,27 +357,8 @@ spec:
         targeting:
           if:
             - in:
-                - var: user.email
-                - - a.astruc@easygo.io # Arnaud
-                  - a.roe@easygo.io # Alister
-                  - a.ruberto@easygo.io # Alex
-                  - an.nguyen@easygo.io # An
-                  - b.rostamiyeganeh@easygo.io # Naz
-                  - e.foh@easygo.io # Edwin
-                  - j.pettigrew@easygo.io # James
-                  - k.bedi@easygo.io # KD
-                  - m.meana@easygo.io # Mateo
-                  - m.soulsby@easygo.io # Matt
-                  - n.dagher@easygo.io # Nick
-                  - p.pan@easygo.io # Peter
-                  - r.tuvera@easygo.io # Raf
-                  - s.chu@easygo.io # Chu
-                  - s.sotiriadis@easygo.io # Sarah
-                  - v.manohar@easygo.io # Vivek
-                  - y.levraud@easygo.io # Yohann
-                  - yohann@kick.com # Yohann (Kick email)
-                  - edward@easygo.io # Edward Craven
-                  - e.wright@easygo.io # #Ethan Wright
+                - internal
+                - var: user.roles
             - enabled
             - disabled
         variants:
@@ -390,27 +371,8 @@ spec:
         targeting:
           if:
             - in:
-                - var: user.email
-                - - a.astruc@easygo.io # Arnaud
-                  - a.roe@easygo.io # Alister
-                  - a.ruberto@easygo.io # Alex
-                  - an.nguyen@easygo.io # An
-                  - b.rostamiyeganeh@easygo.io # Naz
-                  - e.foh@easygo.io # Edwin
-                  - j.pettigrew@easygo.io # James
-                  - k.bedi@easygo.io # KD
-                  - m.meana@easygo.io # Mateo
-                  - m.soulsby@easygo.io # Matt
-                  - n.dagher@easygo.io # Nick
-                  - p.pan@easygo.io # Peter
-                  - r.tuvera@easygo.io # Raf
-                  - s.chu@easygo.io # Chu
-                  - s.sotiriadis@easygo.io # Sarah
-                  - v.manohar@easygo.io # Vivek
-                  - y.levraud@easygo.io # Yohann
-                  - yohann@kick.com # Yohann (Kick email)
-                  - edward@easygo.io # Edward Craven
-                  - e.wright@easygo.io # #Ethan Wright
+                - internal
+                - var: user.roles
             - enabled
             - disabled
         variants:
@@ -437,27 +399,8 @@ spec:
         targeting:
           if:
             - in:
-                - var: user.email
-                - - a.astruc@easygo.io # Arnaud
-                  - a.roe@easygo.io # Alister
-                  - a.ruberto@easygo.io # Alex
-                  - an.nguyen@easygo.io # An
-                  - b.rostamiyeganeh@easygo.io # Naz
-                  - e.foh@easygo.io # Edwin
-                  - j.pettigrew@easygo.io # James
-                  - k.bedi@easygo.io # KD
-                  - m.meana@easygo.io # Mateo
-                  - m.soulsby@easygo.io # Matt
-                  - n.dagher@easygo.io # Nick
-                  - p.pan@easygo.io # Peter
-                  - r.tuvera@easygo.io # Raf
-                  - s.chu@easygo.io # Chu
-                  - s.sotiriadis@easygo.io # Sarah
-                  - v.manohar@easygo.io # Vivek
-                  - y.levraud@easygo.io # Yohann
-                  - yohann@kick.com # Yohann (Kick email)
-                  - edward@easygo.io # Edward Craven
-                  - e.wright@easygo.io # #Ethan Wright
+                - internal
+                - var: user.roles
             - enabled
             - disabled
         variants:
