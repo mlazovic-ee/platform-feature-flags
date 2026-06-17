@@ -349,3 +349,16 @@ spec:
         variants:
           enabled: true
           disabled: false
+      oldCountEP:
+        state: ENABLED
+        defaultVariant: enabled
+        targeting:
+          if:
+            - sem_ver:
+                - var: app.version
+                - <
+                - "40.22.0"
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
