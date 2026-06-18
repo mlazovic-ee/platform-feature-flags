@@ -499,29 +499,10 @@ spec:
         variants:
           disabled: false
           enabled: true
-      # Stream Health - Toggle the stream health feature for creators, which will show stream health status and recommendations in the dashboard.
-      # disabled: not visible to creators
-      # enabled: visible to creators with a toggle to enable/disable the feature
+      # Stream Health in Creator Dashboard
       web-20:
         state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - in:
-                - var: user.email
-                - - j.reyesvera@easygo.io # Juan
-                  - a.fernandes@easygo.io # Andre
-                  - c.li@easygo.io # Coco Li
-                  - c.tatli@easygo.io # Chris
-                  - d.gunawardena@easygo.io # Damitha
-                  - j.brown@easygo.io # Jeremy
-                  - f.mena@easygo.io # Felipe
-                  - y.levraud@easygo.io # Yohann
-                  - a.astruc@easygo.io # Arnaud
-                  - m.hogben@easygo.io # Matt
-                  - p.howard@easygo.io # Peter
-            - enabled
-            - disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
@@ -539,7 +520,7 @@ spec:
         variants:
           enabled: true
           disabled: false
-    # Daily Rewards
+      # Daily Rewards
       web-21:
         state: ENABLED
         defaultVariant: disabled
