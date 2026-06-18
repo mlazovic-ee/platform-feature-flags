@@ -194,3 +194,10 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Daily Rewards
+      web-21:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
