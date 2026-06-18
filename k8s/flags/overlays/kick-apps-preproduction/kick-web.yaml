@@ -478,3 +478,10 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Ambient Cinematic Player
+      web-ambient-player:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true

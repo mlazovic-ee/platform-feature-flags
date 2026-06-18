@@ -525,3 +525,17 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Ambient Cinematic Player
+      web-ambient-player:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
