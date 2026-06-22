@@ -536,6 +536,11 @@ spec:
                   - eg_internal@easygo.mailosaur.net # Automation Testing Account
                   - streamkeyuser@easygo.mailosaur.net # Automation Testing Account
                   - ageassurance@easygo.mailosaur.net # Automation Testing Account
+                  - an.nguyen@easygo.io # An Nguyen
+                  - a.ruberto@easygo.io # Alex Ruberto
+                  - m.goutry@easygo.io # Martin Goutry
+                  - m.meana@easygo.io # Mateo Meana
+                  - s.evans@easygo.io # Shareef Evans
             - enabled
             - disabled
         variants:
