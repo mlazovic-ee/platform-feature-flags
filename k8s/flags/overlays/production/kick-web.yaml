@@ -541,6 +541,7 @@ spec:
                   - m.goutry@easygo.io # Martin Goutry
                   - m.meana@easygo.io # Mateo Meana
                   - s.evans@easygo.io # Shareef Evans
+                  - z.close@easygo.io # Zach Close
             - enabled
             - disabled
         variants:
