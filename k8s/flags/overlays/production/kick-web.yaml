@@ -540,3 +540,32 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # Go Live - Toggle the go live feature for creators
+      # disabled: not visible to creators
+      # enabled: visible to creators with a button to go live from main page navigation bar
+      web-23:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - f.mena@easygo.io # Felipe
+                  - a.fernandes@easygo.io # Andre
+                  - c.tatli@easygo.io # Chris
+                  - c.li@easygo.io # Coco
+                  - d.gunawardena@easygo.io # Damitha
+                  - j.brown@easygo.io # Jeremy
+                  - j.reyesvera@easygo.io # Juan
+                  - m.hogben@easygo.io # Matt Hogben
+                  - c.tzoumanekas@easygo.io # Costa
+                  - larissa@easygo.io # Larissa
+                  - y.levraud@easygo.io # Yohann
+                  - p.howard@easygo.io # Peter
+                  - a.astruc@easygo.io # Arnaud
+                  - b.rostamiyeganeh@easygo.io # Naz
+            - enabled
+            - disabled
+        variants:
+          disabled: false
+          enabled: true
