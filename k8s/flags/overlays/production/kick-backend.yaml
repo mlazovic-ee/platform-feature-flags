@@ -13,7 +13,7 @@ spec:
           disabled: false
       viewer_analytics_sharding_read:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
