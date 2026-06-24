@@ -328,7 +328,7 @@ spec:
       # If disabled, the MUX listener on the native side will never be initialised, and the data will never get sent.
       muxVideoAnalytics:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         targeting:
           if:
             - sem_ver:
@@ -336,16 +336,7 @@ spec:
                 - <
                 - "40.20.0"
             - disabled
-            - if:
-                - in:
-                    - internal
-                    - var: user.roles
-                - enabled
-                - fractional:
-                    - - enabled
-                      - 10
-                    - - disabled
-                      - 90
+            - enabled
         variants:
           enabled: true
           disabled: false
