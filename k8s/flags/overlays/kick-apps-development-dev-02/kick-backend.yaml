@@ -5,18 +5,6 @@ metadata:
 spec:
   flagSpec:
     flags:
-      viewer_analytics_sharding_dual_write:
-        state: ENABLED
-        defaultVariant: disabled
-        variants:
-          enabled: true
-          disabled: false
-      viewer_analytics_sharding_read:
-        state: ENABLED
-        defaultVariant: disabled
-        variants:
-          enabled: true
-          disabled: false
       # Controls the fraction of requests for which Mux SDK IsEnabled is set in media-metadata.
       # 0.0 = disabled for all, 1.0 = enabled for all.
       # Authenticated users are bucketed consistently by user ID; anonymous users are sampled randomly.

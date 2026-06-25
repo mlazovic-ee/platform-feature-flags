@@ -5,18 +5,6 @@ metadata:
 spec:
   flagSpec:
     flags:
-      viewer_analytics_sharding_dual_write:
-        state: ENABLED
-        defaultVariant: disabled
-        variants:
-          enabled: true
-          disabled: false
-      viewer_analytics_sharding_read:
-        state: ENABLED
-        defaultVariant: disabled
-        variants:
-          enabled: true
-          disabled: false
       # Controls the enablement of DataZoom VOD features in media metadata.
       media_metadata_datazoom_vod_enabled:
         state: ENABLED
