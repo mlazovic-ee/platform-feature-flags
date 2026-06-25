@@ -32,12 +32,14 @@ spec:
                   - j.brown@easygo.io # Jeremy
                   - j.reyesvera@easygo.io # Juan
                   - m.hogben@easygo.io # Matt Hogben
+                  - p.howard@easygo.io # Peter
+                  - a.ooi@easygo.io # Aaron
+                  - b.rostamiyeganeh@easygo.io # Naz
+                  - be.kaya@easygo.io # Berat
                   - c.tzoumanekas@easygo.io # Costa
                   - larissa@easygo.io # Larissa
                   - y.levraud@easygo.io # Yohann
-                  - p.howard@easygo.io # Peter
                   - a.astruc@easygo.io # Arnaud
-                  - b.rostamiyeganeh@easygo.io # Naz
             - enabled
             - disabled
         variants:
