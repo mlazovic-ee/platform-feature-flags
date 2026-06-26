@@ -220,3 +220,11 @@ spec:
                 - var: user.roles
             - internal
             - public
+      ptfm_ws_router_sharding_mode:
+        state: ENABLED
+        defaultVariant: none
+        variants:
+          none: 0 # no sharding, just return default
+          client_conn: 1 # sharding on client connections only
+          chatroom_conn: 2 # sharding on chatroom connections only
+          both: 3 # sharding on both client and chatroom connections
