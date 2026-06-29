@@ -535,6 +535,7 @@ spec:
                   - m.meana@easygo.io # Mateo Meana
                   - s.evans@easygo.io # Shareef Evans
                   - z.close@easygo.io # Zach Close
+                  - y.levraud@easygo.io # Yohann
             - enabled
             - disabled
         variants:
