@@ -569,6 +569,13 @@ spec:
                   - larissa@easygo.io # Larissa
                   - y.levraud@easygo.io # Yohann
                   - a.astruc@easygo.io # Arnaud
+                  - j.wauquier@easygo.io # Justin
+                  - m.meana@easygo.io # Mateo
+                  - a.ruberto@easygo.io # Alex
+                  - an.nguyen@easygo.io # An
+                  - a.bacucang@easygo.io # Aze
+                  - b.choi@easygo.io # Brian
+                  - m.goutry@easygo.io # Martin
             - enabled
             - disabled
         variants:
