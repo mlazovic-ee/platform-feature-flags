@@ -513,31 +513,8 @@ spec:
         targeting:
           if:
             - in:
-                - var: user.email
-                - - c.li@easygo.io # Coco
-                  - b.choi@easygo.io # Brian
-                  - z.ingle@easygo.io # Zach
-                  - a.sajiv@easygo.io # Ash
-                  - j.khan@easygo.io # Zeb
-                  - k.camacho@easygo.io # Kyrie
-                  - onboarding04@easygo.mailosaur.net # Kyrie
-                  - onboarding05@easygo.mailosaur.net # Kyrie
-                  - el.liu@easygo.io # Elaine
-                  - eg_viewer@easygo.mailosaur.net # Automation Testing Account
-                  - eg_user@easygo.mailosaur.net # Automation Testing Account
-                  - eg_streamer@easygo.mailosaur.net # Automation Testing Account
-                  - eg_internal@easygo.mailosaur.net # Automation Testing Account
-                  - streamkeyuser@easygo.mailosaur.net # Automation Testing Account
-                  - ageassurance@easygo.mailosaur.net # Automation Testing Account
-                  - an.nguyen@easygo.io # An Nguyen
-                  - a.ruberto@easygo.io # Alex Ruberto
-                  - m.goutry@easygo.io # Martin Goutry
-                  - m.meana@easygo.io # Mateo Meana
-                  - s.evans@easygo.io # Shareef Evans
-                  - z.close@easygo.io # Zach Close
-                  - y.levraud@easygo.io # Yohann
-                  - m.young@easygo.io # M. Young
-                  - s.fernandez@easygo.io # S. Fernandez
+                - internal
+                - var: user.roles
             - enabled
             - disabled
         variants:
