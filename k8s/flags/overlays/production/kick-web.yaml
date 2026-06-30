@@ -536,6 +536,8 @@ spec:
                   - s.evans@easygo.io # Shareef Evans
                   - z.close@easygo.io # Zach Close
                   - y.levraud@easygo.io # Yohann
+                  - m.young@easygo.io # M. Young
+                  - s.fernandez@easygo.io # S. Fernandez
             - enabled
             - disabled
         variants:
