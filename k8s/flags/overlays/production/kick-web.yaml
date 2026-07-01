@@ -509,14 +509,7 @@ spec:
       # Daily Rewards
       web-21:
         state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - in:
-                - internal
-                - var: user.roles
-            - enabled
-            - disabled
+        defaultVariant: enabled
         variants:
           disabled: false
           enabled: true
