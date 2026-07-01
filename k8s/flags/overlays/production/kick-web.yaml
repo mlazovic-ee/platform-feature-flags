@@ -546,6 +546,8 @@ spec:
                   - a.bacucang@easygo.io # Aze
                   - b.choi@easygo.io # Brian
                   - m.goutry@easygo.io # Martin
+                  - r.tuvera@easygo.io # Rafael
+                  - v.manohar@easygo.io # Vivek
             - enabled
             - disabled
         variants:
