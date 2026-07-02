@@ -206,19 +206,19 @@ spec:
             chat_messages: true
             chat_rate: true
           public:
-            avg_ccv: false
-            peak_ccv: false
-            unique_viewers: false
-            stream_count: false
-            hours_streamed: false
-            hours_watched: false
-            subscribers_gained: false
-            subscriber_count: false
-            follower_count: false
-            unique_chatters: false
-            followers_gained: false
-            chat_messages: false
-            chat_rate: false
+            avg_ccv: true
+            peak_ccv: true
+            unique_viewers: true
+            stream_count: true
+            hours_streamed: true
+            hours_watched: true
+            subscribers_gained: true
+            subscriber_count: true
+            follower_count: true
+            unique_chatters: true
+            followers_gained: true
+            chat_messages: true
+            chat_rate: true
         targeting:
           if:
             - in:
