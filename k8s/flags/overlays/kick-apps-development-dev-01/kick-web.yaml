@@ -127,7 +127,14 @@ spec:
       # Overview section
       web-9-1:
         state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
         variants:
           enabled: true
           disabled: false
