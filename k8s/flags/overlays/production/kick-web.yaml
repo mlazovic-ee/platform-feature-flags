@@ -501,6 +501,7 @@ spec:
                   - m.goutry@easygo.io # Martin
                   - r.tuvera@easygo.io # Rafael
                   - v.manohar@easygo.io # Vivek
+                  - j.kumar@easygo.io # Jitender
             - enabled
             - disabled
         variants:
