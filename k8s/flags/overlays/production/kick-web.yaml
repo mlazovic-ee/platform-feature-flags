@@ -502,6 +502,9 @@ spec:
                   - r.tuvera@easygo.io # Rafael
                   - v.manohar@easygo.io # Vivek
                   - j.kumar@easygo.io # Jitender
+                  - u.seshadri@easygo.io # Uday
+                  - l.vesel@easygo.io # Leon
+                  - k.camacho@easygo.io # Kyrie
             - enabled
             - disabled
         variants:
