@@ -443,3 +443,17 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # Riot Games linked account connection
+      web-25:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - h.patel@easygo.io
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
