@@ -569,7 +569,9 @@ spec:
           if:
             - in:
                 - var: user.email
-                - - h.patel@easygo.io
+                - - h.patel@easygo.io # Hemil
+                  - c.li@easygo.io # Coco
+                  - b.choi@easygo.io # Brian
             - enabled
             - disabled
         variants:
