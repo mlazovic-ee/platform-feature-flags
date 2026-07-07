@@ -526,6 +526,14 @@ spec:
                   - j.reyesvera@easygo.io # Juan
                   - m.hogben@easygo.io # Matt Hogben
                   - p.howard@easygo.io # Peter
+                  - y.levraud@easygo.io # Yohann
+                  - s.chu@easygo.io # Chu
+                  - j.kumar@easygo.io # Jitender
+                  - s.fernandez@easygo.io # Sam
+                  - l.galvao@easygo.io # Luis
+                  - r.elgohary@easygo.io # Raf
+                  - be.kaya@easygo.io # Berat
+                  - h.imamura@easygo.io # Honoka
             - enabled
             - disabled
         variants:
