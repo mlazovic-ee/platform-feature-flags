@@ -54,6 +54,10 @@ spec:
                   - l.vesel@easygo.io # Leon
                   - k.camacho@easygo.io # Kyrie
                   - s.fernandez@easygo.io # Sam
+                  - e.wright@easygo.io # Ethan
+                  - edward@easygo.io # Eddie
+                  - ahmed.medias@gmail.com # Ahmed - ahmedlndy
+                  - alexisvtarg@gmail.com # Alexis - alexisvt
             - enabled
             - disabled
         variants:
