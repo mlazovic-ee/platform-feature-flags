@@ -472,6 +472,10 @@ spec:
                   - j.reyesvera@easygo.io # Juan
                   - m.hogben@easygo.io # Matt Hogben
                   - p.howard@easygo.io # Peter
+                  - j.tan@easygo.io # Jeremy T
+                  - j.jiang@easygo.io # Jeremy J
+                  - j.kumar@easygo.io # Jitender
+                  - y.levraud@easygo.io # Yohann
             - enabled
             - disabled
         variants:
