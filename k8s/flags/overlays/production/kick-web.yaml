@@ -536,6 +536,7 @@ spec:
                   - be.kaya@easygo.io # Berat
                   - h.imamura@easygo.io # Honoka
                   - n.joseph@easygo.io # Naveen
+                  - j.tan@easygo.io # Jeremy T
             - enabled
             - disabled
         variants:
