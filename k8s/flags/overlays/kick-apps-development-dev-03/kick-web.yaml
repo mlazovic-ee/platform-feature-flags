@@ -53,6 +53,7 @@ spec:
                   - u.seshadri@easygo.io # Uday
                   - l.vesel@easygo.io # Leon
                   - k.camacho@easygo.io # Kyrie
+                  - s.fernandez@easygo.io # Sam
             - enabled
             - disabled
         variants:
