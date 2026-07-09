@@ -429,31 +429,7 @@ spec:
       # Broswer based captioning
       web-22:
         state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - in:
-                - var: user.email
-                - - f.mena@easygo.io # Felipe
-                  - a.fernandes@easygo.io # Andre
-                  - c.tatli@easygo.io # Chris
-                  - d.gunawardena@easygo.io # Damitha
-                  - j.brown@easygo.io # Jeremy
-                  - j.reyesvera@easygo.io # Juan
-                  - m.hogben@easygo.io # Matt Hogben
-                  - p.howard@easygo.io # Peter
-                  - y.levraud@easygo.io # Yohann
-                  - s.chu@easygo.io # Chu
-                  - j.kumar@easygo.io # Jitender
-                  - s.fernandez@easygo.io # Sam
-                  - l.galvao@easygo.io # Luis
-                  - r.elgohary@easygo.io # Raf
-                  - be.kaya@easygo.io # Berat
-                  - h.imamura@easygo.io # Honoka
-                  - n.joseph@easygo.io # Naveen
-                  - j.tan@easygo.io # Jeremy T
-            - enabled
-            - disabled
+        defaultVariant: enabled
         variants:
           disabled: false
           enabled: true
