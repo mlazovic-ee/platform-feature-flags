@@ -228,3 +228,17 @@ spec:
           client_conn: 1 # sharding on client connections only
           chatroom_conn: 2 # sharding on chatroom connections only
           both: 3 # sharding on both client and chatroom connections
+      # KICK-9703: seed-window kill switch for async Stripe customer creation.
+      # When ENABLED, the monolith InternalStripeCustomerController::createCustomerAccount
+      # skips the Stripe call and returns 200 (caller does not retry). Removes the
+      # create-customer-account worker-starving storm that capped preprod user seeding
+      # (Stripe ~25/s sandbox cap + paym-user-events-processor 3x retry, sharing the
+      # php-monolith-rollout worker pool with createUser). Preproduction-only, for the
+      # seeding window — flip to `disabled` afterward; seeded users have no stripe_id
+      # until reconciled. Requires monolith PR #20645.
+      disable_stripe_customer_creation:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
