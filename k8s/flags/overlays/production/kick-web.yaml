@@ -5,6 +5,13 @@ metadata:
 spec:
   flagSpec:
     flags:
+      # Route global realtime through ws-router
+      web-rt1:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
       # Web Disconnect Protection for Advanced Settings - Toggle disconnect protection for creator channel, which will keep the stream running even if the connection between encoder and Kick is interrupted for a short period of time.
       # disabled: not visible to creators
       # enabled: visible to creators with a toggle to enable/disable the feature

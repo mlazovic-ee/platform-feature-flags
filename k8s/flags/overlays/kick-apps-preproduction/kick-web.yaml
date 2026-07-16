@@ -5,6 +5,13 @@ metadata:
 spec:
   flagSpec:
     flags:
+      # Route global realtime through ws-router
+      web-rt1:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
       # Mux SDK Analytics - Toggle the mux sdk analytics sdk on the player for web clients
       # disabled: MuxTracker component not rendered, no data sent to Mux
       # enabled: MuxTracker component rendered, data sent to Mux
