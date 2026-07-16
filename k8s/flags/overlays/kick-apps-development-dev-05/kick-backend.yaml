@@ -99,6 +99,15 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Reroute the monolith's update_profile bio/socials writes through
+      # user-gateway to the user-profile service (DII-510).
+      # Absent from an environment = old behaviour (monolith writes its own DB).
+      reroute_update_profile_to_user_profile:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
       user_events_stripe_outbox:
         state: ENABLED
         defaultVariant: enabled
