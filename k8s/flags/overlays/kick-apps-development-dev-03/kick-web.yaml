@@ -25,6 +25,9 @@ spec:
             - in:
                 - var: user.email
                 - - f.mena@easygo.io # Felipe
+                  - felipemena@outlook.com # Felipe
+                  - felipemena1@hotmail.com # Felipe
+                  - felipemena40@gmail.com # Felipe
                   - a.fernandes@easygo.io # Andre
                   - c.tatli@easygo.io # Chris
                   - c.li@easygo.io # Coco
