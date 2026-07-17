@@ -478,54 +478,7 @@ spec:
       # enabled: visible to creators with a button to go live from main page navigation bar
       web-23:
         state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - in:
-                - var: user.email
-                - - f.mena@easygo.io # Felipe
-                  - felipemena@outlook.com # Felipe
-                  - felipemena1@hotmail.com # Felipe
-                  - felipemena40@gmail.com # Felipe
-                  - a.fernandes@easygo.io # Andre
-                  - c.tatli@easygo.io # Chris
-                  - c.li@easygo.io # Coco
-                  - d.gunawardena@easygo.io # Damitha
-                  - j.brown@easygo.io # Jeremy
-                  - j.reyesvera@easygo.io # Juan
-                  - m.hogben@easygo.io # Matt Hogben
-                  - p.howard@easygo.io # Peter
-                  - a.ooi@easygo.io # Aaron
-                  - b.rostamiyeganeh@easygo.io # Naz
-                  - be.kaya@easygo.io # Berat
-                  - c.tzoumanekas@easygo.io # Costa
-                  - larissa@easygo.io # Larissa
-                  - y.levraud@easygo.io # Yohann
-                  - a.astruc@easygo.io # Arnaud
-                  - j.wauquier@easygo.io # Justin
-                  - m.meana@easygo.io # Mateo
-                  - a.ruberto@easygo.io # Alex
-                  - an.nguyen@easygo.io # An
-                  - a.bacucang@easygo.io # Aze
-                  - b.choi@easygo.io # Brian
-                  - m.goutry@easygo.io # Martin
-                  - r.tuvera@easygo.io # Rafael
-                  - v.manohar@easygo.io # Vivek
-                  - j.kumar@easygo.io # Jitender
-                  - u.seshadri@easygo.io # Uday
-                  - l.vesel@easygo.io # Leon
-                  - k.camacho@easygo.io # Kyrie
-                  - eg_streamer@easygo.mailosaur.net # Kyrie Test Account
-                  - eg_internal@easygo.mailosaur.net # Kyrie Test Account
-                  - s.fernandez@easygo.io # Sam
-                  - e.wright@easygo.io # Ethan
-                  - edward@easygo.io # Eddie
-                  - b.pergolizzi@easygo.io # Ben
-                  - ahmed.medias@gmail.com # Ahmed - ahmedlndy
-                  - alexisvtarg@gmail.com # Alexis - alexisvt
-                  - skyraworld@gmail.com # skyrairl
-            - enabled
-            - disabled
+        defaultVariant: enabled
         variants:
           disabled: false
           enabled: true
