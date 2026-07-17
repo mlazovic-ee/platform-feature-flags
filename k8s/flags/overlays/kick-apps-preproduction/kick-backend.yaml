@@ -248,3 +248,19 @@ spec:
         variants:
           enabled: true
           disabled: false
+      ptfm_ws_drop_chat_message_pct:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          disabled: 0
+          enabled: 50
+        targeting:
+          if:
+            - and:
+              - in:
+                - var: chatroom_id
+                - []
+              - '==':
+                - var: event_name
+                - 'App\\Events\\ChatMessageEvent'
+            - enabled

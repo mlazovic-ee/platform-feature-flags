@@ -248,7 +248,11 @@ spec:
           enabled: 50
         targeting:
           if:
-            - in:
+            - and:
+              - in:
                 - var: chatroom_id
-                - - 47 # jpettigrew
+                - - 47
+              - '==':
+                - var: event_name
+                - 'App\\Events\\ChatMessageEvent'
             - enabled
