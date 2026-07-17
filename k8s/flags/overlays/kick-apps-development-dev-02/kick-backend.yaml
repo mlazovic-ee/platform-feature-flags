@@ -254,5 +254,5 @@ spec:
                 - - 47
               - '==':
                 - var: event_name
-                - 'App\\Events\\ChatMessageEvent'
+                - 'App\Events\ChatMessageEvent'
             - enabled
