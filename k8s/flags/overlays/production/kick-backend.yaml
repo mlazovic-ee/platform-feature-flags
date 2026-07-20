@@ -31,6 +31,24 @@ spec:
         variants:
           enabled: true
           disabled: false
+      viewer_ccv_sharding_dual_write:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+      viewer_ccv_sharding_read:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+      viewer_ccv_sharding_bulk_read:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
       ws_analytics_tracking_enabled:
         state: ENABLED
         defaultVariant: enabled
