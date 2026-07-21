@@ -5,6 +5,12 @@ metadata:
 spec:
   flagSpec:
     flags:
+      custom-osrs-reward:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: "REPLACE_WITH_OSRS_CAMPAIGN_ULID"
+          disabled: ""
       # Controls the enablement of DataZoom VOD features in media metadata.
       media_metadata_datazoom_vod_enabled:
         state: ENABLED

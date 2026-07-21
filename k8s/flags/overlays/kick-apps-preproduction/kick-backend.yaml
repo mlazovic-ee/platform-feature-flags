@@ -5,6 +5,12 @@ metadata:
 spec:
   flagSpec:
     flags:
+      custom-osrs-reward:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: "REPLACE_WITH_OSRS_CAMPAIGN_ULID"
+          disabled: ""
       # Controls the fraction of requests for which Mux SDK IsEnabled is set in media-metadata.
       # 0.0 = disabled for all, 1.0 = enabled for all.
       # Authenticated users are bucketed consistently by user ID; anonymous users are sampled randomly.
