@@ -438,10 +438,17 @@ spec:
         variants:
           disabled: false
           enabled: true
-      # Web gateway clip & video endpoints
+      # Web gateway clip endpoints
       web-19:
         state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
         variants:
           disabled: false
           enabled: true

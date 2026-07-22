@@ -398,7 +398,7 @@ spec:
         variants:
           disabled: false
           enabled: true
-      # Web gateway clip & video endpoints
+      # Web gateway clip endpoints
       web-19:
         state: ENABLED
         defaultVariant: disabled
