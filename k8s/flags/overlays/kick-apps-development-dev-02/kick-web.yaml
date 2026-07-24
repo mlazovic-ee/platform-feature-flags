@@ -165,6 +165,20 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Granular streamer tier in analytics
+      web-9-7:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
       # Guest HD trial A/B test (control / variant-a 480p / variant-b 720p)
       web-11:
         state: ENABLED

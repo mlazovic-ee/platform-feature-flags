@@ -372,6 +372,20 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Granular streamer tier in analytics
+      web-9-7:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
       # Subscribe prompt.
       web-11:
         state: ENABLED

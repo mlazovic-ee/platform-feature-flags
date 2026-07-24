@@ -153,6 +153,20 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Granular streamer tier in analytics
+      web-9-7:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
       # Dynamic encoding settings in frontend to call chnl-engagement-service for channel_type values
       encoding-settings:
         state: ENABLED

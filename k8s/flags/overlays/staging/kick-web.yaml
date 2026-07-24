@@ -399,7 +399,20 @@ spec:
         variants:
           enabled: true
           disabled: false
-          # Individual Stream section
+      # Granular streamer tier in analytics
+      web-9-7:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
       argentina-only-test:
         state: ENABLED
         defaultVariant: disabled
