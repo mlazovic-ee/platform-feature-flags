@@ -7,7 +7,7 @@ spec:
     flags:
       custom-osrs-reward:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: "01KY6KCAZXYR9FAB5YZJD9A0QN" # OSRS Campaign ULID
           disabled: ""
