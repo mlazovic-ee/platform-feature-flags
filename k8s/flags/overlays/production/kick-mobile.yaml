@@ -342,7 +342,7 @@ spec:
           disabled: false
       oldCountEP:
         state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
         targeting:
           if:
             - sem_ver:
