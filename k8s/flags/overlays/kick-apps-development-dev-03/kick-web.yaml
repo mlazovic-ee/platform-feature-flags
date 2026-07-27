@@ -464,3 +464,10 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Ad SDK debug mode
+      web-26:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
