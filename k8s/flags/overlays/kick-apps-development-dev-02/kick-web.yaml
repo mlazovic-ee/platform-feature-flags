@@ -202,6 +202,13 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Gamification Phase 1 - Global badges + leveling dropdown
+      web-16-1:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
       # Insider SDK
       web-12:
         state: ENABLED
