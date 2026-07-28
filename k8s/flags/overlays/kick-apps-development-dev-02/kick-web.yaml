@@ -116,38 +116,24 @@ spec:
           disabled: false
           enabled: true
       # the web-9 feature flags all fall under streamer analytics
-      # Overview section
-      web-9-1:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
       # Streams section
       web-9-2:
         state: ENABLED
         defaultVariant: disabled
         targeting:
           if:
-            - in:
-                - internal
-                - var: user.roles
+            - or:
+                - in:
+                    - internal
+                    - var: user.roles
+                - in:
+                    - var: user.email
+                    - - an_creator_test@easygo.mailosaur.net
+                      - an_notier_test@easygo.mailosaur.net
+                      - an_verified_test@easygo.mailosaur.net
+                      - an_partner_test@easygo.mailosaur.net
             - enabled
             - disabled
-        variants:
-          enabled: true
-          disabled: false
-      # Partnership section - streamer
-      web-9-3:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
-      # Partnership section - guest
-      web-9-4:
-        state: ENABLED
-        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
@@ -157,11 +143,16 @@ spec:
         defaultVariant: disabled
         targeting:
           if:
-            - in:
-                - internal
-                - var: user.roles
-            - enabled
-            - disabled
+            - or:
+                - in:
+                    - internal
+                    - var: user.roles
+                - in:
+                    - var: user.email
+                    - - an_creator_test@easygo.mailosaur.net
+                      - an_notier_test@easygo.mailosaur.net
+                      - an_verified_test@easygo.mailosaur.net
+                      - an_partner_test@easygo.mailosaur.net
         variants:
           enabled: true
           disabled: false
@@ -171,11 +162,16 @@ spec:
         defaultVariant: disabled
         targeting:
           if:
-            - in:
-                - internal
-                - var: user.roles
-            - enabled
-            - disabled
+            - or:
+                - in:
+                    - internal
+                    - var: user.roles
+                - in:
+                    - var: user.email
+                    - - an_creator_test@easygo.mailosaur.net
+                      - an_notier_test@easygo.mailosaur.net
+                      - an_verified_test@easygo.mailosaur.net
+                      - an_partner_test@easygo.mailosaur.net
         variants:
           enabled: true
           disabled: false
