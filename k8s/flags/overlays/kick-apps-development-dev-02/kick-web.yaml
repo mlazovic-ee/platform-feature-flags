@@ -153,6 +153,8 @@ spec:
                       - an_notier_test@easygo.mailosaur.net
                       - an_verified_test@easygo.mailosaur.net
                       - an_partner_test@easygo.mailosaur.net
+            - enabled
+            - disabled
         variants:
           enabled: true
           disabled: false
@@ -172,6 +174,8 @@ spec:
                       - an_notier_test@easygo.mailosaur.net
                       - an_verified_test@easygo.mailosaur.net
                       - an_partner_test@easygo.mailosaur.net
+            - enabled
+            - disabled
         variants:
           enabled: true
           disabled: false
