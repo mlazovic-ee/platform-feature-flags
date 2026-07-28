@@ -365,7 +365,7 @@ spec:
           enabled: true
           disabled: false
       # Hover smooth mode - slow-motion chat reveal while hovering the channel chatroom (KICK-9719)
-      web-26:
+      web-hover-slow:
         state: ENABLED
         defaultVariant: disabled
         targeting:
