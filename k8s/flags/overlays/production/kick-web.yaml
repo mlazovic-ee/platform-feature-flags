@@ -112,26 +112,10 @@ spec:
       # In-feed Ads
       web-4-1:
         state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - in:
-                - var: user.email
-                - - c.li@easygo.io # Coco
-                  - k.lenihan@easygo.io # Kelly
-                  - el.liu@easygo.io # Elaine
-                  - k.camacho@easygo.io # Kyrie
-                  - kyrie@kick.com # Kyrie
-                  - vukasintrickovic@mebit.io # Vukasin
-                  - j.khan@easygo.io # Zeb
-                  - c.tzoumanekas@easygo.io # Costa
-                  - j.jiang@easygo.io # Jeremy Jiang
-                  - ryan@easygo.io # Ryan
-            - enabled
-            - disabled
+        defaultVariant: enabled
         variants:
-          disabled: false
           enabled: true
+          disabled: false
       # Mid-roll Ads
       web-4-2:
         state: ENABLED
