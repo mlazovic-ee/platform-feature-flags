@@ -222,9 +222,16 @@ spec:
         defaultVariant: disabled
         targeting:
           if:
-            - in:
-                - internal
-                - var: user.roles
+            - or:
+                - in:
+                    - internal
+                    - var: user.roles
+                - in:
+                    - var: user.email
+                    - - an_partner_test@easygo.mailosaur.net
+                      - an_notier_test@easygo.mailosaur.net
+                      - an_preapproved_partner_test@easygo.mailosaur.net
+                      - an_creator_test@easygo.mailosaur.net
             - enabled
             - disabled
         variants:
