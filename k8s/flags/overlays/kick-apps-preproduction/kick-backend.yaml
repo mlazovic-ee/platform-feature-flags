@@ -213,7 +213,7 @@ spec:
           disabled: false
       disable-verified-check:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           disabled: false
           enabled: true
