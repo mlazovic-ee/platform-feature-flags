@@ -55,6 +55,12 @@ spec:
         variants:
           enabled: true
           disabled: false
+      legacy_ccv_write_disabled:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
       ws_analytics_tracking_enabled:
         state: ENABLED
         defaultVariant: enabled
