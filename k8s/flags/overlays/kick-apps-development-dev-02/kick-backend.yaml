@@ -219,21 +219,7 @@ spec:
           disabled: false
       disable-verified-check:
         state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - or:
-                - in:
-                    - internal
-                    - var: user.roles
-                - in:
-                    - var: user.email
-                    - - an_partner_test@easygo.mailosaur.net
-                      - an_notier_test@easygo.mailosaur.net
-                      - an_preapproved_partner_test@easygo.mailosaur.net
-                      - an_creator_test@easygo.mailosaur.net
-            - enabled
-            - disabled
+        defaultVariant: enabled
         variants:
           disabled: false
           enabled: true
@@ -254,10 +240,10 @@ spec:
         targeting:
           if:
             - and:
-              - in:
-                - var: chatroom_id
-                - - 47
-              - '==':
-                - var: event_name
-                - 'App\Events\ChatMessageEvent'
+                - in:
+                    - var: chatroom_id
+                    - - 47
+                - "==":
+                    - var: event_name
+                    - 'App\Events\ChatMessageEvent'
             - enabled

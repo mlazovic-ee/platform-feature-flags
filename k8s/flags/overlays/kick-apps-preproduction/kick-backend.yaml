@@ -214,13 +214,6 @@ spec:
       disable-verified-check:
         state: ENABLED
         defaultVariant: disabled
-        targeting:
-          if:
-            - in:
-                - internal
-                - var: user.roles
-            - enabled
-            - disabled
         variants:
           disabled: false
           enabled: true
@@ -255,10 +248,10 @@ spec:
         targeting:
           if:
             - and:
-              - in:
-                - var: chatroom_id
-                - []
-              - '==':
-                - var: event_name
-                - 'App\Events\ChatMessageEvent'
+                - in:
+                    - var: chatroom_id
+                    - []
+                - "==":
+                    - var: event_name
+                    - 'App\Events\ChatMessageEvent'
             - enabled
