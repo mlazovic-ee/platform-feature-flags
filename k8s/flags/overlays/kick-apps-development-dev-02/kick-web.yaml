@@ -119,66 +119,21 @@ spec:
       # Streams section
       web-9-2:
         state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - or:
-                - in:
-                    - internal
-                    - var: user.roles
-                - in:
-                    - var: user.email
-                    - - an_creator_test@easygo.mailosaur.net
-                      - an_notier_test@easygo.mailosaur.net
-                      - an_verified_test@easygo.mailosaur.net
-                      - an_partner_test@easygo.mailosaur.net
-                      - an_preapproved_partner_test@easygo.mailosaur.net
-            - enabled
-            - disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
       # Individual Stream section
       web-9-5:
         state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - or:
-                - in:
-                    - internal
-                    - var: user.roles
-                - in:
-                    - var: user.email
-                    - - an_creator_test@easygo.mailosaur.net
-                      - an_notier_test@easygo.mailosaur.net
-                      - an_verified_test@easygo.mailosaur.net
-                      - an_partner_test@easygo.mailosaur.net
-                      - an_preapproved_partner_test@easygo.mailosaur.net
-            - enabled
-            - disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
       # Granular streamer tier in analytics
       web-9-7:
         state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - or:
-                - in:
-                    - internal
-                    - var: user.roles
-                - in:
-                    - var: user.email
-                    - - an_creator_test@easygo.mailosaur.net
-                      - an_notier_test@easygo.mailosaur.net
-                      - an_verified_test@easygo.mailosaur.net
-                      - an_partner_test@easygo.mailosaur.net
-                      - an_preapproved_partner_test@easygo.mailosaur.net
-            - enabled
-            - disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
