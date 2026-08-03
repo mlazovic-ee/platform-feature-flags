@@ -174,3 +174,10 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Web Video preview
+      web-27:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false

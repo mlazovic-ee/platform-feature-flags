@@ -503,3 +503,27 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Web Video preview
+      web-27:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - f.mena@easygo.io # Felipe
+                  - a.fernandes@easygo.io # Andre
+                  - c.tatli@easygo.io # Chris
+                  - d.gunawardena@easygo.io # Damitha
+                  - j.brown@easygo.io # Jeremy
+                  - j.reyesvera@easygo.io # Juan
+                  - m.hogben@easygo.io # Matt Hogben
+                  - p.howard@easygo.io # Peter
+                  - j.tan@easygo.io # Jeremy T
+                  - j.jiang@easygo.io # Jeremy J
+                  - b.choi@easygo.io # Brian
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
