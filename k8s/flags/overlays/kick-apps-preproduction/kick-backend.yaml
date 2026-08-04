@@ -261,3 +261,9 @@ spec:
                     - var: event_name
                     - 'App\Events\ChatMessageEvent'
             - enabled
+      chat_send_via_ws_router:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
