@@ -510,18 +510,8 @@ spec:
         targeting:
           if:
             - in:
-                - var: user.email
-                - - f.mena@easygo.io # Felipe
-                  - a.fernandes@easygo.io # Andre
-                  - c.tatli@easygo.io # Chris
-                  - d.gunawardena@easygo.io # Damitha
-                  - j.brown@easygo.io # Jeremy
-                  - j.reyesvera@easygo.io # Juan
-                  - m.hogben@easygo.io # Matt Hogben
-                  - p.howard@easygo.io # Peter
-                  - j.tan@easygo.io # Jeremy T
-                  - j.jiang@easygo.io # Jeremy J
-                  - b.choi@easygo.io # Brian
+                - internal
+                - var: user.roles
             - enabled
             - disabled
         variants:
