@@ -520,34 +520,7 @@ spec:
       # Daily Rewards streaks
       web-28:
         state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - in:
-                - var: user.email
-                - - c.li@easygo.io # Coco
-                  - b.choi@easygo.io # Brian
-                  - j.khan@easygo.io # Zeb
-                  - a.sajiv@easygo.io # Ash
-                  - z.ingle@easygo.io # Zach
-                  - k.camacho@easygo.io # Kyrie
-                  - onboarding04@easygo.mailosaur.net # Kyrie
-                  - onboarding05@easygo.mailosaur.net # Kyrie
-                  - el.liu@easygo.io # Elaine
-                  - s.evans@easygo.io # Shareef
-                  - h.patel@easygo.io # Hemil
-                  - c.tzoumanekas@easygo.io # Costa
-                  - z.close@easygo.io # Zach Close
-                  - eg_viewer@easygo.mailosaur.net # Automation Testing Account
-                  - eg_user@easygo.mailosaur.net # Automation Testing Account
-                  - eg_streamer@easygo.mailosaur.net # Automation Testing Account
-                  - eg_internal@easygo.mailosaur.net # Automation Testing Account
-                  - streamkeyuser@easygo.mailosaur.net # Automation Testing Account
-                  - ageassurance@easygo.mailosaur.net # Automation Testing Account
-                  - eg_admin@easygo.mailosaur.net # Automation Testing Account
-                  - eg_internal@easygo.mailosaur.net # Automation Testing Account
-            - enabled
-            - disabled
+        defaultVariant: enabled
         variants:
-          disabled: false
           enabled: true
+          disabled: false
