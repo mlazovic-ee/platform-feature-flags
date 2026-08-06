@@ -458,6 +458,15 @@ spec:
                   - p.howard@easygo.io # Peter
                   - j.tan@easygo.io # Jeremy T
                   - j.jiang@easygo.io # Jeremy J
+                  - dsloman@google.com # Google tester
+                  - dchitkara@google.com # Google tester  
+                  - adtest286@gmail.com  # Google tester
+                  - simonhyslop@google.com  # Google tester
+                  - gordon@datazoom.io # amazon tester
+                  - avikhu@amazon.com # amazon tester
+                  - sammak@amazon.com  # amazon tester
+                  - tianbing@amazon.com # amazon tester
+                  - hennpete@amazon.com # amazon tester
             - enabled
             - disabled
         variants:
