@@ -184,7 +184,7 @@ spec:
         variants:
           enabled: true
           disabled: false
-      chat_send_via_ws_router:
+      use_ptfm_ws:
         state: ENABLED
         defaultVariant: disabled
         variants:

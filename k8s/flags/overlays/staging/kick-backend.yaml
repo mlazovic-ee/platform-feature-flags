@@ -284,15 +284,15 @@ spec:
         variants:
           enabled: true
           disabled: false
-      chat_send_via_ws_router:
-        state: ENABLED
-        defaultVariant: disabled
-        variants:
-          enabled: true
-          disabled: false
       monolith_remove_session_auth:
         state: ENABLED
         defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      use_ptfm_ws:
+        state: ENABLED
+        defaultVariant: disabled
         variants:
           enabled: true
           disabled: false
