@@ -522,17 +522,7 @@ spec:
                 - internal
                 - var: user.roles
             - enabled
-            # Fractional buckets on the targetingKey, which the web frontend only
-            # sends consistently (SSR and client) for logged-in users. Guests must
-            # resolve deterministically or the feature flashes on/off after hydration.
-            - if:
-                - var: user.id
-                - fractional:
-                    - - enabled
-                      - 20
-                    - - disabled
-                      - 80
-                - disabled
+            - disabled
         variants:
           enabled: true
           disabled: false
