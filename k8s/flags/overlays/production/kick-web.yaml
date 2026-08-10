@@ -522,7 +522,11 @@ spec:
                 - internal
                 - var: user.roles
             - enabled
-            - disabled
+            - fractional:
+                - - enabled
+                  - 50
+                - - disabled
+                  - 50
         variants:
           enabled: true
           disabled: false
