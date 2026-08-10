@@ -209,6 +209,12 @@ spec:
         variants:
           enabled: true
           disabled: false
+      user_events_channel_is_live_cache:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
       ptfm_ws_drop_chat_message_pct:
         state: ENABLED
         defaultVariant: disabled
