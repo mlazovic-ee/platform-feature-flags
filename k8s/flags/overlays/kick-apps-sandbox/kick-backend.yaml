@@ -45,6 +45,12 @@ spec:
         variants:
           enabled: true
           disabled: false
+      ws_viewer_count_go_enabled:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
       ws_analytics_tracking_enabled:
         state: ENABLED
         defaultVariant: enabled
