@@ -75,7 +75,7 @@ spec:
           disabled: false
       user_events_channel_is_live_cache:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
