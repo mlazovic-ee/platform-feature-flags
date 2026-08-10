@@ -515,18 +515,7 @@ spec:
       # Web Video preview
       web-27:
         state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - in:
-                - internal
-                - var: user.roles
-            - enabled
-            - fractional:
-                - - enabled
-                  - 50
-                - - disabled
-                  - 50
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
