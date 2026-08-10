@@ -451,3 +451,10 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # IMA Ad Component 
+      web-29:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
