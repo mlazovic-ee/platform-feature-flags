@@ -215,12 +215,6 @@ spec:
         variants:
           enabled: true
           disabled: false
-      user_events_channel_is_live_cache:
-        state: ENABLED
-        defaultVariant: disabled
-        variants:
-          enabled: true
-          disabled: false
       # When enabled, monolith would call chat-history-service to
       # check if a given user has ever sent a message in a channel.
       user_channel_has_chatted:

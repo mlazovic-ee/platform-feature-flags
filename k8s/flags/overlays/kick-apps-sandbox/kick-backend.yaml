@@ -63,12 +63,6 @@ spec:
         variants:
           enabled: true
           disabled: false
-      user_events_channel_is_live_cache:
-        state: ENABLED
-        defaultVariant: disabled
-        variants:
-          enabled: true
-          disabled: false
       # Enable IVS view counts globally or specify a livestream id
       ivs_view_count:
         state: ENABLED
