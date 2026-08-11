@@ -113,13 +113,6 @@ spec:
         variants:
           disabled: false
           enabled: true
-      # /videos endpoint
-      domain-2:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          disabled: false
-          enabled: true
       # Age Assurance Home Banner
       trust-1:
         state: ENABLED
@@ -467,11 +460,11 @@ spec:
                   - j.jiang@easygo.io # Jeremy J
                   - dsloman@google.com # Google tester
                   - dchitkara@google.com # Google tester
-                  - adtest286@gmail.com  # Google tester
-                  - simonhyslop@google.com  # Google tester
+                  - adtest286@gmail.com # Google tester
+                  - simonhyslop@google.com # Google tester
                   - gordon@datazoom.io # amazon tester
                   - avikhu@amazon.com # amazon tester
-                  - sammak@amazon.com  # amazon tester
+                  - sammak@amazon.com # amazon tester
                   - tianbing@amazon.com # amazon tester
                   - hennpete@amazon.com # amazon tester
             - enabled

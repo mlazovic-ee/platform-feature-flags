@@ -71,20 +71,6 @@ spec:
         variants:
           disabled: false
           enabled: true
-      # /videos endpoint
-      domain-2:
-        state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - in:
-                - internal
-                - var: user.roles
-            - enabled
-            - disabled
-        variants:
-          disabled: false
-          enabled: true
       # Age Assurance Home Banner
       trust-1:
         state: ENABLED
