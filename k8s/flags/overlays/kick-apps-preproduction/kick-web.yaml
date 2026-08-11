@@ -466,7 +466,7 @@ spec:
                   - j.tan@easygo.io # Jeremy T
                   - j.jiang@easygo.io # Jeremy J
                   - dsloman@google.com # Google tester
-                  - dchitkara@google.com # Google tester  
+                  - dchitkara@google.com # Google tester
                   - adtest286@gmail.com  # Google tester
                   - simonhyslop@google.com  # Google tester
                   - gordon@datazoom.io # amazon tester
@@ -493,7 +493,7 @@ spec:
         variants:
           enabled: true
           disabled: false
-      # IMA Ad Component 
+      # IMA Ad Component
       web-29:
         state: ENABLED
         defaultVariant: disabled
@@ -514,3 +514,10 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # kill gifts
+      web-30:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
