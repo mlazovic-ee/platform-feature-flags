@@ -334,13 +334,6 @@ spec:
         variants:
           enabled: true
           disabled: false
-      # Hover smooth mode - slow-motion chat reveal while hovering the channel chatroom (KICK-9719)
-      web-hover-slow:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          disabled: false
-          enabled: true
       # Individual Stream section
       web-9-5:
         state: ENABLED
