@@ -4,12 +4,11 @@ on:
   workflow_dispatch:
     inputs:
       environment:
-        description: 'Environment to update (staging or production)'
+        description: 'Environment to update'
         required: true
         default: 'production'
         type: choice
         options:
-          - staging
           - production
 
 jobs:

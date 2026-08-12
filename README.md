@@ -42,7 +42,6 @@ Feature Flags are cool.
 | Environment   | URL(s)                                                                                                                                     | Configuration                                                                                                   | ArgoCD Application                                                                              |
 | :------------ | :----------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------- |
 | Production    | Web: [https://flags.kick.com](https://flags.kick.com)<br>Mobile: [https://mobile.flags.kick.com](https://mobile.flags.kick.com)         | [Production](https://github.com/KickEngineering/platform-feature-flags/tree/main/k8s/flags/overlays/production) | [platform-feature-flags](https://argo.easygo-kick.com/applications/platform-feature-flags)      |
-| Staging       | Web: [https://flags.easygo-drop-kick.com](https://flags.easygo-drop-kick.com)<br>Mobile: [https://mobile.flags.easygo-drop-kick.com](https://mobile.flags.easygo-drop-kick.com) | [Staging](https://github.com/KickEngineering/platform-feature-flags/tree/main/k8s/flags/overlays/staging)       | [platform-feature-flags](https://argo.easygo-drop-kick.com/applications/platform-feature-flags) |
 | Preproduction | TBA                                                                                                                                        | TBA                                                                                                             | TBA                                                                                             |
 | Development   | TBA                                                                                                                                        | TBA                                                                                                             | TBA                                                                                             |
 
@@ -54,7 +53,7 @@ Feature Flags are cool.
 
 ### Create a new flag
 
-1. Add a new flag to an existing `FeatureFlag` Manifest located in your desired environment overlay, e.g. `k8s/flags/overlays/staging/kick-web.yaml`:
+1. Add a new flag to an existing `FeatureFlag` Manifest located in your desired environment overlay, e.g. `k8s/flags/overlays/production/kick-web.yaml`:
 
 ```yaml
 # My flag to do something cool
@@ -77,7 +76,7 @@ my-flag:
 
 ### Update an existing flag
 
-1. Update your desired flag within a `FeatureFlag` Manifest located in your desired environment overlay, e.g. `k8s/flags/overlays/staging/kick-web.yaml`:
+1. Update your desired flag within a `FeatureFlag` Manifest located in your desired environment overlay, e.g. `k8s/flags/overlays/production/kick-web.yaml`:
 
 2. Raise a Pull Request to merge your changes into the `main` branch. This will trigger a deployment of the updated flag definition to your desired environment.
 
@@ -301,7 +300,6 @@ For consumers that run in an insecure environment, such as a web browser or mobi
 The mobile app uses the OpenFeature OFREP web provider to poll feature flags from a dedicated mobile FlagD endpoint. That endpoint only serves the `kick-mobile.yaml` manifest for the target environment.
 
 - Production: `https://mobile.flags.kick.com`
-- Staging: `https://mobile.flags.easygo-drop-kick.com`
 
 The app must also define each expected flag locally with its own default value so it can continue working if FlagD is unavailable. Flags that exist in this repo but are not declared in the mobile app are ignored.
 
@@ -487,7 +485,7 @@ Flags in Next.js are evaluated _server-side_ in line with [Flags SDK's server-si
 
 **Environment-aware evaluation:**
 
-- **Production/Staging (Kubernetes):** Uses in-process evaluation via the OpenFeature operator for optimal performance
+- **Kubernetes environments:** Uses in-process evaluation via the OpenFeature operator for optimal performance
 - **Local/Vercel Preview:** Falls back to remote evaluation against the public FlagD endpoint via http when in-process is unavailable
 
 ##### 1 – OpenFeature ⇄ flagd adapter
@@ -550,7 +548,6 @@ k8s
 │       ├── production
 │       │   ├── kustomization.yaml
 |       |   └── ...
-│       └── staging
 │           ├── kustomization.yaml
 |           └── ...
 └── ...
