@@ -339,3 +339,9 @@ spec:
         variants:
           enabled: true
           disabled: false
+      ntfr_ingest_enabled:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
