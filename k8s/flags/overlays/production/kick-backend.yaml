@@ -39,7 +39,7 @@ spec:
           disabled: false
       viewer_ccv_sharding_dual_write:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
