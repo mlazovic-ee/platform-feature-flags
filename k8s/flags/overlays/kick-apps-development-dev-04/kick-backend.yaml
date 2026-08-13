@@ -53,7 +53,7 @@ spec:
           disabled: false
       ws_viewer_count_go_enabled:
         state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
         variants:
           enabled: true
           disabled: false
