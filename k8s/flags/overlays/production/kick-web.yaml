@@ -15,7 +15,7 @@ spec:
       # Route chat realtime through ws-router (chatrooms.*.v2)
       web-rt2:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
