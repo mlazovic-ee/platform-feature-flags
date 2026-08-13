@@ -387,13 +387,6 @@ spec:
         variants:
           enabled: true
           disabled: false
-      # Gamification Phase 1 - Global badges + leveling dropdown
-      web-16-1:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
       # Show view count
       web-17:
         state: ENABLED
@@ -500,13 +493,6 @@ spec:
           disabled: false
       # Web Video preview
       web-27:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
-      # Daily Rewards streaks
-      web-28:
         state: ENABLED
         defaultVariant: enabled
         variants:
