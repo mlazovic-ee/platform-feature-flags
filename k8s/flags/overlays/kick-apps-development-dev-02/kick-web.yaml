@@ -42,13 +42,6 @@ spec:
         variants:
           disabled: true
           enabled: false
-      # /videos endpoint
-      domain-2:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          disabled: false
-          enabled: true
       # Age Assurance Home Banner
       trust-1:
         state: ENABLED
@@ -197,13 +190,6 @@ spec:
           enabled: true
       # Ambient Cinematic Player
       web-ambient-player:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          disabled: false
-          enabled: true
-      # Daily Rewards
-      web-21:
         state: ENABLED
         defaultVariant: enabled
         variants:

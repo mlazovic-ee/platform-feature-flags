@@ -6,7 +6,7 @@ spec:
   flagSpec:
     flags:
       # Mux SDK Analytics - Toggle the mux sdk analytics sdk on the player for web clients
-      # disabled: MuxTracker component not rendered, no data sent to Mux 
+      # disabled: MuxTracker component not rendered, no data sent to Mux
       # enabled: MuxTracker component rendered, data sent to Mux
       web-13::
         state: ENABLED
@@ -56,7 +56,7 @@ spec:
       # Web Disconnect Protection for Advanced Settings - Toggle disconnect protection for creator channel, which will keep the stream running even if the connection between encoder and Kick is interrupted for a short period of time.
       # disabled: not visible to creators
       # enabled: visible to creators with a toggle to enable/disable the feature
-      web-disconnect-protection:        
+      web-disconnect-protection:
         state: ENABLED
         defaultVariant: disabled
         targeting:
@@ -147,13 +147,6 @@ spec:
           disabled: false
       # Insider SDK
       web-12:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          disabled: false
-          enabled: true
-      # Daily Rewards
-      web-21:
         state: ENABLED
         defaultVariant: enabled
         variants:

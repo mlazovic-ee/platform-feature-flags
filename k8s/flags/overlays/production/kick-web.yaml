@@ -422,13 +422,6 @@ spec:
         variants:
           enabled: true
           disabled: false
-      # Daily Rewards
-      web-21:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          disabled: false
-          enabled: true
       # Go Live - Toggle the go live feature for creators
       # disabled: not visible to creators
       # enabled: visible to creators with a button to go live from main page navigation bar
