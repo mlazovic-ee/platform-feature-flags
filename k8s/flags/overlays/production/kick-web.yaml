@@ -519,3 +519,23 @@ spec:
         variants:
           enabled: true
           disabled: false
+     # Daily rewards social media sharing 
+      web-31:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - c.li@easygo.io # Coco
+                  - a.sajiv@easygo.io # Ash
+                  - z.ingle@easygo.io # Zach
+                  - b.choi@easygo.io # Brian
+                  - j.khan@easygo.io # Zeb
+                  - k.camacho@easygo.io # Kyrie
+                  - el.liu@easygo.io # Elaine
+            - enabled
+            - disabled
+        variants:
+          disabled: false
+          enabled: true
