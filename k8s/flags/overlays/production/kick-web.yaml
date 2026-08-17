@@ -516,6 +516,16 @@ spec:
       web-30:
         state: ENABLED
         defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - larissa@easygo.io # Larissa
+                  - a.roe@easygo.io # Alister
+                  - s.chu@easygo.io # Chu
+                  - v.manohar@easygo.io # Vivek
+            - enabled
+            - disabled
         variants:
           enabled: true
           disabled: false
