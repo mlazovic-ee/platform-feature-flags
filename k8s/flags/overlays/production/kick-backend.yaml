@@ -51,7 +51,7 @@ spec:
           disabled: false
       viewer_ccv_sharding_bulk_read:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
