@@ -549,3 +549,17 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # Streamer calendar
+      web-32:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
