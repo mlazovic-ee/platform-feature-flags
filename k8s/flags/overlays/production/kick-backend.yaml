@@ -339,6 +339,19 @@ spec:
         variants:
           enabled: true
           disabled: false
+        targeting:
+          if:
+            - or:
+                - in:
+                    - var: channel_id
+                    - - 39421797
+                      - 21052945
+                - in:
+                    - var: chatroom_id
+                    - - 39133465
+                      - 20781106
+            - enabled
+            - disabled
       ntfr_ingest_enabled:
         state: ENABLED
         defaultVariant: disabled
