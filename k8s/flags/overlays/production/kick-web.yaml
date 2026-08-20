@@ -544,6 +544,7 @@ spec:
                   - j.khan@easygo.io # Zeb
                   - k.camacho@easygo.io # Kyrie
                   - el.liu@easygo.io # Elaine
+                  - larissa@easygo.io # Larissa
             - enabled
             - disabled
         variants:
