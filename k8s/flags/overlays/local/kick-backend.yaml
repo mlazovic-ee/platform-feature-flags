@@ -241,3 +241,15 @@ spec:
         variants:
           enabled: true
           disabled: false
+      channel_points_follow_earn_enabled:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+      channel_points_subscription_earn_enabled:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
