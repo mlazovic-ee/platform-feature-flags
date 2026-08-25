@@ -553,6 +553,8 @@ spec:
                   - el.liu@easygo.io # Elaine
                   - d.ha@easygo.io # Duc
                   - c.tzoumanekas@easygo.io # Costa
+                  - k.jois@easygo.io # Keshava
+                  - h.patel@easygo.io # Hemil
             - enabled
             - disabled
         variants:
