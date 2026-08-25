@@ -342,6 +342,9 @@ spec:
         targeting:
           if:
             - or:
+                - starts_with:
+                    - var: service
+                    - 'chnl-'
                 - in:
                     - var: channel_id
                     - - 39421797
