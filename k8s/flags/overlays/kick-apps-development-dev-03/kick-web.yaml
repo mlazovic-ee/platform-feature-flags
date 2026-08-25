@@ -465,3 +465,10 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Levelling up animation
+      web-34:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
