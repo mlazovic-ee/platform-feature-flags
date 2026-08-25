@@ -282,6 +282,12 @@ spec:
         variants:
           enabled: true
           disabled: false
+      channel_points_subscriber_multiplier_enabled:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
       ntfr_delivery_push_enabled:
         state: ENABLED
         defaultVariant: enabled
