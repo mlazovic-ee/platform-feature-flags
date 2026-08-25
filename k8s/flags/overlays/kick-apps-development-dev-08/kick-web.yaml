@@ -36,20 +36,20 @@ spec:
           disabled: false
           enabled: true
       # Age Assurance Home Banner
-      trust-1:
+      trust-4:
         state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
         variants:
           disabled: false
           enabled: true
-      # Age Assurance "forced" verification logic
+      # Age Assurance platform mode
       trust-2:
         state: ENABLED
         defaultVariant: enabled
         variants:
           disabled: false
           enabled: true
-      # Age Assurance lax verification logic
+      # Age Assurance category mode
       trust-3:
         state: ENABLED
         defaultVariant: enabled
