@@ -341,20 +341,11 @@ spec:
           disabled: false
         targeting:
           if:
-            - or:
-                - starts_with:
-                    - var: service
-                    - 'chnl-'
-                - in:
-                    - var: channel_id
-                    - - 39421797
-                      - 21052945
-                - in:
-                    - var: chatroom_id
-                    - - 39133465
-                      - 20781106
-            - enabled
+            - starts_with:
+                - var: service
+                - 'php-'
             - disabled
+            - enabled
       ntfr_ingest_enabled:
         state: ENABLED
         defaultVariant: disabled
