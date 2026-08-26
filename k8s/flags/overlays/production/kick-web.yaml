@@ -510,6 +510,9 @@ spec:
                   - a.roe@easygo.io # Alister
                   - s.chu@easygo.io # Chu
                   - v.manohar@easygo.io # Vivek
+                  - j.pham@easygo.io #Jacob
+                  - ack@easygo.io # Ack
+                  - y.levraud@easygo.io # Yohann
             - enabled
             - disabled
         variants:
