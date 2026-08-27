@@ -513,6 +513,7 @@ spec:
                   - j.pham@easygo.io #Jacob
                   - ack@easygo.io # Ack
                   - y.levraud@easygo.io # Yohann
+                  - jc.yu@easygo.io # JC
             - enabled
             - disabled
         variants:
