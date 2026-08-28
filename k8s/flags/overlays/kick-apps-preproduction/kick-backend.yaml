@@ -320,7 +320,7 @@ spec:
           disabled: false
       channel_points_kicks_earn_enabled:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
