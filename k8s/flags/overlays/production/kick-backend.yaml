@@ -335,17 +335,10 @@ spec:
           disabled: false
       use_ptfm_ws:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
-        targeting:
-          if:
-            - starts_with:
-                - var: service
-                - 'php-'
-            - disabled
-            - enabled
       ntfr_ingest_enabled:
         state: ENABLED
         defaultVariant: disabled

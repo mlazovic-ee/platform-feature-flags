@@ -248,7 +248,7 @@ spec:
           disabled: false
       use_ptfm_ws:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
