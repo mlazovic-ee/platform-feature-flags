@@ -178,12 +178,6 @@ spec:
         variants:
           enabled: true
           disabled: false
-      view_count_outbox_enabled:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
       batch_notifications:
         state: ENABLED
         defaultVariant: enabled

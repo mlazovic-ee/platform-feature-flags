@@ -190,12 +190,6 @@ spec:
         variants:
           enabled: true
           disabled: false
-      view_count_outbox_enabled:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
       outbox_row_lock_claim:
         state: ENABLED
         defaultVariant: enabled
