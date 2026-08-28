@@ -571,3 +571,17 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Events
+      web-35:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
