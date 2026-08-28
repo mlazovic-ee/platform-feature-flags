@@ -318,6 +318,12 @@ spec:
         variants:
           enabled: true
           disabled: false
+      channel_points_kicks_earn_enabled:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
       channel_points_subscriber_multiplier_enabled:
         state: ENABLED
         defaultVariant: enabled
