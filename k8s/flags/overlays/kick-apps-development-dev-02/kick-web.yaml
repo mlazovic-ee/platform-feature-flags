@@ -258,3 +258,10 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # PIN/UNPIN videos
+      web-36:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false

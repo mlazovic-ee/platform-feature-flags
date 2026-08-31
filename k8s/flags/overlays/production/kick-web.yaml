@@ -585,3 +585,26 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # PIN/UNPIN videos
+      web-36:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - c.li@easygo.io # Coco
+                  - a.fernandes@easygo.io # Andre
+                  - f.mena@easygo.io # Felipe
+                  - s.sotiriadis@easygo.io # Sarah
+                  - k.camacho@easygo.io # Kyrie
+                  - j.reyesvera@easygo.io # Juan
+                  - m.mohamed@easygo.io # Shamry
+                  - j.tan@easygo.io # Jeremy T
+                  - j.brown@easygo.io # Jeremy Brown
+                  - y.levraud@easygo.io # Yohann
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
