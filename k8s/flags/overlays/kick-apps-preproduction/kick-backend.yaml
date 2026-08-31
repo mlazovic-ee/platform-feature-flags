@@ -225,7 +225,7 @@ spec:
           enabled: true
       ptfm_ws_router_sharding_mode:
         state: ENABLED
-        defaultVariant: none
+        defaultVariant: both
         variants:
           none: 0 # no sharding, just return default
           client_conn: 1 # sharding on client connections only
