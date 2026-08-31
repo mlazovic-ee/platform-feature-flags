@@ -331,3 +331,9 @@ spec:
         variants:
           enabled: true
           disabled: false
+      paym_read_outbox_events:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
