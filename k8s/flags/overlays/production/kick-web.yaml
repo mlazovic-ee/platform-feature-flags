@@ -533,13 +533,6 @@ spec:
         variants:
           enabled: true
           disabled: false
-      # In-App Rewards
-      web-33:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
       # Levelling up animation
       web-34:
         state: ENABLED
