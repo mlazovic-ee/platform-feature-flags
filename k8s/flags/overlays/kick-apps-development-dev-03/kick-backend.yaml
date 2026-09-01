@@ -283,6 +283,14 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Awards the gifter channel points per sub gifted (KICK-9780). Consumed by
+      # chnl-points-service from payment.gifts.paid; recipients earn nothing.
+      channel_points_gifted_subscription_earn_enabled:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
       channel_points_subscriber_multiplier_enabled:
         state: ENABLED
         defaultVariant: disabled
