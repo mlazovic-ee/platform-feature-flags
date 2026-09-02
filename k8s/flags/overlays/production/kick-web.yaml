@@ -479,6 +479,7 @@ spec:
                   - sammak@amazon.com # amazon tester
                   - tianbing@amazon.com # amazon tester
                   - hennpete@amazon.com # amazon tester
+                  - rycharly@amazon.com # amazon tester
             - enabled
             - disabled
         variants:
