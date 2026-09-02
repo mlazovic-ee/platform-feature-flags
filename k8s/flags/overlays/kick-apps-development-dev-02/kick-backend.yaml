@@ -342,38 +342,6 @@ spec:
         variants:
           pusher: "pusher"
           centrifugo: "centrifugo"
-        targeting:
-          if:
-            # only pusher → shortcircuit
-            - and:
-                - in:
-                    - pusher
-                    - var: accepted_providers
-                - "!":
-                    in:
-                      - centrifugo
-                      - var: accepted_providers
-            - pusher
-            # only centrifugo → shortcircuit
-            - and:
-                - in:
-                    - centrifugo
-                    - var: accepted_providers
-                - "!":
-                    in:
-                      - pusher
-                      - var: accepted_providers
-            - centrifugo
-            - "==":
-                - var: client_type
-                - web
-            - fractional:
-                - - pusher
-                  - 50
-                - - centrifugo
-                  - 50
-            # other client types - default to pusher
-            - pusher
       paym_read_outbox_events:
         state: ENABLED
         defaultVariant: disabled

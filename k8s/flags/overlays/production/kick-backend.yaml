@@ -391,26 +391,6 @@ spec:
           centrifugo: "centrifugo"
         targeting:
           if:
-            # only pusher → shortcircuit
-            - and:
-                - in:
-                    - pusher
-                    - var: accepted_providers
-                - "!":
-                    in:
-                      - centrifugo
-                      - var: accepted_providers
-            - pusher
-            # only centrifugo → shortcircuit
-            - and:
-                - in:
-                    - centrifugo
-                    - var: accepted_providers
-                - "!":
-                    in:
-                      - pusher
-                      - var: accepted_providers
-            - centrifugo
             # allowlisted user_ids → centrifugo
             - in:
                 - var: user_id
@@ -420,6 +400,8 @@ spec:
                   - 40655653 # yoshi
                   - 80820982 # edwin
                   - 30497681 # jc
+                  - 166397 # someonewill
+                  - 43862767 # thegoodkicker
             - centrifugo
             # default to pusher
             - pusher
