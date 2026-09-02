@@ -36,8 +36,13 @@ spec:
                   }
                 }
           spec:
+            terminationGracePeriodSeconds: 45
             containers:
               - name: flagd
+                lifecycle:
+                  preStop:
+                    sleep:
+                      seconds: 20
                 resources:
                   limits:
                     cpu: 1000m
@@ -77,8 +82,13 @@ spec:
                   }
                 }
           spec:
+            terminationGracePeriodSeconds: 45
             containers:
               - name: flagd
+                lifecycle:
+                  preStop:
+                    sleep:
+                      seconds: 20
                 resources:
                   limits:
                     cpu: 1000m
@@ -118,8 +128,18 @@ spec:
                   }
                 }
           spec:
+            # Outlive SIGTERM briefly so the ALB deregisters this pod before flagd
+            # stops accepting connections, avoiding a request being dispatched onto
+            # a socket that is already closing. Native SleepAction (k8s >= 1.30) is
+            # used rather than exec: the flagd image is distroless and has no shell.
+            # Grace period must exceed the sleep so flagd still gets time to exit.
+            terminationGracePeriodSeconds: 45
             containers:
               - name: flagd
+                lifecycle:
+                  preStop:
+                    sleep:
+                      seconds: 20
                 resources:
                   limits:
                     cpu: 1000m
