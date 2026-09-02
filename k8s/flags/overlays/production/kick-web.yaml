@@ -572,6 +572,11 @@ spec:
                   - j.tan@easygo.io # Jeremy T
                   - j.brown@easygo.io # Jeremy Brown
                   - y.levraud@easygo.io # Yohann
+                  - b.choi@easygo.io # Brian
+                  - c.tzoumanekas@easygo.io # Costa
+                  - el.liu@easygo.io # Elaine
+                  - b.rostamiyeganeh@easygo.io # Behnaz
+                  - d.ha@easygo.io # Duc
             - enabled
             - disabled
         variants:
