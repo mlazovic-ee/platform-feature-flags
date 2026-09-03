@@ -341,7 +341,7 @@ spec:
       # chnl-rewards-service. Targeting supports ramping by channel_id.
       seed_default_channel_rewards_enabled:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
