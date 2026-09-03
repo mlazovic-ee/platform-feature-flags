@@ -402,6 +402,7 @@ spec:
                   - 30497681 # jc
                   - 166397 # someonewill
                   - 43862767 # thegoodkicker
+                  - 96257607 # tan
             - centrifugo
             # default to pusher
             - pusher
