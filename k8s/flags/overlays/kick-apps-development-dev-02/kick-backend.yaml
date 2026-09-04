@@ -348,6 +348,19 @@ spec:
         variants:
           pusher: "pusher"
           centrifugo: "centrifugo"
+        targeting:
+          if:
+            # web clients → 99/1 pusher/centrifugo
+            - "==":
+                - var: client_type
+                - web
+            - fractional:
+                - - pusher
+                  - 50
+                - - centrifugo
+                  - 50
+            # default to pusher
+            - pusher
       paym_read_outbox_events:
         state: ENABLED
         defaultVariant: disabled
