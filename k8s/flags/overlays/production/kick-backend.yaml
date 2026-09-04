@@ -410,9 +410,9 @@ spec:
                 - web
             - fractional:
                 - - pusher
-                  - 99
+                  - 95
                 - - centrifugo
-                  - 1
+                  - 5
             # default to pusher
             - pusher
       paym_read_outbox_events:
