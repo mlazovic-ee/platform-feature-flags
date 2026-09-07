@@ -402,7 +402,8 @@ spec:
                   - 30497681 # jc
                   - 166397 # someonewill
                   - 43862767 # thegoodkicker
-                  - 96257607 # tan
+                  - 96257607 # tan - tv
+                  - 98726725 # tan - android go live
             - centrifugo
             # web clients
             - "==":
