@@ -249,6 +249,16 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # KICK-9826: gates the 25,000 KICKs purchase tier ($267.99 / R$1,316.20,
+      # web/Stripe only). Off until the bundle exists in this environment's Stripe
+      # account. Fails OPEN: an unresolvable flag hides the tier rather than
+      # selling it.
+      paym_kicks_tier_25000_enabled:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
       ptfm_ws_connection_routing:
         state: ENABLED
         defaultVariant: pusher
