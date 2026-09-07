@@ -537,3 +537,27 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # What's New
+      web-38:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - c.li@easygo.io # Coco
+                  - a.sajiv@easygo.io # Ash
+                  - z.ingle@easygo.io # Zach
+                  - b.choi@easygo.io # Brian
+                  - j.khan@easygo.io # Zeb
+                  - k.camacho@easygo.io # Kyrie
+                  - el.liu@easygo.io # Elaine
+                  - d.ha@easygo.io # Duc
+                  - c.tzoumanekas@easygo.io # Costa
+                  - k.jois@easygo.io # Keshava
+                  - h.patel@easygo.io # Hemil
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false

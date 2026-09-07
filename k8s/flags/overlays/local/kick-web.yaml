@@ -173,3 +173,10 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # What's New
+      web-38:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
