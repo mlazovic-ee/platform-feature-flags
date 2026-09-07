@@ -404,7 +404,7 @@ spec:
                   - 43862767 # thegoodkicker
                   - 96257607 # tan
             - centrifugo
-            # web clients → 99/1 pusher/centrifugo
+            # web clients
             - "==":
                 - var: client_type
                 - web
@@ -413,6 +413,15 @@ spec:
                   - 40
                 - - centrifugo
                   - 60
+            # webchat-streaming
+            - "==":
+                - var: client_type
+                - webchat-streaming
+            - fractional:
+                - - pusher
+                  - 95
+                - - centrifugo
+                  - 5
             # default to pusher
             - pusher
       paym_read_outbox_events:
