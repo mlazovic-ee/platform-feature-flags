@@ -430,9 +430,9 @@ spec:
                 - webchat-streaming
             - fractional:
                 - - pusher
-                  - 80
+                  - 70
                 - - centrifugo
-                  - 20
+                  - 30
             # default to pusher
             - pusher
       paym_read_outbox_events:
