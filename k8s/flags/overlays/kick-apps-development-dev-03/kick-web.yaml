@@ -5,6 +5,33 @@ metadata:
 spec:
   flagSpec:
     flags:
+      # Thumbnail Update - Toggle the ability for creators to update their channel thumbnail from the creator dashboard
+      # disabled: not visible to creators
+      # enabled: visible to creators with a button to update the thumbnail
+      web-13-2:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - c.li@easygo.io # Coco
+                  - kyrie@kick.com # Kyrie
+                  - a.fernandes@easygo.io # Andre
+                  - c.tatli@easygo.io # Chris
+                  - d.gunawardena@easygo.io # Damitha
+                  - j.brown@easygo.io # Jeremy
+                  - j.reyesvera@easygo.io # Juan
+                  - m.hogben@easygo.io # Matt Hogben
+                  - p.howard@easygo.io # Peter
+                  - f.mena@easygo.io # Felipe
+                  - a.namasivayam@easygo.io # Arvind
+                  - s.chu@easygo.io # Chu
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
       # Mux SDK Analytics - Toggle the mux sdk analytics sdk on the player for web clients
       # disabled: MuxTracker component not rendered, no data sent to Mux
       # enabled: MuxTracker component rendered, data sent to Mux
