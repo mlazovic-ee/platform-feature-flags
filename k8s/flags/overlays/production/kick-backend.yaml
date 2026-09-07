@@ -421,9 +421,9 @@ spec:
                 - web
             - fractional:
                 - - pusher
-                  - 20
+                  - 0
                 - - centrifugo
-                  - 80
+                  - 100
             # webchat-streaming
             - "==":
                 - var: client_type
