@@ -585,7 +585,7 @@ spec:
       # Disable payment related acttions
       payments-disabled:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
