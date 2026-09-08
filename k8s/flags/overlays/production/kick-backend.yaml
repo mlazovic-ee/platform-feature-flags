@@ -440,6 +440,15 @@ spec:
                   - 0
                 - - centrifugo
                   - 100
+            # android-tv
+            - "==":
+                - var: client_type
+                - android-tv
+            - fractional:
+                - - pusher
+                  - 0
+                - - centrifugo
+                  - 100
             # default to pusher
             - pusher
       paym_read_outbox_events:
