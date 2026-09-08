@@ -449,6 +449,24 @@ spec:
                   - 0
                 - - centrifugo
                   - 100
+            # android-streaming
+            - "==":
+                - var: client_type
+                - android-streaming
+            - fractional:
+                - - pusher
+                  - 0
+                - - centrifugo
+                  - 100
+            # ios-streaming
+            - "==":
+                - var: client_type
+                - ios-streaming
+            - fractional:
+                - - pusher
+                  - 0
+                - - centrifugo
+                  - 100
             # default to pusher
             - pusher
       paym_read_outbox_events:
