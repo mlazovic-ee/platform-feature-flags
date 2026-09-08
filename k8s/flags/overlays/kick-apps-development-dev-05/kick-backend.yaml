@@ -259,6 +259,13 @@ spec:
           legacy_only: "legacy_only"
           shadow: "shadow"
           new_only: "new_only"
+        targeting:
+          if:
+            - in:
+                - var: channel_id
+                - - 516 # DII-679 dev-05 verification channel
+            - shadow
+            - legacy_only
       ntfr_push_retry_after_deadline_exceeded:
         state: ENABLED
         defaultVariant: enabled
