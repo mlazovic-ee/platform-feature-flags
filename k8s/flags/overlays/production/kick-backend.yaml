@@ -437,9 +437,9 @@ spec:
                 - webchat-streaming
             - fractional:
                 - - pusher
-                  - 50
+                  - 25
                 - - centrifugo
-                  - 50
+                  - 75
             # default to pusher
             - pusher
       paym_read_outbox_events:
