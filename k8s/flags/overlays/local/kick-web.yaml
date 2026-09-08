@@ -214,4 +214,11 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Disable payment related acttions
+      payments-disabled:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
 
