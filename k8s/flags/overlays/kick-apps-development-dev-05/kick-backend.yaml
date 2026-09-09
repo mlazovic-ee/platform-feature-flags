@@ -265,6 +265,10 @@ spec:
                 - var: channel_id
                 - - 516 # DII-679 dev-05 verification channel
             - shadow
+            - in:
+                - var: channel_id
+                - - 127 # DII-581 dev-05 new_only verification channel
+            - new_only
             - legacy_only
       ntfr_push_retry_after_deadline_exceeded:
         state: ENABLED
