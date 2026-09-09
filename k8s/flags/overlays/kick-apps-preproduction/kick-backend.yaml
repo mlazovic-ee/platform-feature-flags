@@ -275,7 +275,7 @@ spec:
           disabled: false
       ntfr_ingest_enabled:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
@@ -286,6 +286,14 @@ spec:
           legacy_only: "legacy_only"
           shadow: "shadow"
           new_only: "new_only"
+        targeting:
+          if:
+            - in:
+                - var: channel_id
+                - - 24914
+                  - 25696
+            - new_only
+            - legacy_only
       ntfr_push_retry_after_deadline_exceeded:
         state: ENABLED
         defaultVariant: enabled
@@ -298,9 +306,15 @@ spec:
         variants:
           enabled: true
           disabled: false
+      ntfr_delivery_push_enabled:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
       ntfr_delivery_ws_enabled:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
