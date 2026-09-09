@@ -335,7 +335,7 @@ spec:
       # chnl-points-service from payment.gifts.paid; recipients earn nothing.
       channel_points_gifted_subscription_earn_enabled:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
