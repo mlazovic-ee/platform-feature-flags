@@ -377,7 +377,7 @@ spec:
                 - - centrifugo
                   - 50
             # default to pusher
-            - pusher
+            - centrifugo
       paym_read_outbox_events:
         state: ENABLED
         defaultVariant: disabled

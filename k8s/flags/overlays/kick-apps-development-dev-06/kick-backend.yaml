@@ -255,7 +255,7 @@ spec:
           disabled: false
       ptfm_ws_connection_routing:
         state: ENABLED
-        defaultVariant: pusher
+        defaultVariant: centrifugo
         variants:
           pusher: "pusher"
           centrifugo: "centrifugo"
