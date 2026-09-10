@@ -6,6 +6,8 @@ spec:
   flagSpec:
     flags:
       # Shows an age assurance banner on the home screen.
+      # Reworked in 40.30.0 (PENDING_REQUIREMENT status + per-country banner link), so earlier
+      # versions must stay disabled even once this is switched on.
       ageAssuranceBanner:
         state: ENABLED
         defaultVariant: disabled
@@ -14,7 +16,23 @@ spec:
             - sem_ver:
                 - var: app.version
                 - <
-                - "40.14.6"
+                - "40.30.0"
+            - disabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
+      # Blocks playback of restricted categories until the user verifies their age.
+      # Replaces ageAssuranceLaxFlow from 40.30.0 onwards.
+      ageAssuranceCategoryMode:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - sem_ver:
+                - var: app.version
+                - <
+                - "40.30.0"
             - disabled
             - disabled
         variants:
@@ -35,6 +53,8 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Superseded by ageAssuranceCategoryMode in 40.30.0. Kept so pre-40.30.0 installs still
+      # resolve it - it must stay disabled on both branches.
       ageAssuranceLaxFlow:
         state: ENABLED
         defaultVariant: disabled
