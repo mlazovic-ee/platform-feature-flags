@@ -467,6 +467,15 @@ spec:
                   - 0
                 - - centrifugo
                   - 100
+            # android-go-live
+            - "==":
+                - var: client_type
+                - android-go-live
+            - fractional:
+                - - pusher
+                  - 0
+                - - centrifugo
+                  - 100
             # default to pusher
             - pusher
       paym_read_outbox_events:
