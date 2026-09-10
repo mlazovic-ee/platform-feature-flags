@@ -386,7 +386,7 @@ spec:
           disabled: false
       paym_bridge_write_freeze:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
