@@ -534,6 +534,20 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Streamer calendar - Export to calendar
+      web-32-2:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
       # Levelling up animation
       web-34:
         state: ENABLED
