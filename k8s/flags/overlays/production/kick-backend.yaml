@@ -455,9 +455,9 @@ spec:
                 - android-streaming
             - fractional:
                 - - pusher
-                  - 100
-                - - centrifugo
                   - 0
+                - - centrifugo
+                  - 100
             # ios-streaming
             - "==":
                 - var: client_type
