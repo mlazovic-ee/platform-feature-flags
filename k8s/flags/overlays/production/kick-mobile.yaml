@@ -10,7 +10,7 @@ spec:
       # versions must stay disabled even once this is switched on.
       ageAssuranceBanner:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         targeting:
           if:
             - sem_ver:
@@ -18,7 +18,7 @@ spec:
                 - <
                 - "40.30.0"
             - disabled
-            - disabled
+            - enabled
         variants:
           enabled: true
           disabled: false
