@@ -320,7 +320,7 @@ spec:
           disabled: false
       ntfr_ingest_enabled:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
@@ -337,9 +337,15 @@ spec:
         variants:
           enabled: true
           disabled: false
+      ntfr_delivery_push_enabled:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
       ntfr_delivery_ws_enabled:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
