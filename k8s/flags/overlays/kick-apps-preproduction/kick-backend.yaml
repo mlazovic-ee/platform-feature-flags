@@ -393,3 +393,39 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # media-provider migration: routes channel provider verbs in the monolith
+      # (RoutingChannelProvider) from direct IVS to media-provider, one flag per
+      # verb. Evaluated per call with channel_id in context, so targeting can
+      # ramp by channel. All default off; turning a flag off routes the very
+      # next call back to direct IVS.
+      mp_authoritative_provision:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+      mp_authoritative_rotate:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+      mp_authoritative_stop:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+      # Covers both ban and unban.
+      mp_authoritative_enforcement:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+      mp_authoritative_config:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
