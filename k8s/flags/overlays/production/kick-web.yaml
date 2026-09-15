@@ -623,6 +623,13 @@ spec:
                   - j.reyesvera@easygo.io # Juan
                   - m.hogben@easygo.io # Matt Hogben
                   - p.howard@easygo.io # Peter
+                  - j.tan@easygo.io # Jeremy T
+                  - y.levraud@easygo.io # Yohann
+                  - maxstoller@gmail.com # aws tester
+                  - mike.bentzen@gmail.com # aws tester
+                  - Tianbing@amazon.com # aws tester
+                  - rycharly@amazon.com # aws tester
+                  - sammak@amazon.com # aws tester
             - enabled
             - disabled
         variants:
