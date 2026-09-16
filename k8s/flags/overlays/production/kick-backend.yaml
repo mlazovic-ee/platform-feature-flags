@@ -426,6 +426,7 @@ spec:
                   - 43862767 # thegoodkicker
                   - 96257607 # tan - tv
                   - 98726725 # tan - android go live
+                  - 74167921 # jordan - ios go live
             - centrifugo
             # web clients
             - "==":
