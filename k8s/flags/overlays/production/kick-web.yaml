@@ -56,6 +56,20 @@ spec:
       web-13-1:
         state: ENABLED
         defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - a.fernandes@easygo.io # Andre
+                  - c.tatli@easygo.io # Chris
+                  - d.gunawardena@easygo.io # Damitha
+                  - j.brown@easygo.io # Jeremy
+                  - j.reyesvera@easygo.io # Juan
+                  - m.hogben@easygo.io # Matt Hogben
+                  - p.howard@easygo.io # Peter
+                  - f.mena@easygo.io # Felipe
+            - enabled
+            - disabled
         variants:
           enabled: true
           disabled: false
