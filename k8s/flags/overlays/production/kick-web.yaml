@@ -68,6 +68,8 @@ spec:
                   - m.hogben@easygo.io # Matt Hogben
                   - p.howard@easygo.io # Peter
                   - f.mena@easygo.io # Felipe
+                  - k.petrynski@easygo.io # Kacper
+                  - j.kumar@easygo.io # Jitender
             - enabled
             - disabled
         variants:
