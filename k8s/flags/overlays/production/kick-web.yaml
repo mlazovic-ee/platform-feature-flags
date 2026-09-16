@@ -58,18 +58,9 @@ spec:
         defaultVariant: disabled
         targeting:
           if:
-            - in:
+            - ends_with:
                 - var: user.email
-                - - a.fernandes@easygo.io # Andre
-                  - c.tatli@easygo.io # Chris
-                  - d.gunawardena@easygo.io # Damitha
-                  - j.brown@easygo.io # Jeremy
-                  - j.reyesvera@easygo.io # Juan
-                  - m.hogben@easygo.io # Matt Hogben
-                  - p.howard@easygo.io # Peter
-                  - f.mena@easygo.io # Felipe
-                  - k.petrynski@easygo.io # Kacper
-                  - j.kumar@easygo.io # Jitender
+                - "@easygo.io"
             - enabled
             - disabled
         variants:

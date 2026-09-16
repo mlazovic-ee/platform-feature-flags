@@ -56,6 +56,13 @@ spec:
       web-15:
         state: ENABLED
         defaultVariant: enabled
+        targeting:
+          if:
+            - ends_with:
+                - var: user.email
+                - "@easygo.io"
+            - enabled
+            - disabled
         variants:
           enabled: true
           disabled: false
