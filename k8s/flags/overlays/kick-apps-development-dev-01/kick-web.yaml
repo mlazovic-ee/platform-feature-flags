@@ -195,21 +195,6 @@ spec:
         variants:
           enabled: true
           disabled: false
-     # Daily rewards social media sharing 
-      web-31:
-        state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - in:
-                - var: user.email
-                - - c.li@easygo.io # Coco
-                  - k.camacho@easygo.io # Kyrie
-            - enabled
-            - disabled
-        variants:
-          disabled: false
-          enabled: true
       # Streamer calendar
       web-32:
         state: ENABLED

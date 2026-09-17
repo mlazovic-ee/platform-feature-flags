@@ -230,13 +230,6 @@ spec:
         variants:
           enabled: true
           disabled: false
-      # Daily rewards social media sharing 
-      web-31:
-        state: ENABLED
-        defaultVariant: disabled
-        variants:
-          enabled: true
-          disabled: false
       # Streamer calendar
       web-32:
         state: ENABLED
