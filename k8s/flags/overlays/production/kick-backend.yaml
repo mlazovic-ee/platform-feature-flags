@@ -450,8 +450,17 @@ spec:
                   - 0
                 - - centrifugo
                   - 100
-            # default to pusher
-            - pusher
+            # ios-go-live
+            - "==":
+                - var: client_type
+                - ios-go-live
+            - fractional:
+                - - pusher
+                  - 0
+                - - centrifugo
+                  - 100
+            # default to centrifugo
+            - centrifugo
       paym_read_outbox_events:
         state: ENABLED
         defaultVariant: disabled
