@@ -331,6 +331,14 @@ spec:
           legacy_only: "legacy_only"
           shadow: "shadow"
           new_only: "new_only"
+        targeting:
+          if:
+            - in:
+                - var: channel_id
+                - - 101491
+                  - 167470
+            - new_only
+            - shadow
       ntfr_push_retry_after_deadline_exceeded:
         state: ENABLED
         defaultVariant: enabled
