@@ -63,6 +63,13 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # Mandatory account gate for logged-out users in listed countries
+      trust-5:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          disabled: false
+          enabled: true
       # Paypal Integration
       fsp:
         state: ENABLED
