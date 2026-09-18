@@ -338,7 +338,7 @@ spec:
       # next call back to direct IVS.
       mp_authoritative_provision:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
@@ -363,7 +363,7 @@ spec:
           disabled: false
       mp_authoritative_config:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
