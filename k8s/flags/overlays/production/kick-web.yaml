@@ -628,6 +628,22 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Recently streamed categories rail on the channel page
+      # disabled: served by the PHP monolith, ordered by recency
+      # enabled: served by gateway-web via lstm-gateway, ordered by watch time
+      recent-streamed-gateway:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - ends_with:
+                - var: user.email
+                - "@easygo.io"
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
       # Disable payment related acttions
       payments-disabled:
         state: ENABLED
