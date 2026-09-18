@@ -26,7 +26,7 @@ spec:
       # Replaces ageAssuranceLaxFlow from 40.30.0 onwards.
       ageAssuranceCategoryMode:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         targeting:
           if:
             - sem_ver:
