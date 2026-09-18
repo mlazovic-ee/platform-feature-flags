@@ -122,7 +122,7 @@ spec:
       # Age Assurance category mode
       trust-3:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           disabled: false
           enabled: true
