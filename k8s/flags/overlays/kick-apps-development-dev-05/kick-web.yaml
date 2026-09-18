@@ -171,7 +171,7 @@ spec:
       # kill gifts
       web-30:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false

@@ -547,21 +547,7 @@ spec:
       # kill gifts
       web-30:
         state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - in:
-                - var: user.email
-                - - larissa@easygo.io # Larissa
-                  - a.roe@easygo.io # Alister
-                  - s.chu@easygo.io # Chu
-                  - v.manohar@easygo.io # Vivek
-                  - j.pham@easygo.io #Jacob
-                  - ack@easygo.io # Ack
-                  - y.levraud@easygo.io # Yohann
-                  - jc.yu@easygo.io # JC
-            - enabled
-            - disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
