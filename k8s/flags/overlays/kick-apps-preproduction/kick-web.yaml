@@ -571,3 +571,19 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Day-one experience
+      web-40:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - c.li@easygo.io # Coco
+                  - kyrie@kick.com # Kyrie
+                  - k.jois@easygo.io # Keshava
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
