@@ -1,0 +1,240 @@
+apiVersion: core.openfeature.dev/v1beta1
+kind: FeatureFlag
+metadata:
+  name: kick-web
+spec:
+  flagSpec:
+    flags:
+      # Kick Health - Toggle the channel info endpoint from intercluster to cloudflare. Will increase latency by 100ms.
+      # disabled: intercluster
+      # enabled: cloudflare
+      keath-info:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+      # Homepage Banner
+      home-banner:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+      # /me endpoint
+      domain-1:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: true
+          enabled: false
+      # Kicks Pinned Messages
+      web-3:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
+      # Age Assurance Home Banner
+      trust-4:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          disabled: false
+          enabled: true
+      # Age Assurance platform mode
+      trust-2:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
+      # Age Assurance category mode
+      trust-3:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
+      # Mandatory account gate for logged-out users in listed countries
+      trust-5:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          disabled: false
+          enabled: true
+      # Paypal Integration
+      fsp:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
+      # Clip chat command - when enabled, /clip is available in chat
+      web-6:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      view-chat-thread:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      # Home page personalisation - Phase 3
+      web-5-3:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
+      # Home page Embedded chat
+      embedded-chat:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
+      # the web-9 feature flags all fall under streamer analytics
+      # Overview section
+      web-9-1:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      # Streams section
+      web-9-2:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      # Partnership section - streamer
+      web-9-3:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      # Partnership section - guest
+      web-9-4:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      # Individual Stream section
+      web-9-5:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      # Granular streamer tier in analytics
+      web-9-7:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      # Dynamic encoding settings in frontend to call chnl-engagement-service for channel_type values
+      encoding-settings:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      # Riot Games linked account connection
+      web-25:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      # Web Video preview
+      web-27:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      # IMA Ad Component
+      web-29:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      # kill gifts
+      web-30:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      # Streamer calendar
+      web-32:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      # Streamer calendar - Export to calendar
+      web-32-2:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      # Levelling up animation
+      web-34:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      # PIN/UNPIN videos
+      web-36:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      # Tier animation
+      web-37:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
+      # What's New
+      web-38:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      # In-Stream Captions/Translations
+      web-39:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      # Disable payment related acttions
+      payments-disabled:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+      # Day-one experience
+      web-40:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
