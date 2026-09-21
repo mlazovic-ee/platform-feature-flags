@@ -13,7 +13,7 @@ spec:
           disabled: ""
       # Kill switch for first-time chatter claims in chat-history-service; flip to disabled to stop claiming.
       first_time_chatter_claims_enabled:
-        state: DISABLED
+        state: ENABLED
         defaultVariant: disabled
         variants:
           enabled: true
