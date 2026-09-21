@@ -618,7 +618,14 @@ spec:
       # enabled: served by gateway-web via lstm-gateway, ordered by watch time
       recent-streamed-gateway:
         state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
+        targeting:
+          if:
+            - ends_with:
+                - var: user.email
+                - "@easygo.io"
+            - enabled
+            - disabled
         variants:
           enabled: true
           disabled: false
