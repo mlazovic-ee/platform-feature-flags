@@ -14,7 +14,7 @@ spec:
         targeting:
           if:
             - ends_with:
-                - var: user.email
+                - var: [user.email, ""]
                 - "@easygo.io"
             - enabled
             - disabled
@@ -48,7 +48,7 @@ spec:
         targeting:
           if:
             - ends_with:
-                - var: user.email
+                - var: [user.email, ""]
                 - "@easygo.io"
             - enabled
             - disabled

@@ -14,7 +14,7 @@ spec:
         targeting:
           if:
             - ends_with:
-                - var: user.email
+                - var: [user.email, ""]
                 - "@easygo.io"
             - enabled
             - disabled
@@ -44,7 +44,7 @@ spec:
         targeting:
           if:
             - ends_with:
-                - var: user.email
+                - var: [user.email, ""]
                 - "@easygo.io"
             - enabled
             - disabled
@@ -600,7 +600,7 @@ spec:
                       - rycharly@amazon.com # aws tester
                       - sammak@amazon.com # aws tester
                 - ends_with:
-                    - var: user.email
+                    - var: [user.email, ""]
                     - "@easygo.io"
             - enabled
             - disabled

@@ -551,7 +551,7 @@ spec:
                       - rycharly@amazon.com # aws tester
                       - sammak@amazon.com # aws tester
                 - ends_with:
-                    - var: user.email
+                    - var: [user.email, ""]
                     - "@easygo.io"
             - enabled
             - disabled

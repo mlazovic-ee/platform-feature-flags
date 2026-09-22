@@ -221,7 +221,7 @@ web5:
   targeting:
     if:
       - ends_with:
-          - var: email
+          - var: [email, ""]
           - "@easygo.io"
       - "true"
       - "false"
@@ -286,6 +286,9 @@ More Examples:
 
 - https://flagd.dev/playground/
 - https://yzx396.github.io/flagd-ui/
+
+> [!WARNING]
+> Always give `var` a default value (e.g. `var: [email, ""]`) when the property is used with `ends_with` / `starts_with`. These operators require a string, and the property is missing from the evaluation context for logged-out users.
 
 ## Consumption
 
