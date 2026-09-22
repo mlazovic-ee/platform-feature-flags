@@ -18,6 +18,12 @@ spec:
         variants:
           enabled: true
           disabled: false
+      first_time_chatter_feed_enabled:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
       # Controls the fraction of requests for which Mux SDK IsEnabled is set in media-metadata.
       # 0.0 = disabled for all, 1.0 = enabled for all.
       # Authenticated users are bucketed consistently by user ID; anonymous users are sampled randomly.

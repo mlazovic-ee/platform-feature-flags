@@ -18,6 +18,12 @@ spec:
         variants:
           enabled: true
           disabled: false
+      first_time_chatter_feed_enabled:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
       # Controls the enablement of DataZoom VOD features in media metadata.
       media_metadata_datazoom_vod_enabled:
         state: ENABLED
