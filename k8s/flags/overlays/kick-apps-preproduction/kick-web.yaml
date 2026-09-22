@@ -5,6 +5,13 @@ metadata:
 spec:
   flagSpec:
     flags:
+      # KICKs goals in the streamer dashboard (KICK-9825)
+      web-41:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          disabled: false
+          enabled: true
       # Route global realtime through ws-router
       web-rt1:
         state: ENABLED

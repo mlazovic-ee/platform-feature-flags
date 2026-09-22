@@ -5,6 +5,14 @@ metadata:
 spec:
   flagSpec:
     flags:
+      # Kill switch for KICKs goal progress (KICK-9825). Consumed by chnl-modules-worker from
+      # kicks.gifted; off means gifted KICKs are consumed and dropped, not replayed later.
+      channel_goals_kicks_enabled:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
       # Kill switch for first-time chatter claims in chat-history-service; flip to disabled to stop claiming.
       first_time_chatter_claims_enabled:
         state: ENABLED

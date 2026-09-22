@@ -5,6 +5,13 @@ metadata:
 spec:
   flagSpec:
     flags:
+      # KICKs goals in the streamer dashboard (KICK-9825)
+      web-41:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          disabled: false
+          enabled: true
       # Thumbnail Update - Toggle the ability for creators to update their channel thumbnail from the creator dashboard
       # disabled: not visible to creators
       # enabled: visible to creators with a button to update the thumbnail

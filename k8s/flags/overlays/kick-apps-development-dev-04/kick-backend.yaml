@@ -5,6 +5,14 @@ metadata:
 spec:
   flagSpec:
     flags:
+      # Kill switch for KICKs goal progress (KICK-9825). Consumed by chnl-modules-worker from
+      # kicks.gifted; off means gifted KICKs are consumed and dropped, not replayed later.
+      channel_goals_kicks_enabled:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
       custom-osrs-reward:
         state: ENABLED
         defaultVariant: enabled
