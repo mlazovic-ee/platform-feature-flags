@@ -654,7 +654,7 @@ spec:
       # First-time chatter activity feed
       web-42:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
