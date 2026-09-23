@@ -335,7 +335,7 @@ spec:
           centrifugo: "centrifugo"
       paym_read_outbox_events:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
