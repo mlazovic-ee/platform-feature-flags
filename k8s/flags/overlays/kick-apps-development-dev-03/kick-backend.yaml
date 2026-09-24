@@ -358,7 +358,7 @@ spec:
           disabled: false
       mp_authoritative_rotate:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
