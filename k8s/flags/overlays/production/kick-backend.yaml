@@ -490,7 +490,7 @@ spec:
           disabled: false
       paym_read_shadow_sample_percent:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: percent_100
         variants:
           disabled: 0
           percent_1: 1
