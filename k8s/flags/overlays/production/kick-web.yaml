@@ -8,7 +8,7 @@ spec:
       # KICKs goals in the streamer dashboard (KICK-9825)
       web-41:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           disabled: false
           enabled: true
