@@ -263,6 +263,13 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Register & login via the Go user-identity endpoints instead of the PHP monolith
+      go-identity-1:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
       # Events homepage and sidebar entry
       web-43:
         state: ENABLED
