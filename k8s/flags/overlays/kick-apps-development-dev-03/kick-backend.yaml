@@ -375,14 +375,14 @@ spec:
           disabled: false
       mp_authoritative_stop:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
       # Covers both ban and unban.
       mp_authoritative_enforcement:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
