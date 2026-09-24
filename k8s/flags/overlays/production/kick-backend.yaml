@@ -488,6 +488,17 @@ spec:
         variants:
           enabled: true
           disabled: false
+      paym_read_shadow_sample_percent:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          disabled: 0
+          percent_1: 1
+          percent_5: 5
+          percent_10: 10
+          percent_25: 25
+          percent_50: 50
+          percent_100: 100
       use_recommender_v2:
         state: ENABLED
         defaultVariant: enabled
