@@ -551,8 +551,22 @@ spec:
         targeting:
           if:
             - in:
-                - internal
-                - var: user.roles
+                - var: user.email
+                - - a.ruberto@easygo.io # Alex
+                  - a.roe@easygo.io # Alister
+                  - a.astruc@easygo.io # Arnaud
+                  - b.rostamiyeganeh@easygo.io # Naz
+                  - d.almeida@easygo.io # Danny
+                  - jc.yu@easygo.io # JC
+                  - j.tan@easygo.io # Jeremy
+                  - larissa@easygo.io # Larissa
+                  - m.meana@easygo.io # Mateo
+                  - m.soulsby@easygo.io # Matt
+                  - r.tuvera@easygo.io # Raf
+                  - s.sotiriadis@easygo.io # Sarah
+                  - v.manohar@easygo.io # Vivek
+                  - w.liu@easygo.io # Will
+                  - y.levraud@easygo.io # Yohann
             - enabled
             - disabled
         variants:
