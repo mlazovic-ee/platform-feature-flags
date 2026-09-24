@@ -550,6 +550,44 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Streamer calendar - Viewer experience (weekly grid)
+      web-32-3:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - an.nguyen@easygo.io # An
+                  - p.pan@easygo.io # Peter
+                  - k.bedi@easygo.io # KD
+                  - v.manohar@easygo.io # Vivek
+                  - s.sotiriadis@easygo.io # Sarah
+                  - larissa@easygo.io # Larissa
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
+      # Streamer calendar - New creator experience
+      web-32-4:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - an.nguyen@easygo.io # An
+                  - p.pan@easygo.io # Peter
+                  - k.bedi@easygo.io # KD
+                  - v.manohar@easygo.io # Vivek
+                  - s.sotiriadis@easygo.io # Sarah
+                  - larissa@easygo.io # Larissa
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
       # Levelling up animation
       web-34:
         state: ENABLED
