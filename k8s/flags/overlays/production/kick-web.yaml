@@ -728,6 +728,12 @@ spec:
       go-identity-1:
         state: ENABLED
         defaultVariant: disabled
+        targeting:
+          fractional:
+            - - enabled
+              - 1
+            - - disabled
+              - 99
         variants:
           enabled: true
           disabled: false
