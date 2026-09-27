@@ -737,3 +737,17 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Global hourly gifted subs leaderboard
+      web-44:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - ends_with:
+                - var: [user.email, ""]
+                - "@easygo.io"
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
