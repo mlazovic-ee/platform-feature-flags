@@ -645,9 +645,24 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Recently streamed categories rail on the channel page
+      # disabled: served by the PHP monolith, ordered by recency
+      # enabled: served by gateway-web via lstm-gateway, ordered by watch time
+      # easygo staff are always in; everyone else is bucketed 20/80.
       recent-streamed-gateway:
         state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
+        targeting:
+          if:
+            - ends_with:
+                - var: [user.email, ""]
+                - "@easygo.io"
+            - enabled
+            - fractional:
+                - - enabled
+                  - 20
+                - - disabled
+                  - 80
         variants:
           enabled: true
           disabled: false
@@ -658,7 +673,7 @@ spec:
         variants:
           enabled: true
           disabled: false
-      # Day-one experience
+ # Day-one experience
       web-40:
         state: ENABLED
         defaultVariant: disabled
