@@ -389,7 +389,7 @@ spec:
       # Bridge read RPCs answered by paym-read-service, comma-separated; none = the bridge answers everything itself.
       paym_read_serve_methods:
         state: ENABLED
-        defaultVariant: none
+        defaultVariant: counts
         variants:
           none: ""
           counts: "CountSubscriptionsForChannels"
