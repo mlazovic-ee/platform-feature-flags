@@ -384,6 +384,13 @@ spec:
           percent_25: 25
           percent_50: 50
           percent_100: 100
+      # Bridge read RPCs answered by paym-read-service, comma-separated; none = the bridge answers everything itself.
+      paym_read_serve_methods:
+        state: ENABLED
+        defaultVariant: none
+        variants:
+          none: ""
+          counts: "CountSubscriptionsForChannels"
       use_recommender_v2:
         state: ENABLED
         defaultVariant: enabled
