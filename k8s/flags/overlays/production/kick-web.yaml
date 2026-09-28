@@ -651,18 +651,7 @@ spec:
       # easygo staff are always in; everyone else is bucketed 20/80.
       recent-streamed-gateway:
         state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - ends_with:
-                - var: [user.email, ""]
-                - "@easygo.io"
-            - enabled
-            - fractional:
-                - - enabled
-                  - 80
-                - - disabled
-                  - 20
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
