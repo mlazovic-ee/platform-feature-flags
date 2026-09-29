@@ -731,12 +731,17 @@ spec:
         state: ENABLED
         defaultVariant: disabled
         targeting:
+          # Target all easygo email users plus 20% of other users
           if:
             - ends_with:
                 - var: [user.email, ""]
                 - "@easygo.io"
             - enabled
-            - disabled
+            - fractional:
+                - - enabled
+                  - 20
+                - - disabled
+                  - 80
         variants:
           enabled: true
           disabled: false
