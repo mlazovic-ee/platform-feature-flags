@@ -349,7 +349,7 @@ spec:
         defaultVariant: none
         variants:
           none: ""
-          counts: "CountSubscriptionsForChannels"
+          serve: "CountSubscriptionsForChannels"
       use_recommender_v2:
         state: ENABLED
         defaultVariant: enabled

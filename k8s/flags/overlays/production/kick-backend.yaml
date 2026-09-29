@@ -502,10 +502,10 @@ spec:
       # Bridge read RPCs answered by paym-read-service, comma-separated; none = the bridge answers everything itself.
       paym_read_serve_methods:
         state: ENABLED
-        defaultVariant: counts
+        defaultVariant: serve
         variants:
           none: ""
-          counts: "CountSubscriptionsForChannels"
+          serve: "CountSubscriptionsForChannels"
       use_recommender_v2:
         state: ENABLED
         defaultVariant: enabled
