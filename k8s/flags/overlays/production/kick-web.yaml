@@ -720,9 +720,9 @@ spec:
         targeting:
           fractional:
             - - enabled
-              - 0
+              - 10
             - - disabled
-              - 100
+              - 90
         variants:
           enabled: true
           disabled: false
