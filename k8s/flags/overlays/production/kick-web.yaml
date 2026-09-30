@@ -716,13 +716,7 @@ spec:
       # Register & login via the Go user-identity endpoints instead of the PHP monolith
       go-identity-1:
         state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          fractional:
-            - - enabled
-              - 50
-            - - disabled
-              - 50
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
