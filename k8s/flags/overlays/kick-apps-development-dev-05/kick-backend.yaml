@@ -275,22 +275,11 @@ spec:
           disabled: false
       ntfr_rollout_routing_state:
         state: ENABLED
-        defaultVariant: legacy_only
+        defaultVariant: new_only
         variants:
           legacy_only: "legacy_only"
           shadow: "shadow"
           new_only: "new_only"
-        targeting:
-          if:
-            - in:
-                - var: channel_id
-                - - 516 # DII-679 dev-05 verification channel
-            - shadow
-            - in:
-                - var: channel_id
-                - - 127 # DII-581 dev-05 new_only verification channel
-            - new_only
-            - legacy_only
       ntfr_push_retry_after_deadline_exceeded:
         state: ENABLED
         defaultVariant: enabled

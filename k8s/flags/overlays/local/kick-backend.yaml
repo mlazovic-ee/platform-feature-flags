@@ -243,7 +243,7 @@ spec:
           disabled: false
       ntfr_rollout_routing_state:
         state: ENABLED
-        defaultVariant: legacy_only
+        defaultVariant: new_only
         variants:
           legacy_only: "legacy_only"
           shadow: "shadow"
