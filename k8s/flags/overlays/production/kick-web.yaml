@@ -675,8 +675,18 @@ spec:
             - in:
                 - var: user.email
                 - - c.li@easygo.io # Coco
-                  - kyrie@kick.com # Kyrie
+                  - k.camacho@easygo.io # Kyrie
                   - k.jois@easygo.io # Keshava
+                  - dayoneuser01@easygo.mailosaur.net # Day 1 Experience
+                  - dayoneuser02@easygo.mailosaur.net # Day 1 Experience
+                  - dayoneuser03@easygo.mailosaur.net # Day 1 Experience
+                  - dayoneuser04@easygo.mailosaur.net # Day 1 Experience
+                  - dayoneuser05@easygo.mailosaur.net # Day 1 Experience
+                  - dayoneuser06@easygo.mailosaur.net # Day 1 Experience
+                  - dayoneuser07@easygo.mailosaur.net # Day 1 Experience
+                  - dayoneuser08@easygo.mailosaur.net # Day 1 Experience
+                  - dayoneuser09@easygo.mailosaur.net # Day 1 Experience
+                  - dayoneuser10@easygo.mailosaur.net # Day 1 Experience
             - enabled
             - disabled
         variants:
