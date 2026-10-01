@@ -553,7 +553,21 @@ spec:
       # Streamer calendar - Viewer experience (weekly grid)
       web-32-3:
         state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - an.nguyen@easygo.io # An
+                  - p.pan@easygo.io # Peter
+                  - k.bedi@easygo.io # KD
+                  - v.manohar@easygo.io # Vivek
+                  - s.sotiriadis@easygo.io # Sarah
+                  - larissa@easygo.io # Larissa
+                  - r.tuvera@easygo.io # Raf
+                  - y.levraud@easygo.io # Yohann
+            - enabled
+            - disabled
         variants:
           enabled: true
           disabled: false
