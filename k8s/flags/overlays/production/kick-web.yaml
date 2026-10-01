@@ -564,6 +564,8 @@ spec:
                   - v.manohar@easygo.io # Vivek
                   - s.sotiriadis@easygo.io # Sarah
                   - larissa@easygo.io # Larissa
+                  - r.tuvera@easygo.io # Raf
+                  - y.levraud@easygo.io # Yohann
             - enabled
             - disabled
         variants:
@@ -583,6 +585,8 @@ spec:
                   - v.manohar@easygo.io # Vivek
                   - s.sotiriadis@easygo.io # Sarah
                   - larissa@easygo.io # Larissa
+                  - r.tuvera@easygo.io # Raf
+                  - y.levraud@easygo.io # Yohann
             - enabled
             - disabled
         variants:
