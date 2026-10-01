@@ -271,12 +271,6 @@ spec:
         variants:
           enabled: true
           disabled: false
-      ntfr_push_retry_after_deadline_exceeded:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
       # Seeds the default channel points reward (Hydrate) for channels that have
       # channel points enabled and no rewards of their own (KICK-9784). Consumed by
       # chnl-rewards-service. Targeting supports ramping by channel_id.
