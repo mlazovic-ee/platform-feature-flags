@@ -649,16 +649,6 @@ spec:
         variants:
           enabled: true
           disabled: false
-      # Recently streamed categories rail on the channel page
-      # disabled: served by the PHP monolith, ordered by recency
-      # enabled: served by gateway-web via lstm-gateway, ordered by watch time
-      # easygo staff are always in; everyone else is bucketed 20/80.
-      recent-streamed-gateway:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
       # Disable payment related acttions
       payments-disabled:
         state: ENABLED
