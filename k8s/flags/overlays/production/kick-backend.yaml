@@ -550,7 +550,7 @@ spec:
       # Covers both ban and unban.
       mp_authoritative_enforcement:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
