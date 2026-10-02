@@ -573,6 +573,7 @@ spec:
                   - larissa@easygo.io # Larissa
                   - r.tuvera@easygo.io # Raf
                   - y.levraud@easygo.io # Yohann
+                  - w.liu@easygo.io # Will
             - enabled
             - disabled
         variants:
