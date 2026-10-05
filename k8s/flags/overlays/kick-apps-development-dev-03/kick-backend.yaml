@@ -298,6 +298,18 @@ spec:
         variants:
           enabled: true
           disabled: false
+      ntfr_delivery_push_transactional_enabled:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      ntfr_delivery_ws_transactional_enabled:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
       paym_bridge_write_freeze:
         state: ENABLED
         defaultVariant: disabled
