@@ -355,3 +355,9 @@ spec:
         variants:
           top10k: 10
           all: 0
+      featured_channels_v2:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
