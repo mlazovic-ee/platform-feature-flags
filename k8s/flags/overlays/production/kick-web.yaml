@@ -639,20 +639,22 @@ spec:
                 - - c.li@easygo.io # Coco
                   - k.camacho@easygo.io # Kyrie
                   - k.jois@easygo.io # Keshava
-                  - dayoneuser08@easygo.mailosaur.net # Day 1 Experience
-                  - dayoneuser09@easygo.mailosaur.net # Day 1 Experience
-                  - dayoneuser10@easygo.mailosaur.net # Day 1 Experience
-                  - dayoneuser11@easygo.mailosaur.net # Day 1 Experience
-                  - dayoneuser12@easygo.mailosaur.net # Day 1 Experience
-                  - dayoneuser13@easygo.mailosaur.net # Day 1 Experience
-                  - dayoneuser14@easygo.mailosaur.net # Day 1 Experience
-                  - dayoneuser15@easygo.mailosaur.net # Day 1 Experience
                   - j.khan@easygo.io # Zeb
                   - a.sajiv@easygo.io # Ash
                   - b.choi@easygo.io # Brian
                   - c.tzoumanekas@easygo.io # Costa
                   - h.patel@easygo.io # Hemil
                   - z.ingle@easygo.io # Zach
+                  - dayoneuser16@easygo.mailosaur.net # Onboard Testing Account
+                  - dayoneuser17@easygo.mailosaur.net # Onboard Testing Account
+                  - dayoneuser18@easygo.mailosaur.net # Onboard Testing Account
+                  - dayoneuser19@easygo.mailosaur.net # Onboard Testing Account
+                  - dayoneuser20@easygo.mailosaur.net # Onboard Testing Account
+                  - dayoneuser21@easygo.mailosaur.net # Onboard Testing Account
+                  - dayoneuser22@easygo.mailosaur.net # Onboard Testing Account
+                  - dayoneuser23@easygo.mailosaur.net # Onboard Testing Account
+                  - dayoneuser24@easygo.mailosaur.net # Onboard Testing Account
+                  - dayoneuser25@easygo.mailosaur.net # Onboard Testing Account
             - enabled
             - disabled
         variants:
