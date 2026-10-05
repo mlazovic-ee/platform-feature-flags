@@ -722,12 +722,3 @@ spec:
         variants:
           enabled: true
           disabled: false
-      # Community roles badge counts (KICK-9831) - count/limit in VIP/OG/Founder tab headers
-      # disabled: headers unchanged
-      # enabled: headers show a count (VIP/OG as count/100)
-      community-roles-badge-counts:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
