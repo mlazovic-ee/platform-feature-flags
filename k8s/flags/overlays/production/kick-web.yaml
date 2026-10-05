@@ -654,16 +654,20 @@ spec:
                 - - c.li@easygo.io # Coco
                   - k.camacho@easygo.io # Kyrie
                   - k.jois@easygo.io # Keshava
-                  - dayoneuser01@easygo.mailosaur.net # Day 1 Experience
-                  - dayoneuser02@easygo.mailosaur.net # Day 1 Experience
-                  - dayoneuser03@easygo.mailosaur.net # Day 1 Experience
-                  - dayoneuser04@easygo.mailosaur.net # Day 1 Experience
-                  - dayoneuser05@easygo.mailosaur.net # Day 1 Experience
-                  - dayoneuser06@easygo.mailosaur.net # Day 1 Experience
-                  - dayoneuser07@easygo.mailosaur.net # Day 1 Experience
                   - dayoneuser08@easygo.mailosaur.net # Day 1 Experience
                   - dayoneuser09@easygo.mailosaur.net # Day 1 Experience
                   - dayoneuser10@easygo.mailosaur.net # Day 1 Experience
+                  - dayoneuser11@easygo.mailosaur.net # Day 1 Experience
+                  - dayoneuser12@easygo.mailosaur.net # Day 1 Experience
+                  - dayoneuser13@easygo.mailosaur.net # Day 1 Experience
+                  - dayoneuser14@easygo.mailosaur.net # Day 1 Experience
+                  - dayoneuser15@easygo.mailosaur.net # Day 1 Experience
+                  - j.khan@easygo.io # Zeb
+                  - a.sajiv@easygo.io # Ash
+                  - b.choi@easygo.io # Brian
+                  - c.tzoumanekas@easygo.io # Costa
+                  - h.patel@easygo.io # Hemil
+                  - z.ingle@easygo.io # Zach
             - enabled
             - disabled
         variants:
