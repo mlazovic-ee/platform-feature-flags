@@ -617,22 +617,7 @@ spec:
       # In-Stream Captions/Translations
       web-39:
         state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - or:
-                - in:
-                    - var: user.email
-                    - - maxstoller@gmail.com # aws tester
-                      - mike.bentzen@gmail.com # aws tester
-                      - Tianbing@amazon.com # aws tester
-                      - rycharly@amazon.com # aws tester
-                      - sammak@amazon.com # aws tester
-                - ends_with:
-                    - var: [user.email, ""]
-                    - "@easygo.io"
-            - enabled
-            - disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
