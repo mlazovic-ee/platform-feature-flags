@@ -579,6 +579,20 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Following calendar
+      web-32-5:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
       # Levelling up animation
       web-34:
         state: ENABLED
