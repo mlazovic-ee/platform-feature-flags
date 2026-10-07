@@ -338,3 +338,17 @@ spec:
         variants:
           enabled: true
           disabled: false
+      browse_page_read_from_registry:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - c.tzoumanekas@easygo.io
+                  - k.jois@easygo.io
+            - enabled
+            - disabled
