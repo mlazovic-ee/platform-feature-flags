@@ -729,3 +729,21 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # MoQ stream health in the creator dashboard (@easygo.io + named testers)
+      web-47:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - or:
+                - ends_with:
+                    - var: [user.email, ""]
+                    - "@easygo.io"
+                - in:
+                    - var: user.email
+                    - - kixelated@gmail.com
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
