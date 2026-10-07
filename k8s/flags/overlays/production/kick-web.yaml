@@ -704,7 +704,7 @@ spec:
         variants:
           enabled: true
           disabled: false
-      # MoQ stream health in the creator dashboard (@easygo.io + named testers)
+      # MoQ stream health in the creator dashboard (@easygo.io + named testers + 10% of users)
       web-47:
         state: ENABLED
         defaultVariant: disabled
@@ -718,6 +718,14 @@ spec:
                     - var: user.email
                     - - kixelated@gmail.com
             - enabled
+            # 10% of other signed-in users, bucketed by targetingKey (the user id).
+            # Guests have no stable key, so they stay disabled.
+            - var: user.id
+            - fractional:
+                - - enabled
+                  - 10
+                - - disabled
+                  - 90
             - disabled
         variants:
           enabled: true
