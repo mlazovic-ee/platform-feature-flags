@@ -646,6 +646,18 @@ spec:
                   - v.manohar@easygo.io # Vivek
                   - w.liu@easygo.io # Will
                   - y.levraud@easygo.io # Yohann
+                  - a.hu@easygo.io # Ashley
+                  - r.wilson@easygo.io # Ryan
+                  - n.dada@easygo.io # Naz
+                  - r.thomas@easygo.io # Rozetta
+                  - f.moreno@easygo.io # Felipe
+                  - l.galvao@easygo.io # Luis
+                  - o.tierney@easygo.io # Oli
+                  - v.hugocosta@easygo.io # Vitor
+                  - r.elgohary@easygo.io # Raf
+                  - be.kaya@easygo.io # Berat
+                  - n.haris@easygo.io # Nabyle
+                  - z.almsafir@easygo.io # Zed
             - enabled
             - disabled
         variants:
