@@ -727,6 +727,12 @@ spec:
                 - var: [user.email, ""]
                 - "@easygo.io"
             - enabled
+            - var: user.id
+            - fractional:
+                - - enabled
+                  - 10
+                - - disabled
+                  - 90
             - disabled
         variants:
           enabled: true
