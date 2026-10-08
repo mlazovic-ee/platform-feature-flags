@@ -385,6 +385,9 @@ spec:
                   - z.almsafir@easygo.io # Zed
                   - a.papadimos@easygo.io # Anthony
                   - g.oliveira@easygo.io # Guga
+                  - e.mckay@easygo.io # Elliot McKay
+                  - s.fernandez@easygo.io # Samuel Carbajal Fernandez
+                  - m.young@easygo.io # Mike
             - enabled
             - disabled
         variants:
