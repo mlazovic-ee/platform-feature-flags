@@ -392,3 +392,17 @@ spec:
         variants:
           enabled: true
           disabled: false
+      showDayOneExperience:
+        state: ENABLED
+        defaultVariant: enabled
+        targeting:
+          if:
+            - sem_ver:
+                - var: app.version
+                - <
+                - "40.32.0"
+            - disabled
+            - enabled
+        variants:
+          enabled: true
+          disabled: false
