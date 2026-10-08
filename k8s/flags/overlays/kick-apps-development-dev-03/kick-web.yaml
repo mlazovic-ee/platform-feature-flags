@@ -497,6 +497,12 @@ spec:
         variants:
           enabled: true
           disabled: false
+      web-39-1:
+        state: ENABLED
+        defaultVariant: v2
+        variants:
+          v1: "v1"
+          v2: "v2"
       # Disable payment related acttions
       payments-disabled:
         state: ENABLED

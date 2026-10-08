@@ -238,6 +238,12 @@ spec:
         variants:
           enabled: true
           disabled: false
+      web-39-1:
+        state: ENABLED
+        defaultVariant: v1
+        variants:
+          v1: "v1"
+          v2: "v2"
       # Day-one experience
       web-40:
         state: ENABLED
