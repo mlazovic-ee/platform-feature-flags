@@ -499,7 +499,7 @@ spec:
           disabled: false
       web-39-1:
         state: ENABLED
-        defaultVariant: v1
+        defaultVariant: v2
         variants:
           v1: "v1"
           v2: "v2"
