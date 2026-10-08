@@ -568,9 +568,9 @@ spec:
         targeting:
           if:
             - in:
-                - var: user.email
-                - - c.tzoumanekas@easygo.io
-                  - k.jois@easygo.io
+                - var: user.id
+                - - 74014733 # Costa
+                  - 122673829 # Keshava
             - enabled
             - disabled
       browse_page_read_from_registry:
@@ -582,8 +582,8 @@ spec:
         targeting:
           if:
             - in:
-                - var: user.email
-                - - c.tzoumanekas@easygo.io
-                  - k.jois@easygo.io
+                - var: user.id
+                - - 74014733 # Costa
+                  - 122673829 # Keshava
             - enabled
             - disabled
