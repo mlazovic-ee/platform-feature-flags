@@ -534,6 +534,12 @@ spec:
         variants:
           enabled: true
           disabled: false
+      mp_authoritative_credentials:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
       mp_authoritative_rotate:
         state: ENABLED
         defaultVariant: enabled
