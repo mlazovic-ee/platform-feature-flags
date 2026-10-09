@@ -259,6 +259,15 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # The monolith's GET /api/v1/user asks cmpl-consent for the terms version the user stands on (DII-732).
+      # disabled: cmpl-consent is never asked and tos_accepted_version reads "unknown".
+      # enabled: the version is read live; "not_signed" when cmpl-consent holds no acceptance.
+      monolith_tos_accepted_version:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
       use_ptfm_ws:
         state: ENABLED
         defaultVariant: enabled
