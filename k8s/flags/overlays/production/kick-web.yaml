@@ -789,3 +789,29 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # MoQ ads in the creator dashboard (@easygo.io + named testers + 10% of users)
+      web-47-1:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - or:
+                - ends_with:
+                    - var: [user.email, ""]
+                    - "@easygo.io"
+                - in:
+                    - var: user.email
+                    - - kixelated@gmail.com
+            - enabled
+            # 10% of other signed-in users, bucketed by targetingKey (the user id).
+            # Guests have no stable key, so they stay disabled.
+            - var: user.id
+            - fractional:
+                - - enabled
+                  - 10
+                - - disabled
+                  - 90
+            - disabled
+        variants:
+          enabled: true
+          disabled: false

@@ -366,3 +366,17 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # MoQ stream health in the creator dashboard
+      web-47:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
+      # MoQ ads in the creator dashboard
+      web-47-1:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
