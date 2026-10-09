@@ -756,9 +756,9 @@ spec:
             - var: user.id
             - fractional:
                 - - enabled
-                  - 50
+                  - 100
                 - - disabled
-                  - 50
+                  - 0
             - disabled
         variants:
           enabled: true
