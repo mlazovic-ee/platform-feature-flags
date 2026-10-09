@@ -746,20 +746,7 @@ spec:
           disabled: false
       web-46:
         state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - ends_with:
-                - var: [user.email, ""]
-                - "@easygo.io"
-            - enabled
-            - var: user.id
-            - fractional:
-                - - enabled
-                  - 100
-                - - disabled
-                  - 0
-            - disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
