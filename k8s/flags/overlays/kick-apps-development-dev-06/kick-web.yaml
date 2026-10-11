@@ -240,10 +240,11 @@ spec:
           disabled: false
       web-39-1:
         state: ENABLED
-        defaultVariant: v1
+        defaultVariant: v3
         variants:
           v1: "v1"
           v2: "v2"
+          v3: "v3"
       # Day-one experience
       web-40:
         state: ENABLED
