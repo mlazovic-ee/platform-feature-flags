@@ -419,11 +419,3 @@ spec:
         variants:
           enabled: true
           disabled: false
-        targeting:
-          if:
-            - in:
-                - var: user.email
-                - - c.tzoumanekas@easygo.io
-                  - k.jois@easygo.io
-            - enabled
-            - disabled

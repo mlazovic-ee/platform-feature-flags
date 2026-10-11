@@ -580,11 +580,3 @@ spec:
         variants:
           enabled: true
           disabled: false
-        targeting:
-          if:
-            - in:
-                - var: user.id
-                - - 74014733 # Costa
-                  - 122673829 # Keshava
-            - enabled
-            - disabled

@@ -374,15 +374,7 @@ spec:
             - disabled
       browse_page_read_from_registry:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
-        targeting:
-          if:
-            - in:
-                - var: user.id
-                - - 184 # Costa
-                  - 893 # Keshava
-            - enabled
-            - disabled
