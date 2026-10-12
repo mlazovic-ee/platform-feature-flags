@@ -580,3 +580,25 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # CTE-2814: testing channel point follow issues, disabled by default except for the users listed below.
+      channel_points_follow_bonus_enabled:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+        targeting:
+          if:
+            - in:
+                - var: user_id
+                - - 54657966 # Arvind
+                  - 89677479 # Alister
+                  - 80820982 # Edwin
+                  - 88341296 # Jitender
+                  - 29169516 # Kyrie
+                  - 46703234 # Leon
+                  - 40503966 # Raf
+                  - 77004464 # Vivek
+                  - 43862767 # William
+            - enabled
+            - disabled

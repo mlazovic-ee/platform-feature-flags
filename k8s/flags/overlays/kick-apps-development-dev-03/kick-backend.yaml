@@ -419,3 +419,10 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # CTE-2814: testing channel point follow issues, disabled by default.
+      channel_points_follow_bonus_enabled:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
