@@ -504,6 +504,23 @@ spec:
           v1: "v1"
           v2: "v2"
           v3: "v3"
+      # media-captions agent: translator per channel (a = Amazon Translate, b = TranslateGemma).
+      # targetingKey is the IVS channel ARN. Values must match a key in the agent's
+      # TRANSLATION_MODELS; anything else uses Amazon Translate.
+      web-39-2:
+        state: ENABLED
+        defaultVariant: a
+        variants:
+          a: "amazon-translate"
+          b: "translategemma-4b"
+        targeting:
+          if:
+            - in:
+                - var: targetingKey
+                - - arn:aws:ivs:us-west-2:996335889187:channel/982Jp6bEqQm9
+                  - arn:aws:ivs:us-west-2:996335889187:channel/LrYvY5dzB5ua
+            - b
+            - a
       # Disable payment related acttions
       payments-disabled:
         state: ENABLED
