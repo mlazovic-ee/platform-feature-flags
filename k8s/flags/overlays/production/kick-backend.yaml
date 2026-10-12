@@ -516,7 +516,7 @@ spec:
           disabled: false
       subcategory_ingest_auto_approve:
         state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
         variants:
           enabled: true
           disabled: false
