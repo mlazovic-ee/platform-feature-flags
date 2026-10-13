@@ -548,9 +548,9 @@ spec:
         targeting:
           fractional:
             - - enabled
-              - 25
+              - 35
             - - disabled
-              - 75
+              - 65
       mp_authoritative_rotate:
         state: ENABLED
         defaultVariant: enabled
