@@ -384,3 +384,12 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Go Live - Toggle the go live feature for creators
+      # disabled: not visible to creators
+      # enabled: visible to creators with a button to go live from main page navigation bar
+      web-23:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
