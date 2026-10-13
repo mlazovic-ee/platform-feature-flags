@@ -539,18 +539,10 @@ spec:
           disabled: false
       mp_authoritative_credentials:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
-        # Ramped by channel: fractional buckets on the targeting key (the
-        # channel id), so raising the share keeps every channel already on.
-        targeting:
-          fractional:
-            - - enabled
-              - 95
-            - - disabled
-              - 5
       mp_authoritative_rotate:
         state: ENABLED
         defaultVariant: enabled
