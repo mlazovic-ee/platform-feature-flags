@@ -238,6 +238,12 @@ spec:
           v1: "v1"
           v2: "v2"
           v3: "v3"
+      web-39-1-1:
+        state: ENABLED
+        defaultVariant: aws
+        variants:
+          aws: "aws"
+          media-translate: "media-translate"
       # Disable payment related acttions
       payments-disabled:
         state: ENABLED
