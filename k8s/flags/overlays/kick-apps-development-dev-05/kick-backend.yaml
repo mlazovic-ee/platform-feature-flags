@@ -266,7 +266,7 @@ spec:
       # enabled: the version is read live; "not_signed" when cmpl-consent holds no acceptance.
       monolith_tos_accepted_version:
         state: ENABLED
-        defaultVariant: enabled
+        defaultVariant: disabled
         variants:
           enabled: true
           disabled: false
