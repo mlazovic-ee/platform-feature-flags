@@ -378,7 +378,7 @@ spec:
           disabled: false
       browse_page_read_from_registry:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
