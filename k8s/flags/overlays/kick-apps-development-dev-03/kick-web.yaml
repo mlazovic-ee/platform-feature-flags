@@ -506,7 +506,7 @@ spec:
           v3: "v3"
       web-39-1-1:
         state: ENABLED
-        defaultVariant: media-translation
+        defaultVariant: aws
         variants:
           aws: "aws"
           media-translation: "media-translation"
