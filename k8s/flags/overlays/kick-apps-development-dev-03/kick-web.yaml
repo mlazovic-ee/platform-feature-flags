@@ -506,10 +506,10 @@ spec:
           v3: "v3"
       web-39-1-1:
         state: ENABLED
-        defaultVariant: media-translate
+        defaultVariant: media-translation
         variants:
           aws: "aws"
-          media-translate: "media-translate"
+          media-translation: "media-translation"
       # media-captions agent: translator per channel (a = Amazon Translate, b = TranslateGemma).
       # targetingKey is the IVS channel ARN. Values must match a key in the agent's
       # TRANSLATION_MODELS; anything else uses Amazon Translate.

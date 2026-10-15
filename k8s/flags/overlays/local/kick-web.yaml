@@ -268,7 +268,7 @@ spec:
         defaultVariant: aws
         variants:
           aws: "aws"
-          media-translate: "media-translate"
+          media-translation: "media-translation"
       # Disable payment related acttions
       payments-disabled:
         state: ENABLED

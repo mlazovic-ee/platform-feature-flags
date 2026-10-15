@@ -250,7 +250,7 @@ spec:
         defaultVariant: aws
         variants:
           aws: "aws"
-          media-translate: "media-translate"
+          media-translation: "media-translation"
       # Day-one experience
       web-40:
         state: ENABLED
