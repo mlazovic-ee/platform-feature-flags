@@ -621,6 +621,11 @@ spec:
                   - milanmilovanovic@mebit.io # Milan
                   - markomilovanovic@mebit.io # Marko
                   - andrijastefanovic1@mebit.io # Andrija
+                  - i.stilp@easygo.io
+                  - n.qassab@easygo.io
+                  - m.haviaridis@easygo.io
+                  - m.mikami@easygo.io
+                  - c.santos@easygo.io
             - enabled
             - disabled
         variants:
