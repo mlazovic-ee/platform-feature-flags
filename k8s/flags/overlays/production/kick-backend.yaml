@@ -360,6 +360,12 @@ spec:
         variants:
           enabled: true
           disabled: false
+      chnl_calendar_reminder_via_ntfr_gateway:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
       ntfr_delivery_push_transactional_enabled:
         state: ENABLED
         defaultVariant: enabled
