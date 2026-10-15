@@ -348,6 +348,12 @@ spec:
         variants:
           enabled: true
           disabled: false
+      ntfr_ingest_streak_at_risk_enabled:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
       ntfr_delivery_push_enabled:
         state: ENABLED
         defaultVariant: enabled
