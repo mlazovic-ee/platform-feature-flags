@@ -293,76 +293,7 @@ spec:
       # Events homepage and sidebar entry
       web-43:
         state: ENABLED
-        defaultVariant: disabled
-        targeting:
-          if:
-            - in:
-                - var: user.email
-                - - a.ruberto@easygo.io # Alex
-                  - a.roe@easygo.io # Alister
-                  - a.astruc@easygo.io # Arnaud
-                  - b.rostamiyeganeh@easygo.io # Naz
-                  - b.choi@easygo.io # Brian
-                  - d.almeida@easygo.io # Danny
-                  - jc.yu@easygo.io # JC
-                  - j.tan@easygo.io # Jeremy
-                  - larissa@easygo.io # Larissa
-                  - m.meana@easygo.io # Mateo
-                  - m.soulsby@easygo.io # Matt
-                  - r.tuvera@easygo.io # Raf
-                  - s.sotiriadis@easygo.io # Sarah
-                  - v.manohar@easygo.io # Vivek
-                  - w.liu@easygo.io # Will
-                  - y.levraud@easygo.io # Yohann
-                  - a.hu@easygo.io # Ashley
-                  - r.wilson@easygo.io # Ryan
-                  - n.dada@easygo.io # Naz
-                  - r.thomas@easygo.io # Rozetta
-                  - f.moreno@easygo.io # Felipe
-                  - f.mena@easygo.io # Felipe Mena
-                  - l.galvao@easygo.io # Luis
-                  - o.tierney@easygo.io # Oli
-                  - v.hugocosta@easygo.io # Vitor
-                  - r.elgohary@easygo.io # Raf
-                  - be.kaya@easygo.io # Berat
-                  - n.haris@easygo.io # Nabyle
-                  - z.almsafir@easygo.io # Zed
-                  - a.papadimos@easygo.io # Anthony
-                  - g.oliveira@easygo.io # Guga
-                  - e.mckay@easygo.io # Elliot McKay
-                  - s.fernandez@easygo.io # Samuel Carbajal Fernandez
-                  - m.young@easygo.io # Mike
-                  - akhil@easygo.io # Akhil
-                  - e.wright@easygo.io # Ethan
-                  - lu.rodriguez@easygo.io # Luisa Rodriguez
-                  - stefanarsic@mebit.io # Stefan
-                  - milosjovanjev@mebit.io # Milos
-                  - aleksandarzamboni@mebit.io # Aleksandar
-                  - milanpesic@mebit.io # Milan
-                  - petarknezevic@mebit.io # Petar
-                  - markomojsilovic@mebit.io # Marko
-                  - aleksastefanovic@mebit.io # Aleksa
-                  - nenadstevanovic@mebit.io # Nenad
-                  - markozivanovic@mebit.io # Marko
-                  - nemanjaristic@mebit.io # Nemanja
-                  - ivannikolendzic@mebit.io # Ivan
-                  - vukasinkatic@mebit.io # Vukasin
-                  - stefanmilenkovic@mebit.io # Stefan
-                  - igorradicevic@mebit.io # Igor
-                  - matijavuksanovic@mebit.io # Matija
-                  - miloszunjanin@mebit.io # Miloš
-                  - dimitrijekrstic@mebit.io # Dimitrije
-                  - aleksandardjukic@mebit.io # Aleksandar
-                  - milanmilovanovic@mebit.io # Milan
-                  - markomilovanovic@mebit.io # Marko
-                  - andrijastefanovic1@mebit.io # Andrija
-                  - i.stilp@easygo.io
-                  - n.qassab@easygo.io
-                  - m.haviaridis@easygo.io
-                  - m.mikami@easygo.io
-                  - c.santos@easygo.io
-            - enabled
-            - disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
