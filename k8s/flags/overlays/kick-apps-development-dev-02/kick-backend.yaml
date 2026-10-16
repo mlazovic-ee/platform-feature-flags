@@ -417,6 +417,12 @@ spec:
         variants:
           enabled: true
           disabled: false
+      lstm_catalog_shadow_ban_source_trust:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
       browse_page_read_from_registry:
         state: ENABLED
         defaultVariant: enabled

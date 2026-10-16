@@ -384,6 +384,19 @@ spec:
                   - 893 # Keshava
             - enabled
             - disabled
+      lstm_catalog_shadow_ban_source_trust:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+        targeting:
+          if:
+            - in:
+                - var: channel.id
+                - - 777 # Keshava
+            - enabled
+            - disabled
       browse_page_read_from_registry:
         state: ENABLED
         defaultVariant: enabled
