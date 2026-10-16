@@ -440,7 +440,7 @@ spec:
       # Caption translator selection
       caption_translator:
         state: ENABLED
-        defaultVariant: amazon-translate
+        defaultVariant: media-translation
         variants:
           amazon-translate: "amazon-translate"
           media-translation: "media-translation"
