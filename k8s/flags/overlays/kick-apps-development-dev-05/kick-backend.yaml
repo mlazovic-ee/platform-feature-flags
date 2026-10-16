@@ -278,7 +278,7 @@ spec:
           disabled: false
       ntfr_ingest_streak_at_risk_enabled:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
