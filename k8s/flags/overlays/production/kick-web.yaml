@@ -737,7 +737,7 @@ spec:
       # The same key gates the gateway-web endpoint in kick-backend.yaml; flip both to turn the feature off.
       home-live-totals:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false

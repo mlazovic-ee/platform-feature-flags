@@ -609,7 +609,7 @@ spec:
       # home page component in kick-web.yaml; flip both to turn the feature off end to end.
       home-live-totals:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
