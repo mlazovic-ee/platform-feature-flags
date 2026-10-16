@@ -492,3 +492,11 @@ spec:
         variants:
           amazon-translate: "amazon-translate"
           media-translation: "media-translation"
+      # Kill switch for GET /v1/livestreams/live-totals on gateway-web (KICK-9866). The same key gates the
+      # home page component in kick-web.yaml; flip both to turn the feature off end to end.
+      home-live-totals:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false

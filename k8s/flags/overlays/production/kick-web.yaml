@@ -733,3 +733,11 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Home page live totals pill: viewers watching and channels live (KICK-9866).
+      # The same key gates the gateway-web endpoint in kick-backend.yaml; flip both to turn the feature off.
+      home-live-totals:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
