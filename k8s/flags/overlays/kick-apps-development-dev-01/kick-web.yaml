@@ -335,3 +335,12 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # GTA VI truck QR campaign state for the /qr/code route (DAP-1566). Server-only.
+      # upcoming: "You're early!" page, live: sign-up and daily reward flow, ended: standard 404
+      web-48:
+        state: ENABLED
+        defaultVariant: upcoming
+        variants:
+          upcoming: "upcoming"
+          live: "live"
+          ended: "ended"
