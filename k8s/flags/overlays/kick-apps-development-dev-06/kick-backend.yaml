@@ -403,3 +403,9 @@ spec:
         variants:
           enabled: true
           disabled: false
+      monolith_queue_go_follower_sync:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false

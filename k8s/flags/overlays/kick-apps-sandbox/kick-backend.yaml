@@ -318,3 +318,9 @@ spec:
         variants:
           amazon-translate: "amazon-translate"
           media-translation: "media-translation"
+      monolith_queue_go_follower_sync:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
