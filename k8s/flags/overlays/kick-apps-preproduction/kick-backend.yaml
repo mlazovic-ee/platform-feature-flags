@@ -329,7 +329,7 @@ spec:
           disabled: false
       chnl_calendar_reminder_via_ntfr_gateway:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
