@@ -569,6 +569,13 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Home page global gifted subs top channels livestream section
+      web-44-1:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
       web-46:
         state: ENABLED
         defaultVariant: enabled
