@@ -400,6 +400,14 @@ spec:
         variants:
           enabled: true
           disabled: false
+
+      # Public gifted-subs leaderboard. Enabled serves lstm-hub; disabled serves lstm-gateway.
+      leaderboard_read_from_hub:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
       # Caption translator selection
       caption_translator:
         state: ENABLED
