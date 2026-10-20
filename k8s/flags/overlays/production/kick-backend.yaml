@@ -614,9 +614,9 @@ spec:
             - enabled
             - fractional:
                 - - enabled
-                  - 40
+                  - 20
                 - - disabled
-                  - 60
+                  - 80
       # Caption translator selection
       caption_translator:
         state: ENABLED
