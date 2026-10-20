@@ -297,6 +297,12 @@ spec:
         variants:
           enabled: true
           disabled: false
+      monolith_featured_livestreams_from_registry:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
       ntfr_ingest_enabled:
         state: ENABLED
         defaultVariant: enabled

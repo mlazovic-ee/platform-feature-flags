@@ -261,6 +261,12 @@ spec:
         variants:
           enabled: true
           disabled: false
+      monolith_featured_livestreams_from_registry:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
       paym_bridge_write_freeze:
         state: ENABLED
         defaultVariant: disabled
