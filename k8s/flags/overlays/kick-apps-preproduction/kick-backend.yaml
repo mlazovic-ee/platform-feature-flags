@@ -540,6 +540,13 @@ spec:
         variants:
           amazon-translate: "amazon-translate"
           media-translation: "media-translation"
+      # Caption transcriber selection
+      caption_transcriber:
+        state: ENABLED
+        defaultVariant: amazon-transcribe
+        variants:
+          amazon-transcribe: "amazon-transcribe"
+          media-transcription: "media-transcription"
       # Kill switch for GET /v1/livestreams/live-totals on gateway-web (KICK-9866). The same key gates the
       # home page component in kick-web.yaml; flip both to turn the feature off end to end.
       home-live-totals:

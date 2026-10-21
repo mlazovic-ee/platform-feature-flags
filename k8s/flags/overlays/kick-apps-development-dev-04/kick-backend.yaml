@@ -415,6 +415,13 @@ spec:
         variants:
           amazon-translate: "amazon-translate"
           media-translation: "media-translation"
+      # Caption transcriber selection
+      caption_transcriber:
+        state: ENABLED
+        defaultVariant: amazon-transcribe
+        variants:
+          amazon-transcribe: "amazon-transcribe"
+          media-transcription: "media-transcription"
       monolith_queue_go_follower_sync:
         state: ENABLED
         defaultVariant: enabled
