@@ -230,6 +230,13 @@ spec:
           "off": "off"
           shadow: "shadow"
           enforce: "enforce"
+      user_identity_verify_totp_legacy_login:
+        state: ENABLED
+        defaultVariant: shadow
+        variants:
+          "off": "off"
+          shadow: "shadow"
+          enforce: "enforce"
       outbox_row_lock_claim:
         state: ENABLED
         defaultVariant: enabled
