@@ -608,21 +608,10 @@ spec:
       # Public gifted-subs leaderboard. Internal users read lstm-hub. Everyone else stays on lstm-gateway.
       leaderboard_read_from_hub:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
-        targeting:
-          if:
-            - in:
-                - internal
-                - var: user.roles
-            - enabled
-            - fractional:
-                - - enabled
-                  - 60
-                - - disabled
-                  - 40
       # Caption translator selection
       caption_translator:
         state: ENABLED
