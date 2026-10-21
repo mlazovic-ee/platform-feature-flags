@@ -233,6 +233,19 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # DII-804: the monolith's stream key reveal (StreamController::getPublishToken) checks the
+      # authenticator code through user-identity's VerifyTotp. Read by the PHP monolith, targeted by
+      # user id (targetingKey) for a ramp.
+      # off: the monolith's own google2fa check decides, user-identity is not asked
+      # shadow: the monolith decides, user-identity is asked too, both verdicts logged ("totp shadow verification")
+      # enforce: user-identity decides; a lockout is 429, an outage 503
+      user_identity_verify_totp_stream_key:
+        state: ENABLED
+        defaultVariant: shadow
+        variants:
+          "off": "off"
+          shadow: "shadow"
+          enforce: "enforce"
       outbox_row_lock_claim:
         state: ENABLED
         defaultVariant: enabled
