@@ -169,6 +169,12 @@ spec:
           disabled: 0 # only read from php
           shadow: 1 # we will do a dual read, one to php one to go
           useGo: 2 # we will do a single read, just to go
+      chat_monolith_publish_via_ingest:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
       bulk_full_sync_users_to_v2:
         state: ENABLED
         defaultVariant: enabled
