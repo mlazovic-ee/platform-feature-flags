@@ -339,3 +339,21 @@ spec:
           upcoming: "upcoming"
           live: "live"
           ended: "ended"
+      # Kick redesign theme preview switch in Settings > Preferences (FE-116). Server-only, limited to named staff.
+      # disabled: the switch is hidden and a kick_theme=next cookie renders today's look
+      # enabled: the switch shows and the cookie renders the redesign theme on the next page load
+      web-49:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - a.ruberto@easygo.io # Alexander Ruberto
+                  - d.ha@easygo.io # Duc Ha
+                  - m.meana@easygo.io # Mateo
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
