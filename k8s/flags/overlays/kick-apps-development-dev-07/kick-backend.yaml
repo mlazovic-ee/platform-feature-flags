@@ -428,3 +428,27 @@ spec:
         variants:
           enabled: true
           disabled: false
+      trust_fp_ccv_cluster_dual_write:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+      trust_fp_ccv_cluster_read:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+      trust_fp_fps_cluster_read:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+      trust_fp_ccv_legacy_write_disabled:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
