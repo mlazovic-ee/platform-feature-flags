@@ -652,6 +652,12 @@ spec:
         variants:
           amazon-transcribe: "amazon-transcribe"
           media-transcription: "media-transcription"
+        targeting:
+          fractional:
+            - - media-transcription
+              - 10
+            - - amazon-transcribe
+              - 90
       # Kill switch for GET /v1/livestreams/live-totals on gateway-web (KICK-9866). The same key gates the
       # home page component in kick-web.yaml; flip both to turn the feature off end to end.
       home-live-totals:
