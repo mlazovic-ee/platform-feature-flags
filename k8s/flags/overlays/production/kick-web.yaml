@@ -680,9 +680,9 @@ spec:
             - enabled
             - fractional:
                 - - enabled
-                  - 10
+                  - 30
                 - - disabled
-                  - 90
+                  - 70
         variants:
           enabled: true
           disabled: false
