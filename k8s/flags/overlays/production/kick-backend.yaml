@@ -285,7 +285,7 @@ spec:
       # enforce: user-identity decides; a lockout is 429, an outage 503
       user_identity_verify_totp_stream_key:
         state: ENABLED
-        defaultVariant: shadow
+        defaultVariant: enforce
         variants:
           "off": "off"
           shadow: "shadow"
