@@ -400,17 +400,10 @@ spec:
           disabled: false
       chnl_calendar_reminder_via_ntfr_gateway:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
-        targeting:
-          if:
-            - in:
-                - var: channel_id
-                - - 20542911 # danidomi
-            - enabled
-            - disabled
       ntfr_delivery_push_transactional_enabled:
         state: ENABLED
         defaultVariant: enabled
