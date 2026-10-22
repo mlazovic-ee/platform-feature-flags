@@ -292,7 +292,7 @@ spec:
           enforce: "enforce"
       user_identity_verify_totp_legacy_login:
         state: ENABLED
-        defaultVariant: "off"
+        defaultVariant: shadow
         variants:
           "off": "off"
           shadow: "shadow"
