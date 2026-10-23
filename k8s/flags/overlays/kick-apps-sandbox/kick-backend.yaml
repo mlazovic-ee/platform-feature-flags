@@ -26,6 +26,13 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Emits the client-side IMA SDK ad tag (playback_url.imasdk) for live prerolls in media-metadata.
+      media_metadata_ima_tag_enabled:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
       # Controls the fraction of requests for which Mux SDK IsEnabled is set in media-metadata.
       # 0.0 = disabled for all, 1.0 = enabled for all.
       # Authenticated users are bucketed consistently by user ID; anonymous users are sampled randomly.
