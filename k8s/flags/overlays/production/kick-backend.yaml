@@ -377,7 +377,7 @@ spec:
           disabled: false
       monolith_featured_livestreams_from_registry:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
