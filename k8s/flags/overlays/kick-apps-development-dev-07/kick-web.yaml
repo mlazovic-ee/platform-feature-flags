@@ -286,6 +286,20 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Global leaderboard page
+      web-44-2:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
       web-46:
         state: ENABLED
         defaultVariant: enabled

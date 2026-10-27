@@ -668,6 +668,26 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Global leaderboard page
+      web-44-2:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - w.liu@easygo.io # Will Liu
+                  - k.bedi@easygo.io # KD
+                  - s.chu@easygo.io # Chu
+                  - s.evans@easygo.io # Shareef
+                  - v.manohar@easygo.io # Vivek
+                  - e.foh@easygo.io # Edwin Foh
+                  - a.ruberto@easygo.io # Alexander Ruberto
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
       web-46:
         state: ENABLED
         defaultVariant: enabled
