@@ -340,6 +340,14 @@ spec:
       web-48:
         state: ENABLED
         defaultVariant: live
+        targeting:
+          if:
+            - ">=": [{ var: "$flagd.timestamp" }, 1793063700] # 2026-10-27T01:00:00Z, 12:15pm AEDT
+            - live
+            - if:
+                - ">=": [{ var: "$flagd.timestamp" }, 1793064600] # 2026-10-27T01:00:00Z, 12:30pm AEDT
+                - ended
+                - upcoming
         variants:
           upcoming: "upcoming"
           live: "live"
