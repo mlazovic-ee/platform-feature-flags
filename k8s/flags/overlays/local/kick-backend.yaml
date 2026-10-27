@@ -182,6 +182,12 @@ spec:
         variants:
           enabled: true
           disabled: false
+      chat_ingest_pinned_messages_enabled:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
       bulk_full_sync_users_to_v2:
         state: ENABLED
         defaultVariant: enabled
