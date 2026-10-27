@@ -262,7 +262,7 @@ spec:
           enforce: "enforce"
       user_identity_totp_status:
         state: ENABLED
-        defaultVariant: "off"
+        defaultVariant: shadow
         variants:
           "off": "off"
           shadow: "shadow"
