@@ -324,12 +324,6 @@ spec:
         variants:
           enabled: true
           disabled: false
-      chnl_calendar_reminder_via_ntfr_gateway:
-        state: ENABLED
-        defaultVariant: disabled
-        variants:
-          enabled: true
-          disabled: false
 
       # Public gifted-subs leaderboard. Enabled serves lstm-hub; disabled serves lstm-gateway.
       leaderboard_read_from_hub:
