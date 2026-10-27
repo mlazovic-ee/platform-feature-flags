@@ -260,6 +260,13 @@ spec:
           "off": "off"
           shadow: "shadow"
           enforce: "enforce"
+      user_identity_totp_status:
+        state: ENABLED
+        defaultVariant: "off"
+        variants:
+          "off": "off"
+          shadow: "shadow"
+          enforce: "enforce"
       outbox_row_lock_claim:
         state: ENABLED
         defaultVariant: enabled
