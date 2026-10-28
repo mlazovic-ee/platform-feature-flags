@@ -356,6 +356,15 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Settings as a modal under /account-settings instead of the /settings pages (Settings Uplift).
+      # disabled: the user menu links to the old /settings pages
+      # enabled: the user menu links to the modal and the /account-settings routes answer
+      web-50:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
       # Streak recharge
       web-51:
         state: ENABLED
