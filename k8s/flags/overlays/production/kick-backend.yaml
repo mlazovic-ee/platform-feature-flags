@@ -317,6 +317,13 @@ spec:
           "off": "off"
           shadow: "shadow"
           enforce: "enforce"
+        # DII-804 shadow ramp: bucketed on the user id (targetingKey), so a user is in or out at every reader.
+        targeting:
+          fractional:
+            - - shadow
+              - 1
+            - - "off"
+              - 99
       outbox_row_lock_claim:
         state: ENABLED
         defaultVariant: enabled
