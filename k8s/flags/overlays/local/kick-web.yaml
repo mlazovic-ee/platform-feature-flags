@@ -365,3 +365,20 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Streak recharge
+      web-51:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - c.li@easygo.io # Coco
+                  - h.patel@easygo.io # Hemil
+                  - k.camacho@easygo.io # Kyrie
+                  - kyrie@kick.com # Kyrie
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
