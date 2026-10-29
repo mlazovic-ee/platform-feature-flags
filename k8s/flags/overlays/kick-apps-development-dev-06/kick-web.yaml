@@ -371,3 +371,13 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Favourite emotes tab and hearts in the chat emote picker (KICK-9849). Favourites are stored
+      # against the account through gateway-web /v1/chat/emotes/favourites.
+      # disabled: picker shows no Favourites section and no hearts
+      # enabled: Favourites tab after Frequently Used, hover heart to add or remove
+      favourite-emotes:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
