@@ -318,6 +318,12 @@ spec:
         variants:
           enabled: true
           disabled: false
+      featured_channels_slack_notifications:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
       lstm_catalog_shadow_ban_source_trust:
         state: ENABLED
         defaultVariant: enabled
