@@ -382,3 +382,11 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Profile skins: user menu card, chat profile card, Profile Themes tab and unlock reveal (DAP-1657).
+      # enabled: skin surfaces show. disabled: skin surfaces are hidden.
+      web-52:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false

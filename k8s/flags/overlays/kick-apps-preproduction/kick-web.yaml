@@ -769,3 +769,18 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Profile skins: user menu card, chat profile card, Profile Themes tab and unlock reveal (DAP-1657).
+      # enabled: skin surfaces show. disabled: skin surfaces are hidden.
+      web-52:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - b.choi@easygo.io # Brian Choi
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
