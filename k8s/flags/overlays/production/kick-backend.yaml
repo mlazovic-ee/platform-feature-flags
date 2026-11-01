@@ -702,13 +702,13 @@ spec:
           disabled: false
       trust_fp_ccv_cluster_read:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
       trust_fp_fps_cluster_read:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
