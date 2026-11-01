@@ -726,7 +726,7 @@ spec:
           disabled: false
       trust_fp_ccv_legacy_write_disabled:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
