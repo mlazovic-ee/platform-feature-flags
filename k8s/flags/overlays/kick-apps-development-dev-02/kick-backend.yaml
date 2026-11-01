@@ -282,7 +282,7 @@ spec:
         defaultVariant: unlimited
         variants:
           unlimited: 0
-          chat_message: 1
+          chat_message: 600
         targeting:
           if:
             - '==':
