@@ -365,6 +365,18 @@ spec:
           client_conn: 1 # sharding on client connections only
           chatroom_conn: 2 # sharding on chatroom connections only
           both: 3 # sharding on both client and chatroom connections
+      ptfm_ws_chat_rate_limit_per_sec:
+        state: ENABLED
+        defaultVariant: unlimited
+        variants:
+          unlimited: 0
+          chat_message: 600
+        targeting:
+          if:
+            - '==':
+                - var: event_name
+                - 'App\Events\ChatMessageEvent'
+            - chat_message
       ptfm_ws_drop_chat_message_pct:
         state: ENABLED
         defaultVariant: disabled

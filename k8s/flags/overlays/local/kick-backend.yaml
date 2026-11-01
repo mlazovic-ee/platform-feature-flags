@@ -357,6 +357,18 @@ spec:
         variants:
           enabled: true
           disabled: false
+      ptfm_ws_chat_rate_limit_per_sec:
+        state: ENABLED
+        defaultVariant: unlimited
+        variants:
+          unlimited: 0
+          chat_message: 600
+        targeting:
+          if:
+            - '==':
+                - var: event_name
+                - 'App\Events\ChatMessageEvent'
+            - chat_message
       ptfm_ws_connection_routing:
         state: ENABLED
         defaultVariant: centrifugo
