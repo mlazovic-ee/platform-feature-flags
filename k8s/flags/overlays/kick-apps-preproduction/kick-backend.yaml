@@ -616,3 +616,10 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Controls whether cipr-engine-worker should compute hourly rate or use the legacy rate.
+      cipr_engine_computed_hourly_rate:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
