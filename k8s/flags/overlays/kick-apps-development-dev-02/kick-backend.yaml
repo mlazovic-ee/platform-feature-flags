@@ -501,30 +501,6 @@ spec:
         variants:
           enabled: true
           disabled: false
-      trust_fp_ccv_cluster_dual_write:
-        state: ENABLED
-        defaultVariant: disabled
-        variants:
-          enabled: true
-          disabled: false
-      trust_fp_ccv_cluster_read:
-        state: ENABLED
-        defaultVariant: disabled
-        variants:
-          enabled: true
-          disabled: false
-      trust_fp_fps_cluster_read:
-        state: ENABLED
-        defaultVariant: disabled
-        variants:
-          enabled: true
-          disabled: false
-      trust_fp_ccv_legacy_write_disabled:
-        state: ENABLED
-        defaultVariant: disabled
-        variants:
-          enabled: true
-          disabled: false
       # Controls whether cipr-engine-worker should compute hourly rate or use the legacy rate.
       cipr_engine_computed_hourly_rate:
         state: ENABLED
