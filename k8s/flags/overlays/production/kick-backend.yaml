@@ -325,13 +325,15 @@ spec:
           shadow: "shadow"
           enforce: "enforce"
         # DII-804 shadow ramp: bucketed on the user id (targetingKey), so a user is in or out at every reader.
-        # shadow stays first so the cohort only grows: the 1% users of 2026-10-28 are inside the 10%.
+        # shadow stays first so the cohort only grows: the 1% users of 2026-10-28 and the 10% of 2026-10-29 are
+        # inside the 50%. Next step is shadow 100; enforce follows for everyone at once, not as a ramp, once the
+        # shadow has agreed at 100%. Stepping back is a change of these two numbers only.
         targeting:
           fractional:
             - - shadow
-              - 10
+              - 50
             - - "off"
-              - 90
+              - 50
       outbox_row_lock_claim:
         state: ENABLED
         defaultVariant: enabled
