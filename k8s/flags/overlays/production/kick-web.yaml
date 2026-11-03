@@ -522,6 +522,13 @@ spec:
         variants:
           disabled: false
           enabled: true
+      # IMA Ad Component (prerolls only)
+      web-29-1:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          disabled: false
+          enabled: true
       # kill gifts
       web-30:
         state: ENABLED
