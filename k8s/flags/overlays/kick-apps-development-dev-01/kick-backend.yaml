@@ -244,6 +244,68 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # DII-934: Google and Apple SSO served by user-identity instead of the monolith's Socialite path (epic
+      # DII-931). Read by the PHP monolith only; Go has no flag, OAUTH_PROVIDERS gates its providers.
+      #   user_identity_sso_google  POST /socialite/google, SocialiteController::redirectToProvider (web)
+      #   user_identity_sso_apple   POST /socialite/apple, the same method (web)
+      #   user_identity_sso_mobile  POST /api/v1/google-mobile-login and /api/v1/apple-mobile-login (the apps)
+      # Context contract: targetingKey is a UUID the monolith mints per evaluation, so the fractional rule is a
+      # share of requests (never X-Request-ID, the frontend's device fingerprint, which would make the share
+      # sticky per device); an absent or empty key lands on defaultVariant without a word. email is the
+      # provider's email, known before deciding on the mobile endpoints only and "" on the web initiate, so the
+      # allowlist matches on mobile alone. A ramp or a rollback is a change of these numbers only; the rest is
+      # in user-identity's README, "SSO via user-identity: the monolith's flags".
+      user_identity_sso_google:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+        targeting:
+          if:
+            - in:
+                - var: [email, ""]
+                - [] # staff allowlist, provider emails
+            - enabled
+            - fractional:
+                - - enabled
+                  - 0
+                - - disabled
+                  - 100
+      user_identity_sso_apple:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+        targeting:
+          if:
+            - in:
+                - var: [email, ""]
+                - [] # staff allowlist, provider emails
+            - enabled
+            - fractional:
+                - - enabled
+                  - 0
+                - - disabled
+                  - 100
+      user_identity_sso_mobile:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+        targeting:
+          if:
+            - in:
+                - var: [email, ""]
+                - [] # staff allowlist, provider emails
+            - enabled
+            - fractional:
+                - - enabled
+                  - 0
+                - - disabled
+                  - 100
       outbox_row_lock_claim:
         state: ENABLED
         defaultVariant: enabled
