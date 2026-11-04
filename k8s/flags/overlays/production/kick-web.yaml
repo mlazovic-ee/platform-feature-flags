@@ -691,7 +691,12 @@ spec:
                   - e.foh@easygo.io # Edwin Foh
                   - a.ruberto@easygo.io # Alexander Ruberto
             - enabled
-            - disabled
+            - fractional:
+                - - enabled
+                  - 10
+                - - disabled
+                  - 90
+
         variants:
           enabled: true
           disabled: false
