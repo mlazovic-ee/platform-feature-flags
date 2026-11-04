@@ -663,7 +663,7 @@ spec:
           disabled: false
       featured_channels_slack_notifications:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
