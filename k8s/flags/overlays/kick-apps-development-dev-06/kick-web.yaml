@@ -178,7 +178,7 @@ spec:
       # IMA Ad Component (prerolls only)
       web-29-1:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           disabled: false
           enabled: true
