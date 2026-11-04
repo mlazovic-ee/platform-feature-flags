@@ -36,7 +36,7 @@ spec:
       # Emits the client-side IMA SDK ad tag (playback_url.imasdk) for vod prerolls in media-metadata.
       media_metadata_ima_tag_vod_enabled:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
