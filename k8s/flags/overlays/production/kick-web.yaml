@@ -751,15 +751,16 @@ spec:
       web-48:
         state: ENABLED
         defaultVariant: ended
-        targeting:
-          if:
-            - ">=": [{ var: "$flagd.timestamp" }, 1796864400] # 2026-12-10 12pm AEDT, 2026-12-09 5pm PST
-            - ended
-            - ">=": [{ var: "$flagd.timestamp" }, 1794358800] # 2026-11-11 12pm AEDT, 2026-11-10 5pm PST
-            - live
-            - ">=": [{ var: "$flagd.timestamp" }, 1793962800] # 2026-11-06 10pm AEDT, 2026-11-06 3am PST
-            - upcoming
-            - ended
+        # Schedule on hold until further notice. Restore the targeting below to resume.
+        # targeting:
+        #   if:
+        #     - ">=": [{ var: "$flagd.timestamp" }, 1796864400] # 2026-12-10 12pm AEDT, 2026-12-09 5pm PST
+        #     - ended
+        #     - ">=": [{ var: "$flagd.timestamp" }, 1794358800] # 2026-11-11 12pm AEDT, 2026-11-10 5pm PST
+        #     - live
+        #     - ">=": [{ var: "$flagd.timestamp" }, 1793962800] # 2026-11-06 10pm AEDT, 2026-11-06 3am PST
+        #     - upcoming
+        #     - ended
         variants:
           upcoming: "upcoming"
           live: "live"
