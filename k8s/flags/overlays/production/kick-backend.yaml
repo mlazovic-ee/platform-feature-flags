@@ -325,15 +325,16 @@ spec:
           shadow: "shadow"
           enforce: "enforce"
         # DII-804 shadow ramp: bucketed on the user id (targetingKey), so a user is in or out at every reader.
-        # shadow stays first so the cohort only grows: the 1% users of 2026-10-28 and the 10% of 2026-10-29 are
-        # inside the 50%. Next step is shadow 100; enforce follows for everyone at once, not as a ramp, once the
-        # shadow has agreed at 100%. Stepping back is a change of these two numbers only.
+        # shadow stays first so the cohort only grows: the 1% users of 2026-10-28, the 10% of 2026-10-29 and the
+        # 50% of 2026-11-03 are inside the 100%. The fractional rule stays at 100 / 0 rather than moving the
+        # default to shadow, so stepping back to 50 is a change of these two numbers only. Next step is enforce,
+        # for everyone at once (defaultVariant enforce, no ramp), once the shadow has agreed at 100%.
         targeting:
           fractional:
             - - shadow
-              - 50
+              - 100
             - - "off"
-              - 50
+              - 0
       # DII-934: Google and Apple SSO served by user-identity instead of the monolith's Socialite path (epic
       # DII-931). Read by the PHP monolith only; Go has no flag, OAUTH_PROVIDERS gates its providers.
       #   user_identity_sso_google  POST /socialite/google, SocialiteController::redirectToProvider (web)
