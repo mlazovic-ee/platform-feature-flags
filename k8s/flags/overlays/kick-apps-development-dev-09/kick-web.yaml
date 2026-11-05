@@ -363,9 +363,9 @@ spec:
         variants:
           enabled: true
           disabled: false
-      # Settings as a modal under /account-settings instead of the /settings pages (Settings Uplift).
-      # disabled: the user menu links to the old /settings pages
-      # enabled: the user menu links to the modal and the /account-settings routes answer
+      # Settings as a modal opened via the ?settings= query param on the current page, e.g. /browse?settings=profile, instead of the /settings pages (Settings Uplift).
+      # disabled: the user menu links to the old /settings pages and the ?settings= query param is ignored
+      # enabled: the user menu opens the modal in place and the ?settings=<section> query param opens that section
       web-50:
         state: ENABLED
         defaultVariant: disabled
