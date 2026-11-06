@@ -584,20 +584,14 @@ spec:
           enabled: true
           disabled: false
 
-      # Caption translator selection
-      caption_translator:
+      # Caption languages still rolling out (comma-separated ISO 639-1 codes), which media-realtime captions only
+      # on channels for which this lists none. Context: email, the channel owner's email ("" when unknown).
+      caption_languages_staff_only:
         state: ENABLED
-        defaultVariant: amazon-translate
+        defaultVariant: none
         variants:
-          amazon-translate: "amazon-translate"
-          media-translation: "media-translation"
-      # Caption transcriber selection
-      caption_transcriber:
-        state: ENABLED
-        defaultVariant: amazon-transcribe
-        variants:
-          amazon-transcribe: "amazon-transcribe"
-          media-transcription: "media-transcription"
+          arabic-turkish: "ar,tr"
+          none: ""
       # Kill switch for GET /v1/livestreams/live-totals on gateway-web (KICK-9866). The same key gates the
       # home page component in kick-web.yaml; flip both to turn the feature off end to end.
       home-live-totals:
