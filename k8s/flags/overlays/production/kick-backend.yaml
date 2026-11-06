@@ -725,6 +725,8 @@ spec:
                   - "31006986" # Berat Kaya
                   - "47336174" # Andre Fernandes
                   - "106881375" # Damitha Gunawardena
+                  - "107878093" # Zaid Almsafir
+                  - "100226441" # Noor Qassab
             - none
             - arabic-turkish
       # Kill switch for GET /v1/livestreams/live-totals on gateway-web (KICK-9866). The same key gates the
