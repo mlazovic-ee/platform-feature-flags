@@ -503,8 +503,8 @@ spec:
           enabled: true
           disabled: false
 
-      # Caption languages still rolling out (comma-separated ISO 639-1 codes), which media-realtime captions only
-      # on channels for which this lists none. Context: email, the channel owner's email ("" when unknown).
+      # Caption languages still in rollout (comma-separated ISO 639-1 codes). media-metadata gives them only to
+      # viewers for whom this list is empty. Context: user_id, the legacy user ID of the viewer ("" when signed out).
       caption_languages_staff_only:
         state: ENABLED
         defaultVariant: none
