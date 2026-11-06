@@ -613,3 +613,19 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # 10Milly load test (KICK-9861): the monolith skips SES one-time-code mails and login-time Stripe
+      # customer provisioning for load-test accounts; never evaluated in production (code guard).
+      loadtest_third_party_bypass:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+        targeting:
+          if:
+            - in:
+                - var: email_domain
+                - - loadtest.kick.com
+                  - simulator.amazonses.com
+            - enabled
+            - disabled

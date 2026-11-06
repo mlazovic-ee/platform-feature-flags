@@ -750,3 +750,10 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # 10Milly load test (KICK-9861): preprod-only bypass; defined here so evaluation resolves cleanly to off.
+      loadtest_third_party_bypass:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false

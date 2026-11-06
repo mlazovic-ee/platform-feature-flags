@@ -525,3 +525,19 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # 10Milly load test (KICK-9861): the monolith, ntfr-email, paym-user-events-processor and trust-worker skip
+      # SES, Stripe and Kasada for load-test accounts; never evaluated in production (code guard in the monolith).
+      loadtest_third_party_bypass:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+        targeting:
+          if:
+            - in:
+                - var: email_domain
+                - - loadtest.kick.com
+                  - simulator.amazonses.com
+            - enabled
+            - disabled
