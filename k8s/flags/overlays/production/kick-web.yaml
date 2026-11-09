@@ -814,7 +814,7 @@ spec:
       # enabled: Favourites tab after Frequently Used, hover heart to add or remove
       favourite-emotes:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
