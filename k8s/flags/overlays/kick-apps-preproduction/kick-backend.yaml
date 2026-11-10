@@ -207,7 +207,7 @@ spec:
           enabled: true
           disabled: false
       user_events_outbox:
-        state: DISABLED
+        state: ENABLED
         defaultVariant: enabled
         variants:
           enabled: true
@@ -251,7 +251,7 @@ spec:
           disabled: false
       filter_banned_users_from_leaderboards:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
@@ -362,6 +362,14 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # When enabled, monolith would call chat-history-service to
+      # check if a given user has ever sent a message in a channel.
+      user_channel_has_chatted:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
       chnl_settings_batch_get_enabled:
         state: ENABLED
         defaultVariant: enabled
@@ -382,20 +390,6 @@ spec:
           client_conn: 1 # sharding on client connections only
           chatroom_conn: 2 # sharding on chatroom connections only
           both: 3 # sharding on both client and chatroom connections
-      # KICK-9703: seed-window kill switch for async Stripe customer creation.
-      # When ENABLED, the monolith InternalStripeCustomerController::createCustomerAccount
-      # skips the Stripe call and returns 200 (caller does not retry). Removes the
-      # create-customer-account worker-starving storm that capped preprod user seeding
-      # (Stripe ~25/s sandbox cap + paym-user-events-processor 3x retry, sharing the
-      # php-monolith-rollout worker pool with createUser). Preproduction-only, for the
-      # seeding window — flip to `disabled` afterward; seeded users have no stripe_id
-      # until reconciled. Requires monolith PR #20645.
-      disable_stripe_customer_creation:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
       ptfm_ws_chat_rate_limit_per_sec:
         state: ENABLED
         defaultVariant: unlimited
@@ -525,7 +519,7 @@ spec:
           disabled: false
       paym_read_shadow_sample_percent:
         state: ENABLED
-        defaultVariant: percent_100
+        defaultVariant: percent_1
         variants:
           disabled: 0
           percent_1: 1
