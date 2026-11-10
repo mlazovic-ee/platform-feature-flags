@@ -313,9 +313,9 @@ spec:
             - enabled
             - fractional:
                 - - enabled
-                  - 0
+                  - 100 # DII-950: preproduction serves Google (OAUTH_PROVIDERS, #31148); the whole share for the verification matrix
                 - - disabled
-                  - 100
+                  - 0
       user_identity_sso_apple:
         state: ENABLED
         defaultVariant: disabled
