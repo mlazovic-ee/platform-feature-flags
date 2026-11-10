@@ -833,3 +833,17 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Extensions
+      web-45:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false

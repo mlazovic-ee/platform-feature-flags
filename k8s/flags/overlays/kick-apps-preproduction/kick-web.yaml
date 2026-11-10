@@ -798,3 +798,18 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Extensions
+      web-45:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - m.meana@easygo.io
+                  - a.roe@easygo.io
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false

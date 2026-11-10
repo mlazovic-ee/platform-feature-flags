@@ -369,7 +369,7 @@ spec:
         variants:
           enabled: true
           disabled: false
-      # Extension tabs next to the chat on event pages
+      # Extensions
       web-45:
         state: ENABLED
         defaultVariant: enabled
