@@ -184,6 +184,7 @@ spec:
             - in:
                 - var: channel_id
                 - - 7239
+                  - 15038221 # QA integration-test channel (qacbroad-grghqd-jzj2j)
             - enabled
             - disabled
       chat_ingest_pinned_messages_enabled:
@@ -192,6 +193,13 @@ spec:
         variants:
           enabled: true
           disabled: false
+        targeting:
+          if:
+            - in:
+                - var: channel_id
+                - - 15038221 # QA integration-test channel (qacbroad-grghqd-jzj2j)
+            - enabled
+            - disabled
       bulk_full_sync_users_to_v2:
         state: ENABLED
         defaultVariant: enabled
