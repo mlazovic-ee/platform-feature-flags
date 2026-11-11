@@ -326,6 +326,13 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Similar Channels sidebar section (KICK-9860)
+      web-53:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
       # Caption language tag on featured banner info, thumbnails, live streams.
       # enabled: the tag shows the caption languages with a tooltip. disabled: the plain language tag shows.
       web-54:

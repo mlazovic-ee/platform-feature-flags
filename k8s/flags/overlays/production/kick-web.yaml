@@ -720,6 +720,13 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Similar Channels sidebar section (KICK-9860)
+      web-53:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
       # Extensions
       web-45:
         state: ENABLED
