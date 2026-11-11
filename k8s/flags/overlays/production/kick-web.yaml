@@ -240,13 +240,6 @@ spec:
         variants:
           disabled: false
           enabled: true
-      # "Enable Personalized Content" settings toggle
-      web-5-4:
-        state: ENABLED
-        defaultVariant: disabled
-        variants:
-          disabled: false
-          enabled: true
       # "Featured stream follow button
       web-5-5:
         state: ENABLED
