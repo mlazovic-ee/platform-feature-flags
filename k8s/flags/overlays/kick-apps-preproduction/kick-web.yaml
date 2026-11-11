@@ -609,23 +609,9 @@ spec:
           disabled: false
       # GTA VI truck QR campaign state for the /qr/code route (DAP-1566). Server-only.
       # upcoming: "You're early!" page, live: sign-up and daily reward flow, ended: standard 404
-      # Schedule by $flagd.timestamp (epoch seconds), latest window first:
-      #   before Nov 6: ended
-      #   Nov 6 10pm AEDT / Nov 6 6am EST / Nov 6 3am PST: upcoming
-      #   Nov 12 12pm AEDT / Nov 11 8pm EST / Nov 11 5pm PST: live
-      #   Dec 10 12pm AEDT / Dec 9 8pm EST / Dec 9 5pm PST: ended
       web-48:
         state: ENABLED
-        defaultVariant: ended
-        targeting:
-          if:
-            - ">=": [{ var: "$flagd.timestamp" }, 1796864400] # 2026-12-10 12pm AEDT, 2026-12-09 8pm EST, 2026-12-09 5pm PST
-            - ended
-            - ">=": [{ var: "$flagd.timestamp" }, 1794445200] # 2026-11-12 12pm AEDT, 2026-11-11 8pm EST, 2026-11-11 5pm PST
-            - live
-            - ">=": [{ var: "$flagd.timestamp" }, 1793962800] # 2026-11-06 10pm AEDT, 2026-11-06 6am EST, 2026-11-06 3am PST
-            - upcoming
-            - ended
+        defaultVariant: upcoming
         variants:
           upcoming: "upcoming"
           live: "live"
