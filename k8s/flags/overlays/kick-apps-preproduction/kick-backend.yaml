@@ -484,12 +484,6 @@ spec:
         variants:
           none: ""
           serve: "CountSubscriptionsForChannels,CountUserGiftsToChannel,GetFirstSubAtForUserChannel,GetUserStatusOnChannelCached,GetUserStatusOnChannel"
-      use_recommender_v2:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
       subcategory_ingest_auto_approve:
         state: ENABLED
         defaultVariant: disabled

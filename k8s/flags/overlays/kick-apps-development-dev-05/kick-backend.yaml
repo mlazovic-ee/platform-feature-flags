@@ -471,12 +471,6 @@ spec:
         variants:
           none: ""
           serve: "CountSubscriptionsForChannels"
-      use_recommender_v2:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
       featured_channels_v2:
         state: ENABLED
         defaultVariant: enabled
