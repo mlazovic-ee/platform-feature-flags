@@ -599,3 +599,17 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Event reminder notifications
+      web-55:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - internal
+                - var: user.roles
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
