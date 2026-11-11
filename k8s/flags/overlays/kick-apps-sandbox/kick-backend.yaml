@@ -40,12 +40,6 @@ spec:
         variants:
           enabled: true
           disabled: false
-      platform_batch_bans_enabled:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
       viewer_ccv_sharding_dual_write:
         state: ENABLED
         defaultVariant: enabled
@@ -122,12 +116,6 @@ spec:
                 - - cleidoscope
             - enabled
             - disabled
-      vod_tiering:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
       # enforces per bucket expiry for VOD tiering, instead of the 30 days default
       vod_tiering_per_bucket_expiry:
         state: ENABLED
@@ -200,12 +188,6 @@ spec:
       chatroom_sync:
         state: ENABLED
         defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
-      filter_banned_users_from_leaderboards:
-        state: ENABLED
-        defaultVariant: disabled
         variants:
           enabled: true
           disabled: false
