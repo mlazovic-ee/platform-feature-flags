@@ -159,13 +159,6 @@ spec:
         variants:
           enabled: true
           disabled: false
-      # Levelling up animation
-      web-34:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
       # PIN/UNPIN videos
       web-36:
         state: ENABLED
@@ -173,13 +166,6 @@ spec:
         variants:
           enabled: true
           disabled: false
-      # Tier animation
-      web-37:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          disabled: false
-          enabled: true
       # In-Stream Captions/Translations
       web-39:
         state: ENABLED
