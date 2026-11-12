@@ -763,3 +763,20 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # About app news and press posts.
+      # enabled: the posts come from the CMS. disabled: the posts in the about app code show.
+      web-57:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - in:
+                - var: user.email
+                - - m.meana@easygo.io # Mateo
+                  - a.ruberto@easygo.io # Alexander Ruberto
+                  - m.goutry@easygo.io # Martin Goutry
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
