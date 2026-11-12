@@ -611,7 +611,7 @@ spec:
       # upcoming: "You're early!" page, live: sign-up and daily reward flow, ended: standard 404
       web-48:
         state: ENABLED
-        defaultVariant: upcoming
+        defaultVariant: live
         variants:
           upcoming: "upcoming"
           live: "live"
