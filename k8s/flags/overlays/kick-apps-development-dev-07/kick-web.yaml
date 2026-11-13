@@ -364,3 +364,11 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Storyboard thumbnails on the live seek bar of the main channel page (VAP-1610). Remove after full rollout.
+      # enabled: hovering the seek bar shows storyboard thumbnails. disabled: no thumbnails show.
+      web-58:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
