@@ -381,3 +381,18 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Dashboard saves leaderboard period settings (KICKs + gifted subs) to chnl-settings via gateway-web (KICK-9859).
+      # Goes to 100% together with kick-backend subs_leaderboard_settings_from_go.
+      leaderboard-settings:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+      # Viewer reads the gifted subs leaderboard from gateway-web instead of PHP (KICK-9859). % rollout by user id.
+      subs-leaderboard-gateway:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false

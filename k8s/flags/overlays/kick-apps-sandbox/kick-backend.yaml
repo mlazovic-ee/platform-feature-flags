@@ -397,6 +397,14 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # PHP /leaderboards reads the gifted subs period flags from chnl-settings instead of its cache (KICK-9859).
+      # Goes on together with kick-web leaderboard-settings at 100%.
+      subs_leaderboard_settings_from_go:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
       # Caption languages still in rollout (comma-separated ISO 639-1 codes). media-metadata gives them only to
       # viewers for whom this list is empty. Context: user_id, the legacy user ID of the viewer ("" when signed out).
       caption_languages_staff_only:
