@@ -582,7 +582,8 @@ spec:
         variants:
           enabled: true
           disabled: false
-      # MoQ stream health in the creator dashboard (@easygo.io + named testers + 50% of users)
+      # MoQ stream health in the creator dashboard (@easygo.io + named testers only)
+      # Rolled back from 50% of users: MoQ WebSocket fallback failing in production.
       web-47:
         state: ENABLED
         defaultVariant: disabled
@@ -596,19 +597,12 @@ spec:
                     - var: user.email
                     - - kixelated@gmail.com
             - enabled
-            # 50% of other signed-in users, bucketed by targetingKey (the user id).
-            # Guests have no stable key, so they stay disabled.
-            - var: user.id
-            - fractional:
-                - - enabled
-                  - 50
-                - - disabled
-                  - 50
             - disabled
         variants:
           enabled: true
           disabled: false
-      # MoQ ads in the creator dashboard (@easygo.io + named testers + 50% of users)
+      # MoQ ads in the creator dashboard (@easygo.io + named testers only)
+      # Rolled back from 50% of users: MoQ WebSocket fallback failing in production.
       web-47-1:
         state: ENABLED
         defaultVariant: disabled
@@ -622,14 +616,6 @@ spec:
                     - var: user.email
                     - - kixelated@gmail.com
             - enabled
-            # 50% of other signed-in users, bucketed by targetingKey (the user id).
-            # Guests have no stable key, so they stay disabled.
-            - var: user.id
-            - fractional:
-                - - enabled
-                  - 50
-                - - disabled
-                  - 50
             - disabled
         variants:
           enabled: true
