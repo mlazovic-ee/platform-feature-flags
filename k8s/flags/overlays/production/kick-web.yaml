@@ -744,6 +744,10 @@ spec:
             - in:
                 - var: user.email
                 - - k.goh@easygo.io # Kenny Goh
+                  - a.astruc@easygo.io # Arnold
+                  - y.levraud@easygo.io # Yohann
+                  - j.tan@easygo.io # Jeremy T
+                  - k.camacho@easygo.io # Kyrie
             - enabled
             - disabled
         variants:
