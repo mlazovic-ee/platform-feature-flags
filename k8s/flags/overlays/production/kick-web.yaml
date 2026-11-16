@@ -723,7 +723,7 @@ spec:
       # Similar Channels sidebar section (KICK-9860)
       web-53:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
