@@ -215,9 +215,9 @@ spec:
             - enabled
             - fractional:
                 - - enabled
-                  - 100 # DII-950: dev-05 serves Google (OAUTH_PROVIDERS); the slot takes the whole share for the live round trip
+                  - 0 # DII-956: flag-off check of the legacy chain on dev-05; back to 100 (DII-950) once verified
                 - - disabled
-                  - 0
+                  - 100
       user_identity_sso_apple:
         state: ENABLED
         defaultVariant: disabled
