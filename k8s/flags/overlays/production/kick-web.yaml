@@ -789,6 +789,13 @@ spec:
       leaderboard-settings:
         state: ENABLED
         defaultVariant: disabled
+        targeting:
+          if:
+            - ends_with:
+                - var: [user.email, ""]
+                - "@easygo.io"
+            - enabled
+            - disabled
         variants:
           enabled: true
           disabled: false
@@ -796,6 +803,13 @@ spec:
       subs-leaderboard-gateway:
         state: ENABLED
         defaultVariant: disabled
+        targeting:
+          if:
+            - ends_with:
+                - var: [user.email, ""]
+                - "@easygo.io"
+            - enabled
+            - disabled
         variants:
           enabled: true
           disabled: false
