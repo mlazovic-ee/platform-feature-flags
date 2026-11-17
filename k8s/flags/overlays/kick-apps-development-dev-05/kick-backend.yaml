@@ -498,3 +498,10 @@ spec:
                   - simulator.amazonses.com
             - enabled
             - disabled
+      # ws-count-worker also pushes each cycle's display counts to the public channel.{id} websocket stream (PLAT-645).
+      ws_count_worker_realtime_push_enabled:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
