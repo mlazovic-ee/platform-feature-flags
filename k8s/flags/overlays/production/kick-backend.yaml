@@ -46,42 +46,6 @@ spec:
         variants:
           enabled: true
           disabled: false
-      viewer_ccv_sharding_dual_write:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
-      viewer_ccv_sharding_read:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
-      viewer_ccv_sharding_bulk_read:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
-      legacy_ccv_write_disabled:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
-      ws_viewer_count_go_enabled:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
-      ws_analytics_tracking_enabled:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
       validate_watch_events:
         state: ENABLED
         defaultVariant: enabled
@@ -154,20 +118,7 @@ spec:
                 - - 79076551 # set the active livestream
             - enabled
             - disabled
-      schema_based_producers_enabled:
-        state: ENABLED
-        defaultVariant: disabled
-        variants:
-          enabled: true
-          disabled: false
       stripe_purchase_otp:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
-      # enforces per bucket expiry for VOD tiering, instead of the 30 days default
-      vod_tiering_per_bucket_expiry:
         state: ENABLED
         defaultVariant: enabled
         variants:
@@ -204,12 +155,6 @@ spec:
           enabled: true
           disabled: false
       bulk_sync_null_username_users_to_v2:
-        state: ENABLED
-        defaultVariant: disabled
-        variants:
-          enabled: true
-          disabled: false
-      bulk_sync_category_preferences:
         state: ENABLED
         defaultVariant: disabled
         variants:
@@ -649,13 +594,6 @@ spec:
           enabled: true
           disabled: false
 
-      # Public gifted-subs leaderboard. Internal users read lstm-hub. Everyone else stays on lstm-gateway.
-      leaderboard_read_from_hub:
-        state: ENABLED
-        defaultVariant: enabled
-        variants:
-          enabled: true
-          disabled: false
       # PHP /leaderboards reads the gifted subs period flags from chnl-settings instead of its cache (KICK-9859).
       # Goes on together with kick-web leaderboard-settings at 100%.
       subs_leaderboard_settings_from_go:
