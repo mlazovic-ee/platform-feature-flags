@@ -482,7 +482,7 @@ spec:
       # Goes on together with kick-web leaderboard-settings at 100%.
       subs_leaderboard_settings_from_go:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
