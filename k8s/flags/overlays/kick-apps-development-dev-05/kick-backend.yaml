@@ -358,6 +358,13 @@ spec:
         variants:
           enabled: true
           disabled: false
+      ntfr_delivery_push_priority_strategy:
+        state: ENABLED
+        defaultVariant: eager
+        variants:
+          static: static
+          eager: eager
+          dynamic: dynamic
       ntfr_delivery_ws_enabled:
         state: ENABLED
         defaultVariant: enabled
