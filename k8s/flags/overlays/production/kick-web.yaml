@@ -728,12 +728,8 @@ spec:
         targeting:
           if:
             - in:
-                - var: user.email
-                - - k.goh@easygo.io # Kenny Goh
-                  - a.astruc@easygo.io # Arnold
-                  - y.levraud@easygo.io # Yohann
-                  - j.tan@easygo.io # Jeremy T
-                  - k.camacho@easygo.io # Kyrie
+                - internal
+                - var: user.roles
             - enabled
             - disabled
         variants:
