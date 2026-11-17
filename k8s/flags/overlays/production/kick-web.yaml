@@ -727,9 +727,9 @@ spec:
         defaultVariant: disabled
         targeting:
           if:
-            - in:
-                - internal
-                - var: user.roles
+            - ends_with:
+                - var: [user.email, ""]
+                - "@easygo.io"
             - enabled
             - disabled
         variants:
