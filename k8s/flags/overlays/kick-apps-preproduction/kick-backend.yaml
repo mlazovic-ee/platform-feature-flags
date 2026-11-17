@@ -495,6 +495,13 @@ spec:
         variants:
           arabic-turkish: "ar,tr"
           none: ""
+      # Caption languages media-captions GetCaptionSettings does not return. Context: channel_id.
+      caption_settings_withheld_languages:
+        state: ENABLED
+        defaultVariant: none
+        variants:
+          arabic-turkish: "ar,tr"
+          none: ""
       # Kill switch for GET /v1/livestreams/live-totals on gateway-web (KICK-9866). The same key gates the
       # home page component in kick-web.yaml; flip both to turn the feature off end to end.
       home-live-totals:

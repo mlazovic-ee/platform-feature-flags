@@ -439,6 +439,13 @@ spec:
         variants:
           arabic-turkish: "ar,tr"
           none: ""
+      # Caption languages media-captions GetCaptionSettings does not return. Context: channel_id.
+      caption_settings_withheld_languages:
+        state: ENABLED
+        defaultVariant: none
+        variants:
+          arabic-turkish: "ar,tr"
+          none: ""
       monolith_queue_go_follower_sync:
         state: ENABLED
         defaultVariant: enabled
