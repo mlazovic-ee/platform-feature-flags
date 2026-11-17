@@ -354,6 +354,13 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Translated stream titles on featured streams (DAP-1719)
+      web-56:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
       # About app news and press posts.
       # enabled: the posts come from the CMS. disabled: the posts in the about app code show.
       web-57:
