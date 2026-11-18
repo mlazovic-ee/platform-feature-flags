@@ -748,20 +748,9 @@ spec:
         defaultVariant: disabled
         targeting:
           if:
-            - in:
-                - var: user.email
-                - - c.li@easygo.io # Coco
-                  - a.sajiv@easygo.io # Ash
-                  - z.ingle@easygo.io # Zach
-                  - b.choi@easygo.io # Brian
-                  - j.khan@easygo.io # Zeb
-                  - k.camacho@easygo.io # Kyrie
-                  - el.liu@easygo.io # Elaine
-                  - d.ha@easygo.io # Duc
-                  - c.tzoumanekas@easygo.io # Costa
-                  - k.jois@easygo.io # Keshava
-                  - h.patel@easygo.io # Hemil
-                  - y.levraud@easygo.io # Yohann
+            - ends_with:
+                - var: [user.email, ""]
+                - "@easygo.io"
             - enabled
             - disabled
         variants:
