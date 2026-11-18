@@ -666,3 +666,24 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # DAP-1558: drops-tracker resolves channel liveness + category via lstm-registry instead of lstm-store.
+      # Evaluated per channel; targetingKey = channel_id, so a channel stays on one path and the cohort only grows.
+      # Allowlist test channels in the `in` list first. Ramp = change the two fractional numbers (5/95, 25/75, ...);
+      # rollback = set them back to 0 / 100. Once at 100 and stable, DAP-1751 removes the flag.
+      drops_tracker_use_lstm_registry:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
+        targeting:
+          if:
+            - in:
+                - var: channel_id
+                - [] # test channel IDs, as strings (drops-tracker sends channel_id as a string)
+            - enabled
+            - fractional:
+                - - enabled
+                  - 0
+                - - disabled
+                  - 100

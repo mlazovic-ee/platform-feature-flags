@@ -400,3 +400,9 @@ spec:
         variants:
           enabled: true
           disabled: false
+      drops_tracker_use_lstm_registry:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
