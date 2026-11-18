@@ -713,6 +713,20 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Live preview in the sidebar channel hover popup (KICK-9937)
+      web-59:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - ends_with:
+                - var: [user.email, ""]
+                - "@easygo.io"
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
       # Extensions
       web-45:
         state: ENABLED

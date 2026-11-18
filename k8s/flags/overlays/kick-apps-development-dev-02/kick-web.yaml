@@ -414,6 +414,13 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Live preview in the sidebar channel hover popup (KICK-9937)
+      web-59:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
       # Caption language tag on featured banner info, thumbnails, live streams.
       # enabled: the tag shows the caption languages with a tooltip. disabled: the plain language tag shows.
       web-54:
