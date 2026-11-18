@@ -761,6 +761,7 @@ spec:
                   - c.tzoumanekas@easygo.io # Costa
                   - k.jois@easygo.io # Keshava
                   - h.patel@easygo.io # Hemil
+                  - y.levraud@easygo.io # Yohann
             - enabled
             - disabled
         variants:
