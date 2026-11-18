@@ -245,7 +245,7 @@ spec:
           if:
             - in:
                 - var: [email, ""]
-                - [] # staff allowlist, provider emails
+                - ["vladimir.kadic.06@gmail.com"] # staff allowlist, provider emails (DII-961 Part B testers)
             - enabled
             - fractional:
                 - - enabled
