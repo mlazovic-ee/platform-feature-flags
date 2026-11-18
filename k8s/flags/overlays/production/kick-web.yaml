@@ -788,6 +788,21 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Automatic translation toggle in Settings > Preferences (DII-1017)
+      # enabled: the "Automatically translate to your display language" toggle shows. disabled: it's hidden.
+      web-60:
+        state: ENABLED
+        defaultVariant: disabled
+        targeting:
+          if:
+            - ends_with:
+                - var: [user.email, ""]
+                - "@easygo.io"
+            - enabled
+            - disabled
+        variants:
+          enabled: true
+          disabled: false
       # Dashboard saves leaderboard period settings (KICKs + gifted subs) to chnl-settings via gateway-web (KICK-9859).
       # Goes to 100% together with kick-backend subs_leaderboard_settings_from_go.
       leaderboard-settings:

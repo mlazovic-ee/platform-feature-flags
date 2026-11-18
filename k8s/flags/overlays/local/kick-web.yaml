@@ -378,6 +378,14 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Automatic translation toggle in Settings > Preferences (DII-1017)
+      # enabled: the "Automatically translate to your display language" toggle shows. disabled: it's hidden.
+      web-60:
+        state: ENABLED
+        defaultVariant: enabled
+        variants:
+          enabled: true
+          disabled: false
       # Storyboard thumbnails on the live seek bar of the main channel page (VAP-1610). Remove after full rollout.
       # enabled: hovering the seek bar shows storyboard thumbnails. disabled: no thumbnails show.
       web-58:
