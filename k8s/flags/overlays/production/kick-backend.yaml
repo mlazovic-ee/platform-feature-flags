@@ -709,22 +709,10 @@ spec:
                 - - disabled
                   - 100
 
-      # CTE-3355: recent categories from lstm-hub. Allowlist, then fractional ramp.
+      # CTE-3355: recent categories from lstm-hub.
       lstm_hub_recent_categories:
         state: ENABLED
-        defaultVariant: disabled
+        defaultVariant: enabled
         variants:
           enabled: true
           disabled: false
-        targeting:
-          if:
-            - in:
-                - var: channel_id
-                - - "22" # Eddie
-                  - "5417122" # deenthegreat
-            - enabled
-            - fractional:
-                - - enabled
-                  - 70
-                - - disabled
-                  - 30
