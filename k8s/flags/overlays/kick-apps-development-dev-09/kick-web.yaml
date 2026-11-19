@@ -418,3 +418,11 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Dashboard catalog playback flag (VAP-113). Remove after full rollout.
+      # enabled: the dashboard player calls the playback API via catalog. disabled: it uses the current playback path.
+      web-61:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
