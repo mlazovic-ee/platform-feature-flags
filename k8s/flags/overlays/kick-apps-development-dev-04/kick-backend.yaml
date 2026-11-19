@@ -5,6 +5,17 @@ metadata:
 spec:
   flagSpec:
     flags:
+      # Which input writes lstm-store's livestream rows, per legacy channel id (KickEngineering/kick#31301).
+      # gateway: lstm-gateway's StartLivestream/StopLivestreamByStreamID RPCs write; catalog events are ignored.
+      # shadow:  the RPCs write; lstm-store's consumer compares livestream.events.v1 starts against the stored row.
+      # catalog: livestream.events.v1 writes; the RPCs acknowledge without writing.
+      lstm_store_livestream_lifecycle_source:
+        state: ENABLED
+        defaultVariant: shadow
+        variants:
+          gateway: gateway
+          shadow: shadow
+          catalog: catalog
       # Kill switch for KICKs goal progress (KICK-9825). Consumed by chnl-modules-worker from
       # kicks.gifted; off means gifted KICKs are consumed and dropped, not replayed later.
       channel_goals_kicks_enabled:
