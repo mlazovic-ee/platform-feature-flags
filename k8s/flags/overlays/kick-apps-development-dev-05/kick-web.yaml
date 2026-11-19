@@ -425,3 +425,11 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Stripe Checkout Sessions purchase flow for subscriptions, gifts and KICKs (FS-539). Per user.
+      # enabled: the Checkout dialog (Stripe Checkout Session behind Kick's Elements UI). disabled: the legacy payment dialog.
+      web-63:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
