@@ -243,9 +243,9 @@ spec:
             - enabled
             - fractional:
                 - - enabled
-                  - 0
+                  - 100 # DII-964: dev-05 serves Apple (OAUTH_PROVIDERS, google,apple); the slot takes the whole share for the live round trip
                 - - disabled
-                  - 100
+                  - 0
       user_identity_sso_mobile:
         state: ENABLED
         defaultVariant: disabled

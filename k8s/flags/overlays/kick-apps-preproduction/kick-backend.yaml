@@ -255,9 +255,9 @@ spec:
             - enabled
             - fractional:
                 - - enabled
-                  - 0
+                  - 100 # DII-964: preproduction serves Apple (OAUTH_PROVIDERS, google,apple); the whole share for the verification matrix
                 - - disabled
-                  - 100
+                  - 0
       user_identity_sso_mobile:
         state: ENABLED
         defaultVariant: disabled
