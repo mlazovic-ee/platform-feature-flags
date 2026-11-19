@@ -676,6 +676,18 @@ spec:
                   - h.patel@easygo.io # Hemil
                   - k.camacho@easygo.io # Kyrie
                   - kyrie@kick.com # Kyrie
+                  - a.sajiv@easygo.io # Ash
+                  - b.choi@easygo.io # Brian
+                  - c.tzoumanekas@easygo.io # Costa
+                  - d.ha@easygo.io # Duc
+                  - k.goh@easygo.io # Kenny
+                  - k.jois@easygo.io # Keshava
+                  - z.ingle@easygo.io # Zach
+                  - j.khan@easygo.io # Zeb
+                  - m.young@easygo.io # Mike
+                  - y.levraud@easygo.io # Yohann
+                  - s.evans@easygo.io # Shareef
+                  - z.close@easygo.io # Zachary
             - enabled
             - disabled
         variants:
