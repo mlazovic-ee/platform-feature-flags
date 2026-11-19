@@ -463,6 +463,16 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # ws-count-worker run interval in seconds, read every cycle. 15 to 60; anything else falls back to the worker's own 60 (PLAT-645).
+      ws_count_worker_run_interval_seconds:
+        state: ENABLED
+        defaultVariant: sixty
+        variants:
+          sixty: 60
+          forty_five: 45
+          thirty: 30
+          twenty: 20
+          fifteen: 15
       # DAP-1558: enabled on dev-01 for testing drops-tracker's lstm-registry path.
       drops_tracker_use_lstm_registry:
         state: ENABLED
