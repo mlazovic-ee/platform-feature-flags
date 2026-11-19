@@ -652,6 +652,14 @@ spec:
         variants:
           enabled: true
           disabled: false
+      # Live viewer count updates over the realtime connection, with the poll as fallback (PLAT-646)
+      # enabled: the viewer count also updates from ViewerCountUpdated pushes. disabled: it only polls.
+      web-62:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
       # Automatic translation toggle in Settings > Preferences (DII-1017)
       # enabled: the "Automatically translate to your display language" toggle shows. disabled: it's hidden.
       web-60:
