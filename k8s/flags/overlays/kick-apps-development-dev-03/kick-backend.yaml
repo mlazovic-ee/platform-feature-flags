@@ -476,3 +476,11 @@ spec:
         variants:
           enabled: true
           disabled: false
+
+      # CTE-3355: recent categories from lstm-hub.
+      lstm_hub_recent_categories:
+        state: ENABLED
+        defaultVariant: disabled
+        variants:
+          enabled: true
+          disabled: false
