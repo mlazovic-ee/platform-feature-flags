@@ -579,6 +579,6 @@ spec:
             - enabled
             - fractional:
                 - - enabled
-                  - 30
-                - - disabled
                   - 70
+                - - disabled
+                  - 30
