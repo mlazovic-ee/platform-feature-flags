@@ -714,6 +714,6 @@ spec:
             - enabled
             - fractional:
                 - - enabled
-                  - 0
+                  - 30
                 - - disabled
-                  - 100
+                  - 70
